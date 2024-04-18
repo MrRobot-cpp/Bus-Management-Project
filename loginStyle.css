@@ -1,0 +1,10 @@
+
+.login-container{
+    width: 900px;
+    height: 790px;
+    color: #263159;
+    background-color: #FFFBEB;
+    border-radius: 40px;
+    padding: 20px;
+    margin: 12px;
+}
