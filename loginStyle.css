@@ -50,7 +50,6 @@ input{
 }
 button{
     color: #FFFBEB;
-    font-size: 22px;
     background-color: #263159;
     border-radius: 40px;
     width: 200px;
@@ -61,7 +60,7 @@ a{
     text-decoration: none;
 }
 .Forgot-Password{
-    padding-left: 380px;
+    padding-left: 390px;
 }
 .not-regist{
     padding-right: 450px;
