@@ -1,8 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+*{
+    font-family: "Inter", sans-serif;
+    align-items: center;
+    background-color: #263159;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+form{
+    color: #263159;
+    background-color: #FFFBEB;
+}
+h1{
+    color: #263159;
+}
+diV *{
+    background-color: #FFFBEB;
+}
 
+input{
+    border-radius: 8px;
+    width: 508px;
+    height: 40px;
+}
+.top-border{
+    position: absolute;
+    padding-left: 120px;
+    margin: 5px;
+}
+button{
+    color: #FFFBEB;
+    background-color: #263159;
+    border-radius: 40px;
+    width: 200px;
+    height: 60px;
+}
+a{
+    color: #0A45F6;
+    text-decoration: none;
+}
+.Forgot-Password{
+    padding-left: 445px;
+}
+.not-regist{
+    padding-right: 450px;
+}
+.social-icons a {
+    color: #263159;
+    padding: 8px;
+    font-size: 3.2em;
+}
 .login-container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
     width: 900px;
     height: 790px;
-    color: #263159;
     background-color: #FFFBEB;
     border-radius: 40px;
     padding: 20px;
