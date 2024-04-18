@@ -27,13 +27,30 @@ input{
     width: 508px;
     height: 40px;
 }
-.top-border{
+.top-border-email{
     position: absolute;
-    padding-left: 120px;
-    margin: 5px;
+    background-color: #FFFBEB;
+    width: 14px;
+    height: 19px;
+    transform: translate(115px,-15px);
+    padding-left: 10px;
+    padding-right: 30px;
+    margin: 6px;
+}
+
+.top-border-pass{
+    position: absolute;
+    background-color: #FFFBEB;
+    width: 14px;
+    height: 19px;
+    transform: translate(115px,-15px);
+    padding-left: 10px;
+    padding-right: 65px;
+    margin: 6px;
 }
 button{
     color: #FFFBEB;
+    font-size: 22px;
     background-color: #263159;
     border-radius: 40px;
     width: 200px;
@@ -44,7 +61,7 @@ a{
     text-decoration: none;
 }
 .Forgot-Password{
-    padding-left: 445px;
+    padding-left: 380px;
 }
 .not-regist{
     padding-right: 450px;
