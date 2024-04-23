@@ -27,14 +27,26 @@ input{
     width: 508px;
     height: 40px;
 }
-.top-border-email{
+.termsLine{
     position: absolute;
+    transform: translateX(-258px);
+}
+.checker{
+    
+    width: 17px;
+    height: 17px;
+    transform: translateY(3px);
+}
+.top-border-name{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #FFFBEB;
-    width: 14px;
+    width: 95px;
     height: 19px;
     transform: translate(115px,-15px);
     padding-left: 10px;
-    padding-right: 30px;
+    padding-right: 2px;
     margin: 6px;
 }
 
@@ -71,7 +83,7 @@ a{
     padding: 8px;
     font-size: 3.2em;
 }
-.login-container{
+.Creation-container{
     display: flex;
     justify-content: center;
     text-align: center;

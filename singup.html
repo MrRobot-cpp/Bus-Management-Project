@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="signupStyle.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="Creation-container">
+        <form>
+            <h1>Create Account</h1>
+            <br>
+            <br>
+            <div class="top-border-name">
+                <div><label for="fname">First Name</label></div>
+                <input type="text" for="fname">
+                <div><label for="lname">Last Name</label></div>
+                <input type="text" for="lname">
+            </div>
+            <br>
+            <div>
+                <div class="top-border-email"><label for="Email"> Email</label></div>
+                <input type="email" for="Email">
+            </div>
+            <br>
+            <br>
+            <div>
+                <div class="top-border-pass"><label for="Password"> Password</label></div>
+                <input type="password" for="Password" maxlength="20" required>
+            </div>
+            <br>
+            <br>
+            <div>
+                <div class="top-border-pass"><label for="Password"> Re-enter Password</label></div>
+                <input type="password" for="Password" maxlength="20" required>
+            </div>
+            <br>
+            <label class="termsLine">
+                <input class="checker" type="checkbox" checked="checked" name="remember"> I Have Read the <a href="">Terms & Conditions</a>
+            </label>
+            <br>
+            <br>
+            <br>
+            <div>
+                <button type="submit" id="submit">Sign Up</button>
+            </div>
+            <br>
+            <h4 class="not-regist">Already Have An Account? <a href="">Login</a></h4>
+            <h4>Or Join with</h4>
+            <div class="social-icons">
+            <a href=""><i class="fa-brands fa-google"></i></a>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-apple"></i></a>
+        </div>
+        </form>
+    </div>
+</body>
+</html>
