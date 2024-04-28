@@ -25,6 +25,8 @@
     width: 500px;
     margin: auto;
     padding: 0;
+    transition: 0.9s ease;
+
 }
 
 .vertical-navbar{
