@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import VerticalNavbar from './VerticalNavbar/VerticalNavbar'
+import VerticalNavbar from 'C:/Users/medog/OneDrive/Desktop/Bus-Management-Project-1/Bus-Management-Project/client/src/DriverView/src/VerticalNavbar/VerticalNavbar.jsx'
 import StudentProfile from './StudentProfile/StudentProfile'
+// import * as All from './layout'
 import './App.css'
 
 function App() {
