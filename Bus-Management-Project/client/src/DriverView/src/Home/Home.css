@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+.home-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 80vw;
+    margin-left: 100px;
+    margin-right: 10px;
+    background: transparent;
+
+}
+
+.welcome-container{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    width: 60vw;
+    top: 0;
+    margin-top: 20px;
+    margin-left: 80px;
+    background: transparent;
+}
+
+.welcome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 200px;
+    height: 70%;
+    width: 90%;
+    border-radius: 15px;
+    background: #495579;
+}
+
+.welcome-text{
+    color: #FFFBEB;
+}
+
+ @media screen and (max-height: 400px) {
+    .welcome-text {
+      font-size: 2.5rem; 
+      transition: 0.2s ease-in-out;
+    }
+  }
+  
+  
+  
+  @media screen and (max-width: 720px) {
+    .welcome-text {
+      font-size: 2.5rem;
+      transition: 0.2s ease-in-out;
+    }
+  } 
