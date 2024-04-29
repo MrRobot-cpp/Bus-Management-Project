@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
 .trip-container{
     display:flex;
     padding: 0;
@@ -16,7 +19,7 @@
     /* min-height: 500px; */
     min-width: 40px;
     height: 15%;
-    width: 35%;
+    width: 50%;
     padding-top: 20px;
     margin-left: 100px;
     margin-right: 10px;
@@ -35,7 +38,24 @@ img{
     transform: translateY(-40px);
   
 }
-.trip-text{
+.text-style{
     transform: translateY(-40px);
     color: #FFFBEB;
+    margin: 10px;
+}
+
+.student-count{
+    display: flex;
+    margin: 0;
+    width: 50%;
+    height: auto;
+    flex-direction: row;
+    transform: translate(-64px,-40px);
+}
+
+.extra-trip-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
