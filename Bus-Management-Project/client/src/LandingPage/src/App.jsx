@@ -1,33 +1,29 @@
 import MenuItemButtonRegular from "./Componets/MenuItemButton/MenuItemButtonRegular.jsx"
 import MenuItemButtonHighlighted from "./Componets/MenuItemButton/MenuItemButtonHighLighted.jsx";
-import { useState } from 'react';
-
+import "./Componets/MenuItemButton/MenuItemButton.css"
 
 
 
 function App() {
 
-  const [toggleOpen, setToggleOpen] = useState(false);
-
   const toggleDropDown = () => {
-    setToggleOpen(!toggleOpen);
-
-    const toggleBtnIcon = document.querySelector('.toggle-btn-logo');
+    const toggleBtnIcon = document.querySelector('.toggle-btn i');
     const dropDownMenu = document.querySelector('.dropdown-menu');
 
-    dropDownMenu.classList.toggle('open');
-    const isOpen = dropDownMenu.classList.contains('open');
-    //check if class "open" is in dropdown menu element (if present, value true)
-    toggleBtnIcon.classList = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars"
-  };
+    const isOpen = dropDownMenu.classList.toggle('open');
 
+    toggleBtnIcon.classList.toggle('fa-bars', !isOpen);
+    toggleBtnIcon.classList.toggle('fa-xmark', isOpen);
+};
 
   return (
     <>
-
+    {/* Header */}
     <nav className="header">
       <div className="header-contents">
+
           <h1 className="logo-placeholder">RouteMinder</h1>
+
           <ul className="unordered-list">
               <li className="list"><MenuItemButtonRegular text="Home" href="#" /></li>
               <li className="list"><MenuItemButtonRegular text="About" href="#" /></li>
@@ -45,12 +41,12 @@ function App() {
               <li className="list"><MenuItemButtonRegular text="About" href="#" /></li>
               <li className="list"><MenuItemButtonRegular text="Services" href="#" /></li>
               <li className="list"><MenuItemButtonRegular text="Contact Us" href="#" /></li>
-              <li className="list"> <MenuItemButtonHighlighted text="Login" className="login-btn" /></li>
+              <li><button className="login-btn">Login</button></li>
           </div>
 
       </div>
     </nav>
-
+    {/* End of Header */}
 
   
     </>

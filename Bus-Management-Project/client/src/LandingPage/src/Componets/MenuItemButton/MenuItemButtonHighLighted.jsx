@@ -1,9 +1,16 @@
 import './MenuItemButton.css'
+import PropTypes from 'prop-types';
 
-const MenuItemButtonHighlighted = () => {
+const MenuItemButtonHighlighted = (props) => {
   return (
-    <button className="menu-item-highlighted">Menu Item</button>
+    <button className="menu-item-highlighted">{props.text}</button>
   )
 }
+
+MenuItemButtonHighlighted.propTypes = {
+  text: PropTypes.string
+}
+
+MenuItemButtonHighlighted.defaultProp
 
 export default MenuItemButtonHighlighted;
