@@ -34,7 +34,7 @@ function Home(){
     <div className="home-container common">
         <div className="welcome-container">
             <div className="welcome">
-                <p className="welcome-text">Welcome back, {driver.name} !</p>
+                <p className="welcome-text">Welcome Home!</p>
             </div>
         </div>
         <Trip departure={trips[0].departure} arrival={trips[0].arrival}
