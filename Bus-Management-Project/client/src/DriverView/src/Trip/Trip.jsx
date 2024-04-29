@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import "./Trip.css"
-import ProgressBar from "../ProgressBar/ProgressBar";
+import ProgressBar from "./ProgressBar/ProgressBar";
 function Trip(props){
 const { departure: { hour: depHour, minute: depMinute, period: depPeriod } 
 = { hour: 0, minute: 0, period: 'AM' },
