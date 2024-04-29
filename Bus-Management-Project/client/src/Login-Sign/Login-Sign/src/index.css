@@ -6,7 +6,6 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -29,29 +28,39 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
-
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
-
 button {
+  width: 210px;
+  height: 64px;
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
-  font-size: 1em;
+  color: #fffbeb;
+  font-size: 1.4em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #263159;
+  border-radius: 15px;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
+  transition: 0.5s ease;
+  transform: scale(1.1);
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+a{
+  color: #0A45F6;
+  text-decoration: none;
 }
 
 @media (prefers-color-scheme: light) {
@@ -63,6 +72,6 @@ button:focus-visible {
     color: #747bff;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: #263159;
   }
 }

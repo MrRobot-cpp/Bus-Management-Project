@@ -37,28 +37,15 @@ input{
     height: 17px;
     transform: translateY(3px);
 }
-.top-border-name{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #FFFBEB;
-    width: 95px;
-    height: 19px;
-    transform: translate(115px,-15px);
-    padding-left: 10px;
-    padding-right: 2px;
-    margin: 6px;
-}
-
-.top-border-pass{
+.top-border{
     position: absolute;
     background-color: #FFFBEB;
     width: 14px;
-    height: 19px;
-    transform: translate(115px,-15px);
-    padding-left: 10px;
-    padding-right: 65px;
-    margin: 6px;
+    height: 20px;
+    transform: translate(20px,-14px);
+    padding-left: 5px;
+    padding-right: 30px;
+    margin: 2px;
 }
 button{
     font-size: 22px;

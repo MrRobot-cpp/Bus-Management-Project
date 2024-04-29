@@ -9,7 +9,6 @@
     padding: 0;
 
 }
-
 .card {
     background-color:transparent;
     min-height: 100%;
@@ -29,38 +28,53 @@
     margin: 1em;
 }
 
-.card-header {
+.profile-name {
     text-align: left;
-    font-size: 3em;
-    color: #263159;
+    color: #fffbeb;
+    margin: 20px;
+}
+.top-profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center ;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(1, 1, 1, 0.25);
+    background-color:#263159;
 }
 
-.picture-name{
-    display: block;
-}
-.card-logo {
+.profile-pic {
     display: flex;
     justify-content: center; 
     align-items: center;
     text-align: center;
     font-size: 2.7em;
-    width: 64px;
-    height: 64px;
+    width: 128px;
+    height: 128px;
     color: #263159;
-    border: 5px solid #263159;
-    border-radius: 32px;
-    
+    border-radius: 64px;
+    margin: 12px;
 }
-.edit-btn{
+button {
+    width: 210px;
+    height: 64px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1.2em;
+    font-weight: 500;
+    font-family: inherit;
     background-color: #fffbeb;
-    text-decoration: none;
-    box-shadow: 0px 5px 15px rgba(1, 1, 1, 0.25); 
-    border: 5px solid #263159;
-    padding: 1em;
     border-radius: 15px;
+    margin: 12px;
     cursor: pointer;
-}
-
+    transition: border-color 0.25s;
+  }
+  button:hover {
+    transition: 0.5s ease;
+    transform: scale(1.1);
+    border-color: #646cff;
+  }
 .table-info {
     width: 70%;
     height: 90%;

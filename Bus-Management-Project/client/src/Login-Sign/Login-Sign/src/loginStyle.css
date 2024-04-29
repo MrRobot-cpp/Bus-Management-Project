@@ -26,45 +26,21 @@ input{
     border-radius: 8px;
     width: 508px;
     height: 40px;
+    padding-left: 10px;
 }
-.top-border-email{
+.top-border{
     position: absolute;
     background-color: #FFFBEB;
     width: 14px;
-    height: 19px;
-    transform: translate(115px,-15px);
-    padding-left: 10px;
+    height: 20px;
+    transform: translate(20px,-14px);
+    padding-left: 5px;
     padding-right: 30px;
-    margin: 6px;
-}
-
-.top-border-pass{
-    position: absolute;
-    background-color: #FFFBEB;
-    width: 14px;
-    height: 19px;
-    transform: translate(115px,-15px);
-    padding-left: 10px;
-    padding-right: 65px;
-    margin: 6px;
-}
-button{
-    font-size: 22px;
-    color: #FFFBEB;
-    background-color: #263159;
-    border-radius: 40px;
-    width: 200px;
-    height: 60px;
+    margin: 2px;
 }
 a{
     color: #0A45F6;
     text-decoration: none;
-}
-.Forgot-Password{
-    padding-left: 390px;
-}
-.not-regist{
-    padding-right: 450px;
 }
 .social-icons a {
     color: #263159;
@@ -75,11 +51,11 @@ a{
     display: flex;
     justify-content: center;
     text-align: center;
-    box-sizing: border-box;
-    width: 900px;
-    height: 790px;
+    box-sizing:content-box;
+    width: 800px;
+    height: 680px;
     background-color: #FFFBEB;
-    border-radius: 40px;
     padding: 20px;
     margin: 12px;
+    border-radius: 400px;
 }

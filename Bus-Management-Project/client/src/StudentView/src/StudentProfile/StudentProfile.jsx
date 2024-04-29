@@ -11,11 +11,15 @@ function StudentProfile() {
          <div className="card">
 
                 <div className="card-info">
-                    <span className="picture-name">      
-                        <a className="card-logo"><i class="fa-regular fa-user icon"></i> </a>
-                    <h2 className="card-header">3bdel3aty</h2>
-                    </span>
-                    <button className="edit-btn">Edit Personal Info</button>
+                    <div className="top-profile">      
+             <img  className="profile-pic" src="https://www.bing.com/th?id=OIP.hF4tMZhXY6KFPMPqRiBsvAHaHa&w=150&h=150&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" alt="" />           
+                    <h2 className="profile-name">3bdel3aty</h2>
+                    <h4>ID: S32423</h4>
+                    <button>Edit Personal Info</button>
+                    </div>
+                    </div>
+                    <div>
+                        <h2>Personal Information</h2>
                     </div>
                     <div className="table-info">
                     <table>
