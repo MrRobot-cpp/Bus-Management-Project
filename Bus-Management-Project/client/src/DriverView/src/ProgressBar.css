@@ -13,8 +13,8 @@
         align-items: center;
         border-radius: 80px;
         background: #FFFBEB;
-        width: 32px;
-        height: 32px;
+        width: 42px;
+        height: 42px;
         margin: 0;
         padding: 0;
         border: none;
@@ -26,7 +26,7 @@
 
     .bar{
         border: none;
-        height: 1vh;
+        height: 2vh;
         width: 5vw;
         background: #FFFBEB;
         margin: 0;

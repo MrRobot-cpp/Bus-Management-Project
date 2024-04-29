@@ -19,7 +19,7 @@
     /* min-height: 500px; */
     min-width: 40px;
     height: 15%;
-    width: 50%;
+    width: 51%;
     padding-top: 20px;
     margin-left: 100px;
     margin-right: 10px;
@@ -31,17 +31,13 @@
     height: 50px;
     width: 100px
 }*/
-img{
-    display: flex;
-    height: 200px;
-    width:  300px;
-    transform: translateY(-40px);
-  
-}
+
 .text-style{
-    transform: translateY(-40px);
+    /* transform: translateY(-40px); */
     color: #FFFBEB;
     margin: 10px;
+    margin-right: 17.5px;
+    padding-top: 10px;
 }
 
 .student-count{
@@ -50,17 +46,19 @@ img{
     width: 50%;
     height: auto;
     flex-direction: row;
-    transform: translate(-64px,-40px);
+    /* transform: translate(-100px,-70px); */
 }
 
 .extra-trip-info{
-    display: block;
+    display: flex;
     flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 10px;
     margin-bottom: 5px;
     align-items:start;
     width: 50%;
     height: auto;
-    transform: translate(-64px,-20px);
+    transform: translate(-64px,0px);
 
 }
 
@@ -72,6 +70,6 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translate(-32px, 10px);
+    /* transform: translate(0px, 20px); */
 
 }

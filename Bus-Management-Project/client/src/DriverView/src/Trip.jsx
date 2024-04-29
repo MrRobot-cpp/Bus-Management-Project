@@ -19,12 +19,11 @@ status,
     return(
         <div className="trip-container common" >
             <div className="trip">
-            <img src="./herson-rodriguez-w8CcH9Md4vE-unsplash-removebg.png" />
                 
-                    <div className="student-count text-style">
+                    {/* <div className="student-count text-style">
                     Number Of Students: {numStudents} <br />
                     Maximum Student Count: {maxNumberStudents} 
-                    </div>
+                    </div> */}
 
                     <div className="time-line text-style">
                     {/* <span className="arrival-departure">
@@ -33,7 +32,7 @@ status,
                     </span> */}
                     {/* Stops: {stops.map((stop,index)=>(`${stop} ,` ))} <br/> */}
                     <div className="progress-bar-container">
-                    <ProgressBar stops={stops} startPoint={startPoint} endPoint={endPoint}
+                    <ProgressBar stops={stops}
                      departure={{ hour: depHour, minute: depMinute, period: depPeriod }}
                      arrival={{ hour: arrHour, minute: arrMinute, period: arrPeriod }} />
                     </div>
