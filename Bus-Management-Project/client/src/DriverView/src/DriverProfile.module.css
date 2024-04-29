@@ -1,22 +1,57 @@
 .driverProfile{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     background: #263159;
     height: 90%;
-    width: 70%;
+    width: 80%;
+    border-radius: 20px;
+    margin-left: 25px;
     color: #FFFBEB;
 }
 
 .profile{
-    background: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 70%;
+    width: 80%;
 }
+
+
 
 .profilePic{
-    
-    background: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 90px;
+    border-radius: 360px;
+    background:#FFFBEB ;
 }
 
+.star-rating {
+    font-size: 24px;
+    padding-bottom: 15px;
+  }
+  
+  .star {
+    cursor: pointer;
+    color: #ccc;
+  }
+  
+  .filled {
+    color: #ffcc00;
+  }
+  
+
 .driverInfo{
-    background: blue;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 50px;
+    width: 100%;
 }

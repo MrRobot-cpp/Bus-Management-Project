@@ -1,17 +1,38 @@
+import React, { useState } from 'react';
 import styles from './DriverProfile.module.css'
 function DriverProfile(props){
     const {name,age,trips,type}=props;
+
+    const [rating, setRating] = useState(0);
+
+  const handleClick = (value) => {
+    setRating(value);
+  };
+
     return(<>
         <div className={styles.driverProfile}>
         <div className={styles.profile}>
         <div className={styles.profilePic}/>
         <h5>{type}</h5>
-        <h4>{name}</h4>
+        <h2>{name}</h2>
         </div>
-        <span className={styles.driverInfo}>
-            <h4>Age: {age}</h4>
-            <h4>Trips: {trips}</h4>
-        </span>
+        <div className={styles.driverInfo}>
+            <h3>Age: {age}</h3>
+            <h3>Trips: {trips}</h3>
+        </div>
+        <div className={styles['star-rating']}>
+      {[...Array(5)].map((_, index) => {
+        const starValue = index + 1;
+        return(
+          <span
+            key={index}
+            className={starValue <= rating ? styles.filled : styles.star}
+            onClick={() => handleClick(starValue)}>
+            &#9733;
+          </span>
+        );
+      })}
+    </div>
         </div>    
     </>)
 }
