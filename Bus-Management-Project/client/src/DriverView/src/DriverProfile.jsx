@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './DriverProfile.module.css'
 function DriverProfile(props){
-    const {name,age,trips,type}=props;
+    const {name,age,noOfTrips,type}=props;
 
     const [rating, setRating] = useState(0);
 
@@ -18,7 +18,7 @@ function DriverProfile(props){
         </div>
         <div className={styles.driverInfo}>
             <h3>Age: {age}</h3>
-            <h3>Trips: {trips}</h3>
+            <h3>Trips: {noOfTrips}</h3>
         </div>
         <div className={styles['star-rating']}>
       {[...Array(5)].map((_, index) => {
