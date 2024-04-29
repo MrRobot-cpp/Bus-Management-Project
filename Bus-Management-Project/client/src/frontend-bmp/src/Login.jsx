@@ -1,40 +1,31 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
-import './signupStyle.css'; // Assuming you have this CSS file in your project
-function Signup() {
+import './loginStyle.css'; // Assuming you have this CSS file in your project
+
+function Login() {
     return (
-        <div className="Creation-container">
+        <>
+        <div className="login-container">
             <form>
-                <h1>Create Account</h1>
+                <h1>Sign In</h1>
                 <br />
-                <br />
-                <div className='names'>
-                    <div className="top-border"><label htmlFor="Text">First Name</label></div>
-                    <input type="text" />
-                    <br />
-                    <br />
-                    <div className="top-border"><label htmlFor="Text">Last Name</label></div>
-                    <input type="text" />
-                </div>
                 <br />
                 <div>
                     <div className="top-border"><label htmlFor="Email"> Email</label></div>
                     <input type="email" id="Email" />
                 </div>
                 <br />
+                <br />
                 <div>
                     <div className="top-border"><label htmlFor="Password"> Password</label></div>
                     <input type="password" id="Password" maxLength="20" required />
                 </div>
                 <br />
-                <div>
-                    <div className="top-border"><label htmlFor="Password">Re-enter Password</label></div>
-                    <input type="password" id="Password" maxLength="20" required />
-                </div>
-                <br />
                 <a className="Forgot-Password" href="">Forgot Password?</a>
+                <br />
+                <br />
                 <div>
-                    <button type="submit" id="submit">Sign Up</button>
+                    <button type="submit" id="submit">Login</button>
                 </div>
                 <br />
                 <h4 className="not-regist">Not Registered yet? <a href="">Create An Account</a></h4>
@@ -47,7 +38,7 @@ function Signup() {
                 </div>
             </form>
         </div>
+        </>
     );
 }
-
-export default Signup;
+export default Login;

@@ -15,6 +15,10 @@ form{
     color: #263159;
     background-color: #FFFBEB;
 }
+.names{
+    align-items: center;
+    justify-content: space-between;
+}
 h1{
     color: #263159;
 }
@@ -60,7 +64,7 @@ a{
     text-decoration: none;
 }
 .Forgot-Password{
-    padding-left: 390px;
+    padding-right: 390px;
 }
 .not-regist{
     padding-right: 450px;
