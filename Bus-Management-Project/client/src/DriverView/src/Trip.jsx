@@ -11,7 +11,7 @@ startPoint,
 endPoint,
 }  = props;
     return(
-        <div className="trip-container" >
+        <div className="trip-container common" >
             <div className="trip">
                 <p className="trip-text">
                     Arrival: {`${depHour} : ${depMinute} ${depPeriod}` }

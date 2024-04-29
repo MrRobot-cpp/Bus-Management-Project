@@ -22,7 +22,7 @@
     float: left;
     background-color: transparent;
     height: 100vh;  
-    width: 500px;
+    width: 18vw;
     margin: auto;
     padding: 0;
     transition: 0.9s ease;
@@ -31,7 +31,7 @@
 
 .vertical-navbar{
     display: flex;
-    background-color: #495579; 
+    background-color: #263159;
     float: left;
     min-height: 500px;
     min-width: 40px;
@@ -68,7 +68,7 @@ ul li a i{
 
 ul li a:hover {
     background-color: #FFFBEB;
-    color: #495579;
+    color: #263159;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
     transition: 0.5s ease;
