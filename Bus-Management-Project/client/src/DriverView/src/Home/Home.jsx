@@ -1,5 +1,5 @@
 import "./Home.css"
-
+import Trip from "../Trip";
 const trips =[{ //JSON object examples
     departure: {
         hour: 9,
@@ -36,6 +36,7 @@ function Home(){
                 <h1 className="welcome-text">Welcome back, {driver.name} !</h1>
             </div>
         </div>
+        <Trip departure={trips[0].departure}></Trip>
     </div>
     </>);
 }
