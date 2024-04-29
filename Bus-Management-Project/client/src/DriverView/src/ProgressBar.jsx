@@ -8,7 +8,6 @@ function ProgressBar(props){
     stops} = props;
     return(
         <>
-       
         <div className="progress-bar">
         {stops.map((stop,index)=>(<>
          <span className="progress-bar-time-line">
