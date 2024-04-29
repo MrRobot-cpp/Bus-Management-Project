@@ -1,5 +1,5 @@
 import "./Home.css"
-
+import Trip from "../Trip";
 const trips =[{ //JSON object examples
     departure: {
         hour: 9,
@@ -33,9 +33,13 @@ function Home(){
     <div className="home-container common">
         <div className="welcome-container">
             <div className="welcome">
-                <h1 className="welcome-text">Welcome back, {driver.name} !</h1>
+                <p className="welcome-text">Welcome back, {driver.name} !</p>
             </div>
         </div>
+        <Trip departure={trips[0].departure} arrival={trips[0].arrival}
+        numStudents={trips[0].numStudents} maxNumberStudents={trips[0].maxNumberStudents}
+        speedLimit={trips[0].speedLimit} stops={trips[0].stops}
+        startPoint={trips[0].startPoint} endPoint={trips[0].endPoint}></Trip>
     </div>
     </>);
 }

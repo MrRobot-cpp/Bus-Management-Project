@@ -18,7 +18,7 @@ function VerticalNavbar() {
     }
 
     function handleMouseOver() {
-        setBackgroundColor("#495579");
+        setBackgroundColor("#263159");
         setHoverBox(toggle ? "auto" : "40px");
         setHoverBoxMargin(toggle ? "10px":"20px");
     }

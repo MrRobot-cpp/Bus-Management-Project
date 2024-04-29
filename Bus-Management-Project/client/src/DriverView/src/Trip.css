@@ -1,0 +1,25 @@
+.trip-container{
+    display:block;
+    background-color: red;
+    height:10vh;
+    width: 30vw;
+    /* margin: auto; */
+    padding: 0;
+    transition: 0.9s ease;
+}
+
+
+.trip{
+    display: block;
+    /* background-color: #263159; */
+    background: url(https://images.unsplash.com/photo-1582459542742-29f15404a8d2?q=80&w=1851&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    min-height: 500px;
+    min-width: 40px;
+    height: 5vh;
+    width: 50vw;
+    transition: 0.5s ease;
+}
+.trip-text{
+    color: #FFFBEB;
+}
