@@ -17,7 +17,6 @@ status,
 
 
     return(
-        <div className="trip-container common" >
             <div className="trip">
                 
                     {/* <div className="student-count text-style">
@@ -46,10 +45,7 @@ status,
                     Trip Status: {(status && "Completed")||"Not Completed"} 
                     </p>
                     </div>
-                    
-            </div>
-        </div>
-    
+            </div>    
 )
 }
 export default Trip

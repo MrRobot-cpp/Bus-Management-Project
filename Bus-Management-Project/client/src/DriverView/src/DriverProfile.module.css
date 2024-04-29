@@ -1,0 +1,22 @@
+.driverProfile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #263159;
+    height: 90%;
+    width: 70%;
+    color: #FFFBEB;
+}
+
+.profile{
+    background: red;
+}
+
+.profilePic{
+    
+    background: green;
+}
+
+.driverInfo{
+    background: blue;
+}

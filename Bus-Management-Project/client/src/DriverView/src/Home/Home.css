@@ -42,6 +42,23 @@
     padding-left: 2%;
 }
 
+.trip-container{
+  display:flex;
+  padding: 0;
+  transition: 0.9s ease;
+  font-size: 14px;
+
+}
+
+.driver-profile-container{
+  display:flex;
+  padding: 20px;
+  transition: 0.9s ease;
+  font-size: 14px;
+  height: 60%;
+  width: 50%;
+}
+
  @media screen and (max-height: 400px) {
     .welcome-text {
       font-size: 1.5rem; 

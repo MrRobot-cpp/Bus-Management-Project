@@ -1,13 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 
-.trip-container{
-    display:flex;
-    padding: 0;
-    transition: 0.9s ease;
-    font-size: 14px;
 
-}
 
 
 .trip{
@@ -15,7 +9,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #263159; 
+    background: #263159; 
     /* min-height: 500px; */
     min-width: 40px;
     height: 15%;
