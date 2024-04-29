@@ -1,4 +1,4 @@
-.driverProfile{
+.driver-profile{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -23,7 +23,7 @@
 
 
 
-.profilePic{
+.profile-pic{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,6 +31,10 @@
     height: 90px;
     border-radius: 360px;
     background:#FFFBEB ;
+}
+
+.profile-pic h5{
+  color: #fffbeb55;
 }
 
 .star-rating {
@@ -48,7 +52,7 @@
   }
   
 
-.driverInfo{
+.driver-info{
     display: flex;
     justify-content: space-evenly;
     align-items: center;

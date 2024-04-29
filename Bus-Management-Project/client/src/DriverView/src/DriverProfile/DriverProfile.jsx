@@ -10,13 +10,13 @@ function DriverProfile(props){
   };
 
     return(<>
-        <div className={styles.driverProfile}>
+        <div className={styles['driver-profile']}>
         <div className={styles.profile}>
-        <div className={styles.profilePic}/>
-        <h5>{type}</h5>
+        <div className={styles['profile-pic']}/>
         <h2>{name}</h2>
+        <h5>{type}</h5>
         </div>
-        <div className={styles.driverInfo}>
+        <div className={styles['driver-info']}>
             <h3>Age: {age}</h3>
             <h3>Trips: {noOfTrips}</h3>
         </div>
