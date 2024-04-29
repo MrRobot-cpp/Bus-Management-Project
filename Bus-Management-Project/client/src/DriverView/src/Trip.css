@@ -54,8 +54,24 @@ img{
 }
 
 .extra-trip-info{
+    display: block;
+    flex-direction: column;
+    margin-bottom: 5px;
+    align-items:start;
+    width: 50%;
+    height: auto;
+    transform: translate(-64px,-20px);
+
+}
+
+.extra-trip-info-text{
+    font-size: 0.8em;
+}
+
+.progress-bar-container{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    transform: translate(-32px, 10px);
+
 }

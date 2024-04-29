@@ -1,8 +1,4 @@
-    .progress-bar-container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+    
 
     .progress-bar{
         display: flex;
@@ -36,4 +32,11 @@
         margin: 0;
         padding: 0;
         margin-right: calc(-0.7*16px);
+    }
+
+    .progress-bar-time-line{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transform: translate(10px,-30px);
     }

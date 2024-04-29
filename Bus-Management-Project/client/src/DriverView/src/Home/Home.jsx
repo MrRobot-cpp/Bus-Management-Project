@@ -14,7 +14,7 @@ const trips =[{ //JSON object examples
     numStudents: 20,
     maxNumberStudents: 30,
     speedLimit: 60,
-    stops: ["Stop 1", "Stop 2", "Stop 3"],
+    stops: ["Stop 1", "Stop 2", "Stop 3","Stop 4","Stop 5"],
     startPoint: "School A",
     endPoint: "School B",
     status: false,

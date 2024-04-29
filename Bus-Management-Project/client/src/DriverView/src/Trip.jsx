@@ -22,7 +22,7 @@ status,
             <img src="./herson-rodriguez-w8CcH9Md4vE-unsplash-removebg.png" />
                 
                     <div className="student-count text-style">
-                    Number Of Students: {numStudents} 
+                    Number Of Students: {numStudents} <br />
                     Maximum Student Count: {maxNumberStudents} 
                     </div>
 
@@ -32,12 +32,20 @@ status,
                     Arrival: {`${arrHour} : ${arrMinute} ${arrPeriod}`} <br/>
                     </span> */}
                     {/* Stops: {stops.map((stop,index)=>(`${stop} ,` ))} <br/> */}
-                    <ProgressBar stops={stops} startPoint={startPoint} endPoint={endPoint}/>
+                    <div className="progress-bar-container">
+                    <ProgressBar stops={stops} startPoint={startPoint} endPoint={endPoint}
+                     departure={{ hour: depHour, minute: depMinute, period: depPeriod }}
+                     arrival={{ hour: arrHour, minute: arrMinute, period: arrPeriod }} />
+                    </div>
                     </div>
                     
                     <div className="extra-trip-info text-style">
-                    Speed Limit: {speedLimit} 
-                    Trip Status: {status} 
+                    <p className="speed-limit extra-trip-info-text">
+                    Speed Limit: {`${speedLimit} mph`}
+                    </p>
+                    <p className="trip-status extra-trip-info-text"> 
+                    Trip Status: {(status && "Completed")||"Not Completed"} 
+                    </p>
                     </div>
                     
             </div>
