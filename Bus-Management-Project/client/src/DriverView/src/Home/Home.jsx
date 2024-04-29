@@ -16,7 +16,8 @@ const trips =[{ //JSON object examples
     speedLimit: 60,
     stops: ["Stop 1", "Stop 2", "Stop 3"],
     startPoint: "School A",
-    endPoint: "School B"
+    endPoint: "School B",
+    status: false,
 }];
 
 const driver={  //JSON object example
@@ -39,7 +40,8 @@ function Home(){
         <Trip departure={trips[0].departure} arrival={trips[0].arrival}
         numStudents={trips[0].numStudents} maxNumberStudents={trips[0].maxNumberStudents}
         speedLimit={trips[0].speedLimit} stops={trips[0].stops}
-        startPoint={trips[0].startPoint} endPoint={trips[0].endPoint}></Trip>
+        startPoint={trips[0].startPoint} endPoint={trips[0].endPoint} 
+        status={trips[0].status}></Trip>
     </div>
     </>);
 }
