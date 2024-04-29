@@ -51,11 +51,10 @@ a{
     display: flex;
     justify-content: center;
     text-align: center;
-    box-sizing: border-box;
-    width: 900px;
-    height: 790px;
+    box-sizing:content-box;
+    width: 800px;
+    height: 680px;
     background-color: #FFFBEB;
-    border-radius: 40px;
     padding: 20px;
     margin: 12px;
 }

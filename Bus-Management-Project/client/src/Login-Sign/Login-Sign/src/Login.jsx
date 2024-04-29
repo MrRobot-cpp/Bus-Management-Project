@@ -4,6 +4,7 @@ import './loginStyle.css'; // Assuming you have this CSS file in your project
 
 function Login() {
     return (
+        <>
         <div className="login-container">
             <form>
                 <h1>Sign In</h1>
@@ -37,6 +38,7 @@ function Login() {
                 </div>
             </form>
         </div>
+        </>
     );
 }
 export default Login;
