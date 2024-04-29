@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, {useState} from "react";
 import "./StudentProfile.css";
 
@@ -39,7 +40,6 @@ function StudentProfile() {
         <>
         <div className="card-container">
          <div className="card">
-
                 <div className="card-info">
                     <div className="top-profile">    
                     <div className="left-profile">
@@ -78,6 +78,9 @@ function StudentProfile() {
                         </table>
     
     </div>
+    <div className="personal-info">
+                        <h2 >Upcoming Trip</h2>
+                    </div>
             </div>
         </div>
         </>
