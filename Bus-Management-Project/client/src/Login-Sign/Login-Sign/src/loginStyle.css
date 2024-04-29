@@ -33,7 +33,7 @@ input{
     background-color: #FFFBEB;
     width: 14px;
     height: 20px;
-    transform: translate(120px,-14px);
+    transform: translate(20px,-14px);
     padding-left: 5px;
     padding-right: 30px;
     margin: 2px;
@@ -57,4 +57,5 @@ a{
     background-color: #FFFBEB;
     padding: 20px;
     margin: 12px;
+    border-radius: 400px;
 }
