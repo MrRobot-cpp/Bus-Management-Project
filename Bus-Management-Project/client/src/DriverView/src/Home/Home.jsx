@@ -1,6 +1,7 @@
 import "./Home.css"
 import Trip from "../Trip/Trip";
 import DriverProfile from "./DriverProfile/DriverProfile";
+import DateOrganizer from "../DateOrganizer";
 const trips =[{ //JSON object examples
     departure: {
         hour: 9,
@@ -36,6 +37,8 @@ const driver={  //JSON object example
 function Home(){
     return(<>
     <div className="home-container common">
+
+        <div className="left-container">
         <div className="welcome-container">
             <div className="welcome">
                 <p className="welcome-text">Welcome Home!</p>
@@ -52,6 +55,11 @@ function Home(){
         speedLimit={trips[0].speedLimit} stops={trips[0].stops}
         startPoint={trips[0].startPoint} endPoint={trips[0].endPoint} 
         status={trips[0].status}></Trip>
+        </div>
+        </div>
+
+        <div className="data-organizer-container">
+            <DateOrganizer/>
         </div>
 
     </div>
