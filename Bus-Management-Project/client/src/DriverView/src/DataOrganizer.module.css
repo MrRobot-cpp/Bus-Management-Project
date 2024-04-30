@@ -1,0 +1,9 @@
+.data-organizer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    height: 90%;
+    margin-right: 30px;
+    background: #263159;
+}

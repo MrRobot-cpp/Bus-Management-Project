@@ -58,9 +58,11 @@ function Home(){
         </div>
         </div>
 
+        <div className="right-container">
         <div className="data-organizer-container">
             <DateOrganizer/>
         </div>
+        </div> 
 
     </div>
     </>);
