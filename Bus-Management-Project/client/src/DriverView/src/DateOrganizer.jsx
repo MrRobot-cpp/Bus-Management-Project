@@ -21,13 +21,23 @@ function DateOrganizer(props){
     <div className={styles['data-organizer']}>
         <div className={styles['data']}>
             <h2>Schedule</h2>
+
             <span>
             <p>{currentDayOfMonth} {currentMonth},{currentDay}</p>
             <p><i class='fas fa-angle-down'></i></p>
             </span>
+
          <div className={styles['current-data']}>
             
-        </div>   
+        </div> 
+
+        <span>
+        <h3>Upcoming</h3>
+        <h3><i class='fas fa-angle-down'></i></h3>
+        </span>
+
+        <div className={styles['upcoming-data']}></div> 
+
         </div>
     </div>
     </>

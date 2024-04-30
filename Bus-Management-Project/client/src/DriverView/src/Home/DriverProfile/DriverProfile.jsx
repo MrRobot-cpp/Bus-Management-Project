@@ -14,7 +14,7 @@ function DriverProfile(props){
         <div className={styles.profile}>
         <div className={styles['profile-pic']}/>
         <h2>{name}</h2>
-        <h5>{type}</h5>
+        <h5 className={styles['type-text']}>{type}</h5>
         </div>
         <div className={styles['driver-info']}>
             <h3>Age: {age}</h3>
