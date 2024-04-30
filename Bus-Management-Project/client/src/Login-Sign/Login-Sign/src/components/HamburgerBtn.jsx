@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
 import './HamburgerBtn.css';
 
 function HamburgerBtn(props) {
+    // eslint-disable-next-line react/prop-types
     const { toggle, transform, backgroundColor } = props;
 
     

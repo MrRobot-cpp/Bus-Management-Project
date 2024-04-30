@@ -1,6 +1,6 @@
 import "./Home.css"
-import Trip from "../Trip/Trip";
-import DriverProfile from "./DriverProfile/DriverProfile";
+import Trip from "./Trip";
+import DriverProfile from "./DriverProfile";
 import DateOrganizer from "../DateOrganizer";
 const trips =[{ //JSON object examples
     departure: {

@@ -1,7 +1,7 @@
+// eslint-disable-next-line no-unused-vars
 import React, {useState} from "react";
-import HamburgerBtn from "../HamburgerBtn/HamburgerBtn";
+import HamburgerBtn from "./HamburgerBtn";
 import "./VerticalNavbar.css";
-
 
 function VerticalNavbar() {
     const [toggle, setToggle] = useState(true);
@@ -55,7 +55,7 @@ function VerticalNavbar() {
                             onMouseOut={handleMouseOut} style={{width: hoverBox}}>
                                 <HamburgerBtn className="hamburger-btn" transform="translate(-10px,-20px)" 
                                 backgroundColor={backgroundColor} toggle={toggle}/>
-                                 {toggle && "Dashboard"}
+                                {toggle && "Dashboard"}
                             </a>
                         </li>
                         {menuItems.map((item, index) => (

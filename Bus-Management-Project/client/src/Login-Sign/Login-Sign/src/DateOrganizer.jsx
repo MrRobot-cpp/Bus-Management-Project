@@ -14,7 +14,8 @@ const currentDayOfMonth = currentDate.getDate();
 
 
 
-function DateOrganizer(props){
+// eslint-disable-next-line no-unused-vars
+function DateOrganizer(_props){
     // const [lineStart,lineEnd,day]=props
     return(<>
     <link src='https://kit.fontawesome.com/a076d05399.js'></link>
@@ -24,16 +25,16 @@ function DateOrganizer(props){
 
             <span>
             <p>{currentDayOfMonth} {currentMonth},{currentDay}</p>
-            <p><i class='fas fa-angle-down'></i></p>
+            <p><i className='fas fa-angle-down'></i></p>
             </span>
 
-         <div className={styles['current-data']}>
+        <div className={styles['current-data']}>
             
         </div> 
 
         <span>
         <h3>Upcoming</h3>
-        <h3><i class='fas fa-angle-down'></i></h3>
+        <h3><i className='fas fa-angle-down'></i></h3>
         </span>
 
         <div className={styles['upcoming-data']}></div> 
