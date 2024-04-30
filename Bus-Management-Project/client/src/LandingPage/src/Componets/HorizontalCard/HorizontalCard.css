@@ -1,0 +1,34 @@
+
+.horizontal-card {
+    background-color: #495579;
+    padding: 96px;
+  }
+
+  .horizontal-card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* flex-direction: row-reverse;       for horizontal cards section */
+  }
+
+  .horizontal-card-info{
+        color: #ffffff;
+        width: 430px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+  }
+
+  .hc-image {
+    width: 500px;
+  }
+
+  
+  @media (max-width: 992px) {
+    .horizontal-card-content {
+        flex-direction: column;
+    }
+
+    
+
+  }

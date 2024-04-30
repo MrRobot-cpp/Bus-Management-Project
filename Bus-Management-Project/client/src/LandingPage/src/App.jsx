@@ -1,6 +1,8 @@
 import MenuItemButtonRegular from "./Componets/MenuItemButton/MenuItemButtonRegular.jsx"
-import MenuItemButtonHighlighted from "./Componets/MenuItemButton/MenuItemButtonHighLighted.jsx";
 import "./Componets/MenuItemButton/MenuItemButton.css"
+import HorizontalCard from "./Componets/HorizontalCard/HorizontalCard.jsx";
+import FeatureCard from "./Componets/FeaturesCard/FeatureCard.jsx";
+import MenuItemButtonHighlighted from "./Componets/MenuItemButton/MenuItemButtonHighLighted.jsx";
 
 
 
@@ -31,7 +33,9 @@ function App() {
               <li className="list"><MenuItemButtonRegular text="Contact Us" href="#" /></li>
           </ul>
 
-          <MenuItemButtonHighlighted text="Login" />
+          <button className="menu-item-highlighted header-login-btn">Learn More</button>
+
+
           <div className="toggle-btn" onClick={toggleDropDown}>
               <i className="fa-solid fa-bars toggle-btn-logo"></i>
           </div>
@@ -48,7 +52,27 @@ function App() {
     </nav>
     {/* End of Header */}
 
+    {/* Horizontal Card Section (component) */}
+    <HorizontalCard imageSide={"row"}/>
   
+
+    {/* Features Card Section */}
+    {/* <div className="features-container">
+      <h2 className="features-subheader">Features</h2>
+      <div className="features-display">
+        <FeatureCard />
+        <FeatureCard />
+        <FeatureCard />
+        <FeatureCard />
+      </div>
+      <div className="features-btn">
+          <MenuItemButtonHighlighted text="Learn more " />
+      </div>
+    </div> 
+    */}
+
+
+
     </>
   );
 }

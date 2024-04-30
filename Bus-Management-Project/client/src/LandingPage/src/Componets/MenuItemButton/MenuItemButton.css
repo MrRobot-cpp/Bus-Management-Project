@@ -38,13 +38,13 @@
 }
 
 /* link hover animation */
-.link-animation-regular {
+.link-animation {
     position: relative;
     color: #000;
     text-decoration: none;
   }
   
-  .link-animation-regular::before {
+  .link-animation::before {
     content: "";
     position: absolute;
     display: block;
@@ -57,8 +57,10 @@
     transition: transform 0.3s ease;
   }
   
-  .link-animation-regular:hover::before {
+  .link-animation:hover::before {
     transform: scaleX(1);
+    color: #495579;
+
   }
 
   .link-animation-highlighted {
