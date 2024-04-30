@@ -20,7 +20,7 @@ function Login() {
         setPassword(value);
         setPasswordError(validatePassword(value) ? '' : 'Password must be at least 8 characters');
     };
-
+    
     const handleSubmit = (e) => {
         e.preventDefault();
         // Here you can add further validation if needed
