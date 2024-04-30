@@ -1,13 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 
-.trip-container{
-    display:flex;
-    padding: 0;
-    transition: 0.9s ease;
-    font-size: 14px;
 
-}
 
 
 .trip{
@@ -15,13 +9,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #263159; 
+    background: #263159; 
     /* min-height: 500px; */
     min-width: 40px;
     height: 15%;
-    width: 50%;
-    padding-top: 20px;
-    margin-left: 100px;
+    width: 66%;
+    padding-top: 5px;
+    margin-left: 45px;
     margin-right: 10px;
     border-radius: 15px;
     transition: 0.5s ease;
@@ -31,17 +25,13 @@
     height: 50px;
     width: 100px
 }*/
-img{
-    display: flex;
-    height: 200px;
-    width:  300px;
-    transform: translateY(-40px);
-  
-}
+
 .text-style{
-    transform: translateY(-40px);
+    /* transform: translateY(-40px); */
     color: #FFFBEB;
     margin: 10px;
+    margin-right: 17.5px;
+    padding-top: 10px;
 }
 
 .student-count{
@@ -50,12 +40,30 @@ img{
     width: 50%;
     height: auto;
     flex-direction: row;
-    transform: translate(-64px,-40px);
+    /* transform: translate(-100px,-70px); */
 }
 
 .extra-trip-info{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+    align-items:start;
+    width: 50%;
+    height: auto;
+    transform: translate(-64px,0px);
+
+}
+
+.extra-trip-info-text{
+    font-size: 0.8em;
+}
+
+.progress-bar-container{
+    display: flex;
+    justify-content: center;
     align-items: center;
+    /* transform: translate(0px, 20px); */
+
 }

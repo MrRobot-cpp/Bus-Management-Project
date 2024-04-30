@@ -2,56 +2,114 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 
 .home-container{
+    display: flex;
+    flex-direction: row ;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 80vw;
+    /*
+    padding-top: 20px;
+    margin-left: 100px;
+    margin-right: 10px; */
+}
+.left-container{
+  display: block;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding-top: 20px;
+  margin-left: 30px;
+  /* transform: translateX(160px);*/
+}
+
+.right-container{
+  display: block;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 80%;
+  padding-top: 20px;
+  margin-right: -10em;
+  transform: translateX(-137px);
+}
+
+.data-organizer-container{
+    display:flex;
+    padding: 20px;
+    transition: 0.9s ease;
+    font-size: 14px;
+    height: 100%;
+    width: 100%;
+}
+
+
+.welcome-container{
     display: block;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 80vw;
-    padding-top: 20px;
-    margin-left: 100px;
-    margin-right: 10px;
-}
-
-.welcome-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 30vh;
+    height: 10vh;
     width: 60vw;
     float: top;
-    padding-top: 20px;
-    margin-left: 80px;
+    margin-left: 10px;
+    /*margin-left: -10px;*/
 }
 
 .welcome{
-    display: flex; 
+    display: block;
     justify-content: center;
     align-items: center;
     max-height: 200px;
     height: 50%;
     width: 70%;
-    border-radius: 15px;
-    background: #263159;
+    /* margin-left: -20px; */
+    /* border-radius: 15px;
+    background: #263159; */
 }
 
 .welcome-text{
     display: flex;
-    color: #FFFBEB;
+    color: #263159;
     font-size: 2rem;
+    padding-left: 10%;
 }
+
+.trip-container{
+  display:flex;
+  padding: 0;
+  transition: 0.9s ease;
+  font-size: 14px;
+
+}
+
+.driver-profile-container{
+  display:flex;
+  padding: 20px;
+  transition: 0.9s ease;
+  font-size: 14px;
+  height: 60%;
+  width: 50%;
+}
+
+
 
  @media screen and (max-height: 400px) {
     .welcome-text {
-      font-size: 1.5rem; 
+      font-size: 1.5rem;
       transition: 0.2s ease-in-out;
     }
   }
-  
-  
-  
+
+
+
   @media screen and (max-width: 720px) {
     .welcome-text {
       font-size: 1.5rem;
       transition: 0.2s ease-in-out;
     }
-  } 
+  }

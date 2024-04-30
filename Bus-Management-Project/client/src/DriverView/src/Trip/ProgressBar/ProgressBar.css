@@ -1,8 +1,4 @@
-    .progress-bar-container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+    
 
     .progress-bar{
         display: flex;
@@ -17,8 +13,8 @@
         align-items: center;
         border-radius: 80px;
         background: #FFFBEB;
-        width: 32px;
-        height: 32px;
+        width: 42px;
+        height: 42px;
         margin: 0;
         padding: 0;
         border: none;
@@ -30,10 +26,17 @@
 
     .bar{
         border: none;
-        height: 1vh;
+        height: 2vh;
         width: 5vw;
         background: #FFFBEB;
         margin: 0;
         padding: 0;
         margin-right: calc(-0.7*16px);
+    }
+
+    .progress-bar-time-line{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transform: translate(10px,-30px);
     }

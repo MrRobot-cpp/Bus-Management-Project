@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import "./Trip.css"
-import ProgressBar from "./ProgressBar";
+import ProgressBar from "./ProgressBar/ProgressBar";
 function Trip(props){
 const { departure: { hour: depHour, minute: depMinute, period: depPeriod } 
 = { hour: 0, minute: 0, period: 'AM' },
@@ -17,14 +17,12 @@ status,
 
 
     return(
-        <div className="trip-container common" >
             <div className="trip">
-            <img src="./herson-rodriguez-w8CcH9Md4vE-unsplash-removebg.png" />
                 
-                    <div className="student-count text-style">
-                    Number Of Students: {numStudents} 
+                    {/* <div className="student-count text-style">
+                    Number Of Students: {numStudents} <br />
                     Maximum Student Count: {maxNumberStudents} 
-                    </div>
+                    </div> */}
 
                     <div className="time-line text-style">
                     {/* <span className="arrival-departure">
@@ -32,17 +30,22 @@ status,
                     Arrival: {`${arrHour} : ${arrMinute} ${arrPeriod}`} <br/>
                     </span> */}
                     {/* Stops: {stops.map((stop,index)=>(`${stop} ,` ))} <br/> */}
-                    <ProgressBar stops={stops} startPoint={startPoint} endPoint={endPoint}/>
+                    <div className="progress-bar-container">
+                    <ProgressBar stops={stops}
+                     departure={{ hour: depHour, minute: depMinute, period: depPeriod }}
+                     arrival={{ hour: arrHour, minute: arrMinute, period: arrPeriod }} />
+                    </div>
                     </div>
                     
                     <div className="extra-trip-info text-style">
-                    Speed Limit: {speedLimit} 
-                    Trip Status: {status} 
+                    <p className="speed-limit extra-trip-info-text">
+                    Speed Limit: {`${speedLimit} mph`}
+                    </p>
+                    <p className="trip-status extra-trip-info-text"> 
+                    Trip Status: {(status && "Completed")||"Not Completed"} 
+                    </p>
                     </div>
-                    
-            </div>
-        </div>
-    
+            </div>    
 )
 }
 export default Trip
