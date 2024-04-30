@@ -6,15 +6,16 @@ function Signup() {
         <div className="Creation-container">
             <form>
                 <h1>Create Account</h1>
-                <br />
-                <br />
+                <div className='labels-container'>
                 <div className='names'>
+                    <div className='name-div'>
                     <div className="top-border"><label htmlFor="Text">First Name</label></div>
                     <input type="text" />
-                    <br />
-                    <br />
+                    </div>
+                    <div className='name-div'>
                     <div className="top-border"><label htmlFor="Text">Last Name</label></div>
                     <input type="text" />
+                </div>
                 </div>
                 <br />
                 <div>
@@ -32,7 +33,12 @@ function Signup() {
                     <input type="password" id="Password" maxLength="20" required />
                 </div>
                 <br />
-                <a className="Forgot-Password" href="">Forgot Password?</a>
+                </div>
+                <div className='termsLine'>
+                    <input className='checker' type="checkbox" />
+                <h5>I Have Read the<a className="Forgot-Password" href=""> Terms & Conditions</a></h5>
+                </div>
+                <br />
                 <div>
                     <button type="submit" id="submit">Sign Up</button>
                 </div>
