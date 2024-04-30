@@ -1,9 +1,41 @@
 .data-organizer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60vw;
-    height: 90%;
-    margin-right: 30px;
+    display: block;
+    width: 90%;
+    height: 91%;
     background: #263159;
+    margin-left: -10px;
+    border-radius: 20px;
+    padding: 0;
+    transform: translateY(50px);
 }
+
+.data{
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.data span p{
+    display: inline-block;
+    justify-content:space-between;
+    align-items: center;
+    color: #FFFBEB;
+}
+
+.data span p:nth-child(2){
+    margin-left: 150px;
+}
+
+.data h2{
+    color: hsl(60, 20%, 80%);;
+}
+
+.current-data{
+    display: flex;
+    width: 80%;
+    height: 30%;
+    background: blue;
+}
+
