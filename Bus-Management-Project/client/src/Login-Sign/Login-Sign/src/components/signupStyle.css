@@ -25,9 +25,6 @@ form{
     flex-direction: row;
     justify-content: space-between;
 }
-.name-div{
-
-}
 .name-div input{
     width: 18em;
     margin-right:0.45em ;

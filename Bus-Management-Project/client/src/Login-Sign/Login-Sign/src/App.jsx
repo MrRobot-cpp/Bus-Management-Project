@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
-//  import Login from './Login';
-import Signup from './signUp';
+//  import Login from './components/Login.jsx';
+import Signup from './components/signUp.jsx';
 
 function App() {
     return (
