@@ -2,15 +2,17 @@
 import React from 'react';
 // import Login from './components/Login.jsx';
 //import Signup from './components/signUp.jsx';
-import StudentProfile from './components/StudentProfile';
-// import VerticalNavbar from './components/VerticalNavbar';
+//import StudentProfile from './components/StudentProfile';
+import VerticalNavbar from './components/VerticalNavbar';
+import Home from './components/Home'
 function App() {
     return (
         <div>
             {/* <Login /> */}
             {/* <Signup /> */}
-            {/* <VerticalNavbar /> */}
-            <StudentProfile />
+            <Home />
+            <VerticalNavbar />
+            {/* <StudentProfile /> */}
         </div>
     );
 }
