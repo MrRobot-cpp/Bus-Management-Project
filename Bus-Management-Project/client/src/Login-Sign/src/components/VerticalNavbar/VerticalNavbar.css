@@ -6,7 +6,6 @@
     overflow: hidden;
     margin: 0;
     padding: 0;
-    justify-content: center;
 }
 
 .header{
@@ -22,8 +21,9 @@
 }
 
 .vertical-navbar-container{
-    display:block;
+    display:flex;
     justify-content: center;
+    align-items: center ;
     float: left;
     background: transparent;
     height: 100vh; 
@@ -36,8 +36,9 @@
 
 .vertical-navbar{
     display: flex;
-    justify-content: center;
     background-color: #263159;
+    justify-content: center;
+    align-items: center ;
     float: left;
     min-height: 500px;
     height: 100%;
@@ -58,25 +59,29 @@ ul li{
 
 ul li a{
     display: flex;
-    align-items: center;
+    align-items: center;  
+    justify-content: center;
     color: #FFFBEB;
     font-weight: 400;
-    font-size: 2vh;
+    font-size: 2.3vh;
     text-transform: capitalize;
     padding: 0;
     /* height: 40px; */
     height: 7vh;
+    margin-left: 3px;
+    text-align: center;
     text-decoration: none;
     transition: 0.5s ease;
+    margin-right: 20px;
 }
 
 
 
 ul li a i{
-    display: flex;
+    display: block;
     align-items: center;
     width: 40px;
-    text-align: center; 
+    font-size: 3vh;
   
 }
 
@@ -88,9 +93,7 @@ ul li a:hover {
     transition: 0.5s ease;
 }
 
-ul li:nth-child(1) a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-right: 50px;
+.hamburger-btn-line a{
+  display: flex;
+  flex-direction: row-reverse;
 }
