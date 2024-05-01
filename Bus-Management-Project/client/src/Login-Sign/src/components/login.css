@@ -1,20 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
-:root {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    line-height: 1;
-    font-weight: 400;
-    color-scheme: light dark;
-    background-color: #242424;
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
 *{
+    margin: 0;
+    padding: 0;
+}
+.login{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
     font-family: "Inter", sans-serif;
     align-items: center;
+<<<<<<< HEAD
     /* background-color: #263159; */
 }
 body{
@@ -24,29 +25,30 @@ body{
     box-sizing: border-box;
     margin: 0;
     display: flex;
+=======
+    background-color: #263159;
+>>>>>>> 09e052e6c5b4daf3fba88d52a50676cf8f6e6535
     place-items: center;
-    min-width: 320px;
-    min-height: 100vh;
 }
-form{
+.login-form{
+    margin-top: auto;
+    margin-bottom: auto;
     color: #263159;
     background-color: #FFFBEB;
+
 }
-h1{
+.login-header{
     font-size: 3.2em;
     line-height: 1.1;
     color: #263159;
 }
-diV *{
-    background-color: #FFFBEB;
-}
-
-input{
+.login-input{
     border-radius: 8px;
     width: 508px;
     height: 40px;
     padding-left: 10px;
     margin: 5px;
+    background-color: #FFFBEB;
 }
 .top-border{
     position: absolute;
@@ -56,7 +58,7 @@ input{
     padding-right: 5px;
     margin: 2px;
 }
-a{
+.create-account-login-link{
     font-weight: 500;
     color: #646cff;
     text-decoration: inherit;
@@ -65,13 +67,17 @@ a{
     color: #263159;
     padding: 8px;
     font-size: 3.2em;
+    background-color: #FFFBEB;
 }
-a:hover {
+.social-icons a:hover {
     color: #535bf2;
 }
 .Forgot-Password{
     margin-left: 380px;
     background-color: transparent;
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit;
 }
 .not-regist{
     transform: translate(-230px,-14px);
@@ -89,7 +95,7 @@ a:hover {
     margin: 12px;
     border-radius: 400px;
 }
-button {
+.Login-btn{
     width: 210px;
     height: 64px;
     border-radius: 8px;
@@ -107,18 +113,15 @@ button {
     margin: 2em;
 
 }
-button:hover{
+.Login-btn:hover{
     transition: 0.5s ease;
     transform: scale(1.1);
     border-color: #646cff;
 }
-button:focus,
-button:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
-}
 .login-container{
     display: flex;
     justify-content: center;
+    align-items: center;
     text-align: center;
     box-sizing: border-box;
     width: 900px;
@@ -127,16 +130,4 @@ button:focus-visible {
     border-radius: 40px;
     padding: 20px;
     margin: 12px;
-}
-@media (prefers-color-scheme: light) {
-:root{
-    color: #213547;
-    background-color: #ffffff;
-    }
-    a:hover {
-    color: #747bff;
-    }
-    button {
-    background-color: #263159;
-    }
 }

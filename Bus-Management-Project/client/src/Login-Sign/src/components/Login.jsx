@@ -33,33 +33,34 @@ function Login() {
         }
     };
     return (
-        <>
+        <div className='login'>
         <div className="login-container">
-            <form onSubmit={handleSubmit}>
-                <h1>Sign In</h1>
+            <form className='login-form' onSubmit={handleSubmit}>
+                <h1 className='login-header'>Sign In</h1>
                 <br />
                 <br />
-                <div>
+                <div className='login-div-holder'>
                     <div className="top-border"><label htmlFor="Email"> Email</label></div>
-                    <input type="email" id="Email" value={email} onChange={handleEmailChange}/>
+                    <input className='login-input' type="email" id="Email" value={email} onChange={handleEmailChange}/>
                     <br />
                     {emailError && <span className='error'>{emailError}</span>}
                 </div>
                 <br />
-                <div>
+                <div className='login-div-holder'>
                     <div className="top-border"><label htmlFor="Password"> Password</label></div>
-                    <input type="password" id="Password" maxLength="20" value={password} onChange={handlePasswordChange} />
+                    <input className='login-input' type="password" id="Password" maxLength="20" value={password} onChange={handlePasswordChange} />
                     <br />
                     {passwordError && <span className='error'>{passwordError}</span>}
                 </div>
                 <br />
                 <a className="Forgot-Password" href="">Forgot Password?</a>
                 <br />
-                <div>
-                    <button type="submit" id="submit">Login</button>
+                <div className='login-div-holder'>
+                    <button className='Login-btn' type="submit" id="submit">Login</button>
                 </div>
-                <h4 className="not-regist">Not Registered yet? <a href="">Create An Account</a></h4>
+                <h4 className="not-regist">Not Registered yet? <a className='create-account-login-link' href="">Create An Account</a></h4>
                 <h4>Or Join with</h4>
+                <br />
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
                 <div className="social-icons">
                     <a href=""><i className="fab fa-google"></i></a>
@@ -68,7 +69,7 @@ function Login() {
                 </div>
             </form>
         </div>
-        </>
+        </div>
     );
 }
 export default Login;

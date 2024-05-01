@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1;
+    font-weight: 400;
+    color-scheme: light dark;
+    background-color: #242424;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 *{
     font-family: "Inter", sans-serif;
     align-items: center;
@@ -10,6 +21,11 @@ body{
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
+    margin: 0;
+    display: flex;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
 }
 form{
     color: #263159;
@@ -32,32 +48,48 @@ form{
 
 }
 h1{
+    font-size: 3.2em;
+    line-height: 1.1;
     color: #263159;
 }
 diV *{
     background-color: #FFFBEB;
 }
-
+a{
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit;
+}
+.social-icons a {
+    color: #263159;
+    padding: 8px;
+    font-size: 3.2em;
+}
+a:hover {
+    color: #535bf2;
+}
 input{
     border-radius: 8px;
     width: 508px;
     height: 40px;
     padding-left: 10px;
+    margin: 5px;
 }
 .termsLine{
     position: absolute;
+    transform: translate(110px,-30px);
     background-color: transparent;
 }
 .checker{
-    width: 17px;
-    height: 17px;
-    transform: translateY(3px);
+    width: 15px;
+    height: 15px;
+    transform: translateY(4px);
 }
 .top-border{
     position: absolute;
     background-color: #FFFBEB;
     height: 20px;
-    transform: translate(30px,-14px);
+    transform: translate(20px,-5px);
     padding-left: 5px;
     padding-right: 5px;
     margin: 2px;
@@ -69,6 +101,7 @@ button{
     border-radius: 40px;
     width: 200px;
     height: 60px;
+    margin: 5px;
 }
 a{
     color: #0A45F6;
@@ -85,6 +118,33 @@ a{
     padding: 8px;
     font-size: 3.2em;
 }
+button {
+    width: 210px;
+    height: 64px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1.2em;
+    font-weight: 500;
+    font-family: inherit;
+    color: #FFFBEB;
+    background-color: #263159;
+    border-radius: 15px;
+    margin: 12px;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    margin: 2em;
+
+}
+button:hover{
+    transition: 0.5s ease;
+    transform: scale(1.1);
+    border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+}
 .Creation-container{
     display: flex;
     justify-content: center;
@@ -97,3 +157,19 @@ a{
     padding: 20px;
     margin: 12px;
 }
+span{
+    background-color: transparent;
+    margin: 2px;
+}
+@media (prefers-color-scheme: light) {
+    :root{
+        color: #213547;
+        background-color: #ffffff;
+        }
+        a:hover {
+        color: #747bff;
+        }
+        button {
+        background-color: #263159;
+        }
+    }
