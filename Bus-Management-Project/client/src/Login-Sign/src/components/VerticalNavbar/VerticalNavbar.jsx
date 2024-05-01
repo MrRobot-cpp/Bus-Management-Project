@@ -37,19 +37,18 @@ function VerticalNavbar() {
         { icon: "fa-solid fa-user", text: "Profile" },
         { icon: "fa-solid fa-arrow-right-from-bracket", text: "LogOut" },
     ];
-   
 
     return (
-        <>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-            <div className="vertical-navbar-container common">
-                <div className="vertical-navbar">
+    <>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+        <div className="vertical-navbar-container common">
+            <div className="vertical-navbar">
                     <ul>
-                        <li style={{marginLeft: hoverBoxMargin}}>
-                         <div className="header">
-                            <h2>{(toggle && "RouteMinder.")||"RM."}</h2>
-                         </div>
-                        </li>
+                    <li style={{marginLeft: hoverBoxMargin}}>
+                        <div className="header">
+                        <h2>{(toggle && "RouteMinder.")||"RM."}</h2>
+                        </div>
+                    </li>
                         <li style={{marginLeft: hoverBoxMargin}}>
                             <a href="#" className="dashboard-link" onClick={handleToggle} onMouseOver={handleMouseOver} 
                             onMouseOut={handleMouseOut} style={{width: hoverBox}}>
@@ -61,15 +60,14 @@ function VerticalNavbar() {
                         {menuItems.map((item, index) => (
                             <li key={index} style={{marginLeft: hoverBoxMargin}}>
                                 <a href="#" style={{width: hoverBox}}>
-                                <i className={`fa-solid ${item.icon}`}></i>
                                 {toggle && item.text}
                                 </a>
                             </li>
                         ))}
                     </ul>
-                </div>
             </div>
-        </>
+        </div>
+    </>
     );
 }
 

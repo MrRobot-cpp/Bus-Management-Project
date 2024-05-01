@@ -6,6 +6,7 @@
     overflow: hidden;
     margin: 0;
     padding: 0;
+    justify-content: center;
 }
 
 .header{
@@ -60,7 +61,7 @@ ul li a{
     align-items: center;
     color: #FFFBEB;
     font-weight: 400;
-    font-size: 3.2vh;
+    font-size: 2vh;
     text-transform: capitalize;
     padding: 0;
     /* height: 40px; */

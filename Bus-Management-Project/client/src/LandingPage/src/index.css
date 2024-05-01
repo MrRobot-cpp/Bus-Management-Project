@@ -6,6 +6,10 @@
     font-family: "Istok Web", sans-serif;
 }
 
+body {
+  background-color: #495579;
+}
+
 /* header section */
 .header {
     display: block;
@@ -93,50 +97,56 @@
   }
 
 
+  /* features card */
 
-/*  
-
-  .features-container {
-    height: 435px;
+  .feature-card-container {
     background: #495579;
-    padding: 96px;
+    height: 439px;
     padding-top: 0;
-  }
-
-  .features-display {
+    margin: 0;
     display: flex;
-    align-content: center;
-    gap: 16px;
-    padding: 40px 0;
-    translate: 0 40px;
-  }
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+}
 
-  .features-btn, .features-subheader {
-    display: flex;
-    justify-content: center;
-  }
-
-  .features-subheader {
+.features-title {
+    font-size: 32px;
     color: #fff;
-    font-size: 34px;
-  } */
+}
 
-     /* responsive design */
-     @media (max-width: 1121px) {
-      .unordered-list, .header-login-btn {
-          display: none;
-      }
-  
-      .toggle-btn {
-          display: block;
-          margin-left: 50px;
-          margin-right: 50px;
-      }
-  
-      .dropdown-menu {
-          display: block;
-      }
+.feature-card-display {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 44px;
+  gap: 24px;
+}
+
+  /* responsive design */
+  @media (max-width: 1121px) {    
+    .unordered-list, .header-login-btn {
+        display: none;
     }
+
+    .toggle-btn {
+        display: block;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .dropdown-menu {
+        display: block;
+    }
+
+    .feature-card-display {
+        display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+
+  }
 
   @media (max-width: 576px) {
     .dropdown-menu {
