@@ -15,19 +15,7 @@
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
     align-items: center;
-<<<<<<< HEAD
-    /* background-color: #263159; */
-}
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    margin: 0;
-    display: flex;
-=======
     background-color: #263159;
->>>>>>> 09e052e6c5b4daf3fba88d52a50676cf8f6e6535
     place-items: center;
 }
 .login-form{
