@@ -60,14 +60,12 @@ ul li a{
     font-size: 3.2vh;
     text-transform: capitalize;
     padding: 0;
-    height: 40px;
+    /* height: 40px; */
+    height: 7vh;
     text-decoration: none;
     transition: 0.5s ease;
 }
 
-ul li a{
-    font-size: 20px;
-}
 
 
 ul li a i{
