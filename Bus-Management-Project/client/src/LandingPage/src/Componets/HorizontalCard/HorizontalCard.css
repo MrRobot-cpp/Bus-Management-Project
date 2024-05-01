@@ -2,12 +2,14 @@
 .horizontal-card {
     background-color: #495579;
     padding: 96px;
+    margin: 0;
   }
 
   .horizontal-card-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: auto;
     /* flex-direction: row-reverse;       for horizontal cards section */
   }
 
@@ -26,9 +28,8 @@
   
   @media (max-width: 992px) {
     .horizontal-card-content {
-        flex-direction: column;
+        margin: 0 auto;
+        display: table;
     }
-
-    
 
   }

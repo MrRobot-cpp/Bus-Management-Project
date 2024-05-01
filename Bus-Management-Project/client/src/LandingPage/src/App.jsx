@@ -1,9 +1,8 @@
 import MenuItemButtonRegular from "./Componets/MenuItemButton/MenuItemButtonRegular.jsx"
 import "./Componets/MenuItemButton/MenuItemButton.css"
 import HorizontalCard from "./Componets/HorizontalCard/HorizontalCard.jsx";
-import FeatureCard from "./Componets/FeaturesCard/FeatureCard.jsx";
+import FeatureCard from "./Componets/FeatureCard/FeatureCard.jsx";
 import MenuItemButtonHighlighted from "./Componets/MenuItemButton/MenuItemButtonHighLighted.jsx";
-
 
 
 function App() {
@@ -57,20 +56,16 @@ function App() {
   
 
     {/* Features Card Section */}
-    {/* <div className="features-container">
-      <h2 className="features-subheader">Features</h2>
-      <div className="features-display">
-        <FeatureCard />
-        <FeatureCard />
-        <FeatureCard />
-        <FeatureCard />
+    <div className="feature-card-container">
+        <h2 className="features-title">Features</h2>
+      <div className="feature-card-display">
+          <FeatureCard iconColor={'#000'}/>
+          <FeatureCard iconColor={'#251749'} />
+          <FeatureCard iconColor={'#263159'} />
+          <FeatureCard iconColor={'#4B5880'} />
       </div>
-      <div className="features-btn">
-          <MenuItemButtonHighlighted text="Learn more " />
-      </div>
-    </div> 
-    */}
-
+      <MenuItemButtonHighlighted text="More About Our Features" />
+    </div>
 
 
     </>
