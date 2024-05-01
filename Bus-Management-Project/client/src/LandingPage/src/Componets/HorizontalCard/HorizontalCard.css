@@ -1,6 +1,5 @@
 
 .horizontal-card {
-    background-color: #495579;
     padding: 96px;
     margin: 0;
   }
@@ -23,6 +22,10 @@
 
   .hc-image {
     width: 500px;
+  }
+
+  .description {
+    line-height: -9px;
   }
 
   

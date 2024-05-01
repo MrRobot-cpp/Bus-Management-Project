@@ -4,23 +4,29 @@ import PropTypes from 'prop-types'
 
 
 const FeatureCard = (props) => {
+
+
   return (
-    
     <div className="feature-card">
-        <div className="feature-card-icon" style={{backgroundColor: props.iconColor}} ></div>
+        <div className="feature-card-icon" style={{backgroundColor: props.iconColor}} >
+        <i className={props.iconLink}></i>
+        </div>
         <div className="feature-card-content">
-        <h2 className="feature-card-subheader">Headline</h2>
-        <p className='feature-card-description'>This is a description of the first feature of our app. 
-            We are going to briefly outline what this feature does.</p>
+        <h2 className="feature-card-headline">{props.headlineText}</h2>
+        <p className='feature-card-description'>{props.descriptionText}</p>
         <button className="menu-item-regular">
-      <a className="link-animation feature-card-link" href="#">Learn More</a>
-    </button>
+            <a className="link-animation feature-card-link" href={props.hRef}>Learn More</a>
+        </button>
         </div>
     </div>
-  )
+  );
 }
 FeatureCard.propTypes = {
-    iconColor: PropTypes.string
+    iconColor: PropTypes.string,
+    headlineText: PropTypes.string,
+    descriptionText: PropTypes.string,
+    hRef: PropTypes.string,
+    iconLink: PropTypes.string
 }
 
 export default FeatureCard

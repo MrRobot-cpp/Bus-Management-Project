@@ -4,14 +4,14 @@ import PropTypes from 'prop-types'
 const MenuItemButtonRegular = (props) => {
  return (
    <button className="menu-item-regular">
-      <a className="link-animation" href={props.href}>{props.text}</a>
+      <a className="link-animation" href={props.hRef}>{props.text}</a>
     </button> 
  )
 }
 
 MenuItemButtonRegular.propTypes = {
  text: PropTypes.string,
- href: PropTypes.string
+ hRef: PropTypes.string
 }
 
 export default MenuItemButtonRegular;
