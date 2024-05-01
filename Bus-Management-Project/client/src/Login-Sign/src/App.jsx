@@ -3,7 +3,7 @@ import React from 'react';
 // import Login from './components/Login.jsx';
 //import Signup from './components/signUp.jsx';
 import StudentProfile from './components/StudentProfile';
-import VerticalNavbar from './components/VerticalNavbar';
+import VerticalNavbar from './components/VerticalNavbar/VerticalNavbar';
 function App() {
     return (
         <div>
