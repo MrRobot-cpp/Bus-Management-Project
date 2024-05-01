@@ -14,7 +14,7 @@ function App() {
             {/* <VerticalNavbar />
             <Home/>  */}
             {/* <StudentProfile />  */}
-            <Student/> 
+            {/* <Student/>  */}
         </>
     );
 }
