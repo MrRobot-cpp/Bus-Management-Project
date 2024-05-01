@@ -1,36 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
-:root {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    line-height: 1;
-    font-weight: 400;
-    color-scheme: light dark;
-    background-color: #242424;
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
 *{
+    margin: 0;
+    padding: 0;
+}
+.sign{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
     font-family: "Inter", sans-serif;
     align-items: center;
     background-color: #263159;
-}
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    margin: 0;
-    display: flex;
     place-items: center;
-    min-width: 320px;
-    min-height: 100vh;
 }
-form{
+.sign-form{
+    margin-top: auto;
+    margin-bottom: auto;
     color: #263159;
     background-color: #FFFBEB;
-
+}
+.sign-header{
+    font-size: 3.2em;
+    line-height: 1.1;
+    color: #263159;
 }
 .labels-container{
     display: flex;
@@ -45,17 +42,16 @@ form{
     width: 18em;
     margin-right:0.45em ;
     margin-left:0.45em ;
-
 }
-h1{
-    font-size: 3.2em;
-    line-height: 1.1;
-    color: #263159;
-}
-diV *{
+.sign-input{
+    border-radius: 8px;
+    width: 508px;
+    height: 40px;
+    padding-left: 10px;
+    margin: 5px;
     background-color: #FFFBEB;
 }
-a{
+.create-acc-link{
     font-weight: 500;
     color: #646cff;
     text-decoration: inherit;
@@ -64,21 +60,20 @@ a{
     color: #263159;
     padding: 8px;
     font-size: 3.2em;
+    background-color: #FFFBEB;
 }
-a:hover {
+.social-icons a:hover {
     color: #535bf2;
-}
-input{
-    border-radius: 8px;
-    width: 508px;
-    height: 40px;
-    padding-left: 10px;
-    margin: 5px;
 }
 .termsLine{
     position: absolute;
-    transform: translate(110px,-30px);
+    transform: translate(10px,-34px);
     background-color: transparent;
+    font-weight: 500;
+}
+.termsLine a{
+    color: #646cff;
+    text-decoration: inherit;
 }
 .checker{
     width: 15px;
@@ -94,31 +89,23 @@ input{
     padding-right: 5px;
     margin: 2px;
 }
-button{
-    font-size: 22px;
-    color: #FFFBEB;
-    background-color: #263159;
-    border-radius: 40px;
-    width: 200px;
-    height: 60px;
-    margin: 5px;
-}
-a{
-    color: #0A45F6;
-    text-decoration: none;
-}
 .Forgot-Password{
-    padding-right: 390px;
+    margin-left: 380px;
+    background-color: transparent;
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit;
 }
 .not-regist{
-    padding-right: 450px;
+    transform: translate(-230px,-14px);
+    background-color: transparent;
 }
 .social-icons a {
     color: #263159;
     padding: 8px;
     font-size: 3.2em;
 }
-button {
+.Sign-btn {
     width: 210px;
     height: 64px;
     border-radius: 8px;
@@ -134,16 +121,11 @@ button {
     cursor: pointer;
     transition: border-color 0.25s;
     margin: 2em;
-
 }
-button:hover{
+.Sign-btn:hover{
     transition: 0.5s ease;
     transform: scale(1.1);
     border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
 }
 .Creation-container{
     display: flex;
@@ -157,19 +139,3 @@ button:focus-visible {
     padding: 20px;
     margin: 12px;
 }
-span{
-    background-color: transparent;
-    margin: 2px;
-}
-@media (prefers-color-scheme: light) {
-    :root{
-        color: #213547;
-        background-color: #ffffff;
-        }
-        a:hover {
-        color: #747bff;
-        }
-        button {
-        background-color: #263159;
-        }
-    }
