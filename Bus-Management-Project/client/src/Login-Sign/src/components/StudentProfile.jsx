@@ -43,7 +43,7 @@ function StudentProfile() {
                                 />
                                 <div className="profile-txt">
                                     <h2 className="profile-name">{student.username}</h2>
-                                    <h4>ID: {student.id}</h4>
+                                    <h4 className="profile-name">ID: {student.id}</h4>
                                 </div>
                             </div>
                             <div className="right-profile">
