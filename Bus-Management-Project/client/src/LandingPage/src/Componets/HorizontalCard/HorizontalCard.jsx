@@ -4,20 +4,15 @@ import busImage from "/Users/sc/Desktop/Bus-Management-Project/Bus-Management-Pr
 import PropTypes from 'prop-types'
 
 const HorizontalCard = (props) => {
-
   return (
-
-        <div className="horizontal-card">
-
+        <div className="horizontal-card" style={{backgroundColor: props.background}}>
             <div className="horizontal-card-content" style={{ flexDirection: props.imageSide === 'row' ? 'row' : 'row-reverse' }}>
             <div className="horizontal-card-info" >
-                <h1>RouteMinder. - Simplifying Bus Transport.</h1>
-                <p>This is a website for a fictional company that develops 
-                    an app that provides features and services for its users.
+                <h1 className="headline">{props.headlineText}</h1>
+                <p className="description">{props.descriptionText}
                 </p>
                     <MenuItemButtonHighlighted text="Learn More" />
             </div>
-
                 <img className="hc-image" src={busImage} alt="Live Bus Transportation System"/>
             </div>
         </div>
@@ -25,7 +20,10 @@ const HorizontalCard = (props) => {
 }
 
 HorizontalCard.propTypes = {
-  imageSide: PropTypes.string
+  imageSide: PropTypes.string,
+  headlineText: PropTypes.string,
+  descriptionText: PropTypes.string,
+  background: PropTypes.string
 }
 
 export default HorizontalCard;
