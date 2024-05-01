@@ -2,7 +2,7 @@
 import React from 'react';
 // import Login from './components/Login.jsx';
 //import Signup from './components/signUp.jsx';
-import StudentProfile from './components/StudentProfile';
+import StudentProfile from './components/StudentProfile/StudentProfile/';
 import VerticalNavbar from './components/VerticalNavbar';
 function App() {
     return (
