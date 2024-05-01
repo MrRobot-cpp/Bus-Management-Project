@@ -86,9 +86,9 @@ function StudentProfile() {
                             ))}
                         </table>
                     </div>
-                    <div className="personal-info">
+                    {/* <div className="personal-info">
                         <h2>Upcoming Trip</h2>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </>
