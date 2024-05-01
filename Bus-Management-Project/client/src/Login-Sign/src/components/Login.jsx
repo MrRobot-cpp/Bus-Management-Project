@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React , {useState} from 'react';
 import { validateEmail, validatePassword } from './validation';
-import './loginStyle.css'; // Assuming you have this CSS file in your project
+import './login.css'; // Assuming you have this CSS file in your project
 
 function Login() {
     const [email, setEmail] = useState('');
@@ -55,11 +55,9 @@ function Login() {
                 <br />
                 <a className="Forgot-Password" href="">Forgot Password?</a>
                 <br />
-                <br />
                 <div>
                     <button type="submit" id="submit">Login</button>
                 </div>
-                <br />
                 <h4 className="not-regist">Not Registered yet? <a href="">Create An Account</a></h4>
                 <h4>Or Join with</h4>
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
