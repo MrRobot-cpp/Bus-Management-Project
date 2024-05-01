@@ -9,11 +9,16 @@ export const validatePassword = (password) => {
 };
 
 export const validateName = (name) => {
-    // Name validation: non-empty string
-    return name.trim() !== '';
+    // Name validation: letters only (no numbers)
+    return /^[a-zA-Z]+$/.test(name);
 };
 
 export const validateConfirmPassword = (password, confirmPassword) => {
     // Confirm password validation: must match password
     return password === confirmPassword;
+};
+
+export const validateTermsAndConditions = (isChecked) => {
+    // Terms and conditions validation: checkbox must be checked
+    return isChecked;
 };

@@ -5,15 +5,14 @@ import Login from './components/Login.jsx';
 //import StudentProfile from './components/StudentProfile/StudentProfile/';
 //import VerticalNavbar from './components/VerticalNavbar/VerticalNavbar';
 //import Student from './components/Student/Student';
-// import Home from './components/Home'
+//import Home from './components/Home'
 function App() {
     return (
         <>
             <Login />
             {/* <Signup /> */}
-
             {/* <VerticalNavbar />
-            <Home/> */}
+            <Home/>  */}
             {/* <StudentProfile />  */}
             {/* <Student/> */}
         </>
