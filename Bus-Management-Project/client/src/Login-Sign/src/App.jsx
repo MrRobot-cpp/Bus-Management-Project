@@ -11,13 +11,8 @@ function App() {
         <>
             {/* <Login /> */}
             {/* <Signup /> */}
-<<<<<<< HEAD
             {/* <VerticalNavbar /> */}
             {/* <Home/> */}
-=======
-            {/* <VerticalNavbar />
-            <Home/>  */}
->>>>>>> c01d7f26c32601ff5dc2417b3dbf83486b68d3a3
             {/* <StudentProfile />  */}
             <Student/>  
         </>
