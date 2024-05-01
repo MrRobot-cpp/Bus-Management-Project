@@ -2,20 +2,19 @@
 import React from 'react';
 // import Login from './components/Login.jsx';
 //import Signup from './components/signUp.jsx';
-import StudentProfile from './components/StudentProfile/StudentProfile/';
-import VerticalNavbar from './components/VerticalNavbar/VerticalNavbar';
+//import StudentProfile from './components/StudentProfile/StudentProfile/';
+//import VerticalNavbar from './components/VerticalNavbar/VerticalNavbar';
 import Student from './components/Student/Student';
-import Home from './components/Home'
+//import Home from './components/Home'
 function App() {
     return (
         <>
             {/* <Login /> */}
             {/* <Signup /> */}
-
-            <VerticalNavbar />
-            <Home/>
+            {/* <VerticalNavbar /> */}
+            {/* <Home/> */}
             {/* <StudentProfile />  */}
-            {/* <Student/> */}
+            <Student/>  
         </>
     );
 }
