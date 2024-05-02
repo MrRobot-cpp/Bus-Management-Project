@@ -1,22 +1,20 @@
 .card-container{
     display:flex;
     flex-direction: column;
-    height: 100%;
-    width: auto;
+    height: 89.2vh;
     justify-content: center;
     align-items: center;
-    background-color: white;
-    margin: auto;
-    padding: 0;
+    background-color: #263159;
 }
 .card {
-    background-color:transparent;
-    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #263159;
+    height: 100%;
     width: 100%;
     overflow: hidden;
     border-radius: 15px;
-    transition: 0.5s ease;
-    
+    transition: 0.5s ease;   
 }
 .card-info {
     display:flex;
@@ -32,6 +30,7 @@
 .top-profile{
     display: flex;
     flex-direction: row;
+    overflow: hidden;
     width: 100%;
     justify-content: space-between;
     align-items: center ;
@@ -48,14 +47,24 @@
 .right-profile{
     margin: 2em;
 }
+.student-profile-body{
+    display: flex;
+    flex-direction: row;
+}
+.personal-info-container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
 .personal-info{
-padding-left: 2em;
-margin: 2em;
-width: 30%;
-color: #263159;
-background-color: transparent;
-border-radius: 15px;
-box-shadow: 0px 5px 15px rgba(1 1 1 /0.25);
+    margin: 1em;
+    margin-bottom: 0.3em;
+    width: auto;
+    text-align: center;
+    color: #FFFBEB;
+    background-color: transparent;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(1 1 1 /0.25);
 }
 .profile-pic {
     display: flex;
@@ -63,8 +72,8 @@ box-shadow: 0px 5px 15px rgba(1 1 1 /0.25);
     align-items: center;
     text-align: center;
     font-size: 2.7em;
-    width: 128px;
-    height: 128px;
+    width: 100px;
+    height: 100px;
     color: #FFFBEB;
     border-radius: 64px;
     margin: 12px;
@@ -94,15 +103,15 @@ box-shadow: 0px 5px 15px rgba(1 1 1 /0.25);
     width: auto;
     height:auto;
     box-shadow: 0px 5px 15px rgba(1, 1, 1, 0.25); 
+    overflow: hidden;
     border: 5px solid #fffbeb;
     border-radius: 15px;
     margin: 2em;
 }
 
-table{
+.student-table{
     width: 100%;
     background-color: #fffbeb;
-
     box-shadow: 0px 5px 25px rgba(1 1 1 /25%);
 }
 th, td {
@@ -130,6 +139,10 @@ th {
     border: none;
 
 }
+.upcoming-trip-container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;}
 .bottom-upcoming-trip{
     display:flex;
     justify-content: space-between;
@@ -138,8 +151,6 @@ th {
     margin: 1em;
 }
 .upcoming-trip-info{
-    display: flex;
-    flex-direction: row;
     width: 100%;
     justify-content: space-between;
     align-items: center ;
@@ -148,8 +159,8 @@ th {
     background-color:#FFFBEB;
 }
 .upcoming-trip-txt{
-    padding-left: 1em;
-    text-align: left;
+    padding: 1em;
+    text-align: center;
     color: #263159;
 }
 

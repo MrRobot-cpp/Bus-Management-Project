@@ -8,7 +8,7 @@ function StudentTrip() {
         <div className='student-trip-container'>
         <div className='student-trip'>
         <div className='head'>
-            <h1 className='head-txt'>Trips</h1>
+            <span className='head-txt'>Trips</span>
         </div>
         <div className='trip-content'>
         <p> random</p>

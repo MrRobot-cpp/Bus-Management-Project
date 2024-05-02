@@ -22,7 +22,7 @@
     border-radius: 8px;
     text-align: center;
     transition: transform .2s ease; 
-    width: fit-content;
+    width: 130px;
     padding: 10px;
 }
 

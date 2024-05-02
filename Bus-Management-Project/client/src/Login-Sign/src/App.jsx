@@ -4,9 +4,10 @@ import React from 'react';
 //import Signup from './components/signUp.jsx';
 //import StudentProfile from './components/StudentProfile/StudentProfile/';
 //import VerticalNavbar from './components/VerticalNavbar/VerticalNavbar';
-//import Student from './components/Student/Student';
+import Student from './components/Student/Student';
 //import Home from './components/Home'
-import AccountConfig from './components/AccountConfig';
+// import AccountConfig from './components/AccountConfig';
+// import Admin from './components/Admin/Admin'
 function App() {
     return (
         <>
@@ -14,14 +15,9 @@ function App() {
             {/* <Signup /> */}
             {/* <VerticalNavbar /> */}
             {/* <Home/> */}
-
-            {/* <VerticalNavbar />
-            <Home/>  */}
-            {/* <VerticalNavbar /> */}
-            {/* <Home/> */}
-            <AccountConfig />
-            {/* <StudentProfile />  */}
-            {/* <Student/>    */}
+            {/* <AccountConfig /> */}
+            <Student/>   
+            {/* <Admin /> */}
         </>
     );
 }

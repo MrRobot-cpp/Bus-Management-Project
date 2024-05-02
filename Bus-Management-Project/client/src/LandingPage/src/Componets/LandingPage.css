@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+*  {
+    margin: 0;
+    padding: 0;
+    font-family: "Istok Web", sans-serif;
+}
+
+/* header section */
+.header {
+    height: 50px;
+    background-color: #ffffff;
+    margin: 0 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    min-width: 100%;
+    padding: 4px 2em;
+}
+
+.logo-nav {
+    display: flex;
+    align-items: flex-start;
+}
+
+.header-contents {
+    margin: 4px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.unordered-list, .list {
+    height: 50px;;
+}
+
+.list {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.logo-placeholder {
+    font-size: 30px;
+    margin: 0;
+    
+}
+
+
+  /* dropdown menu */
+.toggle-btn  {
+    color: #000;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: none;
+}
+
+.dropdown-menu {
+    margin: 0;
+    border: none;
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 300px;
+    height: 0;
+    background-color: #ffffff;
+
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height  0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown-menu .list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-menu .dropdown-login-btn {
+    width: 50%;
+    padding: 0;
+    height: 35px;
+    border-radius: 30px;
+    transition: transform .2s ease; 
+}
+
+.dropdown-menu.open {
+    height: 250px;
+}
+
+.dropdown-login-btn {
+    background: #263159;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.dropdown-login-btn:hover {
+    background: #020d19;
+    opacity: 0.5;
+    transform: scale(1.05);
+    color: #ffffff;
+}
+
+
+  /* features card */
+
+.feature-card-container {
+    background: #495579;
+    min-height: 439px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    padding-bottom: 20px;
+}
+
+.features-title {
+    font-size: 32px;
+    color: #fff;
+}
+
+
+.feature-card-display {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 44px;
+    gap: 24px;
+}
+
+
+
+/* About Us Section */
+
+.about-us-container {
+    background-color: #FFFBEB;
+}
+
+.about-us-headline {
+    color: #000;
+    text-align: center;
+    padding-top: 50px;
+    font-size: 38px;
+}
+
+
+
+  /* customer card */
+
+.customer-card-container {
+    height: 600px;
+    background-color: #495579;
+    padding: 76px 0;
+}
+
+.customer-card-headline {
+    color: #fff;
+    text-align: center;
+}
+
+.customer-card-display {
+    display: flex;
+    width: 1936px;
+    padding: 34px;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+}
+
+
+
+
+
+
+  /* responsive design */
+@media (max-width: 1121px) {    
+    .unordered-list, .header-login-btn {
+        display: none;
+    }
+
+    .toggle-btn {
+        display: block;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .dropdown-menu {
+        display: block;
+    }
+
+    .feature-card-display {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+}
+
+@media (max-width: 576px) {
+    .dropdown-menu {
+        left: 2rem;
+        width: unset;
+    }
+}
+

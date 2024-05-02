@@ -71,11 +71,13 @@ function StudentProfile() {
                             </div>
                         </div>
                     </div>
+                    <div className="student-profile-body">
+                    <div className="personal-info-container">
                     <div className="personal-info">
                         <h2>Personal Information</h2>
                     </div>
                     <div className="table-info">
-                        <table>
+                        <table className="student-table">
                             {tableItems.map((item, index) => (
                                 <tr key={index}>
                                     <td>{item.text}</td>
@@ -103,6 +105,8 @@ function StudentProfile() {
                             ))}
                         </table>
                     </div>
+                    </div>
+                    <div className="upcoming-trip-container">
                     <div className="personal-info">
                         <h2>Upcoming Trip</h2>
                     </div>
@@ -111,8 +115,10 @@ function StudentProfile() {
                             <h2 className="upcoming-trip-txt">Data</h2>
                         </div>
                     </div>
+                    </div>
+                    </div>
+                    </div>
                 </div>
-            </div>
         </>
     );
 }

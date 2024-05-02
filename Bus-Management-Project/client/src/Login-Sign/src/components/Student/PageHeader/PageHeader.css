@@ -1,0 +1,20 @@
+.student-header-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #263159;
+}
+.student-header-border{
+    display: flex;
+    width: 100%;
+}
+.header-txt{
+    padding: 1em;
+    padding-left: 0;
+    margin-left: 1em;
+    margin-right: 1em;
+    color: #FFFBEB;
+    font-family:inherit;
+    border-bottom: 5px double #FFFBEB;
+
+}

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import styles from "./DataOrganizer.module.css";
 import Overlay from "./Overlay/Overlay";
 import React, {useState} from "react";
@@ -29,6 +30,7 @@ const currentDayOfMonth = currentDate.getDate();
 
 
 function DateOrganizer(props) {
+  // eslint-disable-next-line react/prop-types
   const { trips } = props;
   const [toggleStates, setToggleStates] = useState(new Array(trips.length).fill(false));
 
@@ -55,15 +57,11 @@ function DateOrganizer(props) {
           </div>
 
           <div className={styles["current-data"]}>
-            <ul className={styles["trip-list"]}>
+            <ul className="trip-list">
               {trips.map((trip, index) => {
-                if (
-                  trip.date.getDate() === currentDayOfMonth &&
-                  trip.date.getMonth() === month
-                ) {
-                  return (
-                    <li key={index} onClick={() => handleTripClick(index)}>
-                    {toggleStates[index] && <Overlay trip={trip} />}
+               
+                  tripTimeValidation(trip) && (
+                    <li key={index}>
                       <div className={styles["trip-info"]}>
                         <h2 className={styles["trip-header"]}>
                           Trip {index + 1}
