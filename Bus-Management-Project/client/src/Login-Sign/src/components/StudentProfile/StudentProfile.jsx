@@ -1,32 +1,35 @@
-// eslint-disable-next-line no-unused-vars
-import React, { useState } from "react";
+import  { useState } from "react";
 import "./StudentProfile.css";
 
 function StudentProfile() {
     const [isChecked, setIsChecked] = useState(false);
+    const [editableIndex, setEditableIndex] = useState(-1);
+    const [tableItems, setTableItems] = useState([
+        { text: "Name:", value: "Mohamed abdelaaty" },
+        { text: "Email:", value: "abdelaaty@m3kamele7tramy.com" },
+        { text: "Password:", value: "Abdelaaty%" },
+        { text: "Phone:", value: "01284049697" },
+        { text: "Location:", value: "New Nozha" },
+        { text: "Birthdate:", value: "January 1, 1990" },
+        { text: "Gender:", value: "Male" },
+    ]);
+
     const handleCheckboxChange = () => {
         setIsChecked(!isChecked);
+        setEditableIndex(-1); 
     };
-    const student = {
-        name: "Mohamed abdelaaty",
-        username: "3bdel3aty",
-        id: "123456",
-        birthdate: "January 1, 1990",
-        gender: "Male",
-        email: "abdelaaty@m3kamele7tramy.com",
-        phone: "01284049697",
-        location: "New Nozha",
-        password: "Abdelaaty%",
+
+    const handleEditClick = (index) => {
+        setEditableIndex(index);
     };
-    const tableItems = [
-        { text: "Name:", value: student.name },
-        { text: "Email:", value: student.email },
-        { text: "Password:", value: student.password },
-        { text: "Phone:", value: student.phone },
-        { text: "Location:", value: student.location },
-        { text: "Birthdate:", value: student.birthdate },
-        { text: "Gender:", value: student.gender },
-    ];
+
+    const handleSaveClick = () => {
+        const updatedTableItems = [...tableItems];
+        updatedTableItems[editableIndex].value = document.getElementById(`input-${editableIndex}`).value;
+        setTableItems(updatedTableItems);
+        setEditableIndex(-1);
+    };
+
     return (
         <>
             <div className="card-container">
@@ -40,8 +43,8 @@ function StudentProfile() {
                                     alt=""
                                 />
                                 <div className="profile-txt">
-                                    <h2 className="profile-name">{student.username}</h2>
-                                    <h4 className="profile-name">ID: {student.id}</h4>
+                                    <h2 className="profile-name">3bdel3aty</h2>
+                                    <h4 className="profile-name">ID: 123456</h4>
                                 </div>
                             </div>
                             <div className="right-profile">
@@ -61,20 +64,27 @@ function StudentProfile() {
                         <table>
                             {tableItems.map((item, index) => (
                                 <tr key={index}>
-                                    <>
-                                        <td>{item.text}</td>
-                                        <td>{item.value}</td>
-                                        <td>
-                                            {" "}
-                                            {index !== 0 && index !== 6 && isChecked && (
-                                                <input
-                                                    type="button"
-                                                    className="edit-btn"
-                                                    value=" edit "
-                                                />
-                                            )}
-                                        </td>
-                                    </>
+                                    <td>{item.text}</td>
+                                    <td>
+                                        {editableIndex === index ? (
+                                            <input
+                                                id={`input-${index}`}
+                                                type="text"
+                                                defaultValue={item.value}
+                                                className="input-personal-info"
+                                            />
+                                        ) : (
+                                            <span>{item.value}</span>
+                                        )}
+                                    </td>
+                                    <td>
+                                        {(index !== 0 && index !== 5 && index !== 6) && isChecked && // Show Edit button for relevant fields only when isChecked is true
+                                            (editableIndex === index ? (
+                                                <button onClick={handleSaveClick} className="edit-btn">Save</button>
+                                            ) : (
+                                                <button onClick={() => handleEditClick(index)}  className="edit-btn">Edit</button>
+                                            ))}
+                                    </td>
                                 </tr>
                             ))}
                         </table>
@@ -83,13 +93,14 @@ function StudentProfile() {
                         <h2>Upcoming Trip</h2>
                     </div>
                     <div className="bottom-upcoming-trip">
-                    <div className="upcoming-trip-info">
-                    <h2 className="upcoming-trip-txt">Data</h2>
-                    </div>
+                        <div className="upcoming-trip-info">
+                            <h2 className="upcoming-trip-txt">Data</h2>
+                        </div>
                     </div>
                 </div>
             </div>
         </>
     );
 }
+
 export default StudentProfile;

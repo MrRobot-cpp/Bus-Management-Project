@@ -1,8 +1,11 @@
 
-
+.feature-card-headline {
+    font-size: 24px;
+}
 
 .feature-card-link {
     font-weight: bold;
+    display: inline-block;
 }
 
 .feature-card-description {
@@ -11,7 +14,7 @@
 
 .feature-card {
     margin: 0 ;
-    background-color: #fff;
+    background-color: #FFFBEB;
     width: 230px;
     height: 210px;
     padding: 14px;
@@ -31,4 +34,13 @@
     background-color: #000;
     border-radius: 32px;
     translate: 0 -35px;
+    box-shadow: 5px 8px 8px  rgba(0, 0, 0, 0.35);
+}
+
+.fa-hourglass-half, .fa-route, .fa-comments, .fa-user {
+    color: #FFFBEB;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    translate: 0 15px;
 }

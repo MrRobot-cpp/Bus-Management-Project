@@ -26,10 +26,10 @@ function App() {
           <h1 className="logo-placeholder">RouteMinder</h1>
 
           <ul className="unordered-list">
-              <li className="list"><MenuItemButtonRegular text="Home" href="#" /></li>
-              <li className="list"><MenuItemButtonRegular text="About" href="#" /></li>
-              <li className="list"><MenuItemButtonRegular text="Services" href="#" /></li>
-              <li className="list"><MenuItemButtonRegular text="Contact Us" href="#" /></li>
+              <li className="list"><MenuItemButtonRegular text="Home" hRef={"#"} /></li>
+              <li className="list"><MenuItemButtonRegular text="Services" hRef={"#"} /></li>
+              <li className="list"><MenuItemButtonRegular text="About" hRef={"#"} /></li>
+              <li className="list"><MenuItemButtonRegular text="Contact Us" hRef={"#"} /></li>
           </ul>
 
           <button className="menu-item-highlighted header-login-btn">Learn More</button>
@@ -40,10 +40,10 @@ function App() {
           </div>
 
           <div className="dropdown-menu" >
-              <li className="list"><MenuItemButtonRegular text="Home" href="#" /></li>
-              <li className="list"><MenuItemButtonRegular text="About" href="#" /></li>
-              <li className="list"><MenuItemButtonRegular text="Services" href="#" /></li>
-              <li className="list"><MenuItemButtonRegular text="Contact Us" href="#" /></li>
+              <li className="list"><MenuItemButtonRegular text="Home" hRef={"#"} /></li>
+              <li className="list"><MenuItemButtonRegular text="Services" hRef={"#"} /></li>
+              <li className="list"><MenuItemButtonRegular text="About" hRef={"#"} /></li>
+              <li className="list"><MenuItemButtonRegular text="Contact Us" hRef={"#"} /></li>
               <li><button className="login-btn">Login</button></li>
           </div>
 
@@ -51,20 +51,21 @@ function App() {
     </nav>
     {/* End of Header */}
 
-    {/* Horizontal Card Section (component) */}
-    <HorizontalCard imageSide={"row"}/>
+    {/* Horizontal Card Section */}
+    <HorizontalCard imageSide={"row"} background={'#495579'} headlineText={"RouteMinder. - Simplifying Bus Transport."} 
+      descriptionText={"At RouteMinder, we understand the critical importance of safe, reliable, and efficient transportation for schools and universities. Whether you're a bustling urban campus or a quaint rural school district, our comprehensive transportation services are tailored to meet your unique needs."}/>
   
 
     {/* Features Card Section */}
     <div className="feature-card-container">
-        <h2 className="features-title">Features</h2>
+        <h2 className="features-title">Services</h2>
       <div className="feature-card-display">
-          <FeatureCard iconColor={'#000'}/>
-          <FeatureCard iconColor={'#251749'} />
-          <FeatureCard iconColor={'#263159'} />
-          <FeatureCard iconColor={'#4B5880'} />
+          <FeatureCard iconLink={"fa-regular fa-hourglass-half"} iconColor={'#000'} headlineText={"Real-Time Tracking"} descriptionText={"Students can stay updated and track bus location and arrival time. Encourages stress-free transportation"}  />
+          <FeatureCard iconLink={"fa-solid fa-route"} iconColor={'#251749'} headlineText={"Route Management"} descriptionText={"Drivers ensure timely departure and arrival. Manage routes with multiple stops for each round efficiently."} />
+          <FeatureCard iconLink={"fa-regular fa-comments"} iconColor={'#263159'} headlineText={"Commnunication Channel"} descriptionText={"Facilitate easy communication between drivers and students."} />
+          <FeatureCard iconLink={"fa-regular fa-user"} iconColor={'#4B5880'} headlineText={"Extensive Profile"} descriptionText={"Streamline administrative tasks for route, driver, and student management."} />
       </div>
-      <MenuItemButtonHighlighted text="More About Our Features" />
+      <MenuItemButtonHighlighted text="More About Our Services" />
     </div>
 
 
