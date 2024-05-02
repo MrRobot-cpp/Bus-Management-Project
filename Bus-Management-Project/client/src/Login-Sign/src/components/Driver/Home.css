@@ -13,7 +13,7 @@
     margin-bottom: 5px;
     height: 98%;
     width: 90%;
-    background: #FFFBEB;
+    /* background: #FFFBEB; */
     /*
     padding-top: 20px;
     margin-left: 100px;
@@ -32,7 +32,7 @@
 }
 
 .left-container > div{
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
 
 .right-container{
@@ -41,7 +41,7 @@
   align-items: flex-end;
   height: 100%;
   width: 50%;
-  background: blue;
+  /* background: blue; */
 }
 
 .data-organizer-container{
@@ -52,7 +52,8 @@
     font-size: 14px;
     height: 80%;
     width: 80%;
-    background: orange;
+    margin-bottom: 10px;
+    /* background: orange; */
 }
 
 
@@ -92,8 +93,8 @@
   display:flex;
   justify-content: center;
   align-items: center;
-  width: 80%;
-  height: 20%;
+  width: 85%;
+  height: 30%;
   transition: 0.9s ease;
   font-size: 14px;
   /* background: pink; */
@@ -106,7 +107,7 @@
   align-items: center;
   transition: 0.9s ease;
   font-size: 14px;
-  height: 40%;
+  height: 70%;
   width: 50%;
   /* background: purple; */
 }

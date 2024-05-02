@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 // eslint-disable-next-line no-unused-vars
 import React, {useState} from "react";
-import HamburgerBtn from "./HamburgerBtn/HamburgerBtn";
+import HamburgerBtn from "./HamburgerBtn";
 import "./VerticalNavbar.css";
 
 function VerticalNavbar(props) {

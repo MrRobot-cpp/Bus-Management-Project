@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React , {useState} from 'react';
-import { validateEmail, validatePassword } from './validation';
+import { validateEmail, validatePassword } from '../validation';
 import './login.css'; // Assuming you have this CSS file in your project
 
 function Login() {

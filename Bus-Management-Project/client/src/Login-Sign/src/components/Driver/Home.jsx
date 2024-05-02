@@ -1,6 +1,6 @@
 import "./Home.css";
 import Trip from "./Trip";
-import DriverProfile from "./DriverProfile/DriverProfile";
+import DriverProfile from "./DriverProfile";
 import DateOrganizer from "./DateOrganizer";
 const trips = [
     {
@@ -21,7 +21,7 @@ const trips = [
       startPoint: "School A",
       endPoint: "School B",
       status: false,
-      date: new Date("2024-05-01"),
+      date: new Date("2024-05-02"),
     },
     {
       departure: {
@@ -41,8 +41,28 @@ const trips = [
       startPoint: "School C",
       endPoint: "School D",
       status: true,
-      date: new Date("2024-05-02"),
+      date: new Date("2024-05-06"),
     },
+    {
+        departure: {
+          hour: 8,
+          minute: 45,
+          period: "AM",
+        },
+        arrival: {
+          hour: 1,
+          minute: 30,
+          period: "PM",
+        },
+        numStudents: 25,
+        maxNumberStudents: 35,
+        speedLimit: 50,
+        stops: ["Stop 1", "Stop 2", "Stop 3"],
+        startPoint: "School C",
+        endPoint: "School D",
+        status: true,
+        date: new Date("2024-05-03"),
+      },
   ];
   
 
