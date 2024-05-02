@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 // eslint-disable-next-line no-unused-vars
 import React, {useState} from "react";
 import HamburgerBtn from "./HamburgerBtn/HamburgerBtn";
@@ -9,6 +10,7 @@ function VerticalNavbar(props) {
     const [hoverBox, setHoverBox] = useState("14vw");
     const [hoverBoxMargin, setHoverBoxMargin] = useState("10px");
 
+    // eslint-disable-next-line react/prop-types
     const {menuItems} = props;
 
     function handleToggle() {
@@ -56,7 +58,7 @@ function VerticalNavbar(props) {
                         {menuItems.map((item, index) => (
                             <li key={index} style={{marginLeft: hoverBoxMargin}}>
                                 <a href="#" style={{width: hoverBox}}>
-                                 <i className={item.icon}></i>   
+                                <i className={item.icon}></i>   
                                 {toggle && item.text}
                                 </a>
                             </li>

@@ -1,5 +1,6 @@
 import VerticalNavbar from "../VerticalNavbar/VerticalNavbar";
 import StudentProfile from "./StudentProfile/StudentProfile";
+import PageHeader from "./PageHeader/PageHeader";
 // import StudentTrip from "./StudentTrip/StudentTrip";
 function Student(){
     const menuItems = [
@@ -12,6 +13,7 @@ function Student(){
 
     return(
         <>
+        <PageHeader text='Student Profile'/>
         <VerticalNavbar menuItems={menuItems}/>
         <StudentProfile/>
         {/* <StudentTrip/> */}
