@@ -5,8 +5,6 @@ function Admin() {
   return (
     <>
     < AdminDashboard/>
-    
-    <div>Admin</div>
     </>
   )
 }
