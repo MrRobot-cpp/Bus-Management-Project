@@ -1,6 +1,7 @@
 import React from 'react'
-import VerticalNavbar from './VerticalNavbar/VerticalNavbar'
+import VerticalNavbar from '../VerticalNavbar/VerticalNavbar'
 import Home from './Home';
+import PageHeader from '../Student/PageHeader/PageHeader'
 import styles from './Driver.module.css'
 
 
@@ -15,9 +16,11 @@ function Driver() {
     ];
   return (
     <div className={styles['main-container']}>
+      <PageHeader text={"Driver"}/>
+      <div className={styles['home-container']}>
       <VerticalNavbar menuItems={menuItems}/>
       <Home/>
-      
+      </div>  
     </div>
   )
 }
