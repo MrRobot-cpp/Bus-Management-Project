@@ -3,27 +3,48 @@ import Trip from "./Trip";
 import DriverProfile from "./DriverProfile/DriverProfile";
 import DateOrganizer from "./DateOrganizer";
 const trips = [
-  {
-    //JSON object examples
-    departure: {
-      hour: 9,
-      minute: 30,
-      period: "AM",
+    {
+      departure: {
+        hour: 9,
+        minute: 30,
+        period: "AM",
+      },
+      arrival: {
+        hour: 2,
+        minute: 15,
+        period: "PM",
+      },
+      numStudents: 20,
+      maxNumberStudents: 30,
+      speedLimit: 60,
+      stops: ["Stop 1", "Stop 2", "Stop 3", "Stop 4", "Stop 5"],
+      startPoint: "School A",
+      endPoint: "School B",
+      status: false,
+      date: new Date("2024-05-01"),
     },
-    arrival: {
-      hour: 2,
-      minute: 15,
-      period: "PM",
+    {
+      departure: {
+        hour: 8,
+        minute: 45,
+        period: "AM",
+      },
+      arrival: {
+        hour: 1,
+        minute: 30,
+        period: "PM",
+      },
+      numStudents: 25,
+      maxNumberStudents: 35,
+      speedLimit: 50,
+      stops: ["Stop 1", "Stop 2", "Stop 3"],
+      startPoint: "School C",
+      endPoint: "School D",
+      status: true,
+      date: new Date("2024-05-02"),
     },
-    numStudents: 20,
-    maxNumberStudents: 30,
-    speedLimit: 60,
-    stops: ["Stop 1", "Stop 2", "Stop 3", "Stop 4", "Stop 5"],
-    startPoint: "School A",
-    endPoint: "School B",
-    status: false,
-  },
-];
+  ];
+  
 
 const driver = {
   //JSON object example
@@ -74,7 +95,7 @@ function Home() {
 
         <div className="right-container">
           <div className="data-organizer-container">
-            <DateOrganizer />
+            <DateOrganizer trips={trips}/>
           </div>
         </div>
       </div>

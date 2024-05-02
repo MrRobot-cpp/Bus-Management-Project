@@ -37,20 +37,22 @@
 
 .right-container{
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-end;
   height: 100%;
   width: 50%;
-  /* background: blue; */
+  background: blue;
 }
 
 .data-organizer-container{
     display:flex;
+    justify-content: flex-start;
+    align-items: flex-start;
     transition: 0.9s ease;
     font-size: 14px;
     height: 80%;
     width: 80%;
-    /* background: orange; */
+    background: orange;
 }
 
 
