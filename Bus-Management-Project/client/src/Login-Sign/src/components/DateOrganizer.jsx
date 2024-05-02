@@ -57,11 +57,15 @@ function DateOrganizer(props) {
           </div>
 
           <div className={styles["current-data"]}>
-            <ul className="trip-list">
+            <ul className={styles["trip-list"]}>
               {trips.map((trip, index) => {
-               
-                  tripTimeValidation(trip) && (
-                    <li key={index}>
+                if (
+                  trip.date.getDate() === currentDayOfMonth &&
+                  trip.date.getMonth() === month
+                ) {
+                  return (
+                    <li key={index} onClick={() => handleTripClick(index)}>
+                    {toggleStates[index] && <Overlay trip={trip} />}
                       <div className={styles["trip-info"]}>
                         <h2 className={styles["trip-header"]}>
                           Trip {index + 1}
