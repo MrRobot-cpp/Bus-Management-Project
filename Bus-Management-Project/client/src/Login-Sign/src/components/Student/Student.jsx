@@ -1,6 +1,6 @@
 import VerticalNavbar from "../VerticalNavbar/VerticalNavbar";
-// import StudentProfile from "../StudentProfile/StudentProfile";
-import StudentTrip from "../StudentTrip/StudentTrip";
+import StudentProfile from "./StudentProfile/StudentProfile";
+// import StudentTrip from "./StudentTrip/StudentTrip";
 function Student(){
     const menuItems = [
         { icon: "fa-solid fa-shop", text: "Home" },
@@ -13,8 +13,8 @@ function Student(){
     return(
         <>
         <VerticalNavbar menuItems={menuItems}/>
-        {/* <StudentProfile/> */}
-        <StudentTrip/>
+        <StudentProfile/>
+        {/* <StudentTrip/> */}
         </>
     )
 

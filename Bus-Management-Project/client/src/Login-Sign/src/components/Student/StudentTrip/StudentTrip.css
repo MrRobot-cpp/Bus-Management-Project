@@ -21,11 +21,14 @@
     height: 3vh;
     padding: 1em;
     margin: 1em;
+    align-items: center;
+    text-align: center;
     background-color: #FFFBEB;
     border: 5px solid #263159;
     border-radius: 15px;
 }
 .head-txt{
+    font-size: 2em;
     font-family: inherit;
     text-align: center;
 }
