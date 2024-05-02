@@ -1,0 +1,42 @@
+.student-trip-container{
+    display:flex;
+    flex-direction: column;
+    height: 100%;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin: auto;
+    padding: 0;
+}
+.student-trip {
+    background-color:transparent;
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: 0.5s ease;
+}
+.head{
+    height: 3vh;
+    padding: 1em;
+    margin: 1em;
+    align-items: center;
+    text-align: center;
+    background-color: #FFFBEB;
+    border: 5px solid #263159;
+    border-radius: 15px;
+}
+.head-txt{
+    font-size: 2em;
+    font-family: inherit;
+    text-align: center;
+}
+.trip-content{
+    background-color: #FFFBEB;
+    height: 80vh;
+    padding: 1em;
+    margin: 1em;
+    border: 5px solid #263159;
+    border-radius: 15px;
+}

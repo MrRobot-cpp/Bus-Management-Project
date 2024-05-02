@@ -29,6 +29,8 @@ return(
                 arrival={{ hour: arrHour, minute: arrMinute, period: arrPeriod }} />
                 </div>
                 </div>
+
+
                 <div className="extra-trip-info text-style">
                 <p className="speed-limit extra-trip-info-text">
                 Speed Limit: {`${speedLimit} mph`}

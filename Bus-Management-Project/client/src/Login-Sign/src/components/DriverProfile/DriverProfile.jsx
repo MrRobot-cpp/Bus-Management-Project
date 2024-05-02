@@ -10,16 +10,25 @@ function DriverProfile(props){
   };
 
     return(<>
-        <div className={styles['driver-profile']}>
+      <div className={styles['driver-profile']}>
+
         <div className={styles.profile}>
         <div className={styles['profile-pic']}/>
-        <h2>{name}</h2>
-        <h5 className={styles['type-text']}>{type}</h5>
+        <h1>{name}</h1>
+        <h3 className={styles['type-text']}>{type}</h3>
         </div>
+
         <div className={styles['driver-info']}>
-            <h3>Age: {age}</h3>
-            <h3>Trips: {noOfTrips}</h3>
+           <div className={styles['age-info']}>
+            <p>Age</p>
+            <p>{age}</p>
+          </div>
+          <div className={styles['trip-info']}>
+            <p>Trips</p>
+            <p>{noOfTrips}</p>
+          </div>
         </div>
+
         <div className={styles['star-rating']}>
       {[...Array(5)].map((_, index) => {
         const starValue = index + 1;
@@ -32,8 +41,9 @@ function DriverProfile(props){
           </span>
         );
       })}
-    </div>
-        </div>    
+        </div>
+
+      </div>    
     </>)
 }
 export default DriverProfile;

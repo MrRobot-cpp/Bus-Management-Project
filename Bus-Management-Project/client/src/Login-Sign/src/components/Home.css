@@ -7,65 +7,76 @@
     flex-direction: row ;
     justify-content: center;
     align-items: center;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    width: 80vw;
+    margin: auto;
+    margin-left: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 98%;
+    width: 90%;
+    background: #FFFBEB;
     /*
     padding-top: 20px;
     margin-left: 100px;
     margin-right: 10px; */
 }
 .left-container{
-  display: block;
-  flex: 1;
-  justify-content: center;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   height: 100%;
-  width: 100%;
-  padding-top: 20px;
-  margin-left: 30px;
+  width: 50%;
+  /* overflow: hidden; */
+  /* background: red; */
   /* transform: translateX(160px);*/
 }
 
+.left-container > div{
+  margin-bottom: 60px;
+}
+
 .right-container{
-  display: block;
-  flex: 1;
-  justify-content: center;
-  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
   height: 100%;
-  width: 80%;
-  padding-top: 20px;
+  width: 50%;
+  background: blue;
 }
 
 .data-organizer-container{
     display:flex;
-    padding: 20px;
+    justify-content: flex-start;
+    align-items: flex-start;
     transition: 0.9s ease;
     font-size: 14px;
-    height: 100%;
-    width: 100%;
+    height: 80%;
+    width: 80%;
+    background: orange;
 }
 
 
 .welcome-container{
-    display: block;
-    justify-content: center;
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
-    height: 10vh;
-    width: 60vw;
-    float: top;
+    height: 20%;
+    width: 100%;
     margin-left: 10px;
+    /* background: yellow; */
+    /* height: 10vh; */
+    /* width: 60vw; */
+    /* float: top; */
     /*margin-left: -10px;*/
 }
 
 .welcome{
-    display: block;
-    justify-content: center;
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
-    max-height: 200px;
-    height: 50%;
-    width: 70%;
+    height: 80%;
+    width: 90%;
+    /* background: white; */
     /* margin-left: -20px; */
     /* border-radius: 15px;
     background: #263159; */
@@ -74,25 +85,30 @@
 .welcome-text{
     display: flex;
     color: #263159;
-    font-size: 2rem;
-    padding-left: 10%;
+    font-size: 3em;
 }
 
 .trip-container{
   display:flex;
-  padding: 0;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 20%;
   transition: 0.9s ease;
   font-size: 14px;
+  /* background: pink; */
 
 }
 
 .driver-profile-container{
   display:flex;
-  padding: 20px;
+  justify-content: center;
+  align-items: center;
   transition: 0.9s ease;
   font-size: 14px;
-  height: 60%;
+  height: 40%;
   width: 50%;
+  /* background: purple; */
 }
 
 

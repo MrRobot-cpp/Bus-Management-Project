@@ -3,15 +3,29 @@ import "./StudentProfile.css";
 
 function StudentProfile() {
     const [isChecked, setIsChecked] = useState(false);
+
     const [editableIndex, setEditableIndex] = useState(-1);
+
+    const student = {
+        name: "Mohamed abdelaaty",
+        username: "3bdel3aty",
+        id: "123456",
+        birthdate: "January 1, 1990",
+        gender: "Male",
+        email: "abdelaaty@m3kamele7tramy.com",
+        phone: "01284049697",
+        location: "New Nozha",
+        password: "Abdelaaty%",
+    };
+
     const [tableItems, setTableItems] = useState([
-        { text: "Name:", value: "Mohamed abdelaaty" },
-        { text: "Email:", value: "abdelaaty@m3kamele7tramy.com" },
-        { text: "Password:", value: "Abdelaaty%" },
-        { text: "Phone:", value: "01284049697" },
-        { text: "Location:", value: "New Nozha" },
-        { text: "Birthdate:", value: "January 1, 1990" },
-        { text: "Gender:", value: "Male" },
+        { text: "Name:", value: student.name },
+        { text: "Email:", value: student.email },
+        { text: "Password:", value: student.password },
+        { text: "Phone:", value: student.phone },
+        { text: "Location:", value: student.location },
+        { text: "Birthdate:", value: student.birthdate },
+        { text: "Gender:", value: student.gender },
     ]);
 
     const handleCheckboxChange = () => {
@@ -57,11 +71,13 @@ function StudentProfile() {
                             </div>
                         </div>
                     </div>
+                    <div className="student-profile-body">
+                    <div className="personal-info-container">
                     <div className="personal-info">
                         <h2>Personal Information</h2>
                     </div>
                     <div className="table-info">
-                        <table>
+                        <table className="student-table">
                             {tableItems.map((item, index) => (
                                 <tr key={index}>
                                     <td>{item.text}</td>
@@ -89,6 +105,8 @@ function StudentProfile() {
                             ))}
                         </table>
                     </div>
+                    </div>
+                    <div className="upcoming-trip-container">
                     <div className="personal-info">
                         <h2>Upcoming Trip</h2>
                     </div>
@@ -97,8 +115,10 @@ function StudentProfile() {
                             <h2 className="upcoming-trip-txt">Data</h2>
                         </div>
                     </div>
+                    </div>
+                    </div>
+                    </div>
                 </div>
-            </div>
         </>
     );
 }

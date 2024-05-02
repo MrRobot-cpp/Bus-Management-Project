@@ -1,13 +1,13 @@
 .driver-profile{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     background: #263159;
-    height: 90%;
-    width: 80%;
+    height: 95%;
+    width: 85%;
     border-radius: 20px;
-    margin-left: 25px;
+    overflow: hidden;
     color: #FFFBEB;
 }
 
@@ -17,8 +17,13 @@
     justify-content: center;
     align-items: center;
     margin: 0;
-    height: 70%;
-    width: 80%;
+    margin-top: -1.6vh;
+    height: 52%;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    background: hsla(217, 56%, 50%, 0.386);
+
+    /* background: #ffcc00; */
 }
 
 
@@ -27,18 +32,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90px;
-    height: 90px;
+    width: 10vh;
+    height: 10vh;
     border-radius: 360px;
+    margin-bottom: 0.5vh;
     background:#FFFBEB ;
 }
 
 .type-text{
-  color: hsl(60, 20%, 80%);
+  color: hsla(210, 2%, 67%, 0.566);
+
 }
 
 .star-rating {
-    font-size: 24px;
+    font-size: 40px;
     padding-bottom: 15px;
   }
   
@@ -54,8 +61,14 @@
 
 .driver-info{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    margin-top: 1vh;
     align-items: center;
-    padding-bottom: 50px;
-    width: 100%;
+    text-align: center;
+    width: 70%;
+}
+
+.age-info p,.trip-info p{
+  font-size: 20px;
+  margin-bottom: 1vh;
 }
