@@ -1,6 +1,7 @@
 import React from 'react'
 import VerticalNavbar from './VerticalNavbar/VerticalNavbar'
 import Home from './Home';
+import styles from './Driver.module.css'
 
 
 function Driver() {
@@ -13,11 +14,11 @@ function Driver() {
         { icon: "fa-solid fa-arrow-right-from-bracket", text: "LogOut" },
     ];
   return (
-    <>
+    <div className={styles['main-container']}>
       <VerticalNavbar menuItems={menuItems}/>
       <Home/>
       
-    </>
+    </div>
   )
 }
 

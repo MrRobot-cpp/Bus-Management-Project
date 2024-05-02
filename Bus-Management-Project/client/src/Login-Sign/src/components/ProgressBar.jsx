@@ -11,18 +11,23 @@ function ProgressBar(props) {
     // eslint-disable-next-line react/prop-types
     stops } = props;
     return (
-        <>
-            <div className="progress-bar">
-                {stops.map((stop, index) => (
-                    <div key={index} className="progress-bar-time-line">
-                        {index === 0 && <p className="progress-bar-time-line-text">{`${depHour}:${depMinute} ${depPeriod}`}</p>}
-                        <div className="circle">{stop}</div>
-                        {index !== stops.length - 1 && <div className="bar"></div>}
-                        {index === stops.length - 1 && <p className="progress-bar-time-line-text">{`${arrHour}:${arrMinute} ${arrPeriod}`}</p>}
-                    </div>
-                ))}
-            </div>
-        </>
+<>
+    <div className="progress-bar">
+     <div className="progress-bar-info">   
+      <p className="progress-bar-time-line-text">{`${depHour}:${depMinute} ${depPeriod}`}</p>
+      <p className="progress-bar-time-line-text">{`${arrHour}:${arrMinute} ${arrPeriod}`}</p>
+     </div>
+        <div className="progress-bar-graphics">
+            {stops.map((stop, index) => (
+                <div className="graphics" key={index}>
+                    <div className="circle">{stop}</div>
+                    {index !== stops.length - 1 && <div className="bar"></div>}
+                </div>
+            ))}
+        </div>
+    </div>
+</>
+
     );
 }
 

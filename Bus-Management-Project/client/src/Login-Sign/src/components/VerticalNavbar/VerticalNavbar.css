@@ -29,7 +29,7 @@
     width: 18vw;
     padding: 0;
     margin: 0;
-    transition: 0.9s ease;
+    transition: 0.5s ease-out;
 
 }
 
@@ -42,7 +42,7 @@
     min-height: 500px;
     height: 100%;
     width: 18vw;
-    transition: 0.5s ease;
+    transition: 0.5s ease-out;
 }
 
 ul{
