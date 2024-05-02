@@ -2,6 +2,7 @@
 import React, {useState} from "react";
 import "./Trip.css"
 import ProgressBar from "./ProgressBar";
+
 function Trip(props){
 // eslint-disable-next-line react/prop-types
 const { departure: { hour: depHour, minute: depMinute, period: depPeriod } 

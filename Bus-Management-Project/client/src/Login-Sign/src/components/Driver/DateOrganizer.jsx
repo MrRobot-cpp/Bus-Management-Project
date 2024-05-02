@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import styles from "./DataOrganizer.module.css";
-import Overlay from "./Overlay/Overlay";
+import Overlay from "../Overlay/Overlay";
 import React, {useState} from "react";
 
 const currentDate = new Date();

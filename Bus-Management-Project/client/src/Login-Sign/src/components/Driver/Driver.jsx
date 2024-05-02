@@ -1,7 +1,7 @@
 import React from 'react'
-import VerticalNavbar from './VerticalNavbar/VerticalNavbar'
+import VerticalNavbar from '../VerticalNavbar/VerticalNavbar'
 import Home from './Home';
-import PageHeader from './Student/PageHeader/PageHeader'
+import PageHeader from '../Student/PageHeader/PageHeader'
 import styles from './Driver.module.css'
 
 
