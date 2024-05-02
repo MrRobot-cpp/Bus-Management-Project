@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import styles from "./DataOrganizer.module.css";
 
 const currentDate = new Date();
@@ -26,6 +27,7 @@ const currentMonth = monthsOfYear[month];
 const currentDayOfMonth = currentDate.getDate();
 
 function DateOrganizer(props) {
+  // eslint-disable-next-line react/prop-types
   const { trips } = props;
 
   let tripTimeValidation = function(trip){
@@ -54,8 +56,8 @@ function DateOrganizer(props) {
 
           <div className={styles["current-data"]}>
             <ul className="trip-list">
+        
               {trips.map((trip, index) => {
-               
                   tripTimeValidation(trip) && (
                     <li key={index}>
                       <div className={styles["trip-info"]}>
