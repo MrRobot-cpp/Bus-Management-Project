@@ -4,8 +4,8 @@
     justify-content: space-around;
     align-items: center;
     background: #263159;
-    height: 95%;
-    width: 85%;
+    height: 100%;
+    width: 90%;
     border-radius: 20px;
     overflow: hidden;
     color: #FFFBEB;
@@ -18,7 +18,7 @@
     align-items: center;
     margin: 0;
     margin-top: -1.6vh;
-    height: 52%;
+    height: 100%;
     width: 100%;
     border-radius: 20px 20px 0 0;
     background: hsla(217, 56%, 50%, 0.386);
@@ -35,7 +35,6 @@
     width: 10vh;
     height: 10vh;
     border-radius: 360px;
-    margin-bottom: 0.5vh;
     background:#FFFBEB ;
 }
 
