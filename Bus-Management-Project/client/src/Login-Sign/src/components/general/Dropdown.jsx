@@ -1,33 +1,40 @@
 /* eslint-disable react/prop-types */
-/* eslint-disable no-undef */
 // eslint-disable-next-line no-unused-vars
-import React, { useState } from 'react'
-import './Dropdown.css'
+import React, { useState } from 'react';
+import './Dropdown.css';
 
-// eslint-disable-next-line no-unused-vars
-function Dropdown(props) {
+// eslint-disable-next-line react/prop-types
+function Dropdown({ options, onSelect }) {
     const [isActive, setIsActive] = useState(false);
     const [selected, setSelected] = useState('Select an option');
-    const {options} = props;
     
+    const handleOptionClick = (option) => {
+        setSelected(option);
+        setIsActive(false);
+        onSelect(option); // Pass the selected option back to the parent component
+    };
+
     return (
-    <div className='dropdown'>
-        <div className='dropdown-btn' onClick={() => setIsActive(!isActive)}>
-            {selected}
-            <span className='fas fa-caret-down'></span>
+        <div className='dropdown'>
+            <div className='dropdown-btn' onClick={() => setIsActive(!isActive)}>
+                {selected}
+                <span className='fas fa-caret-down'></span>
             </div>
             {isActive && (
-        <div className="dropdown-content">
-            {options.map(option =>(
-                // eslint-disable-next-line react/jsx-key
-                <div  onClick={() =>{setSelected(option) 
-                    setIsActive(false)
-                }}className="dropdown-item" key={option}>{option}</div>
-            ))}
+                <div className="dropdown-content">
+                    {options.map(option => (
+                        <div
+                            key={option}
+                            className="dropdown-item"
+                            onClick={() => handleOptionClick(option)}
+                        >
+                            {option}
+                        </div>
+                    ))}
+                </div>
+            )}
         </div>
-)}
-    </div>
-)
+    );
 }
 
-export default Dropdown
+export default Dropdown;

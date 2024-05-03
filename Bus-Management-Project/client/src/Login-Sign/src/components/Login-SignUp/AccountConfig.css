@@ -19,9 +19,32 @@
     place-items: center;
 }
 .login-header{
-    font-size: 3.2em;
+    font-size: 2.5em;
     line-height: 1.1;
     color: #263159;
+}
+.Config-text-div{
+    text-align: left;
+    width: 55%;
+}
+.Config-text-div h4{
+    color:#838383 ;
+}
+.loading-Questions{
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+}
+.loading-dash {
+    margin: 2px 5px;
+    border: 0.5px solid #263159;
+    color: #FFFBEB;
+    width: 12%;
+    height: 2px;
+}
+
+.loading-dash.active {
+    background-color: #263159; 
 }
 .Login-btn{
     width: 210px;
@@ -35,16 +58,25 @@
     color: #FFFBEB;
     background-color: #263159;
     border-radius: 15px;
-    margin: 12px;
     cursor: pointer;
     transition: border-color 0.25s;
-    margin: 2em;
-
+    margin: 1em 1.6em 1em 1.6em;
 }
 .Login-btn:hover{
     transition: 0.5s ease;
     transform: scale(1.1);
     border-color: #646cff;
+}
+.Continue-Button{
+    width: 55%;
+    height: 8%;
+    background-color: #E4E5E7;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    font-size: 1.7em;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 1.2em;
 }
 .login-container{
     display: flex;
@@ -64,4 +96,24 @@
     background-color: #FFFBEB;
     border: 1.5px solid #263159;
     border-radius: 10px;
+    width: 380px;
+    border: 1.5px solid #263159;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 5px 15px rgba(1, 1, 1, 0.08);
+    color: #263159;
+    font-weight: bold;
+}
+.placeholder-text{
+    color: #263159;
+    font-style: italic;
+}
+.dropdown-container {
+    position: relative;
+}
+
+.dropdown-container > .dropdown {
+    position: absolute;
+    top: calc(100% + 5px); /* Adjust the distance between the dropdowns as needed */
+    left: 0;
 }
