@@ -9,12 +9,16 @@ function AdminDashboard() {
     {text: "Drivers" },
     {text: "Students" },
     {text: "Trips" },
-];
+    {text: "Profile" },
+  ];
   return (
     <div className='Dashboard-Container'>
     <PageHeader text='Admin Dashboard' />
-    <VerticalNavbar menuItems={menuItems}/>
+    <div className='tempNav'>
+    <VerticalNavbar menuItems={menuItems} user />
+    </div>
     </div>
   )
 }
+
 export default AdminDashboard
