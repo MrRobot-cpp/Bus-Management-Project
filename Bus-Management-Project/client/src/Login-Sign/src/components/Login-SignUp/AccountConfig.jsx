@@ -1,92 +1,112 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './AccountConfig.css';
 import Dropdown from '../General/Dropdown.jsx';
+import { validateNumberOfDays } from './validation.js'; // Importing validateNumberOfDays from validationUtils.js
 
 function AccountConfig() {
     const options1 = ['Nozha', 'Shobra', 'Heliopolis', '5th settlement', 'El Rehab'];
     const options2 = ['MIU - Misr International University', 'BUE - British University in Egypt', 'El Galala University'];
 
     const [step, setStep] = useState(1);
-    // eslint-disable-next-line no-unused-vars
     const [selectedOption1, setSelectedOption1] = useState('');
-    // eslint-disable-next-line no-unused-vars
     const [selectedOption2, setSelectedOption2] = useState('');
     const [numberOfDays, setNumberOfDays] = useState('');
+    const [locationInput, setLocationInput] = useState('');
     const [continueButtonColor, setContinueButtonColor] = useState('#E4E5E7');
 
-    const handleStudentButtonClick = () => {
-        setStep(2);
-    };
+    useEffect(() => {
+        // Check if all dropdowns and inputs are filled and valid
+        if (step === 4 && validateNumberOfDays(numberOfDays) && selectedOption1 && selectedOption2 && isGoogleMapsLink(locationInput)) {
+            setContinueButtonColor('#263159');
+        } else {
+            setContinueButtonColor('#E4E5E7');
+        }
+    }, [step, selectedOption1, selectedOption2, numberOfDays, locationInput]);
 
     const handleOption1Select = (option) => {
         setSelectedOption1(option);
-        setStep(3);
+        setStep(2);
     };
 
     const handleOption2Select = (option) => {
         setSelectedOption2(option);
-        setStep(4);
-        setContinueButtonColor('#E4E5E7');
+        setStep(4); // Progress to step 4 when an option is selected from dropdown button 2
+    };
+
+    const handleLocationInputChange = (e) => {
+        setLocationInput(e.target.value);
+        if (isGoogleMapsLink(e.target.value)) {
+            setStep(3);
+        }
+    };
+
+    const handleNumberOfDaysChange = (e) => {
+        const days = parseInt(e.target.value);
+        if (!isNaN(days) && days >= 1 && days <= 7) {
+            setNumberOfDays(days);
+        }
+    };
+    
+    const isGoogleMapsLink = (input) => {
+        // Regular expression to check if the input is a Google Maps link
+        return /^https?:\/\/maps\.app\.goo\.gl\/.*$/.test(input);
     };
 
     return (
         <div className='login'>
             <div className="login-container">
                 <div className='Config-text-div'>
-                    <h4>Question {step}</h4>
+                    <h4>Question {step > 4 ? 4 : step}</h4>
                     <div className='loading-Questions'>
-                        {[1, 2, 3, 4, 5].map((item) => (
-                            <div key={item} className={`loading-dash ${step >= item  ? 'active' : ''}`}></div>
+                        {[1, 2, 3, 4].map((item) => (
+                            <div key={item} className={`loading-dash ${step >= item ? 'active' : ''}`}></div>
                         ))}
                     </div>
                     <h2 className='login-header'>Tell us about yourself</h2>
-                    <h4>{step === 1 ? 'Who are you' : ''}</h4>
-                {step === 1 && (
-                    <div className='buttons-holder'>
-                        <button className='Login-btn'>Driver</button>
-                        <button className='Login-btn' onClick={handleStudentButtonClick}>Student</button>
-                    </div>
-                )}
-                {step === 2  && (
-                    <div>
-                        <h4>{step == 2 ? 'Where are you from?' : 'Select an option'}</h4>
-                        <Dropdown options={options1} onSelect={handleOption1Select} />
-                    </div>
-                )}
-                {step === 3 && (
-                    <div>
-                        <h4>{step == 3 ? 'What is your Destination?' : 'Select an option'}</h4>
-                        <Dropdown options={options2} onSelect={handleOption2Select} />
-                    </div>
-                )}
-                {step === 4 && (
-                    <div>
-                        <h4>{step == 4 ? 'How many days you go to this Destination?' : 'Select an option'}</h4>
-                        <input
-                            type="number"
-                            className='NumberOfDays'
-                            value={numberOfDays}
-                            onChange={(e) => setNumberOfDays(e.target.value)}
-                            placeholder='Enter the days in numbers here'
+                    {step >= 1 && (
+                        <div className='drop-holder'>
+                            <Dropdown options={options1} onSelect={handleOption1Select} />
+                        </div>
+                    )}
+                    {step >= 2 && (
+                        <div className='drop-holder'>
+                            <h4>{step >= 2 ? 'What’s your Location there?' : 'Select an option'}</h4>
+                            <input
+                                type="text"
+                                className='location-input'
+                                value={locationInput}
+                                onChange={handleLocationInputChange}
+                                placeholder='Insert your location link'
                             />
-                    </div>
-                )}
-                {step === 5 && (
-                    <div>
-                        <h4>{step == 5 ? 'How many days you go to this Destination?' : 'Select an option'}</h4>
-                        <input
-                            type="number"
-                            className='NumberOfDays'
-                            value={numberOfDays}
-                            onChange={(e) => setNumberOfDays(e.target.value)}
-                            placeholder='Enter the days in numbers here'
+                            {locationInput && !isGoogleMapsLink(locationInput) && (
+                                <p className="error">Please enter a valid Google Maps link.</p>
+                            )}
+                        </div>
+                    )}
+                    {step >= 3 && (
+                        <div className='drop-holder'>
+                            <h4>{step >= 3 ? 'What is your Destination?' : 'Select an option'}</h4>
+                            <Dropdown options={options2} onSelect={handleOption2Select} />
+                        </div>
+                    )}
+                    {step >= 4 && (
+                        <div className='drop-holder'>
+                            <h4>{step >= 4 ? 'How many days you go to this Destination?' : 'Select an option'}</h4>
+                            <input
+                                type="number"
+                                className='NumberOfDays'
+                                min='1'
+                                max='7'
+                                value={numberOfDays}
+                                onChange={handleNumberOfDaysChange}
+                                placeholder='Enter the days in numbers here'
                             />
-                    </div>
-                )}
+                        </div>
+                    )}
                 </div>
-                <button className='Continue-Button' style={{backgroundColor: continueButtonColor}}>Continue</button>
-                {/* Render other steps similarly */}
+                {/* Add continue button */}
+                <button className='Continue-Button' onClick={() => setStep(step + 1)} style={{ backgroundColor: continueButtonColor }}>Continue</button>
             </div>
         </div>
     );

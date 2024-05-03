@@ -70,7 +70,7 @@
     border-radius: 15px;
     cursor: pointer;
     transition: border-color 0.25s;
-    margin: 1em 1.6em 1em 0em;
+    margin: 0.2em 1.6em 0.2em 0em;
 }
 .Login-btn:hover{
     transition: 0.5s ease;
@@ -95,8 +95,8 @@
     align-items: center;
     text-align: left;
     box-sizing: border-box;
-    width: 900px;
-    height: 790px;
+    width: 45vw;
+    height: 80vh;
     background-color: #FFFBEB;
     border-radius: 40px;
     padding: 20px;
@@ -106,13 +106,32 @@
     background-color: #FFFBEB;
     border: 1.5px solid #263159;
     border-radius: 10px;
-    width: 380px;
+    width: 88%;
+    height: 2.3vh;
     border: 1.5px solid #263159;
     border-radius: 10px;
     padding: 10px;
     box-shadow: 0px 5px 15px rgba(1, 1, 1, 0.08);
     color: #263159;
     font-weight: bold;
+}
+.location-input{
+    background-color: #FFFBEB;
+    border: 1.5px solid #263159;
+    border-radius: 10px;
+    width: 88%;
+    height: 2.3vh;
+    border: 1.5px solid #263159;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 5px 15px rgba(1, 1, 1, 0.08);
+    color: #263159;
+    font-weight: bold;
+}
+.drop-holder{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 .placeholder-text{
     color: #263159;
