@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
-import VerticalNavbar from "../General/VerticalNavbar";
+import VerticalNavbar from "../General/VerticalNavbar.jsx";
 import Home from "./Home";
 import PageHeader from "../Student/PageHeader/PageHeader.jsx";
 import styles from "./Driver.module.css";
@@ -63,6 +63,26 @@ const trips = [
     stops: ["Stop 1", "Stop 2", "Stop 3"],
     startPoint: "School C",
     endPoint: "School D",
+    status: true,
+    date: new Date("2024-05-03"),
+  },
+  {
+    departure: {
+      hour: 8,
+      minute: 45,
+      period: "AM",
+    },
+    arrival: {
+      hour: 1,
+      minute: 30,
+      period: "PM",
+    },
+    numStudents: 25,
+    maxNumberStudents: 35,
+    speedLimit: 50,
+    stops: ["Stop 1", "Stop 2", "Stop 3"],
+    startPoint: "School C",
+    endPoint: "School E",
     status: true,
     date: new Date("2024-05-03"),
   },

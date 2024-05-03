@@ -6,9 +6,10 @@ function StudentHeader(props) {
     return(
         <>
         <div className="student-header-container">
-            <header>
                 <h2 className="header-txt">{props.text}</h2>
-            </header>
+                <div className="border-box-container">
+                <div className="border-box"/>
+                </div>
         </div>
         </>
     );
