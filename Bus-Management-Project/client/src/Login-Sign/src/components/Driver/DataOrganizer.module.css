@@ -10,20 +10,21 @@
 .data-organizer{
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    width: 65%;
+    align-items: center;
+    width: 63%;
     height: 90%;
-    background: #495579;
-    border-radius: 20px;
-    padding: 20px;
+    margin-top: 1.3vh;
+    /* padding: 10px; */
     /* transform: translateY(50px); */
 }
 
 .data{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
+    justify-content: center;
+    align-items: flex-start;
+    background: #495579;
+    border-radius: 20px;
     width: 95%;
     height: 100%;
     padding: 20px;
