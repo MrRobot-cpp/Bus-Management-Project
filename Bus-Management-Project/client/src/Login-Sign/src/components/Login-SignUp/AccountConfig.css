@@ -60,3 +60,8 @@
     padding: 20px;
     margin: 12px;
 }
+.NumberOfDays{
+    background-color: #FFFBEB;
+    border: 1.5px solid #263159;
+    border-radius: 10px;
+}

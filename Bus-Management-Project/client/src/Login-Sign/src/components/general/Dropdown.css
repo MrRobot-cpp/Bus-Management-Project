@@ -37,7 +37,9 @@
     padding: 10px;
     cursor: pointer;
     transition: all 0.2s;
-
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
 }
 .dropdown-item:hover{
     background:#6b7bb6 ;

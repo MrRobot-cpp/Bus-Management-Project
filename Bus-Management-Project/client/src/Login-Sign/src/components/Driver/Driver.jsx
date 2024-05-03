@@ -1,7 +1,8 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react'
-import VerticalNavbar from '../general/VerticalNavbar'
+import VerticalNavbar from '../General/VerticalNavbar'
 import Home from './Home';
-import PageHeader from '../Student/PageHeader/PageHeader'
+import PageHeader from '../Student/PageHeader/PageHeader.jsx'
 import styles from './Driver.module.css'
 
 const trips = [

@@ -4,11 +4,12 @@
 import React, { useState } from 'react'
 import './Dropdown.css'
 
-
 // eslint-disable-next-line no-unused-vars
-function Dropdown({selected, setSelected}) {
+function Dropdown(props) {
     const [isActive, setIsActive] = useState(false);
-    const options =['React','Vue','Angular'];
+    const [selected, setSelected] = useState('Select an option');
+    const {options} = props;
+    
     return (
     <div className='dropdown'>
         <div className='dropdown-btn' onClick={() => setIsActive(!isActive)}>
@@ -21,7 +22,7 @@ function Dropdown({selected, setSelected}) {
                 // eslint-disable-next-line react/jsx-key
                 <div  onClick={() =>{setSelected(option) 
                     setIsActive(false)
-                }}className="dropdown-item">{option}</div>
+                }}className="dropdown-item" key={option}>{option}</div>
             ))}
         </div>
 )}
