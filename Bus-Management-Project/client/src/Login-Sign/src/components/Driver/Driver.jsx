@@ -89,7 +89,7 @@ function Driver() {
     ];
   return (
     <div className={styles['main-container']}>
-      <PageHeader text={"Driver"}/>
+      <PageHeader text={"Driver Dashboard"}/>
       <div className={styles['home-container']}>
       <VerticalNavbar menuItems={menuItems} user={driver}/>
       <Home driver={driver} trips={trips}/>
