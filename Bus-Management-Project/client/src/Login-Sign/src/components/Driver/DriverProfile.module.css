@@ -3,12 +3,12 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background: #495579;
+    background: #FFFBEB;
     height: 100%;
-    width: 90%;
+    width: 95%;
     border-radius: 20px;
     overflow: hidden;
-    color: #FFFBEB;
+    color: #263159;
 }
 
 .profile{
@@ -32,8 +32,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 10vh;
-    height: 10vh;
+    width: 20vh;
+    height: 20vh;
+    margin-bottom: 3vh;
     border-radius: 360px;
     background:#FFFBEB ;
 }

@@ -15,11 +15,11 @@
         justify-content: center;
         align-items: center;
         border-radius: 80px;
-        background: #FFFBEB;
+        background: #263159;
         width: 5vh;
         height: 5vh;
         border: none;
-        color: #495579;
+        color: #FFFBEB;
         font-size: 10px;
         z-index: 1;
         margin-right: -16px;
@@ -31,7 +31,7 @@
         border: none;
         height: 40%;
         width: 80%;
-        background: #FFFBEB;
+        background: #263159;
         margin: 0;
         padding: 0;
         transform: translate(10px,0); 

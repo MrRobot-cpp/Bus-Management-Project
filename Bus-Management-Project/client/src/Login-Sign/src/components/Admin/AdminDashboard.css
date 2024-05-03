@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Font Imports */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
@@ -7,10 +8,23 @@
     margin: 0;
 }
 .Dashboard-Container {
+=======
+
+.Dashboard-Container{
+>>>>>>> ddf26bd05f4daabe13502bac7ebf4536a683dc56
     width: 100%;
     height: 100vh;
     overflow: auto;
     background-color: #263159;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    overflow: hidden;
+
+=======
+   
+>>>>>>> 4c79e7cb773157137d0c4bb12afbf03f0587dd6a
+>>>>>>> ddf26bd05f4daabe13502bac7ebf4536a683dc56
 }
 .main-container {
     display: flex;
@@ -20,11 +34,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80%;
+    height: 100%;
     width: 236px;
     border-radius: 20px;
     margin: 20px;
+<<<<<<< HEAD
+    overflow: hidden;
+=======
     margin-top: 50px;
+>>>>>>> 4c79e7cb773157137d0c4bb12afbf03f0587dd6a
 }
 .Students {
     padding: 0px;
