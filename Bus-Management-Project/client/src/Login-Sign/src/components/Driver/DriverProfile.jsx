@@ -1,6 +1,8 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import styles from './DriverProfile.module.css'
 function DriverProfile(props){
+    // eslint-disable-next-line react/prop-types
     const {name,age,noOfTrips,type}=props;
 
     const [rating, setRating] = useState(0);

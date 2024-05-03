@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const MenuItemButtonHighlighted = (props) => {
   return (
-    <button className={`menu-item-highlighted ${props.classCondition ? props.className2 : ''}`}   
+    <button className={`menu-item-highlighted ${props.classCondition ? props.className2 : false}`}   
       style={{width: props.Width}}  >{props.text}
       </button>
     
