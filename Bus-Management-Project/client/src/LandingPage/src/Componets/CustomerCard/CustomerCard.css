@@ -6,7 +6,7 @@
 
 
 .customer-card {
-    width: 270px;
+    min-width: 246px;
     height: 382px;
     border-radius: 16px;
     padding: 24px;
