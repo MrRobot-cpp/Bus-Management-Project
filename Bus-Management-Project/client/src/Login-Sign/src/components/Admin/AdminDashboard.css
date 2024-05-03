@@ -1,21 +1,21 @@
+/* Font Imports */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
-*{
+* {
     font-family: "Istok Web", sans-serif;
     padding: 0;
     margin: 0;
 }
-.Dashboard-Container{
+.Dashboard-Container {
     width: 100%;
     height: 100vh;
-    overflow:auto;
+    overflow: auto;
     background-color: #263159;
-   
 }
-.main-container{
+.main-container {
     display: flex;
 }
-.tempNav{
+.tempNav {
     padding: 0px;
     display: flex;
     justify-content: center;
@@ -26,55 +26,66 @@
     margin: 20px;
     margin-top: 50px;
 }
-.Students 
-{
+.Students {
     padding: 0px;
-    margin-top:30px;
+    margin-top: 30px;
     height: 200px;
     width: 220px;
     border-radius: 20px;
     background-color: #FFFBEB;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
-.Students h6{
-    width:199.42px;
-    height :17px;
-    top:16px;
+.Students h6 {
+    width: 199.42px;
+    height: 17px;
     color: #4D4D4D;
-    left:21.37px;
-
-font-family: Inter;
-font-size: 14px;
-font-weight: 500;
-line-height: 16.94px;
-letter-spacing: -0.15px;
-text-align:left;
-padding-top: 15px;
-padding-left: 15px;
-
-
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.94px;
+    letter-spacing: -0.15px;
+    text-align: left;
+    padding-top: 15px;
+    padding-left: 15px;
 }
-
-.Students h2{
-color:black;
-font-family: Inter;
-font-size: 22px;
-font-weight: bold;
-line-height: 16.94px;
-letter-spacing: -0.15px;
-text-align:left;
-padding-top: 7px;
-padding-left: 15px;
-
+.Students h2 {
+    color: black;
+    font-family: Inter;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 16.94px;
+    letter-spacing: -0.15px;
+    text-align: left;
+    padding-top: 7px;
+    padding-left: 15px;
 }
-/* al dayra al zar2a */
-.Students .Pie{
- padding-left: 115px;
- padding-top: 20px;
- width:100px;
- height:auto;
- display: inline-block;
+.Students .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px;
 }
-
-.Students .percentages{
-    display: inline-block;
+.Students .Pie {
+    width: 100px;
+    height: auto;
+}
+.Students .percentages {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 14px;
+    font-weight: normal;
+    color: #4D4D4D;
+}
+.Students .percentages ul {
+    list-style: none;
+    padding: 0;
+}
+.Students .percentages ul li {
+    margin-bottom: 5px;
 }

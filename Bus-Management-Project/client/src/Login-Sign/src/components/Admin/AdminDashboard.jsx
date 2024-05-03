@@ -16,21 +16,26 @@ function AdminDashboard() {
 
   return (
     <div className='Dashboard-Container'>
-    <PageHeader text='Admin Dashboard' />
-    <div className='main-container'>
-    <div className='tempNav'>
-    <VerticalNavbar menuItems={menuItems} user />
-    </div>
-    <div className='Students'>
-      <h6>Students</h6>
-      <h2>4,209</h2>
-      <h6 className='percentages'>62%</h6>
-      <h6 className='percentages'>13%</h6>
-      <h6 className='percentages'>23%</h6>
-
-      <img className='Pie'src={studentImage} alt="Student" />
-    </div> 
-    </div>
+      <PageHeader text='Admin Dashboard' />
+      <div className='main-container'>
+        <div className='tempNav'>
+          <VerticalNavbar menuItems={menuItems} user />
+        </div>
+        <div className='Students'>
+          <h6>Students</h6>
+          <h2>4,209</h2>
+          <div className='info'>
+            <div className='percentages'>
+              <ul>
+                <li>62% New </li>
+                <li>13% Returning</li>
+                <li>23% Inactive</li>
+              </ul>
+            </div>
+            <img className='Pie' src={studentImage} alt="Student" />
+          </div>
+        </div> 
+      </div>
     </div>
   )
 }
