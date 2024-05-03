@@ -1,5 +1,7 @@
 import './LandingPage.css'
 import "./MenuItemButton/MenuItemButton.css"
+import { addAnimation } from "./CustomerCard/scrollingAnimation.js"
+import { useEffect } from 'react'
 
 import MenuItemButtonRegular from "./MenuItemButton/MenuItemButtonRegular.jsx"
 import HorizontalCard from "./HorizontalCard/HorizontalCard.jsx";
@@ -31,6 +33,15 @@ const toggleDropDown = () => {
     toggleBtnIcon.classList.toggle('fa-xmark', isOpen);
 };
 
+//check for media queries
+//if user has reduced motion OFF --> add animation function
+//reduced motion minimizes the amount of animation or motion it uses
+useEffect(() => {
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        addAnimation();
+    }
+}, []);
+
 
 return (
     <>
@@ -43,7 +54,7 @@ return (
                 <li className="list"><MenuItemButtonRegular text="Services" hRef={"#"} /></li>
                 <li className="list"><MenuItemButtonRegular text="About" hRef={"#"} /></li>
                 <li className="list"><MenuItemButtonRegular text="Contact Us" hRef={"#"} /></li>
-                <MenuItemButtonHighlighted text="Login" classCondition="true" className2="header-login-btn"  />
+                <MenuItemButtonHighlighted text="Login" classCondition={true} className2="header-login-btn"  />
             </ul>
 
         <div className="toggle-btn" onClick={toggleDropDown}>
@@ -54,7 +65,7 @@ return (
             <li className="list"><MenuItemButtonRegular text="Services" hRef={"#"} /></li>
             <li className="list"><MenuItemButtonRegular text="About" hRef={"#"} /></li>
             <li className="list"><MenuItemButtonRegular text="Contact Us" hRef={"#"} /></li>
-            <li className="list"><MenuItemButtonHighlighted text="Login" classCondition="true" className2="dropdown-login-btn"/></li>
+            <li className="list"><MenuItemButtonHighlighted text="Login" classCondition={true} className2="dropdown-login-btn"/></li>
         </div>
     </div>
     </nav>
@@ -96,19 +107,21 @@ return (
 
 
     {/* Customer Card Section */}
-{/* 
+{/* {/*      */}
     <div className="customer-card-container">
         <h1 className="customer-card-headline">Hear From Our Customers</h1>
-        <div className="customer-card-display">
-            <CustomerCard imageLink={client1Image} />
-            <CustomerCard imageLink={client2Image} />
-            <CustomerCard imageLink={client3Image} />
-            <CustomerCard imageLink={client4Image} />
-            <CustomerCard imageLink={client5Image} />
-            <CustomerCard imageLink={client6Image} />
-            <CustomerCard imageLink={client7Image} />
-        </div>
-    </div> */}
+            <div className="customer-card-scroller" data-animated={true} >
+                <div className="customer-card-display customer-card-inner-scroller">
+                <CustomerCard imageLink={client1Image}  />
+                <CustomerCard imageLink={client2Image}  />
+                <CustomerCard imageLink={client3Image}  />
+                <CustomerCard imageLink={client4Image}  />
+                <CustomerCard imageLink={client5Image}  />
+                <CustomerCard imageLink={client6Image}  />
+                <CustomerCard imageLink={client7Image}  />
+                </div>
+            </div>
+    </div>
 
     </>
 );

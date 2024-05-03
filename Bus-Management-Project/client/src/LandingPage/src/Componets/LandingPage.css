@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 
+
+
+
 *  {
     margin: 0;
     padding: 0;
@@ -155,26 +158,66 @@
   /* customer card */
 
 .customer-card-container {
-    height: 600px;
+    place-content: center;
     background-color: #495579;
-    padding: 76px 0;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    height: 700px;
 }
 
 .customer-card-headline {
     color: #fff;
-    text-align: center;
+    padding-block: 44px 20px;
+
 }
 
 .customer-card-display {
     display: flex;
-    width: 1936px;
-    padding: 34px;
-    justify-content: center;
-    align-content: center;
-    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+
 }
 
 
+.customer-card-scroller {
+    max-width: 1000px;
+    outline: 3px solid lime;
+    padding-top: 2.5rem;
+    
+}
+
+.customer-card-inner-scroller {
+    display: flex;
+    flex-wrap: wrap
+}
+
+
+.customer-card-scroller[data-animated=true] {
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(
+        90deg,
+        transparent,
+        #fff 20%,
+        #fff 80%,
+        transparent
+        );
+    }
+    
+    .customer-card-scroller[data-animated=true] .customer-card-inner-scroller {
+        flex-wrap: nowrap;
+        animation: scroll 35s linear infinite;
+        width: fit-content;
+    }
+    
+    
+    @keyframes scroll {
+        to {
+            transform: translate(calc(-50% - 0.5rem));
+        }
+    }
 
 
 
@@ -209,4 +252,3 @@
         width: unset;
     }
 }
-
