@@ -8,7 +8,7 @@ import React from 'react';
 import Driver from './components/Driver/Driver'
 //import Home from './components/Home'
 //import AccountConfig from './components/Login-SignUp/AccountConfig';
-import Admin from './components/Admin/Admin'
+ import Admin from './components/Admin/Admin'
 function App() {
     return (
         <>
