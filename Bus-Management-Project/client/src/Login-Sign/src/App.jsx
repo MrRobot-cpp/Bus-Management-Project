@@ -3,8 +3,7 @@ import React from 'react';
 //import Login from './components/Login.jsx';
 //import Signup from './components/signUp.jsx';
 //import StudentProfile from './components/StudentProfile/StudentProfile/';
-//import VerticalNavbar from './components/VerticalNavbar/VerticalNavbar';
-// import Student from './components/Student/Student';
+import Student from './components/Student/Student';
 //import Driver from './components/Driver/Driver';
 //import Home from './components/Home'
 // import AccountConfig from './components/AccountConfig';
@@ -17,7 +16,7 @@ function App() {
             {/* <VerticalNavbar /> */}
             {/* <Home/> */}
             {/* <AccountConfig /> */}
-            {/* <Student/>    */}
+            <Student/>   
             {/* <Admin /> */}
         </>
     );
