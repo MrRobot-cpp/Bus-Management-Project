@@ -8,7 +8,9 @@
 .Dashboard-Container{
     width: 100%;
     height: 100vh;
+    overflow:auto;
     background-color: #263159;
+   
 }
 .tempNav{
     padding: 0px;
@@ -19,5 +21,14 @@
     width: 236px;
     border-radius: 20px;
     margin: 20px;
-    margin-top: 30px;
+    margin-top: 50px;
+}
+.Students 
+{
+    padding: 0px;
+    display: flex;
+    height: 200px;
+    width: 200px;
+    border-radius: 20px;
+    background-color: #FFFBEB;
 }
