@@ -116,7 +116,7 @@ box-shadow: 0 0 10px rgba(0,0,0,0.3);
     transition: 0.5s ease;
 }
 
-.minimal-info{
+/* .minimal-info{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -131,9 +131,9 @@ box-shadow: 0 0 10px rgba(0,0,0,0.3);
 
 .hr-line {
     border-top: 1px solid #FFFBEB; /* Adjust color and thickness as needed */
-    height: 20px;
-    width: 13vw; /* Adjust height as needed */
-    overflow: hidden;
+    /* height: 20px; */
+    /* width: 13vw; /* Adjust height as needed  */
+    /* overflow: hidden;/* 
   }
 
 .name{
@@ -148,4 +148,4 @@ box-shadow: 0 0 10px rgba(0,0,0,0.3);
     padding-left: 10px;
 
 }
-  
+   */

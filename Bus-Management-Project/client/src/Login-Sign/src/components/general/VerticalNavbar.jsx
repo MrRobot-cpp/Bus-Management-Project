@@ -14,7 +14,7 @@ function VerticalNavbar(props) {
     const [hoverBoxMargin, setHoverBoxMargin] = useState("10px");
 
     // eslint-disable-next-line react/prop-types
-    const {menuItems,user} = props;
+    const {menuItems} = props;
     //ahmed
 
     // function handleToggle() {
@@ -70,7 +70,7 @@ function VerticalNavbar(props) {
                             </li>
                         ))}
                     </ul>
-                    <div className="minimal-info">
+                    {/* <div className="minimal-info">
                     <div className="hr-line"></div>
                     <p className="name">
                         {user.name}
@@ -78,7 +78,7 @@ function VerticalNavbar(props) {
                     <p className="email">
                         {user.mail}
                     </p>
-                    </div>
+                    </div> */}
             </div>
         </div>
     </>
