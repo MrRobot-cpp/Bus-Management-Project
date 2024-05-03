@@ -29,6 +29,7 @@
 .Students {
     padding: 0px;
     margin-top: 30px;
+    margin-right: 20px;
     height: 200px;
     width: 220px;
     border-radius: 20px;
@@ -59,8 +60,9 @@
     line-height: 16.94px;
     letter-spacing: -0.15px;
     text-align: left;
-    padding-top: 7px;
-    padding-left: 15px;
+    padding-bottom: 10px;
+    padding-left: 1px;
+    padding-right: 125px;
 }
 .Students .info {
     display: flex;
@@ -69,9 +71,13 @@
     width: 100%;
     padding: 0 10px;
 }
+
+/* el sora el zr2a */
 .Students .Pie {
     width: 100px;
     height: auto;
+    padding-bottom: 20px;
+    padding-right: 5px;
 }
 .Students .percentages {
     display: flex;
@@ -88,4 +94,10 @@
 }
 .Students .percentages ul li {
     margin-bottom: 5px;
+}
+
+.Students .percentages ul li.small-text {
+    padding-left: 5px;
+    font-size: 12px; /* Adjust the font size to make it slightly smaller */
+    color: #6B6B6B; /* Adjust the color if needed */
 }
