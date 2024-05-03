@@ -3,6 +3,7 @@ import React from "react";
 import VerticalNavbar from "../General/VerticalNavbar.jsx";
 import Home from "./Home";
 import PageHeader from "../Student/PageHeader/PageHeader.jsx";
+import TripsTable from "./TripsTable.jsx";
 import styles from "./Driver.module.css";
 
 const trips = [
@@ -109,12 +110,14 @@ function Driver() {
   return (
     <div className={styles["main-container"]}>
       <PageHeader text={"Driver Dashboard"} />
-      <div className={styles["home-container"]}>
+      <div className={styles["container"]}>
+
         <div className={styles["navbar-container"]}>
           <VerticalNavbar menuItems={menuItems} user={driver} />
           <a href="#">Logout</a>
         </div>
-        <Home driver={driver} trips={trips} />
+        <TripsTable/>
+        {/* <Home driver={driver} trips={trips} /> */}
       </div>
     </div>
   );

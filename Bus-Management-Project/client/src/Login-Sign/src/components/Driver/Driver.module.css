@@ -9,7 +9,7 @@
     background: #263159;
 }
 
-.home-container{
+.container{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,7 +35,7 @@
     transition: 0.2s ease-out;
     width: 60%;
     height: 35px;
-    margin-top: -20px;
+    margin-top: 10%;
     margin-left: 1.6vw;
     border: 1px solid #FFFBEB;
     border-radius: 10px;
