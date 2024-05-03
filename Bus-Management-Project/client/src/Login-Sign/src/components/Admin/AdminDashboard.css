@@ -11,13 +11,13 @@
     background-color: #263159;
 }
 .tempNav{
-    background-color: #495579;
     padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 80%;
     width: 236px;
     border-radius: 20px;
     margin: 20px;
     margin-top: 30px;
-    border: 1.5px solid #FFFBEB;
-    overflow: hidden;
 }
