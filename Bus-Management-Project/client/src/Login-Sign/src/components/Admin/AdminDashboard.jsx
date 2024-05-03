@@ -11,11 +11,14 @@ function AdminDashboard() {
     {text: "Trips" },
     {text: "Profile" },
   ];
+
   return (
     <div className='Dashboard-Container'>
     <PageHeader text='Admin Dashboard' />
     <div className='tempNav'>
     <VerticalNavbar menuItems={menuItems} user />
+    </div>
+    <div className='Students'> 
     </div>
     </div>
   )
