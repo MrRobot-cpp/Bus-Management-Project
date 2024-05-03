@@ -4,12 +4,9 @@ import PageHeader from "./PageHeader/PageHeader";
 // import StudentTrip from "./StudentTrip/StudentTrip";
 function Student(){
     const menuItems = [
-        { icon: "fa-solid fa-shop", text: "Home" },
-        { icon: "fa-solid fa-bus", text: "Trips" },
-        { icon: "fa-solid fa-clock-rotate-left", text: "History" },
-        { icon: "fa-solid fa-money-bill-1", text: "Cash Deposit" },
-        { icon: "fa-solid fa-user", text: "Profile" },
-        { icon: "fa-solid fa-arrow-right-from-bracket", text: "LogOut" },
+        { text: "Trips" },
+        { text: "Cash Deposit" },
+        { text: "Profile" },
     ];
 
     return(
