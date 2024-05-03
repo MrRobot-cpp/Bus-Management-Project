@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
+import '@fortawesome/fontawesome-free/css/all.css';
 import './Dropdown.css';
 
 // eslint-disable-next-line react/prop-types
@@ -18,7 +19,7 @@ function Dropdown({ options, onSelect }) {
         <div className='dropdown'>
             <div className='dropdown-btn' onClick={() => setIsActive(!isActive)}>
                 {selected}
-                <span className='fas fa-caret-down'></span>
+                <i className="fa-solid fa-caret-down"></i>
             </div>
             {isActive && (
                 <div className="dropdown-content">
