@@ -11,7 +11,7 @@ function VerticalNavbar(props) {
     const [hoverBoxMargin, setHoverBoxMargin] = useState("10px");
 
     // eslint-disable-next-line react/prop-types
-    const {menuItems} = props;
+    const {menuItems,user} = props;
 
     function handleToggle() {
     const newToggleValue = !toggle;
@@ -41,17 +41,19 @@ function VerticalNavbar(props) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
         <div className="vertical-navbar-container common">
             <div className="vertical-navbar">
-                    <ul>
-                    <li style={{marginLeft: hoverBoxMargin}}>
+                    <ul className="vertical-navbar-ul">
+                    {/* <li style={{marginLeft: hoverBoxMargin}}> */}
+                    <li>
                         <div className="header">
-                        <h2>{(toggle && "RouteMinder.")||"RM."}</h2>
+                        <p>RouteMinder.</p>
                         </div>
                     </li>
                         <li style={{marginLeft: hoverBoxMargin}} className="hamburger-btn-line">
-                            <a href="#" className="dashboard-link" onClick={handleToggle} onMouseOver={handleMouseOver} 
-                            onMouseOut={handleMouseOut} style={{width: hoverBox}}>
-                                <HamburgerBtn className="hamburger-btn" transform={`translate(${toggle?"0px":"-15px" },-20px)`} 
-                                backgroundColor={backgroundColor} toggle={toggle}/>
+                            {/* <a href="#" className="dashboard-link" onClick={handleToggle} onMouseOver={handleMouseOver} 
+                            onMouseOut={handleMouseOut} style={{width: hoverBox}}> */}
+                                 <a href="#" className="dashboard-link">
+                                {/* <HamburgerBtn className="hamburger-btn" transform={`translate(${toggle?"0px":"-15px" },-20px)`} 
+                                backgroundColor={backgroundColor} toggle={toggle}/> */}
                                 {toggle && "Dashboard"}
                             </a>
                         </li>
@@ -64,6 +66,15 @@ function VerticalNavbar(props) {
                             </li>
                         ))}
                     </ul>
+                    <div className="minimal-info">
+                    <div className="hr-line"></div>
+                    <p className="name">
+                        {user.name}
+                    </p>
+                    <p className="email">
+                        {user.mail}
+                    </p>
+                    </div>
             </div>
         </div>
     </>
