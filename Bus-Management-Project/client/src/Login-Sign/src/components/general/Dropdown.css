@@ -5,7 +5,7 @@
 .dropdown{
     width: 400px;
     user-select: none;
-    margin: 100px auto;
+    margin: 10px auto;
     position: relative;
 }
 .dropdown-btn{
@@ -15,7 +15,6 @@
     color: #263159;
     display: flex;
     cursor: pointer;
-    align-items: center;
     justify-content: space-between;
     border: 1.5px solid #263159;
     border-radius: 10px;
