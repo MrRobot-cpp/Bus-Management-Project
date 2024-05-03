@@ -18,3 +18,36 @@
     overflow: hidden;
     background: #263159;
 }
+
+.navbar-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.navbar-container > a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    transition: 0.2s ease-out;
+    width: 60%;
+    height: 35px;
+    margin-top: -20px;
+    margin-left: 1.6vw;
+    border: 1px solid #FFFBEB;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    color: #FFFBEB;
+    background-color: #495579;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.navbar-container > a:hover{
+    background-color: #FFFBEB;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    color: #263159;
+}

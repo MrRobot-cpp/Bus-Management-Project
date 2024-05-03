@@ -9,7 +9,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #495579; 
+    background: #FFFBEB; 
     /* min-height: 500px; */
     min-width: 40px;
     height: 90%;
@@ -28,7 +28,7 @@
 
 .text-style{
     /* transform: translateY(-40px); */
-    color: #FFFBEB;
+    color: #263159;
     /* margin: 10px;
     margin-right: 17.5px;
     padding-top: 10px; */
