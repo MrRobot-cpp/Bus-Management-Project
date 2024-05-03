@@ -9,7 +9,6 @@ import './Dropdown.css'
 function Dropdown({selected, setSelected}) {
     const [isActive, setIsActive] = useState(false);
     const options =['React','Vue','Angular'];
-
     return (
     <div className='dropdown'>
         <div className='dropdown-btn' onClick={() => setIsActive(!isActive)}>
