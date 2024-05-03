@@ -1,9 +1,9 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react'
+import React, { useState } from 'react'
 import "./AccountConfig.css" 
-function AccountConfig() {
-
-    
+import Dropdown from '../General/Dropdown.jsx'
+function AccountConfig() { 
+    const [selected, setSelected] = useState('');
 return (
     <div className='login'>
         <div className="login-container">
@@ -15,6 +15,7 @@ return (
                 <div className='login-div-holder'>
                     <button className='Login-btn' type="submit" id="submit">Driver</button>
                     <button className='Login-btn' type="submit" id="submit">Student</button>
+                <Dropdown selected={selected} setSelected={setSelected}/>
                 </div>
                 <div>
                 <button className='Login-btn' type="submit" id="submit">Continue</button>
