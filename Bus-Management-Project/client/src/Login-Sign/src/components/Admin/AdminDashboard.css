@@ -12,6 +12,9 @@
     background-color: #263159;
    
 }
+.main-container{
+    display: flex;
+}
 .tempNav{
     padding: 0px;
     display: flex;
@@ -26,9 +29,52 @@
 .Students 
 {
     padding: 0px;
-    display: flex;
+    margin-top:30px;
     height: 200px;
-    width: 200px;
+    width: 220px;
     border-radius: 20px;
     background-color: #FFFBEB;
+}
+.Students h6{
+    width:199.42px;
+    height :17px;
+    top:16px;
+    color: #4D4D4D;
+    left:21.37px;
+
+font-family: Inter;
+font-size: 14px;
+font-weight: 500;
+line-height: 16.94px;
+letter-spacing: -0.15px;
+text-align:left;
+padding-top: 15px;
+padding-left: 15px;
+
+
+}
+
+.Students h2{
+color:black;
+font-family: Inter;
+font-size: 22px;
+font-weight: bold;
+line-height: 16.94px;
+letter-spacing: -0.15px;
+text-align:left;
+padding-top: 7px;
+padding-left: 15px;
+
+}
+/* al dayra al zar2a */
+.Students .Pie{
+ padding-left: 115px;
+ padding-top: 20px;
+ width:100px;
+ height:auto;
+ display: inline-block;
+}
+
+.Students .percentages{
+    display: inline-block;
 }
