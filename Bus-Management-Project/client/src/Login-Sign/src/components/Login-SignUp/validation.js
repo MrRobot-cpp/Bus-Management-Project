@@ -23,20 +23,6 @@ export const validateTermsAndConditions = (isChecked) => {
     return isChecked;
 };
 
-export function handleInputFocus(setIsInputFocused, setNumberOfDays) {
-    setIsInputFocused(true);
-    // Clear the placeholder text when focused
-    setNumberOfDays('');
-}
-
-export function handleInputBlur(numberOfDays, setIsInputFocused, setNumberOfDays) {
-    setIsInputFocused(false);
-    // Reset the placeholder text if input is empty
-    if (numberOfDays === '') {
-        setNumberOfDays('Enter the days in numbers here');
-    }
-}
-
 export const validateOption1 = (option) => {
     // Validation logic for the first dropdown (options1)
     return option !== ''; // You can add more complex validation logic as needed
@@ -49,5 +35,5 @@ export const validateOption2 = (option) => {
 
 export const validateNumberOfDays = (numberOfDays) => {
     // Validation logic for the number of days input
-    return numberOfDays !== '' && numberOfDays > 0; // Validate if it's not empty and greater than 0
+    return numberOfDays !== '' && numberOfDays >= 1 && numberOfDays <= 7; // Validate if it's not empty and within the range of 1 to 7
 };
