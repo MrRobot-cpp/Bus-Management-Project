@@ -1,18 +1,28 @@
-/* eslint-disable no-undef */
 /* eslint-disable react/prop-types */
 // eslint-disable-next-line no-unused-vars
 import React, {useState} from "react";
 import "./VerticalNavbar.css";
 
 function VerticalNavbar(props) {
-    // const [toggle, setToggle] = useState(true);
-    // const [backgroundColor, setBackgroundColor] = useState("#FFFBEB");
-    // const [hoverBox, setHoverBox] = useState("14vw");
-    // const [hoverBoxMargin, setHoverBoxMargin] = useState("10px");
+    // eslint-disable-next-line no-unused-vars
+    const [toggle, setToggle] = useState(true);
+    // eslint-disable-next-line no-unused-vars
+    const [backgroundColor, setBackgroundColor] = useState("#FFFBEB");
+    // eslint-disable-next-line no-unused-vars
+    const [hoverBox, setHoverBox] = useState("14vw");
+    // eslint-disable-next-line no-unused-vars
+    const [hoverBoxMargin, setHoverBoxMargin] = useState("10px");
 
     // eslint-disable-next-line react/prop-types
     const {menuItems,user} = props;
 
+    // function handleToggle() {
+    // const newToggleValue = !toggle;
+    // setToggle(newToggleValue);   
+    // document.getElementsByClassName("vertical-navbar")[0].style.width = newToggleValue ? "18vw" : "80px"; 
+    // document.getElementsByClassName("vertical-navbar-container")[0].style.width = newToggleValue ? "18vw" : "80px"; 
+
+    // }
 
     // function handleMouseOver() {
     //     setBackgroundColor("#263159");
