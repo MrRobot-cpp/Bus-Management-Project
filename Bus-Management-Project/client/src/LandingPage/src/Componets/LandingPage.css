@@ -12,15 +12,12 @@
 
 /* header section */
 .header {
-    height: 50px;
     background-color: #ffffff;
     margin: 0 ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    min-width: 100%;
-    padding: 4px 2em;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000; 
 }
 
 .logo-nav {
@@ -29,7 +26,7 @@
 }
 
 .header-contents {
-    margin: 4px 20px;
+    padding: 4px 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;

@@ -31,7 +31,8 @@ return (
 
 Accordion.propTypes = {
     headlineText: PropTypes.string,
-    descriptionText: PropTypes.string
+    descriptionText: PropTypes.string,
+    openCount: PropTypes.number
 }
 
 
