@@ -10,9 +10,6 @@ function StudentTrip() {
         <div className='head'>
             <span className='head-txt'>Trips</span>
         </div>
-        <div className='trip-content'>
-        <p> random</p>
-        </div>
         </div>
         </div>
         

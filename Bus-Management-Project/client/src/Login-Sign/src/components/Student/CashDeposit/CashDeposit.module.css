@@ -9,3 +9,36 @@ background-color: #263159;
 margin: auto;
 padding: 0;
 }
+.cash-deposit{
+background-color:transparent;
+min-height: 100%;
+width: 100%;
+overflow: hidden;
+border-radius: 15px;
+transition: 0.5s ease;
+} 
+
+.cash-deposit-content{
+    background-color: #263159;
+    height: 70vh;
+    padding: 2em;
+    margin: 1em;
+    margin-left: 0px;
+    margin-top: 33px;
+    border: 1px solid #FFFBEB;
+    border-radius: 15px;
+}
+.choosebank-container{
+width: 30%;
+height: 500x;
+box-shadow: 0px 5px 15px rgba(168, 33, 33, 0.704);
+background-color: #FFFBEB;
+border-radius: 8px;
+border: 1px solid #FFFBEB;
+}
+.dropdown-h4-holder{
+    display: flex;
+    flex-direction: row;
+    justify-content: left   ;
+    align-items: center;
+}
