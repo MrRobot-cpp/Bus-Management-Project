@@ -1,6 +1,6 @@
 
 .horizontal-card {
-    padding: 96px;
+    padding: 96px 190px;
     margin: 0;
   }
 
@@ -18,15 +18,20 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
+        padding: 0;
+        margin: 0;
+        text-align: left;
   }
 
   .hc-image {
     width: 500px;
   }
 
-  .description {
+  p.description {
     line-height: 23px;
     font-size: 17px;
+    padding: 0;
+    margin: 0;
   }
 
   

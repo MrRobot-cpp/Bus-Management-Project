@@ -4,7 +4,6 @@
     width: 760px;
     height: 56px;
     padding: 24px;
-    transition: height 0.3s ease-in;
 }
 
 .headline {
@@ -21,11 +20,29 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 24px;
+}
+
+
+.headline-and-button, .divider-and-description {
+    padding-inline: 10px;
+
+}
+
+.divider-and-description {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: all 6s ease-in-out;
+}
+
+.divider-and-description .open {
+    height: 100px;
+    opacity: 1;
 }
 
 .divider {
     opacity: 0.5;
+    margin: 10px;
 }
 
 .description {
@@ -34,6 +51,8 @@
     padding-bottom: 0;
 }
 
-.accordion.open {
+.accordion {
     height: auto; 
 }
+
+

@@ -26,7 +26,7 @@
 }
 
 .header-contents {
-    padding: 4px 40px;
+    padding: 4px 190px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -307,7 +307,6 @@
     }
 
 
-
     /* Footer Section */
 
 .footer-container {
@@ -316,7 +315,6 @@
     background: #000;
     position: relative;
     bottom: 0;
-    transition: margin-bottom 0.3s ease;
 }
 
 .social-media-logo {
@@ -390,6 +388,9 @@
 
     .accordion-container {
         min-width: 700px;
+        flex-grow: 1;
+        overflow-y: auto;
+        padding-bottom: 100px;
     }
 }
 
@@ -405,4 +406,9 @@
         overflow-y: hidden;
     }
 
+}
+.wrapper {
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
 }
