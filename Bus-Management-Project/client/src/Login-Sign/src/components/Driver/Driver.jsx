@@ -1,9 +1,10 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react'
-import VerticalNavbar from '../General/VerticalNavbar'
-import Home from './Home';
-import PageHeader from '../Student/PageHeader/PageHeader.jsx'
-import styles from './Driver.module.css'
+import React from "react";
+import VerticalNavbar from "../General/VerticalNavbar.jsx";
+import Home from "./Home";
+import PageHeader from "../Student/PageHeader/PageHeader.jsx";
+import TripsTable from "./TripsTable.jsx";
+import styles from "./Driver.module.css";
 
 const trips = [
   {
@@ -47,55 +48,79 @@ const trips = [
     date: new Date("2024-05-06"),
   },
   {
-      departure: {
-        hour: 8,
-        minute: 45,
-        period: "AM",
-      },
-      arrival: {
-        hour: 1,
-        minute: 30,
-        period: "PM",
-      },
-      numStudents: 25,
-      maxNumberStudents: 35,
-      speedLimit: 50,
-      stops: ["Stop 1", "Stop 2", "Stop 3"],
-      startPoint: "School C",
-      endPoint: "School D",
-      status: true,
-      date: new Date("2024-05-03"),
+    departure: {
+      hour: 8,
+      minute: 45,
+      period: "AM",
     },
+    arrival: {
+      hour: 1,
+      minute: 30,
+      period: "PM",
+    },
+    numStudents: 25,
+    maxNumberStudents: 35,
+    speedLimit: 50,
+    stops: ["Stop 1", "Stop 2", "Stop 3"],
+    startPoint: "School C",
+    endPoint: "School D",
+    status: true,
+    date: new Date("2024-05-03"),
+  },
+  {
+    departure: {
+      hour: 8,
+      minute: 45,
+      period: "AM",
+    },
+    arrival: {
+      hour: 1,
+      minute: 30,
+      period: "PM",
+    },
+    numStudents: 25,
+    maxNumberStudents: 35,
+    speedLimit: 50,
+    stops: ["Stop 1", "Stop 2", "Stop 3"],
+    startPoint: "School C",
+    endPoint: "School E",
+    status: true,
+    date: new Date("2024-05-03"),
+  },
 ];
 
-
 const driver = {
-//JSON object example
-name: "Ahmed",
-Id: "#200428",
-mail: "ahmedsamersayed22@gmail.com",
-gender: "male",
-age: 40,
-noOfTrips: 1000,
-phone: "01090790791",
-type: "driver",
+  //JSON object example
+  name: "Ahmed",
+  Id: "#200428",
+  mail: "ahmedsamersayed22@gmail.com",
+  gender: "male",
+  age: 40,
+  noOfTrips: 1000,
+  phone: "01090790791",
+  type: "driver",
 };
 
 function Driver() {
-    const menuItems = [
-        {text: "Trips" },
-        {text: "History" },
-        {text: "Profile" },
-    ];
+  const menuItems = [
+    { text: "Trips" },
+    { text: "History" },
+    { text: "Profile" },
+  ];
   return (
-    <div className={styles['main-container']}>
-      <PageHeader text={"Driver Dashboard"}/>
-      <div className={styles['home-container']}>
-      <VerticalNavbar menuItems={menuItems} user={driver}/>
-      <Home driver={driver} trips={trips}/>
-      </div>  
+    <div className={styles["main-container"]}>
+      <PageHeader text={"Driver Dashboard"} />
+      <div className={styles["container"]}>
+
+        <div className={styles["navbar-container"]}>
+          <VerticalNavbar menuItems={menuItems} user={driver} />
+          <a href="#">Logout</a>
+        </div>
+        <TripsTable/>
+        {/* <Home driver={driver} trips={trips} /> */}
+      </div>
     </div>
-  )
+  );
 }
 
-export default Driver
+export default Driver;

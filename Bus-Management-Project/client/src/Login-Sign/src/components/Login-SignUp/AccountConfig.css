@@ -23,12 +23,22 @@
     line-height: 1.1;
     color: #263159;
 }
+.buttons-holder{
+    display: flex;
+    flex-direction: row;
+}
 .Config-text-div{
     text-align: left;
     width: 55%;
 }
-.Config-text-div h4{
+.login-container h4{
     color:#838383 ;
+    text-align: left;
+    margin: 4px 0px;
+}
+.login-container div{
+    text-align: left;
+    
 }
 .loading-Questions{
     display: flex;
@@ -47,8 +57,8 @@
     background-color: #263159; 
 }
 .Login-btn{
-    width: 210px;
-    height: 64px;
+    width: 100%;
+    height: 6vh;
     border-radius: 8px;
     border: 1px solid transparent;
     padding: 0.6em 1.2em;
@@ -60,7 +70,7 @@
     border-radius: 15px;
     cursor: pointer;
     transition: border-color 0.25s;
-    margin: 1em 1.6em 1em 1.6em;
+    margin: 0.2em 1.6em 0.2em 0em;
 }
 .Login-btn:hover{
     transition: 0.5s ease;
@@ -68,7 +78,7 @@
     border-color: #646cff;
 }
 .Continue-Button{
-    width: 55%;
+    width: 52%;
     height: 8%;
     background-color: #E4E5E7;
     border-radius: 8px;
@@ -76,17 +86,17 @@
     font-size: 1.7em;
     font-weight: bold;
     color: #ffffff;
-    margin: 1.2em;
+    margin: 1em 1.6em 1em 0.8em;
 }
 .login-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: left;
     box-sizing: border-box;
-    width: 900px;
-    height: 790px;
+    width: 45vw;
+    height: 80vh;
     background-color: #FFFBEB;
     border-radius: 40px;
     padding: 20px;
@@ -96,7 +106,8 @@
     background-color: #FFFBEB;
     border: 1.5px solid #263159;
     border-radius: 10px;
-    width: 380px;
+    width: 88%;
+    height: 2.3vh;
     border: 1.5px solid #263159;
     border-radius: 10px;
     padding: 10px;
@@ -104,16 +115,25 @@
     color: #263159;
     font-weight: bold;
 }
+.location-input{
+    background-color: #FFFBEB;
+    border: 1.5px solid #263159;
+    border-radius: 10px;
+    width: 88%;
+    height: 2.3vh;
+    border: 1.5px solid #263159;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 5px 15px rgba(1, 1, 1, 0.08);
+    color: #263159;
+    font-weight: bold;
+}
+.drop-holder{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
 .placeholder-text{
     color: #263159;
     font-style: italic;
-}
-.dropdown-container {
-    position: relative;
-}
-
-.dropdown-container > .dropdown {
-    position: absolute;
-    top: calc(100% + 5px); /* Adjust the distance between the dropdowns as needed */
-    left: 0;
 }

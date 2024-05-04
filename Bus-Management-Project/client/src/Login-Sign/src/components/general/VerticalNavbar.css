@@ -16,8 +16,8 @@
     justify-content: flex-start;
     align-items: center ;
     background: transparent;
-    height: 75vh;
-    width: 13vw;
+    height: 80%;
+    width: 75%;
     padding: 0;
     margin: 0;
     margin-left: 2vw;
@@ -33,7 +33,6 @@
     flex-direction: column;
     height: 100%;
     width: 90%;
-    margin-bottom: 60px;
     border-radius: 20px;
     padding-right: 15px;
     transition: 0.5s ease-out;
