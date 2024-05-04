@@ -114,9 +114,12 @@ function Driver() {
 
         <div className={styles["navbar-container"]}>
           <VerticalNavbar menuItems={menuItems} user={driver} />
-          <a href="#">Logout</a>
         </div>
-        <TripsTable/>
+        <div className={styles["right-container"]}>
+        <TripsTable trips={trips}/>
+        <TripsTable trips={trips}/>
+        <TripsTable trips={trips}/>
+        </div>
         {/* <Home driver={driver} trips={trips} /> */}
       </div>
     </div>
