@@ -12,11 +12,29 @@
 .container{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     height: 100vh;
     width: 100vw;
     overflow: hidden;
     background: #263159;
+}
+
+.right-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin: 0;
+    height: 100%;
+    width: 80%;
+    overflow: auto;
+}
+
+.right-container > div{
+    margin-top: 5px;
+}
+.right-container > div:nth-child(1){
+    margin-top: 20px;
 }
 
 .navbar-container{
@@ -27,7 +45,7 @@
     height: 100%;
 }
 
-.navbar-container > a{
+/* .navbar-container > a{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,4 +68,4 @@
     background-color: #FFFBEB;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
     color: #263159;
-}
+} */

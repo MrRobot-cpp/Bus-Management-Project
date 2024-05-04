@@ -43,7 +43,7 @@ function VerticalNavbar(props) {
     return (
     <>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-        <div className="vertical-navbar-container common">
+        <div className="vertical-navbar-container">
             <div className="vertical-navbar">
                     <ul className="vertical-navbar-ul">
                     {/* <li style={{marginLeft: hoverBoxMargin}}> */}
