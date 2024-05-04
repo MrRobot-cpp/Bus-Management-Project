@@ -1,0 +1,39 @@
+.accordion {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    width: 760px;
+    height: 56px;
+    padding: 24px;
+    transition: height 0.3s ease-in;
+}
+
+.headline {
+    font-size: 24px;
+}
+
+.dropdown-btn {
+    color: #263159;
+    font-size: 50px;
+}
+
+.headline-and-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 24px;
+}
+
+.divider {
+    opacity: 0.5;
+}
+
+.description {
+    font-size: 16px;
+    padding: 24px;
+    padding-bottom: 0;
+}
+
+.accordion.open {
+    height: auto; 
+}

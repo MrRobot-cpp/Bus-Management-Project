@@ -11,14 +11,9 @@ const CustomerCard = (props) => {
     </div>
 
     <div className="customer-card-info">
-        <p className="qutoe">“This is a customer quote. 
-            The customer is going to share their opinion about our product or service, 
-            hopefully it’s going to be a positive one. 
-            The social proof section is important when you want to 
-            increase trust and trustworthiness of your company with your website visitors.”
-        </p>
-        <h2 className="client-name">Name Lastname</h2>
-        <h3 className="client-position">Position &#64; Company A</h3>
+        <p className="qutoe">{props.descriptionText}</p>
+        <h3 className="client-name">{props.name}</h3>
+        <h3 className="client-position">{props.position}</h3>
     </div>
     
 </div>
@@ -26,7 +21,10 @@ const CustomerCard = (props) => {
 }
 
 CustomerCard.propTypes = {
-  imageLink: PropTypes.string
+  imageLink: PropTypes.string,
+  descriptionText: PropTypes.string,
+  name: PropTypes.string,
+  position: PropTypes.string
 }
 
 

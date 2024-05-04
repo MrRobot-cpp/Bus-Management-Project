@@ -45,10 +45,12 @@
 .client-position {
     opacity: 0.5;
     padding-bottom: 0;
+    font-size: 18px;
 }
 
 .client-name {
     margin: 10px;
+    font-size: 22px;
 }
 
 .customer-card-info {
