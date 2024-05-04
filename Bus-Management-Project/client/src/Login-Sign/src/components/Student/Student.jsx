@@ -1,4 +1,4 @@
-import VerticalNavbar from '../general/VerticalNavbar';
+import VerticalNavbar from '../General/VerticalNavbar';
 // import StudentProfile from "./StudentProfile/StudentProfile";
 import PageHeader from "./PageHeader/PageHeader";
 // import StudentTrip from "./StudentTrip/StudentTrip";
