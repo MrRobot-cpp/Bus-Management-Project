@@ -1,0 +1,11 @@
+.cash-deposit-container{
+display:flex;
+flex-direction: column;
+height: 89.2vh;
+width: auto;
+justify-content: center;
+align-items: center;
+background-color: #263159;
+margin: auto;
+padding: 0;
+}

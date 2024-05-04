@@ -21,8 +21,11 @@ align-items: center;
 
 }
 .bottom-left-container{
-width: 20%;
-height: 90%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 20%;
+    height: 90%;
 }
 .bottom-right-container{
 width: 100vw;

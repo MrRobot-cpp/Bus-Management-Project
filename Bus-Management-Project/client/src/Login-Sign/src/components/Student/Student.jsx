@@ -1,15 +1,15 @@
 import VerticalNavbar from '../general/VerticalNavbar';
-import StudentProfile from "./StudentProfile/StudentProfile";
+// import StudentProfile from "./StudentProfile/StudentProfile";
 import PageHeader from "./PageHeader/PageHeader";
 // import StudentTrip from "./StudentTrip/StudentTrip";
 import styles from "./Student.module.css"
+import CashDeposit from './CashDeposit/CashDeposit';
 function Student(){
     const menuItems = [
         { text: "Trips" },
         { text: "Cash Deposit" },
         { text: "Profile" },
     ];
-
     return(
         <>
         <div className={styles["main-container"]} >
@@ -21,7 +21,8 @@ function Student(){
         <VerticalNavbar menuItems={menuItems}/>
         </div>
         <div className={styles["bottom-right-container"]}>
-        <StudentProfile/>
+        <CashDeposit/>
+        {/* <StudentProfile/> */}
         {/* <StudentTrip/> */}
         </div>
         </div>
