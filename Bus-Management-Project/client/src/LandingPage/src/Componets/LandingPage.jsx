@@ -1,14 +1,16 @@
 import './LandingPage.css'
-import "./MenuItemButton/MenuItemButton.css"
-import { addAnimation } from "./CustomerCard/scrollingAnimation.js"
-import { useEffect } from 'react'
+import "./MenuItemButton/MenuItemButton.css";
+
+import { addAnimation } from "./CustomerCard/scrollingAnimation.js";
+import { useEffect, useState } from 'react'
 
 import MenuItemButtonRegular from "./MenuItemButton/MenuItemButtonRegular.jsx"
 import HorizontalCard from "./HorizontalCard/HorizontalCard.jsx";
 import FeatureCard from "./FeatureCard/FeatureCard.jsx";
 import MenuItemButtonHighlighted from "./MenuItemButton/MenuItemButtonHighLighted.jsx";
-
 import CustomerCard from "./CustomerCard/CustomerCard.jsx";
+import Accordion from './Accordion/Accordion.jsx';
+
 import busImage1 from '../assets/bus-image-1.png' 
 import busImage2 from '../assets/bus-image-2.svg'
 import busImage3 from '../assets/bus-image-3.svg'
@@ -20,6 +22,11 @@ import client4Image from "../assets/client4.jpeg";
 import client5Image from "../assets/client5.jpeg";
 import client6Image from "../assets/client6.jpeg";
 import client7Image from "../assets/client7.jpeg";
+import iphoneImage from "../assets/iphoneImage.png";
+
+import instagramImage from "../assets/instagramImage.png"
+import facebookImage from "../assets/facebookImage.png"
+import twitterXImage from "../assets/twitterXImage.png"
 
 function LandingPage() {
 
@@ -41,6 +48,8 @@ useEffect(() => {
         addAnimation();
     }
 }, []);
+
+
 
 
 return (
@@ -123,6 +132,66 @@ return (
             </div>
     </div>
 
+
+
+
+    {/* CTA Section */}
+    <div className="cta-container">
+        <div className="cta">
+            <div className="cta-contents">
+                <div className="cta-headline-and-description">
+                    <h2 className="cta-headline">Download Now</h2>
+                    <p className="cta-description">
+                        See why so many people enjoy our app. 
+                        Discover the satisfaction firsthand.
+                    </p>
+                </div>
+                <div className="screen">
+                    <img className="iphone-image" src={iphoneImage} alt="iphone screen"/>
+                </div>
+                <div className="review-and-download">
+                    <div className="reviews">
+                        <span className="star-icon">
+                            <i className="fa-solid fa-star"></i>
+                            <i className="fa-solid fa-star"></i>
+                            <i className="fa-solid fa-star"></i>
+                            <i className="fa-solid fa-star"></i>
+                            <i className="fa-solid fa-star"></i>
+                        </span>
+                        <p className="review-amount">5/5 &#x2022; 361 reviews</p>
+                    </div>
+                    <MenuItemButtonHighlighted text="Download Now" Width="140px" />
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    {/* Accordion Section */}
+    <div className="accordion-container">
+        <h1 className="accordion-headline">Frequently Asked Questions (FAQs)</h1>
+        <Accordion headlineText="headline1" descriptionText="This is an answer to a frequently asked question. A couple more works to specify the subject further, provide more detail and make sure the user understands everything." />
+        <Accordion headlineText="headline2" descriptionText="This is an answer to a frequently asked question. A couple more works to specify the subject further, provide more detail and make sure the user understands everything." />
+        <Accordion headlineText="headline3" descriptionText="This is an answer to a frequently asked question. A couple more works to specify the subject further, provide more detail and make sure the user understands everything." />
+        <Accordion headlineText="headline4" descriptionText="This is an answer to a frequently asked question. A couple more works to specify the subject further, provide more detail and make sure the user understands everything." />
+        <Accordion headlineText="headline5" descriptionText="This is an answer to a frequently asked question. A couple more works to specify the subject further, provide more detail and make sure the user understands everything." />
+    </div>
+
+
+    {/* Footer Section */}
+    <div className="footer-container">
+            <div className="info-box">
+                <h2 className='footer-logo'>RouteMinder.</h2>
+                <p className='footer-company-refer'>&copy; 2024 RouteMinder. Inc.</p>
+                <span className="social-media">
+                    <img className="social-media-logo" src={instagramImage} alt="instagram"/>
+                    <img className="social-media-logo" src={facebookImage} alt="facebook"/>
+                    <img className="social-media-logo" src={twitterXImage} alt="twitter-x"/>
+                </span>
+            </div>
+        </div>
     </>
 );
 }
