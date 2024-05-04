@@ -80,6 +80,9 @@ function VerticalNavbar(props) {
                     </p>
                     </div> */}
             </div>
+            <div className="logout-bottom-container">
+                <a>Logout</a>
+            </div>
         </div>
     </>
     );

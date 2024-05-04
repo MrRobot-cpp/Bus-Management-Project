@@ -12,11 +12,11 @@ function TripsTable() {
       <th>Departure Time</th>
       <th>Arrival Time</th>
       <th>Max Num. of Students</th>
-      <th>Speed Limit</th>
       <th>Start Point</th>
       <th>End Point</th>
       <th>Status</th>
       <th>Date</th>
+      <th/>
     </tr>
   </thead>
   <tbody>
@@ -24,11 +24,11 @@ function TripsTable() {
       <td>9:30 AM</td>
       <td>2:15 PM</td>
       <td>30</td>
-      <td>60 mph</td>
       <td>School A</td>
       <td>School B</td>
-      <td>False</td>
+      <td>not completed</td>
       <td>5/3/24</td>
+      <td><button>Start</button></td>
     </tr>
   </tbody>
           </table>
