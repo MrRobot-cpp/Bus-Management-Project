@@ -3,15 +3,11 @@ import React from 'react'
 import './AdminDashboard.css'
 import PageHeader from '../Student/PageHeader/PageHeader'
 import VerticalNavbar from '../General/VerticalNavbar'
-import studentImage from './User.png'; // Import the image
-import iconImage from './Rectangle 2373.png';
-import iconImage1 from './Rectangle 2374.png';
-import iconImage2 from './Rectangle 2375.png';
-import chartimage from './Order.png';
-
-
-
-
+import studentImage from '../../assets/User.png'; // Import the image
+import iconImage from '../../assets/Rectangle 2373.png';
+import iconImage1 from '../../assets/Rectangle 2374.png';
+import iconImage2 from '../../assets/Rectangle 2375.png';
+import chartimage from '../../assets/Order.png';
 
 function AdminDashboard() {
   const menuItems = [
