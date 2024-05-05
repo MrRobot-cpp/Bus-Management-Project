@@ -6,7 +6,7 @@ import { validateNumberOfDays } from './validation.js';
 
 function AccountConfig() {
     const options1 = ['Nozha', 'Shobra', 'Heliopolis', '5th settlement', 'El Rehab'];
-    const options2 = ['MIU - Misr International University', 'BUE - British University in Egypt', 'El Galala University'];
+    const options2 = ['MIU - Misr International University', 'BUE - British University in Egypt', 'El Galala University','GUC - German University in Cairo'];
 
     const [step, setStep] = useState(1);
     const [selectedOption1, setSelectedOption1] = useState('');
