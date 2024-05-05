@@ -2,20 +2,22 @@ import "./Accordion.css";
 import PropTypes from 'prop-types';
 
 
-const Accordion = (props, isOpen, setIsOpen) => {
+const Accordion = ({ headlineText, descriptionText, isOpen, setIsOpen }) => {
     return (
         <div className="accordion">
 
             <div className="headline-and-button">
-                <h2 className="headline">{props.headlineText}</h2>
-                <span onClick={() => setIsOpen(props.headlineText)} className="dropdown-btn">
-                    <i className={`fa-solid fa-circle-chevron-${isOpen === props.headlineText ? 'up' : 'down'}`}></i>
+                <h2 className="headline">{headlineText}</h2>
+                <span 
+                onClick={() => setIsOpen(headlineText) 
+                } className="dropdown-btn">
+                    <i className={`fa-solid fa-circle-chevron-${isOpen === headlineText ? 'up' : 'down'}`}></i>
                 </span>
             </div>
 
-            <div className={(isOpen === props.headlineText ? 'open' : '') + "divider-and-description"}>
+            <div className={(isOpen === headlineText ? 'open' : '') + "divider-and-description"}>
                 <hr className="divider" />
-                <p className="description">{props.descriptionText}</p>
+                <p className="description">{descriptionText}</p>
             </div>
 
         </div>
@@ -27,7 +29,9 @@ export default Accordion;
 
 Accordion.propTypes = {
     headlineText: PropTypes.string,
-    descriptionText: PropTypes.string
+    descriptionText: PropTypes.string,
+    isOpen: PropTypes.string,
+    setIsOpen: PropTypes.func
 } 
 
 

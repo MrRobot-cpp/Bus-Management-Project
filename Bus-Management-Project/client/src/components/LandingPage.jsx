@@ -51,7 +51,7 @@ function LandingPage() {
         }
     }, []);
 
-    const {isOpen, setIsOpen} = useState("headline1")
+    const [isOpen, setIsOpen] = useState("");
 
 
     return (

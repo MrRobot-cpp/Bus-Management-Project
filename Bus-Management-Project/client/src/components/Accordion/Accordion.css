@@ -4,6 +4,7 @@
     width: 760px;
     height: 56px;
     padding: 24px;
+    height: auto; 
 }
 
 .headline {
@@ -11,8 +12,10 @@
 }
 
 .dropdown-btn {
+    transition: height 3s ease-in-out;
     color: #263159;
     font-size: 50px;
+    cursor: pointer;
 }
 
 .headline-and-button {
@@ -32,7 +35,6 @@
     opacity: 0;
     height: 0;
     overflow: hidden;
-    transition: all 6s ease-in-out;
 }
 
 .divider-and-description .open {
@@ -51,8 +53,5 @@
     padding-bottom: 0;
 }
 
-.accordion {
-    height: auto; 
-}
 
 
