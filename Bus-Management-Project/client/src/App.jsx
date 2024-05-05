@@ -10,7 +10,7 @@ import React from 'react';
 //import Driver from './components/Driver/Driver'
 //import Home from './components/Home'
 //import AccountConfig from './components/Login-SignUp/AccountConfig';
-import Admin from './components/Admin/Admin'
+// import Admin from './components/Admin/Admin'
 //import Signup from './components/Login-SignUp/signUp';
 //import AccountConfig from './components/Login-SignUp/AccountConfig';
 //import VerticalNavbar from './components/VerticalNavbar/VerticalNavbar';
@@ -18,6 +18,7 @@ import Admin from './components/Admin/Admin'
 // import Driver from './components/Driver/Driver'
 //import Home from './components/Home'
 // import Admin from './components/Admin/Admin'
+import LandingPage from './components/LandingPage'
 function App() {
     return (
         <>
@@ -30,11 +31,12 @@ function App() {
             {/* <Student/>    */}
             {/* <AccountConfig /> */}
             {/* <Student/>    */}
-            <Admin />
+            {/* <Admin /> */}
             {/* <Driver/> */}
             {/* <Student/>    */}
             {/* <Admin /> */}
             {/* <Driver/> */}
+            <LandingPage/>
         </>
     );
 }
