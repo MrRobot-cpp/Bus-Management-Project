@@ -1,0 +1,17 @@
+.admin-container{
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    background-color: #263159;
+}
+.Admin-navbar{
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 15%;
+    border-radius: 20px;
+    margin: 20px;
+    margin-top: 30px;
+}
