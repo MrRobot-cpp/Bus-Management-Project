@@ -15,18 +15,18 @@
     width: 90%;
   }
 }
+
 .trips-table-container{
     display: flex;
     flex-direction: column ;
     justify-content: flex-start;
     align-items: center;
-    margin: auto;
-    margin-left: 30px;
+    margin-left: 10px;
     margin-top: -10px;
     margin-bottom: 5px;
-    margin-right: 20px;
+    margin-right: 0px;
     height: 95%;
-    width: 90%;
+    width: 95%;
     background: #FFFBEB; 
     transition: 0.4s ease;
     border-radius: 20px;
@@ -49,6 +49,7 @@
 }
 
 .table-head > p{
+  font-size: 17px;
   margin-left: 10px;
 }
 
@@ -65,6 +66,7 @@
     border-radius: 10px;
     overflow: scroll;
     margin-bottom: 20px;
+    white-space: nowrap;
     transition: 1s ease;
   }
   
@@ -78,9 +80,13 @@
   .trips-table th {
     font-size: 15px;
     color: #000;
-    font-weight: bold;
+    font-weight: 500;
     transition: 1s ease;
+  }
 
+  .trips-table td{
+    color: #70768C;
+    opacity: 500;
   }
   
 /*////////////////////////////////////////////minmize button///////////////////////////////////////*/
@@ -114,3 +120,23 @@
 .plus-btn .vertical-bar{
   transform: rotate(90deg);
 }
+/*////////////////////////////////////////////status button///////////////////////////////////////*/
+
+.status-btn{
+  background: transparent;
+  height: 20px;
+  width: 50px;
+  border-radius: 5px;
+  box-shadow: #EFF0F6;
+  border:1.7px solid #495579;
+}
+
+.status-btn-active{
+  border: none;
+  background: transparent;
+  height: 20px;
+  width: 50px;
+  color: #28a745;
+}
+
+

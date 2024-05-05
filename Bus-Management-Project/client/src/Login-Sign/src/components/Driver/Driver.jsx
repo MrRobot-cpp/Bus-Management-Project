@@ -116,9 +116,10 @@ function Driver() {
           <VerticalNavbar menuItems={menuItems} user={driver} />
         </div>
         <div className={styles["right-container"]}>
-        <TripsTable trips={trips}/>
-        <TripsTable trips={trips}/>
-        <TripsTable trips={trips}/>
+          <div className={styles["profile-container"]}></div>
+        <TripsTable trips={trips} tripHead="Current Trips" activateStatBtn={true}/>
+        <TripsTable trips={trips} tripHead="Completed Trips" activateStatBtn={false}/>
+        <TripsTable trips={trips} tripHead="Upcoming Trips" activateStatBtn={false}/>
         </div>
         {/* <Home driver={driver} trips={trips} /> */}
       </div>
