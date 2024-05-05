@@ -19,6 +19,8 @@ transition: 0.5s ease;
 } 
 
 .cash-deposit-content{
+    display: flex;
+    flex-direction: column;
     background-color: #263159;
     height: 70vh;
     padding: 2em;
@@ -28,17 +30,100 @@ transition: 0.5s ease;
     border: 1px solid #FFFBEB;
     border-radius: 15px;
 }
+.first-row-container{
+    display: flex;
+    height: 50%;
+}
 .choosebank-container{
 width: 30%;
-height: 500x;
-box-shadow: 0px 5px 15px rgba(168, 33, 33, 0.704);
+box-shadow: 0px 5px 15px rgba(210, 177, 177, 0.327);
 background-color: #FFFBEB;
-border-radius: 8px;
+border-radius: 5px;
 border: 1px solid #FFFBEB;
+margin: 32px;
+padding: 3px;
 }
-.dropdown-h4-holder{
+.choosebank-container>h3{
+    color: #FFFBEB;
+    text-align: center;
+    background-color: #495579;
+    border-radius: 5px;
+    padding: 10px;
+}
+.dropdown-holder{
     display: flex;
     flex-direction: row;
     justify-content: left   ;
     align-items: center;
 }
+.current-due-container{
+width: 70%;
+height: auto;
+align-items: center;
+text-align: center;
+justify-content: center;
+box-shadow: 0px 5px 15px rgba(210, 177, 177, 0.327);
+background-color: #FFFBEB;
+border-radius: 5px;
+border: 1px solid #FFFBEB;
+margin: 32px;
+padding: 3px;
+}
+
+.current-due-container> h3{
+padding: 18px;
+text-align: center;
+color: #FFFBEB;
+background-color: #495579;
+border-radius: 5px;
+}
+
+.table-container {
+    width: 100%;
+}
+
+.table {
+    border-collapse:collapse;
+    width: 100%;
+}
+
+.table th,
+.table td {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+
+}
+
+.table th {
+    background-color: #f2f2f2;
+}
+
+.second-row-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.amount-container{
+width: 30%;
+height: 20vh;
+box-shadow: 0px 5px 15px rgba(181, 210, 177, 0.327);
+background-color: #FFFBEB;
+border-radius: 5px;
+border: 1px solid #FFFBEB;
+margin: 32px;
+padding: 3px;
+}
+.amount-container> h3{
+    padding: 16px;
+    text-align: center;
+    color: #FFFBEB;
+    background-color: #495579;
+    border-radius: 5px;
+}   
+.animation-container {
+    width: 30%;
+    padding-top: 30px;
+
+}
+

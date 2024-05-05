@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 // eslint-disable-next-line no-unused-vars
 import React, {useState} from "react";
-import "./VerticalNavbar.css";
+import styles from "./VerticalNavbar.module.css"
 
 function VerticalNavbar(props) {
     // eslint-disable-next-line no-unused-vars
@@ -20,8 +20,8 @@ function VerticalNavbar(props) {
     // function handleToggle() {
     // const newToggleValue = !toggle;
     // setToggle(newToggleValue);   
-    // document.getElementsByClassName("vertical-navbar")[0].style.width = newToggleValue ? "18vw" : "80px"; 
-    // document.getElementsByClassName("vertical-navbar-container")[0].style.width = newToggleValue ? "18vw" : "80px"; 
+    // document.getElementsByClassName("{styles["vertical-navbar")[0].style.width = newToggleValue ? "18vw" : "80px"; 
+    // document.getElementsByClassName("{styles["vertical-navbar-container")[0].style.width = newToggleValue ? "18vw" : "80px"; 
 
     // }
 
@@ -43,20 +43,20 @@ function VerticalNavbar(props) {
     return (
     <>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-        <div className="vertical-navbar-container">
-            <div className="vertical-navbar">
-                    <ul className="vertical-navbar-ul">
+        <div className={styles["vertical-navbar-container"]}>
+            <div className={styles["vertical-navbar"]}>
+                    <ul className={styles["vertical-navbar-ul"]}>
                     {/* <li style={{marginLeft: hoverBoxMargin}}> */}
                     <li>
-                        <div className="header">
+                        <div className={styles["header"]}>
                         <p>RouteMinder.</p>
                         </div>
                     </li>
-                        <li style={{marginLeft: hoverBoxMargin}} className="hamburger-btn-line">
-                            {/* <a href="#" className="dashboard-link" onClick={handleToggle} onMouseOver={handleMouseOver} 
+                        <li style={{marginLeft: hoverBoxMargin}} className={styles["hamburger-btn-line"]}>
+                            {/* <a href="#" className="{styles["dashboard-link" onClick={handleToggle} onMouseOver={handleMouseOver} 
                             onMouseOut={handleMouseOut} style={{width: hoverBox}}> */}
-                                <a href="#" className="dashboard-link">
-                                {/* <HamburgerBtn className="hamburger-btn" transform={`translate(${toggle?"0px":"-15px" },-20px)`} 
+                                <a href="#" className={styles["dashboard-link"]}>
+                                {/* <HamburgerBtn className="{styles["hamburger-btn" transform={`translate(${toggle?"0px":"-15px" },-20px)`} 
                                 backgroundColor={backgroundColor} toggle={toggle}/> */}
                                 {toggle && "Dashboard"}
                             </a>
@@ -64,23 +64,23 @@ function VerticalNavbar(props) {
                         {menuItems.map((item, index) => (
                             <li key={index} style={{marginLeft: hoverBoxMargin}}>
                                 <a href="#" style={{width: hoverBox}}>
-                                <i className={item.icon}></i>   
+                                {/* <i className={item.icon}/>    */}
                                 {toggle && item.text}
                                 </a>
                             </li>
                         ))}
                     </ul>
-                    {/* <div className="minimal-info">
-                    <div className="hr-line"></div>
-                    <p className="name">
+                    {/* <div className="{styles["minimal-info">
+                    <div className="{styles["hr-line"></div>
+                    <p className="{styles["name">
                         {user.name}
                     </p>
-                    <p className="email">
+                    <p className="{styles["email">
                         {user.mail}
                     </p>
                     </div> */}
             </div>
-            <div className="logout-bottom-container">
+            <div className={styles["logout-bottom-container"]}>
                 <a>Logout</a>
             </div>
         </div>
