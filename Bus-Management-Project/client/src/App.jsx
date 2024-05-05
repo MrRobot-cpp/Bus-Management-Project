@@ -20,6 +20,10 @@ import React from 'react';
 // import Admin from './components/Admin/Admin'
 import LandingPage from './components/LandingPage'
 function App() {
+    // eslint-disable-next-line no-unused-vars
+    const toggleDropDown = () => {
+
+    };
     return (
         <>
             {/* <Login /> */}
