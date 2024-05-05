@@ -1,0 +1,32 @@
+.main-container{
+display: flex;
+flex-direction: column;
+width: 100vw;
+height: 100vh;
+justify-content: center;
+align-items: center;
+background-color: #263159;
+}
+.top-container{
+display: flex;
+flex-direction: row;
+}
+.bottom-container{
+display: flex;
+flex-direction: row;   
+width: 100%;
+height: 100%;
+/* justify-content: space-between; */
+align-items: center;
+
+}
+.bottom-left-container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 20%;
+    height: 90%;
+}
+.bottom-right-container{
+width: 100vw;
+} 

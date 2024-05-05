@@ -2,11 +2,11 @@
 import React, { useState, useEffect } from 'react';
 import './AccountConfig.css';
 import Dropdown from '../General/Dropdown.jsx';
-import { validateNumberOfDays } from './validation.js'; // Importing validateNumberOfDays from validationUtils.js
+import { validateNumberOfDays } from './validation.js'; 
 
 function AccountConfig() {
     const options1 = ['Nozha', 'Shobra', 'Heliopolis', '5th settlement', 'El Rehab'];
-    const options2 = ['MIU - Misr International University', 'BUE - British University in Egypt', 'El Galala University'];
+    const options2 = ['MIU - Misr International University', 'BUE - British University in Egypt', 'El Galala University','GUC - German University in Cairo'];
 
     const [step, setStep] = useState(1);
     const [selectedOption1, setSelectedOption1] = useState('');
@@ -31,7 +31,7 @@ function AccountConfig() {
 
     const handleOption2Select = (option) => {
         setSelectedOption2(option);
-        setStep(4); // Progress to step 4 when an option is selected from dropdown button 2
+        setStep(4); 
     };
 
     const handleLocationInputChange = (e) => {
@@ -40,16 +40,13 @@ function AccountConfig() {
             setStep(3);
         }
     };
-
     const handleNumberOfDaysChange = (e) => {
         const days = parseInt(e.target.value);
         if (!isNaN(days) && days >= 1 && days <= 7) {
             setNumberOfDays(days);
         }
     };
-    
     const isGoogleMapsLink = (input) => {
-        // Regular expression to check if the input is a Google Maps link
         return /^https?:\/\/maps\.app\.goo\.gl\/.*$/.test(input);
     };
 

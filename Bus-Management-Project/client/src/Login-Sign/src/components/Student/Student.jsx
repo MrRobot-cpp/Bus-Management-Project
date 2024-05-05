@@ -1,23 +1,32 @@
-import VerticalNavbar from '../general/VerticalNavbar';
-import StudentProfile from "./StudentProfile/StudentProfile";
+import VerticalNavbar from '../General/VerticalNavbar';
+// import StudentProfile from "./StudentProfile/StudentProfile";
 import PageHeader from "./PageHeader/PageHeader";
 // import StudentTrip from "./StudentTrip/StudentTrip";
+import styles from "./Student.module.css"
+import CashDeposit from './CashDeposit/CashDeposit';
 function Student(){
     const menuItems = [
-        { icon: "fa-solid fa-shop", text: "Home" },
-        { icon: "fa-solid fa-bus", text: "Trips" },
-        { icon: "fa-solid fa-clock-rotate-left", text: "History" },
-        { icon: "fa-solid fa-money-bill-1", text: "Cash Deposit" },
-        { icon: "fa-solid fa-user", text: "Profile" },
-        { icon: "fa-solid fa-arrow-right-from-bracket", text: "LogOut" },
+        { text: "Trips" },
+        { text: "Cash Deposit" },
+        { text: "Profile" },
     ];
-
     return(
         <>
+        <div className={styles["main-container"]} >
+        <div className={styles["top-container"]} >
         <PageHeader text='Student Profile'/>
+        </div>
+        <div className={styles["bottom-container"]}>
+        <div className={styles["bottom-left-container"]}>
         <VerticalNavbar menuItems={menuItems}/>
-        <StudentProfile/>
+        </div>
+        <div className={styles["bottom-right-container"]}>
+        <CashDeposit/>
+        {/* <StudentProfile/> */}
         {/* <StudentTrip/> */}
+        </div>
+        </div>
+        </div>
         </>
     )
 
