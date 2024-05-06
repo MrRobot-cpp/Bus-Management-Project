@@ -1,7 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
 import './AdminDashboard.css'
-import PageHeader from '../Student/PageHeader/PageHeader'
 import studentImage from '../../assets/User.png'; // Import the image
 import iconImage from '../../assets/Rectangle 2373.png';
 import iconImage1 from '../../assets/Rectangle 2374.png';
@@ -11,7 +10,6 @@ import chartimage from '../../assets/Order.png';
 function AdminDashboard() {
   return (
     <div className='Dashboard-Container'>
-      <PageHeader text='Admin Dashboard'/>
       <div className='main-container'>
 
 

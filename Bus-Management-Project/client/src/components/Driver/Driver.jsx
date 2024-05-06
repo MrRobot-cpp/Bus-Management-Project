@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import VerticalNavbar from "../General/VerticalNavbar.jsx";//done
+// eslint-disable-next-line no-unused-vars
 import Home from "./Home";
 import PageHeader from "../Student/PageHeader/PageHeader.jsx";//done
 import TripsTable from "./TripsTable.jsx";//done
