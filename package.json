@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "@svgr/core": "^8.1.0"
+  },
+  "dependencies": {
+    "react-router-dom": "^6.23.0"
   }
 }
