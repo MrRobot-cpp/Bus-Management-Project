@@ -5,7 +5,7 @@ import PageHeader from '../Student/PageHeader/PageHeader'
 import RouteManagement from './RouteManagement'
 import VerticalNavbar from '../General/VerticalNavbar'
 import './Admin.css'
-import AdminDashboard from './AdminDashboard'
+//import AdminDashboard from './AdminDashboard'
 function Admin() {
 
 const[header,setHeader] = useState('Dashboard')

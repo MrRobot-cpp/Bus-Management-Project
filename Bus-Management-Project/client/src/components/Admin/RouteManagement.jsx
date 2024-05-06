@@ -17,11 +17,40 @@ function RouteManagement() {
   const [modalPosition, setModalPosition] = useState({ x: 0, y: 0 });
   // eslint-disable-next-line no-unused-vars
 
+  const positionModal = (event) => {
+    const modal = document.querySelector('.modal');
+    const rect = event.target.getBoundingClientRect();
+    const modalWidth = modal.offsetWidth;
+    const modalHeight = modal.offsetHeight;
+    const clickX = rect.left + window.scrollX + rect.width / 2;
+    const clickY = rect.top + window.scrollY + rect.height / 2;
+    const newX = clickX - modalWidth / 2;
+    const newY = clickY - modalHeight / 2;
+    modal.style.left = `${newX}px`;
+    modal.style.top = `${newY}px`;
+  };
 
-  const handleEditRoute = (id) => {
-    setSelectedRoute(id); // Set the selected route for editing
-    setModalPosition({ x: event.clientX, y: event.clientY });
-    setIsModalOpen(true); // Open the modal
+  const addRoute = () => {
+    const newRoute = {
+      id: uuidv4(), // Generate a unique ID
+      startFrom: '', // Initialize other properties with default values
+      endAt: '',
+      tripType: '',
+      numberOfStops: 0,
+      startTime: '',
+      endTime: ''
+    };
+    setRoutes([...routes, newRoute]);
+  };
+
+  const handleEditRoute = (id, event) => {
+    if (selectedRoute === id && isModalOpen) {
+      setIsModalOpen(false); // Close the modal if already open for the same route
+    } else {
+      setSelectedRoute(id);
+      setIsModalOpen(true);
+      positionModal(event);
+    }
   };
 
   // eslint-disable-next-line no-unused-vars
@@ -48,8 +77,13 @@ function RouteManagement() {
       <div className='routes-management-right-container'>
         <div className='routes-container'>
           <div className='routes-header-container'>
+            <div className='details-num-div'>
             <h4 className='routes-header'>Details</h4>
             <h4 className='numberOfRoutes'>{routes.length}</h4>
+            </div>
+            <div className='add-routes-btn'>
+            <button onClick={addRoute}>Add Route</button>
+          </div>
           </div>
           <hr />
           <table className="routes-table">
