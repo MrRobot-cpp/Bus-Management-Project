@@ -1,0 +1,260 @@
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+* {
+    font-family: "Istok Web", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+.Dashboard-Container {
+  display: flex;
+  flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    background-color: #263159;
+}
+.main-container {
+    display: flex;
+}
+.tempNav {
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 236px;
+    border-radius: 20px;
+    margin: 20px;
+    margin-top: 30px;
+}
+
+.Students {
+    padding: 0px;
+    margin-top: 30px;
+    margin-right: 20px;
+    height: 260px;
+    width: 280px;
+    border-radius: 20px;
+    background-color: #FFFBEB;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.Students h6 {
+    width: 250px;
+    height: 17px;
+    color: #4D4D4D;
+    font-family: Inter;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 16.94px;
+    letter-spacing: -0.15px;
+    text-align: left;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+.Students h2 {
+    color: black;
+    font-family: Inter;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 16.94px;
+    letter-spacing: -0.15px;
+    text-align: left;
+    padding-bottom: 45px;
+    padding-left: 1px;
+    padding-right: 170px;
+}
+.Students .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px;
+}
+
+/* el sora el zr2a */
+.Students .Pie {
+    width: 125px;
+    height: auto;
+    padding-bottom: 20px;
+    padding-right: 5px;
+}
+.Students .percentages {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 14px;
+    font-weight: normal;
+    color: #4D4D4D;
+}
+.Students .percentages ul {
+    list-style: none;
+    padding: 0;
+}
+.Students .percentages ul li {
+    margin-bottom: 5px;
+}
+
+.Students .percentages ul li.small-text {
+    padding-left: 5px;
+    font-size: 12px; /* Adjust the font size to make it slightly smaller */
+    color: #6B6B6B; /* Adjust the color if needed */
+}
+
+.test {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .row1, .row3 {
+    display: flex;
+  }
+  
+  .row1 > .compo, .row3 > .compo1 {
+    margin-right: 20px; /* Adjust as needed */
+  }
+  
+  .compo, .compo1 {
+    margin-top: 30px;
+    padding-top: 25px;
+    padding-left: 25px;
+    width: 150px;
+    height: 70px;
+    border-radius: 20px;
+    background-color: #FFFBEB;
+  }
+  
+  .compo h2, .compo1 h2 {
+    margin-top: 7px;
+  }
+  
+  .compo h6, .compo1 h6 {
+    color: #4D4D4D;
+  }
+  
+  .compo3 {
+    font-family: Inria Serif;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 21.58px;
+    color: #FFFBEB;
+    padding-bottom: 0px;
+    padding-top: 20px;
+    width: 100%; /* Adjust as needed */
+    text-align: center; /* Center the text */
+  }
+
+
+
+  
+  .combo-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px; /* Adjust margin as needed */
+    margin-left: 50px;
+    gap: 15px;
+    border-radius: 20px 0px 0px 0px;
+    opacity: 0px;
+
+  }
+  
+  .combo-row1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px; /* Adjust margin as needed */
+    margin-right: 200px;
+    gap: 15px;
+    border-radius: 20px 0px 0px 0px;
+    opacity: 0px;
+
+  }
+  
+
+  .combo-row  select {
+    padding: 8px 12px;
+    height:39px;
+    width: 250px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 1px solid #FFFBEB;
+    text-align: center;
+    background-color: #495579;
+  }
+  .combo-row1  select {
+    padding: 8px 12px;
+    height:39px;
+    width: 250px;
+    font-size: 16px;
+    border-radius: 20px;
+    text-align: center;
+    align-items: center;
+    border: 1px solid #FFFBEB;
+    background-color: #495579;
+  }
+
+.stylee{
+  display: flex;
+  flex-direction: column;
+}
+  .compo5{
+    margin-top: 30px;
+    padding-top: 25px;
+    padding-left: 25px;
+    width: 546px;
+    height: 267px;
+    border-radius: 20px;
+    background-color: #FFFBEB;
+
+  }
+  
+  .compo6{
+    margin-top: 30px;
+    padding-top: 25px;
+    width: 265px;
+    height: 270px;
+    top: -63px;
+    left: -22px;
+    gap: 0px;
+    border-radius: 20px;
+    background-color: #FFFBEB;
+    border: 1px ;
+    opacity: 0px;
+  }
+
+  .compo6 h6{
+    padding-left: 20px;
+    color: #4D4D4D;
+    font-family: Inter;
+    font-size: 17px;
+    font-weight: bold;
+
+  }
+  .compo6 h5{
+    padding-left: 20px;
+    padding-top: 15px;
+    color: #4D4D4D;
+    font-family: Inter;
+    font-size: 17px;
+  }
+  .compo6 span{
+padding-left: 70px;
+color: black;
+font-size: 17px;
+  }
+  .line-break {
+    margin-left: 10px;
+    height: 1px; /* Adjust the thickness of the line */
+    width: 220px; /* Set the width to cover the entire container */
+    background-color: #E4E5E7; /* Set the color of the line */
+    margin-top: 10px;
+    left: 5%;
+    }
+  

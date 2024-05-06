@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "@svgr/core": "^8.1.0"
+  }
+}
