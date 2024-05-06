@@ -35,7 +35,7 @@ function App() {
             <Student/>   
             {/* <AccountConfig /> */}
             {/* <Student/>    */}
-            { <Admin /> }
+            {/* { <Admin /> } */}
             {/* <Driver/> */}
             {/* <Student/>    */}
             {/* <Admin /> */}
