@@ -1,11 +1,10 @@
 // eslint-disable-next-line no-unused-vars
-import React from "react";
-import VerticalNavbar from "../General/VerticalNavbar.jsx";//done
-// eslint-disable-next-line no-unused-vars
+import React, {useState} from "react";
+import VerticalNavbar from "../General/VerticalNavbar.jsx"; //done
 import Home from "./Home";
-import PageHeader from "../Student/PageHeader/PageHeader.jsx";//done
-import TripsTable from "./TripsTable.jsx";//done
-import styles from "./Driver.module.css";//done
+import PageHeader from "../Student/PageHeader/PageHeader.jsx"; //done
+import TripsTable from "./TripsTable.jsx"; //done
+import styles from "./Driver.module.css"; //done
 
 const trips = [
   {
@@ -103,6 +102,9 @@ const driver = {
 };
 
 function Driver() {
+  const[header,setHeader] = useState("Dashboard")
+  
+
   const menuItems = [
     { text: "Trips" },
     { text: "History" },
@@ -110,19 +112,17 @@ function Driver() {
   ];
   return (
     <div className={styles["main-container"]}>
-      <PageHeader text={"Driver Dashboard"} />
+      <PageHeader text={`Driver ${header}`} />
       <div className={styles["container"]}>
-
         <div className={styles["navbar-container"]}>
-          <VerticalNavbar menuItems={menuItems} user={driver} />
+          <VerticalNavbar menuItems={menuItems} onQuery={setHeader}/>
         </div>
         <div className={styles["right-container"]}>
-          <div className={styles["profile-container"]}></div>
-        <TripsTable trips={trips} tripHead="Current Trips" activateStatBtn={true}/>
+          <Home driver={driver} trips={trips} />
+          {/* <TripsTable trips={trips} tripHead="Current Trips" activateStatBtn={true}/>
         <TripsTable trips={trips} tripHead="Completed Trips" activateStatBtn={false}/>
-        <TripsTable trips={trips} tripHead="Upcoming Trips" activateStatBtn={false}/>
+        <TripsTable trips={trips} tripHead="Upcoming Trips" activateStatBtn={false}/> */}
         </div>
-        {/* <Home driver={driver} trips={trips} /> */}
       </div>
     </div>
   );

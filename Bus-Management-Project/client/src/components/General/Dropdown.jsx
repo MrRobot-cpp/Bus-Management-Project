@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
-import '@fortawesome/fontawesome-free/css/all.css';
 import './Dropdown.css';
 
 // eslint-disable-next-line react/prop-types
