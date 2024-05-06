@@ -38,7 +38,7 @@ function App() {
             {/* { <Admin /> } */}
             {/* <Driver/> */}
             {/* <Student/>    */}
-            <Admin />
+            {/* <Admin /> */}
             {/* <Driver/> */}
             {/* <LandingPage/> */}
         </>
