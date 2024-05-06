@@ -45,7 +45,7 @@
     font-size: small;
 }
 .modal {
-    position: absolute;
+    position: fixed;
     align-items: center;
     justify-content: center;
     background-color: #ffffff;
