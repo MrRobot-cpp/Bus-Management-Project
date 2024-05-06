@@ -5,6 +5,7 @@ import PageHeader from '../Student/PageHeader/PageHeader'
 import RouteManagement from './RouteManagement'
 import VerticalNavbar from '../General/VerticalNavbar'
 import './Admin.css'
+import AdminDashboard from './AdminDashboard'
 function Admin() {
   const menuItems = [
     {text: "Routes" },
@@ -22,8 +23,9 @@ function Admin() {
           <VerticalNavbar menuItems={menuItems} user/>
         </div>
     <div className="admin-right-container">
-    {/* < AdminDashboard/> */}
-    <RouteManagement />
+    {< AdminDashboard/> }
+    {/* <RouteManagement /> */}
+    
     </div>
     </div>
     </div>

@@ -6,6 +6,16 @@ import iconImage from '../../assets/Rectangle 2373.png';
 import iconImage1 from '../../assets/Rectangle 2374.png';
 import iconImage2 from '../../assets/Rectangle 2375.png';
 import chartimage from '../../assets/Order.png';
+import chartimage2 from './chart.png';
+import chartimage3 from './chart2.png';
+import iconImage3 from './icon1.jpg';
+import iconImage4 from './icon2.jpg';
+import iconImage5 from './icon3.jpg';
+import iconImage6 from './icon4.jpg';
+import iconImage7 from './icon5.jpg';
+import iconImage8 from './icon6.jpg';
+
+
 
 function AdminDashboard() {
   return (
@@ -37,12 +47,63 @@ function AdminDashboard() {
       <option value="timeframe">TimeFrame: All time</option>
     </select>
     </div>
-
     <div className='compo6'>
     <h6>Admin Activity</h6>
     <h6 className='line-break'></h6>
-    <h5> People Added <span>238</span></h5>
+    <h5> People Added <span>139</span></h5>
+    <h5> Product Created <span>283</span></h5>
+    <h5> UTM Created <span>782</span></h5>
+    <h5> Email Send Created <span>1,923</span></h5>
+    <h5> Content added <span>103</span></h5>
+    <h5> Products Updated <span>477</span></h5>
+    <h5> Reports Downloaded <span>280</span></h5>
     </div>
+ 
+    <div className='compo7'>
+    <h6>Top Drivers </h6>
+    <h6 className='line-break1'></h6>
+    <ul>
+      <h4>
+      <li className="small-text"><img src={iconImage3} alt="New Icon" />
+      </li>
+      </h4>
+      <h4>
+
+<li className="small-text"><img src={iconImage4} alt="New Icon" />
+      FaceBook Ads 
+</li>
+</h4>
+
+<h4>
+
+<li className="small-text"><img src={iconImage5} alt="New Icon" />
+ Influencers 
+</li>
+</h4>
+
+<h4>
+
+<li className="small-text"><img src={iconImage6} alt="New Icon" />
+ Website 
+</li>
+</h4>
+
+<h4>
+
+<li className="small-text"><img src={iconImage7} alt="New Icon" />
+ Android App 
+</li>
+</h4>
+
+<h4>
+
+<li className="small-text"><img src={iconImage8} alt="New Icon" />
+</li>
+</h4>
+    </ul>
+    </div>
+
+
 
 
 </div>
@@ -70,8 +131,29 @@ function AdminDashboard() {
     </select>
     </div>
     <div className='compo6'>
-aaa    
+    <h6>Top Influencers</h6>
+    <h6 className='line-break'></h6>
+    <h5> Quizzes taken <span>139</span></h5>
+    <h5> Questions Answered <span>283</span></h5>
+    <h5> Assignments completed <span>782</span></h5>
+    <h5> Comments posted <span>1,923</span></h5>
+    <h5> Challenges <span>103</span></h5>
+    <h5> Badges earned  <span>477</span></h5>
+    <h5> Reinforcements taken <span>280</span></h5>
     </div>
+    
+    <div className='compo8'>
+    <h6 className='line-break1'></h6>
+    <h4>$50k</h4>
+    <h4>$2k</h4>
+    <h4>$8k</h4>
+    <h4>$20k</h4>
+    <h4>$100k</h4>
+    <h4>$16k</h4>
+
+
+    </div>
+
 </div>
 {/* dool b2a ely homa kda ely homa el 3 components  */}
 <div className='test'>
@@ -120,8 +202,11 @@ aaa
     </select>
   </div>
   <div className='compo5'>
+    <img src={chartimage2} alt="New Icon" />
 </div>
-
+<div className='compo5'>
+    <img src={chartimage3} alt="New Icon" />
+</div>
 </div>
   
 
