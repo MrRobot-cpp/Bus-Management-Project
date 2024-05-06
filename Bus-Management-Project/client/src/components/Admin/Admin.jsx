@@ -1,12 +1,15 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react'
+import React, { useState } from 'react'
 import PageHeader from '../Student/PageHeader/PageHeader'
 //import AdminDashboard from './AdminDashboard'
-import RouteManagement from './RouteManagement'
+//import RouteManagement from './RouteManagement'
 import VerticalNavbar from '../General/VerticalNavbar'
 import './Admin.css'
 import AdminDashboard from './AdminDashboard'
 function Admin() {
+
+const[header,setHeader] = useState('Dashboard')
+
   const menuItems = [
     {text: "Routes" },
     {text: "Drivers" },
@@ -17,10 +20,10 @@ function Admin() {
   return (
     <>
     <div className='admin-container'>
-    <PageHeader text={'Admin Dashboard'}/>
+    <PageHeader text={`Admin ${header}`}/>
     <div className='admin-page-container'>
         <div className="admin-navbar-container">
-          <VerticalNavbar menuItems={menuItems} user/>
+          <VerticalNavbar menuItems={menuItems} onQuery={setHeader}/>
         </div>
     <div className="admin-right-container">
     {< AdminDashboard/> }

@@ -3,11 +3,11 @@ import VerticalNavbar from '../General/VerticalNavbar';
 import PageHeader from "./PageHeader/PageHeader";
 // import StudentTrip from "./StudentTrip/StudentTrip";
 import styles from "./Student.module.css"
-import CashDeposit from './CashDeposit/CashDeposit';
+import CashDeposit from "./CashDeposit/CashDeposit"
 function Student(){
     const menuItems = [
         { text: "Trips" },
-        { text: "Cash Deposit" },
+        { text: "Deposit" },
         { text: "Profile" },
     ];
     return(

@@ -43,6 +43,7 @@
     justify-content: center;
     flex-direction: column;
     height: 100%;
+    width: 15%;
 }
 
 /* .navbar-container > a{
