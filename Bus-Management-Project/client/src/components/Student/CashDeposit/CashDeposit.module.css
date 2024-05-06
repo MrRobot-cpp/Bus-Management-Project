@@ -123,11 +123,36 @@ justify-content: center;
 }   
 .amount-txt{
     display: flex;
+    flex-direction: column;
     margin: 3px;
-    margin-top:30px ;
+    margin-top:20px ;
     align-items: center;
     justify-content: center;
-    text-align: left;
+}
+.amount-txt>h4{
+    color: #263159;
+}
+.pay-btn{
+    width: 5.5vw;
+    height: 3.6vh;
+    float: right;
+    background-color: #263159;
+    color: #FFFBEB;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    border: 2px solid #263159;
+    border-radius: 10px;
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.25);
+    display: block;
+    cursor: pointer;
+    margin: 8px;
+
+}
+.pay-btn:hover{
+    transition: 0.5s ease;
+    transform: scale(1.1);
+    border-color: #646cff;
 }
 .animation-container {
     display: flex;
