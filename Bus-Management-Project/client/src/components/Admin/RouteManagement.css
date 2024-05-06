@@ -1,0 +1,39 @@
+.RouteManagement-container{
+    display: flex;
+    flex-direction: row;
+}
+.routes-container{
+    margin-top: 3vh;
+    margin-left: 0.5vw;
+    background-color: #fffbeb;
+    display: flex;
+    flex-direction: column;
+    width: 83vw;
+    height: 80vh;
+    border: 1px solid #fffbeb;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+.routes-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 2vw;
+}
+.numberOfRoutes{
+    color: rgb(161, 161, 161);
+}
+
+.routes-header-container{
+    display: flex;
+    flex-direction: row;
+    margin: 1.2em 0.01em 1.2em 0em;
+}
+.routes-table{
+    margin-top: 1.2em;
+}
+.routes-table td{
+    color: rgb(161, 161, 161);
+    font-weight: 100;
+    font-size: small;
+}

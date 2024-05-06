@@ -1,17 +1,34 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
 import './AdminDashboard.css'
-import studentImage from '../../assets/User.png'; // Import the image
-import iconImage from '../../assets/Rectangle 2373.png';
-import iconImage1 from '../../assets/Rectangle 2374.png';
-import iconImage2 from '../../assets/Rectangle 2375.png';
-import chartimage from '../../assets/Order.png';
+import PageHeader from '../Student/PageHeader/PageHeader'
+import VerticalNavbar from '../General/VerticalNavbar'
+import studentImage from './User.png'; // Import the image
+import iconImage from './Rectangle 2373.png';
+import iconImage1 from './Rectangle 2374.png';
+import iconImage2 from './Rectangle 2375.png';
+import chartimage from './Order.png';
+
+
+
+
 
 function AdminDashboard() {
+  const menuItems = [
+    {text: "Routes" },
+    {text: "Drivers" },
+    {text: "Students" },
+    {text: "Trips" },
+    {text: "Profile" },
+  ];
+
   return (
     <div className='Dashboard-Container'>
+      <PageHeader text='Admin Dashboard'/>
       <div className='main-container'>
-
+        <div className='tempNav'>
+          <VerticalNavbar menuItems={menuItems} user/>
+        </div>
 
         {/* da b2a m4 el tany da el awlany w rkz m3aya kda  */}
         <div className='stylee'>

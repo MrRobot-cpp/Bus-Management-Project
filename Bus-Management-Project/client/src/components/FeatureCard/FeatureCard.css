@@ -10,6 +10,7 @@
 
 .feature-card-description {
     opacity: 0.5;
+    padding: 0;
 }
 
 .feature-card {
