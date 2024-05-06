@@ -14,29 +14,20 @@ function RouteManagement() {
 
   const [selectedRoute, setSelectedRoute] = useState(null); // Track the selected route for editing or deletion
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+  const [modalPosition, setModalPosition] = useState({ x: 0, y: 0 });
   // eslint-disable-next-line no-unused-vars
-  const addRoute = () => {
-    const newRoute = {
-      id: uuidv4(), // Generate a unique ID
-      startFrom: '', // Initialize other properties with default values
-      endAt: '',
-      tripType: '',
-      numberOfStops: 0,
-      startTime: '',
-      endTime: ''
-    };
-    setRoutes([...routes, newRoute]);
-  };
+
 
   const handleEditRoute = (id) => {
     setSelectedRoute(id); // Set the selected route for editing
+    setModalPosition({ x: event.clientX, y: event.clientY });
     setIsModalOpen(true); // Open the modal
   };
 
   // eslint-disable-next-line no-unused-vars
   const handleDeleteRoute = (id) => {
     setSelectedRoute(id); // Set the selected route for deletion
+    setModalPosition({ x: event.clientX, y: event.clientY });
     setIsModalOpen(true); // Open the modal
   };
 
@@ -85,18 +76,20 @@ function RouteManagement() {
                   <td>{route.startTime}</td>
                   <td>{route.endTime}</td>
                   <td>
-                  <button onClick={() => handleEditRoute(route.id)}>Options</button>
+                  <button onClick={() => handleEditRoute(route.id)}><i className="fa-solid fa-gear"></i></button>
                   </td>
                 </tr>
               ))}
             </tbody>
           </table>
           {isModalOpen && (
-        <div className="modal" >
+        <div className={`modal modal-animation ${isModalOpen ? 'modal-animation-slide-in' : 'modal-animation-slide-out'}`} style={{ top: modalPosition.y + 'px', left: modalPosition.x + 'px' }} >
           <div className="modal-content">
             <p>Do you want to edit or delete this route?</p>
-            <button onClick={handleConfirmEdit}>Edit</button>
+            <div className='buttons-modal-holder'>
+            <button className='edit-btn-route' onClick={handleConfirmEdit}>Edit</button> 
             <button onClick={handleConfirmDelete}>Delete</button>
+            </div>
           </div>
         </div>
           )}

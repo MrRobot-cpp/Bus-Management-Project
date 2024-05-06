@@ -19,7 +19,7 @@ const[header,setHeader] = useState('Dashboard')
   return (
     <>
     <div className='admin-container'>
-    <PageHeader text={header}/>
+    <PageHeader text={`Admin ${header}`}/>
     <div className='admin-page-container'>
         <div className="admin-navbar-container">
           <VerticalNavbar menuItems={menuItems} onQuery={setHeader}/>

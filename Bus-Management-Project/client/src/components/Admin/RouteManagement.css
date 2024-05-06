@@ -4,7 +4,7 @@
 }
 .routes-container{
     margin-top: 3vh;
-    margin-left: 0.5vw;
+    margin-left: 4vw;
     background-color: #fffbeb;
     display: flex;
     flex-direction: column;
@@ -13,6 +13,13 @@
     border: 1px solid #fffbeb;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+.routes-container button{
+    color: #263159;
+    border: none;
+    background-color: transparent;
+    border-radius: 8px;
+    padding: 5px;
 }
 .routes-header{
     display: flex;
@@ -37,3 +44,67 @@
     font-weight: 100;
     font-size: small;
 }
+.modal {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 20px;
+    width: 8vw;
+}
+.modal button{
+    cursor: pointer;
+    color: #fffbeb;
+    background-color: #263159;
+    margin: 4px;
+    padding: 6px;
+}
+.modal button:hover{
+    transform: scale(1.1);
+}
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4px;
+    padding: 2px;
+}
+  /* Ensure modal stays within viewport */
+@keyframes slideIn {
+    from {
+opacity: 0;
+transform: translateY(-20px);
+    }
+    to {
+    opacity: 1;
+    transform: translateY(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+    opacity: 1;
+    transform: translateY(0);
+    }
+    to {
+    opacity: 0;
+    transform: translateY(-20px);
+    }
+}
+
+.modal-animation {
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.modal-animation-slide-in {
+    animation-name: slideIn;
+}
+
+.modal-animation-slide-out {
+    animation-name: slideOut;
+  }
+
