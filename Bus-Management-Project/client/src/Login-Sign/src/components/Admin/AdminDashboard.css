@@ -213,3 +213,46 @@
 
   }
   
+  .compo6{
+    margin-top: 30px;
+    padding-top: 25px;
+    width: 265px;
+    height: 270px;
+    top: -63px;
+    left: -22px;
+    gap: 0px;
+    border-radius: 20px;
+    background-color: #FFFBEB;
+    border: 1px ;
+    opacity: 0px;
+  }
+
+  .compo6 h6{
+    padding-left: 20px;
+    color: #4D4D4D;
+    font-family: Inter;
+    font-size: 17px;
+    font-weight: bold;
+
+  }
+  .compo6 h5{
+    padding-left: 20px;
+    padding-top: 15px;
+    color: #4D4D4D;
+    font-family: Inter;
+    font-size: 17px;
+  }
+  .compo6 span{
+padding-left: 70px;
+color: black;
+font-size: 17px;
+  }
+  .line-break {
+    margin-left: 10px;
+    height: 1px; /* Adjust the thickness of the line */
+    width: 220px; /* Set the width to cover the entire container */
+    background-color: #E4E5E7; /* Set the color of the line */
+    margin-top: 10px;
+    left: 5%;
+    }
+  

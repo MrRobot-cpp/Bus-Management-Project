@@ -55,6 +55,12 @@ function AdminDashboard() {
     </select>
     </div>
 
+    <div className='compo6'>
+    <h6>Admin Activity</h6>
+    <h6 className='line-break'></h6>
+    <h5> People Added <span>238</span></h5>
+    </div>
+
 
 </div>
 ِ{/* m4 el box el awlany da el tany  */}
@@ -79,6 +85,9 @@ function AdminDashboard() {
     <select>
       <option value="source">Source: All</option>
     </select>
+    </div>
+    <div className='compo6'>
+aaa    
     </div>
 </div>
 {/* dool b2a ely homa kda ely homa el 3 components  */}
