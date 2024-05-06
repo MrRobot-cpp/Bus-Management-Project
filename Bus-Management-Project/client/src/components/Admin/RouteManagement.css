@@ -13,6 +13,7 @@
     border: 1px solid #fffbeb;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    overflow: auto;
 }
 .routes-container button{
     color: #263159;
@@ -115,17 +116,13 @@ transform: translateY(-20px);
     transform: translateY(-20px);
     }
 }
-
-.modal-animation {
+.modal-animation{
     animation-duration: 0.2s;
     animation-fill-mode: forwards;
 }
-
-.modal-animation-slide-in {
+.modal-animation-slide-in{
     animation-name: slideIn;
 }
-
-.modal-animation-slide-out {
+.modal-animation-slide-out{
     animation-name: slideOut;
 }
-

@@ -19,15 +19,15 @@ function RouteManagement() {
 
   const positionModal = (event) => {
     const modal = document.querySelector('.modal');
-    const rect = event.target.getBoundingClientRect();
+    const rect = event.target.getBoundingClientRect(); // Get button's position
     const modalWidth = modal.offsetWidth;
     const modalHeight = modal.offsetHeight;
-    const clickX = rect.left + window.scrollX + rect.width / 2;
-    const clickY = rect.top + window.scrollY + rect.height / 2;
-    const newX = clickX - modalWidth / 2;
-    const newY = clickY - modalHeight / 2;
-    modal.style.left = `${newX}px`;
-    modal.style.top = `${newY}px`;
+    const clickX = rect.left + window.scrollX + rect.width / 2; // Calculate X position relative to button
+    const clickY = rect.top + window.scrollY + rect.height / 2; // Calculate Y position relative to button
+    const newX = clickX - modalWidth / 2; // Adjust X position to center modal horizontally
+    const newY = clickY - modalHeight / 2; // Adjust Y position to center modal vertically
+    modal.style.left = `${newX}px`; // Set the new X position
+    modal.style.top = `${newY}px`; // Set the new Y position
   };
 
   const addRoute = () => {
@@ -110,7 +110,7 @@ function RouteManagement() {
                   <td>{route.startTime}</td>
                   <td>{route.endTime}</td>
                   <td>
-                  <button onClick={() => handleEditRoute(route.id)}><i className="fa-solid fa-gear"></i></button>
+                  <button onClick={(event) => handleEditRoute(route.id,event)}><i className="fa-solid fa-gear"></i></button>
                   </td>
                 </tr>
               ))}

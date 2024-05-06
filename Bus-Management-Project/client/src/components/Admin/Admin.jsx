@@ -15,6 +15,7 @@ const[header,setHeader] = useState('Dashboard')
     {text: "Drivers" },
     {text: "Students" },
     {text: "Trips" },
+    {text: "Payments" },
     {text: "Profile" },
   ];
   return (
