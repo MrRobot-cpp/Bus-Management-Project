@@ -10,7 +10,11 @@ import React from 'react';
 //import Driver from './components/Driver/Driver'
 //import Home from './components/Home'
 //import AccountConfig from './components/Login-SignUp/AccountConfig';
+<<<<<<< HEAD
 import Admin from './components/Admin/Admin'
+=======
+//  import Admin from './components/Admin/Admin'
+>>>>>>> b4e6e8218f180b9d462894b1379d4b0141ac356c
 //import Signup from './components/Login-SignUp/signUp';
 //import AccountConfig from './components/Login-SignUp/AccountConfig';
 //import VerticalNavbar from './components/VerticalNavbar/VerticalNavbar';
@@ -38,7 +42,7 @@ function App() {
             {/* { <Admin /> } */}
             {/* <Driver/> */}
             {/* <Student/>    */}
-            <Admin />
+            {/* <Admin /> */}
             {/* <Driver/> */}
             {/* <LandingPage/> */}
         </>

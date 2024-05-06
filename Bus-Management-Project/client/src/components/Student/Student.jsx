@@ -7,7 +7,7 @@ import CashDeposit from "./CashDeposit/CashDeposit"
 function Student(){
     const menuItems = [
         { text: "Trips" },
-        { text: "Cash Deposit" },
+        { text: "Deposit" },
         { text: "Profile" },
     ];
     return(
