@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react'
-import styles from './CashDeposit.module.css'
-import Dropdown from '../../General/Dropdown'
+import React from 'react';
+import styles from './CashDeposit.module.css';
+import Dropdown from '../../General/Dropdown';
 import PaymentGif from '../../../assets/Paymenttt.png';
 
 function CashDeposit() {
@@ -48,11 +48,13 @@ return (
         <div className={styles['second-row-container']}>
         <div className={styles['amount-container']}>
         <h3>Amount to be paid</h3>
-        <h4>amount:</h4>
+        <div className={styles ["amount-txt"]}>
+        <h4>Amount:</h4>
+        </div>
         </div>
         <div className={styles["animation-container"]}>
         <img src={PaymentGif} alt="" />
-\        </div>
+        </div>
         </div>
         </div>
     </div>

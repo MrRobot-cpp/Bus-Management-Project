@@ -1,6 +1,12 @@
 // eslint-disable-next-line no-unused-vars
+<<<<<<< HEAD
 import React, {useState} from "react";
 import VerticalNavbar from "../General/VerticalNavbar.jsx"; //done
+=======
+import React from "react";
+import VerticalNavbar from "../General/VerticalNavbar.jsx";//done
+// eslint-disable-next-line no-unused-vars
+>>>>>>> 38d291e0bf04a3168098cc05492fabaf03af7ee4
 import Home from "./Home";
 import PageHeader from "../Student/PageHeader/PageHeader.jsx"; //done
 import TripsTable from "./TripsTable.jsx"; //done

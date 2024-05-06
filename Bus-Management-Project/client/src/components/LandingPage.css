@@ -311,7 +311,7 @@
 
 .footer-container {
     width: 100%;
-    height: 100px;
+    height: auto;
     background: #000;
     position: relative;
     bottom: 0;
@@ -345,70 +345,63 @@
 
 
 @media (max-width: 622px) {
-    .info-box  {
-        display: inline-block;
-    }
-
-    p {
-        padding: 15px 0;
-    }
-
+    
 }
 
-
-
-
-
-
-
-  /* responsive design */
-@media (max-width: 1121px) {    
+/* responsive design */
+@media (max-width: 1221px) {    
     .unordered-list, .header-login-btn {
         display: none;
     }
-
+    
     .toggle-btn {
         display: block;
         margin-left: 50px;
         margin-right: 50px;
     }
-
+    
     .dropdown-menu {
         display: block;
     }
-
+    
     .feature-card-display {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        padding: 10px;
     }
-
+    
     .cta {
         min-width: 700px;
     }
-
+    
     .accordion-container {
         min-width: 700px;
         flex-grow: 1;
         overflow-y: auto;
         padding-bottom: 100px;
     }
+
+    .info-box  {
+        display: inline-block;
+    }
+    
+    p {
+        padding: 15px 0;
+    }
+
+    
+
 }
 
 @media (max-width: 576px) {
     .dropdown-menu {
         left: 2rem;
         width: unset;
+        top: 0;
     }
 
     .customer-card-scroller[data-animated=true] .customer-card-inner-scroller {
-        overflow: hidden;
-        overflow-x: auto; /* Use horizontal scrolling for small screens */
-        overflow-y: hidden;
+        overflow: auto;
+        
     }
-
-}
-.wrapper {
-    min-height: 100px;
-    display: flex;
-    flex-direction: column;
 }
