@@ -19,7 +19,7 @@ import Admin from './components/Admin/Admin'
 //import AccountConfig from './components/Login-SignUp/AccountConfig';
 //import VerticalNavbar from './components/VerticalNavbar/VerticalNavbar';
 //import Student from './components/Student/Student';
-//import Driver from './components/Driver/Driver'
+import Driver from './components/Driver/Driver'
 //import Home from './components/Home'
 import Admin from './components/Admin/Admin'
 // import LandingPage from './components/LandingPage'
@@ -43,11 +43,16 @@ function App() {
             {/* <Driver/> */}
             {/* <Student/>    */}
 <<<<<<< HEAD
+<<<<<<< HEAD
             <Admin />
 =======
             { <Admin /> }
 >>>>>>> f73a323f5d9c1be6ad1ec27c10627111b76204ae
             {/* <Driver/> */}
+=======
+            {/* <Admin /> */}
+            <Driver/>
+>>>>>>> 2d255a9a64b7d4ab9db74c1b88b38b606a1a0103
             {/* <LandingPage/> */}
         </>
     );

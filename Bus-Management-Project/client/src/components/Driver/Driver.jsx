@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
-import React, {useState} from "react";
+import React, { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import VerticalNavbar from "../General/VerticalNavbar.jsx"; //done
 import Home from "./Home";
 import PageHeader from "../Student/PageHeader/PageHeader.jsx"; //done
@@ -101,9 +102,41 @@ const driver = {
   type: "driver",
 };
 
+// const router = BrowserRouter([
+//   {
+//     path: '/dashboard',
+//     element: <Home/>
+//   },
+//   {
+//     path: '/trips',
+//     element: <TripComponent/>
+//   }
+// ])
+
+function TripComponent() {
+  return (
+    <>
+      <TripsTable
+        trips={trips}
+        tripHead="Current Trips"
+        activateStatBtn={true}
+      />
+      <TripsTable
+        trips={trips}
+        tripHead="Completed Trips"
+        activateStatBtn={false}
+      />
+      <TripsTable
+        trips={trips}
+        tripHead="Upcoming Trips"
+        activateStatBtn={false}
+      />
+    </>
+  );
+}
+
 function Driver() {
-  const[header,setHeader] = useState("Dashboard")
-  
+  const [header, setHeader] = useState("Dashboard");
 
   const menuItems = [
     { text: "Trips" },
@@ -115,13 +148,17 @@ function Driver() {
       <PageHeader text={`Driver ${header}`} />
       <div className={styles["container"]}>
         <div className={styles["navbar-container"]}>
-          <VerticalNavbar menuItems={menuItems} onQuery={setHeader}/>
+          <VerticalNavbar menuItems={menuItems} onQuery={setHeader} />
         </div>
         <div className={styles["right-container"]}>
-          <Home driver={driver} trips={trips} />
-          {/* <TripsTable trips={trips} tripHead="Current Trips" activateStatBtn={true}/>
-        <TripsTable trips={trips} tripHead="Completed Trips" activateStatBtn={false}/>
-        <TripsTable trips={trips} tripHead="Upcoming Trips" activateStatBtn={false}/> */}
+            <Routes>
+              <Route
+                path="/Home"
+                element={<Home driver={driver} trips={trips} />}
+                exact={true}
+              />
+              <Route path="/trips" element={<TripComponent />} />
+            </Routes>
         </div>
       </div>
     </div>

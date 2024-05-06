@@ -64,15 +64,15 @@ function VerticalNavbar(props) {
                         <li className={styles["hamburger-btn-line"]} onClick={handleOnQuery("Dashboard")}>
                             {/* <a href="#" className="{styles["dashboard-link" onClick={handleToggle} onMouseOver={handleMouseOver} 
                             onMouseOut={handleMouseOut} style={{width: hoverBox}}> */}
-                                <a href="#" className={styles["dashboard-link"]}>
+                                <Link to="/home" className={styles["dashboard-link"]}>
                                 {/* <HamburgerBtn className="{styles["hamburger-btn" transform={`translate(${toggle?"0px":"-15px" },-20px)`} 
                                 backgroundColor={backgroundColor} toggle={toggle}/> */}
                                 Dashboard
-                            </a>
+                            </Link>
                         </li>
                         {menuItems.map((item, index) => (
                             <li key={index} onClick={handleOnQuery(item.text)}>
-                                <Link to="#">
+                                <Link to={`/driver${item.text}`}>
                                 {/* <i className={item.icon}/>    */}
                                 {item.text}
                                 </Link>
