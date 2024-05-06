@@ -105,14 +105,14 @@ function LandingPage() {
                         iconLink={"fa-regular fa-hourglass-half"} 
                         iconColor={'#000'}
                         headlineText={"Real-Time Tracking"} 
-                        descriptionText={"Students can stay updated and track bus location and arrival time. Encourages stress-free transportation"}  
+                        descriptionText={"Students can stay updated and track bus location and arrival time."}  
                     />
 
                     <FeatureCard 
                         iconLink={"fa-solid fa-route"} 
                         iconColor={'#251749'} 
                         headlineText={"Route Management"} 
-                        descriptionText={"Drivers ensure timely departure and arrival. Manage routes with multiple stops for each round efficiently."} 
+                        descriptionText={"Drivers manage routes with multiple stops for each round efficiently."} 
                     />
 
                     <FeatureCard 
@@ -162,7 +162,6 @@ function LandingPage() {
 
 
             {/* Customer Card Section */}
-            {/* {/*      */}
             <div className="customer-card-container">
                 <h1 className="customer-card-headline">Hear From Our Customers</h1>
                     <div className="customer-card-scroller" data-animated={true} >
@@ -213,14 +212,12 @@ function LandingPage() {
                             imageLink={client7Image} 
                             name="Jessica Martinez" 
                             position="Student &#64; Central High School" 
-                            descriptionText={`"As a student, I appreciate RouteMinder's commitment to safety and efficiency. Knowing that my bus is equipped with real-time tracking gives me peace of mind during my daily commute. Plus, the app's user-friendly design makes it easy for me to stay informed about any changes or updates."`}  
+                            descriptionText={`"As a student, I appreciate RouteMinder's commitment to safety and efficiency. Knowing that my bus is equipped with real-time tracking gives me peace of mind during my daily commute."`}  
                         />
 
                         </div>
                     </div>
-            </div
-
-            >
+            </div>
             {/* End of Customer Card Section */}
 
 
@@ -257,6 +254,8 @@ function LandingPage() {
                 </div>
             </div>
             {/* End of CTA Section */}
+
+
 
 
             {/* Accordion Section */}
