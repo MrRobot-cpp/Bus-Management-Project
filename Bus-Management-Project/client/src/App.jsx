@@ -17,11 +17,7 @@ import React from 'react';
 import Student from './components/Student/Student';
 // import Driver from './components/Driver/Driver'
 //import Home from './components/Home'
-<<<<<<< HEAD
 // import Admin from './components/Admin/Admin'
-=======
-import Admin from './components/Admin/Admin'
->>>>>>> 977020591aa4f300ad2c35530ca2529477602546
 // import LandingPage from './components/LandingPage'
 function App() {
     // eslint-disable-next-line no-unused-vars
@@ -44,11 +40,7 @@ function App() {
             {/* <Student/>    */}
             {/* <Admin /> */}
             {/* <Driver/> */}
-<<<<<<< HEAD
             {/* <LandingPage/> */}
-=======
-            {/* < LandingPage/> */}
->>>>>>> 977020591aa4f300ad2c35530ca2529477602546
         </>
     );
 }
