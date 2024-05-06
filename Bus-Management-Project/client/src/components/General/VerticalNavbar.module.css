@@ -84,6 +84,7 @@
     justify-content: center;
     font-weight: 400;
     font-size: 15px;
+    padding-inline: 40px;
     text-transform: capitalize;
     text-decoration: none;
     color: #FFFBEB;
