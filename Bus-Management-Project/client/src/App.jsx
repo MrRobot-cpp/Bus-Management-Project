@@ -14,11 +14,11 @@ import React from 'react';
 //import Signup from './components/Login-SignUp/signUp';
 //import AccountConfig from './components/Login-SignUp/AccountConfig';
 //import VerticalNavbar from './components/VerticalNavbar/VerticalNavbar';
-//import Student from './components/Student/Student';
+import Student from './components/Student/Student';
 // import Driver from './components/Driver/Driver'
 //import Home from './components/Home'
 // import Admin from './components/Admin/Admin'
-import LandingPage from './components/LandingPage'
+// import LandingPage from './components/LandingPage'
 function App() {
     return (
         <>
@@ -28,7 +28,7 @@ function App() {
             {/* <VerticalNavbar /> */}
             {/* <Home/> */}
             {/* <AccountConfig /> */}
-            {/* <Student/>    */}
+            <Student/>   
             {/* <AccountConfig /> */}
             {/* <Student/>    */}
             {/* <Admin /> */}
@@ -36,7 +36,7 @@ function App() {
             {/* <Student/>    */}
             {/* <Admin /> */}
             {/* <Driver/> */}
-            <LandingPage/>
+            {/* <LandingPage/> */}
         </>
     );
 }
