@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from './CashDeposit.module.css';
 import Dropdown from '../../General/Dropdown';
-import PaymentGif from '../../../assets/Paymenttt.png';
+import PaymentGif from '../../../assets/Payment.png';
 
 function CashDeposit() {
     const banks = ['Visa/Credit Card', 'HSBC Bank', 'CIB Bank', 'ADIB Bank'];
