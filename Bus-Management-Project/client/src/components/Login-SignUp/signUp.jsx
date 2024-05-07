@@ -120,7 +120,7 @@ function Signup() {
                 <div className='sign-div-holder'>
                     <button className='Sign-btn' type="submit" id="submit">Sign Up</button>
                 </div>
-                <h4 className="not-regist">Not Registered yet? <a className="create-acc-link" href="">Create An Account</a></h4>
+                <h4 className="not-regist">Already Have An Account? <a className="create-acc-link" href="">Login</a></h4>
                 <h4>Or Join with</h4>
                 <br />
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
