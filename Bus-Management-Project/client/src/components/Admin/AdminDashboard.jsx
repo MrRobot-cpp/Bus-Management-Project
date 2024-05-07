@@ -1,6 +1,6 @@
 //eslint-disable-next-line no-unused-vars
-import React from 'react'
-import './AdminDashboard.css'
+import React from 'react';
+import './AdminDashboard.css';
 import studentImage from '../../assets/User.png'; // Import the image
 import iconImage from '../../assets/Rectangle 2373.png';
 import iconImage1 from '../../assets/Rectangle 2374.png';
@@ -10,7 +10,7 @@ import chartimage2 from './chart.png';
 import chartimage3 from './chart2.png';
 import iconImage3 from './icon1.jpg';
 import iconImage4 from './icon2.jpg';
-import iconImage5 from './icon3.jpg';
+import iconImage5 from './icon3.png';
 import iconImage6 from './icon4.jpg';
 import iconImage7 from './icon5.jpg';
 import iconImage8 from './icon6.jpg';
@@ -209,9 +209,6 @@ function AdminDashboard() {
 </div>
 </div>
   
-
-
-
 
       </div>
     </div>
