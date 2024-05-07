@@ -5,7 +5,9 @@ import VerticalNavbar from "../General/VerticalNavbar.jsx"; //done
 import Home from "./Home";
 import PageHeader from "../Student/PageHeader/PageHeader.jsx"; //done
 import TripsTable from "./TripsTable.jsx"; //done
+import BubbleChat from "../General/BubbleChat.jsx";
 import styles from "./Driver.module.css"; //done
+
 
 const trips = [
   {
@@ -102,6 +104,7 @@ const driver = {
   type: "driver",
 };
 
+
 // const router = BrowserRouter([
 //   {
 //     path: '/dashboard',
@@ -137,7 +140,12 @@ function TripComponent() {
 
 function Driver() {
   const [header, setHeader] = useState("Dashboard");
+  const [toggleChatBtn,setToggleChatBtn] = useState(true)
 
+  const refreshTime = (() => {
+    return toggleChatBtn ? { diplay: "block" } : { display: "none" };
+  })();
+  
   const menuItems = [
     { text: "Trips" },
     { text: "History" },
@@ -146,6 +154,9 @@ function Driver() {
   return (
     <div className={styles["main-container"]}>
       <PageHeader text={`Driver ${header}`} />
+      <div className={styles["bubble-chat-container"]} style={refreshTime}>
+      <BubbleChat onQuery={setToggleChatBtn}/>
+      </div>
       <div className={styles["container"]}>
         <div className={styles["navbar-container"]}>
           <VerticalNavbar menuItems={menuItems} onQuery={setHeader} />
@@ -153,9 +164,8 @@ function Driver() {
         <div className={styles["right-container"]}>
             <Routes>
               <Route
-                path="/Home"
+                path={"/Home" || "/"}
                 element={<Home driver={driver} trips={trips} />}
-                exact={true}
               />
               <Route path="/trips" element={<TripComponent />} />
             </Routes>

@@ -46,6 +46,16 @@
     width: 15%;
 }
 
+.bubble-chat-container{
+    position: fixed;
+    bottom: 10%;
+    right: 7%;
+    width: auto;
+    height: auto;
+    z-index: 1;
+
+}
+
 /* .navbar-container > a{
     display: flex;
     align-items: center;

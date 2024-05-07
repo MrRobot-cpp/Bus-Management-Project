@@ -72,7 +72,7 @@ function VerticalNavbar(props) {
                         </li>
                         {menuItems.map((item, index) => (
                             <li key={index} onClick={handleOnQuery(item.text)}>
-                                <Link to={`/driver${item.text}`}>
+                                <Link to={`/${item.text}`}>
                                 {/* <i className={item.icon}/>    */}
                                 {item.text}
                                 </Link>
