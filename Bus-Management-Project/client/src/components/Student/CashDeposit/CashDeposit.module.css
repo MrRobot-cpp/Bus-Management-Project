@@ -55,7 +55,7 @@ margin: 16px;
 }
 .current-due-container{
 width: 70%;
-max-height:22.5vh ;
+max-height:auto ;
 height: auto;
 align-items: center;
 text-align: center;
@@ -158,6 +158,6 @@ justify-content: center;
     display: flex;
     justify-content: flex-end; 
     width: 70%;
-    padding: 30px;
+    padding: 16px;
 }
 
