@@ -2,10 +2,10 @@
 import React, { useState } from 'react'
 import PageHeader from '../Student/PageHeader/PageHeader'
 //import AdminDashboard from './AdminDashboard'
-//import RouteManagement from './RouteManagement'
+import RouteManagement from './RouteManagement'
 import VerticalNavbar from '../General/VerticalNavbar'
 import './Admin.css'
-import AdminDashboard from './AdminDashboard'
+//import AdminDashboard from './AdminDashboard'
 function Admin() {
 
 const[header,setHeader] = useState('Dashboard')
@@ -15,6 +15,7 @@ const[header,setHeader] = useState('Dashboard')
     {text: "Drivers" },
     {text: "Students" },
     {text: "Trips" },
+    {text: "Payments" },
     {text: "Profile" },
   ];
   return (
@@ -26,9 +27,8 @@ const[header,setHeader] = useState('Dashboard')
           <VerticalNavbar menuItems={menuItems} onQuery={setHeader}/>
         </div>
     <div className="admin-right-container">
-    {< AdminDashboard/> }
-    {/* <RouteManagement /> */}
-    
+    {/* < AdminDashboard/> */}
+    <RouteManagement />
     </div>
     </div>
     </div>
