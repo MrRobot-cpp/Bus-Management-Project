@@ -3,20 +3,19 @@ import StudentProfile from "./StudentProfile/StudentProfile";
 import PageHeader from "./PageHeader/PageHeader";
 // import StudentTrip from "./StudentTrip/StudentTrip";
 import styles from "./Student.module.css"
-// import CashDeposit from "./CashDeposit/CashDeposit"
+import CashDeposit from "./CashDeposit/CashDeposit"
 function Student(){
     const menuItems = [
         { text: "Trips" },
         { text: "Deposit" },
         { text: "Profile" },
     ];
-    const profile =[
-        {                 },
-        {                 },
-        {                 },
-        {                 },
-
-    ]
+    // const profile =[
+    //     {                 },
+    //     {                 },
+    //     {                 },
+    //     {                 },
+    // ]
     return(
         <>
         <div className={styles["main-container"]} >
@@ -28,8 +27,8 @@ function Student(){
         <VerticalNavbar menuItems={menuItems}/>
         </div>
         <div className={styles["bottom-right-container"]}>
-        {/* <CashDeposit/> */}
-        <StudentProfile />
+        <CashDeposit/>
+        {/* <StudentProfile /> */}
         {/* <StudentTrip/> */}
         </div>
         </div>

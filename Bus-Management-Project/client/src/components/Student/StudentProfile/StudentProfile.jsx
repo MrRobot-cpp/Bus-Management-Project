@@ -82,8 +82,8 @@ function StudentProfile(props) {
                         <table className="student-table">
                             {tableItems.map((item, index) => (
                                 <tr key={index}>
-                                    <td>{item.text}</td>
-                                    <td>
+                                    <td  className="student-table-td">{item.text}</td>
+                                    <td className="student-table-td">
                                         {editableIndex === index ? (
                                             <input
                                                 id={`input-${index}`}
@@ -95,7 +95,7 @@ function StudentProfile(props) {
                                             <span>{item.value}</span>
                                         )}
                                     </td>
-                                    <td>
+                                    <td className="student-table-td">
                                         {(index !== 0 && index !== 5 && index !== 6) && isChecked && // Show Edit button for relevant fields only when isChecked is true
                                             (editableIndex === index ? (
                                                 <button onClick={handleSaveClick} className="edit-btn">Save</button>
