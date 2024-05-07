@@ -9,7 +9,7 @@ import Student from './components/Student/Student';
 //import Driver from './components/Driver/Driver'
 //import Home from './components/Home'
 //import AccountConfig from './components/Login-SignUp/AccountConfig';
-import Admin from './components/Admin/Admin'
+// import Admin from './components/Admin/Admin'
 //import Signup from './components/Login-SignUp/signUp';
 //import AccountConfig from './components/Login-SignUp/AccountConfig';
 //import VerticalNavbar from './components/VerticalNavbar/VerticalNavbar';
@@ -33,7 +33,7 @@ function App() {
            {/*  <Home/> */}
             <Student/>   
             {/* <Driver/> */}
-            <Admin />
+            {/* <Admin /> */}
             {/* <LandingPage/> */}
         </>
     );

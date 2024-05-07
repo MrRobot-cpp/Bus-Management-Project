@@ -1,21 +1,23 @@
 import  { useState } from "react";
 import "./StudentProfile.css";
+import PropTypes from "prop-types";
 
-function StudentProfile() {
+
+function StudentProfile(props) {
     const [isChecked, setIsChecked] = useState(false);
 
     const [editableIndex, setEditableIndex] = useState(-1);
 
     const student = {
-        name: "Mohamed abdelaaty",
-        username: "3bdel3aty",
-        id: "123456",
-        birthdate: "January 1, 1990",
-        gender: "Male",
-        email: "abdelaaty@m3kamele7tramy.com",
-        phone: "01284049697",
-        location: "New Nozha",
-        password: "Abdelaaty%",
+        name: props.name,
+        username: props.username,
+        id: props.id,
+        birthdate: props.birthdate,
+        gender: props.gender,
+        email: props.email,
+        phone: props.phone,
+        location: props.location,
+        password: props.password,
     };
 
     const [tableItems, setTableItems] = useState([
@@ -121,6 +123,17 @@ function StudentProfile() {
                 </div>
         </>
     );
+}
+StudentProfile.propTypes={
+    name: PropTypes.string,
+    username: PropTypes.string,
+    id: PropTypes.number,
+    birthdate: PropTypes.string,
+    gender: PropTypes.string,
+    email: PropTypes.string,
+    phone: PropTypes.number,
+    location: PropTypes.string,
+    password: PropTypes.string
 }
 
 export default StudentProfile;
