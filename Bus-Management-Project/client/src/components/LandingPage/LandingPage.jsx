@@ -1,32 +1,32 @@
 import './LandingPage.css'
-import "./MenuItemButton/MenuItemButton.css";
+import "../General/MenuItemButton/MenuItemButton.css";
 
-import { addAnimation } from "./CustomerCard/scrollingAnimation.js";
+import { addAnimation } from "../General/CustomerCard/scrollingAnimation.js";
 import { useEffect, useState } from 'react'
 
-import MenuItemButtonRegular from "./MenuItemButton/MenuItemButtonRegular.jsx"
-import HorizontalCard from "./HorizontalCard/HorizontalCard.jsx";
-import FeatureCard from "./FeatureCard/FeatureCard.jsx";
-import MenuItemButtonHighlighted from "./MenuItemButton/MenuItemButtonHighLighted.jsx";
-import CustomerCard from "./CustomerCard/CustomerCard.jsx";
-import Accordion from './Accordion/Accordion.jsx';
+import MenuItemButtonRegular from "../General/MenuItemButton/MenuItemButtonRegular.jsx"
+import HorizontalCard from "../General/HorizontalCard/HorizontalCard.jsx";
+import FeatureCard from "../General/FeatureCard/FeatureCard.jsx";
+import MenuItemButtonHighlighted from "../General/MenuItemButton/MenuItemButtonHighLighted.jsx";
+import CustomerCard from "../General/CustomerCard/CustomerCard.jsx";
+import Accordion from '../General/Accordion/Accordion.jsx';
 
-import busImage1 from '../assets/bus-image-1.png' 
-import busImage2 from '../assets/bus-image-2.svg'
-import busImage3 from '../assets/bus-image-3.svg'
+import busImage1 from '../../assets/bus-image-1.png' 
+import busImage2 from '../../assets/bus-image-2.svg'
+import busImage3 from '../../assets/bus-image-3.svg'
 
-import client1Image from "../assets/client1.jpeg";
-import client2Image from "../assets/client2.jpeg";
-import client3Image from "../assets/client3.jpeg";
-import client4Image from "../assets/client4.jpeg";
-import client5Image from "../assets/client5.jpeg";
-import client6Image from "../assets/client6.jpeg";
-import client7Image from "../assets/client7.jpeg";
-import iphoneImage from "../assets/iphoneImage.png";
+import client1Image from "../../assets/client1.jpeg";
+import client2Image from "../../assets/client2.jpeg";
+import client3Image from "../../assets/client3.jpeg";
+import client4Image from "../../assets/client4.jpeg";
+import client5Image from "../../assets/client5.jpeg";
+import client6Image from "../../assets/client6.jpeg";
+import client7Image from "../../assets/client7.jpeg";
+import iphoneImage from "../../assets/iphoneImage.png";
 
-import instagramImage from "../assets/instagramImage.png"
-import facebookImage from "../assets/facebookImage.png"
-import twitterXImage from "../assets/twitterXImage.png"
+import instagramImage from "../../assets/instagramImage.png"
+import facebookImage from "../../assets/facebookImage.png"
+import twitterXImage from "../../assets/twitterXImage.png"
 
 
 
@@ -62,11 +62,11 @@ function LandingPage() {
             <div className="header-contents">
                 <div className="logo-nav"><h1 className="logo-placeholder">RouteMinder</h1></div>
                     <ul className="unordered-list">
-                        <li className="list"><MenuItemButtonRegular text="Home" hRef={"#"} /></li>
+                        <li className="list"><MenuItemButtonRegular text="Home" hRef={""} /></li>
                         <li className="list"><MenuItemButtonRegular text="Services" hRef={"#"} /></li>
                         <li className="list"><MenuItemButtonRegular text="About" hRef={"#"} /></li>
                         <li className="list"><MenuItemButtonRegular text="Contact Us" hRef={"#"} /></li>
-                        <MenuItemButtonHighlighted text="Login" classCondition={true} className2="header-login-btn"  />
+                        <MenuItemButtonHighlighted text="Login" classCondition={true} className2="header-login-btn" hRef="/Login" />
                     </ul>
 
                 <div className="toggle-btn" onClick={toggleDropDown}>

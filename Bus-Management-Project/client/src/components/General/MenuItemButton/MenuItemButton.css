@@ -21,6 +21,7 @@
   color: #ffffff;
   border-radius: 8px;
   text-align: center;
+  text-decoration: none;
   transition: transform .2s ease; 
   width: 130px;
   padding: 10px;
