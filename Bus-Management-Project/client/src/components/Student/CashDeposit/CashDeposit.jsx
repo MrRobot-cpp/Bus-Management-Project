@@ -11,11 +11,11 @@ function CashDeposit() {
         1: false, // Assuming 1 is the index of the second item
     });
     const [totalAmount, setTotalAmount] = useState(0);
-    const [paymentMade, setPaymentMade] = useState(false); // State to track payment status
+    const [paymentMade, setPaymentMade] = useState( ); // State to track payment status
 
     // Function to handle checkbox change
     const handleCheckboxChange = (index) => {
-        if (!paymentMade) { // Check if payment hasn't been made yet
+        if ((!paymentMade &&!checkedItems[0])||(!paymentMade &&!checkedItems[1])) { // Check if payment hasn't been made yet
             const newCheckedItems = { ...checkedItems, [index]: !checkedItems[index] };
             setCheckedItems(newCheckedItems);
 
@@ -27,7 +27,7 @@ function CashDeposit() {
                 } else if (index === 1 && !checkedItems[1]) {
                     amount += 3000;
                 }
-            } else { // If checkbox is unchecked
+            } else if(!newCheckedItems[index]){ // If checkbox is unchecked
                 if (index === 0 && checkedItems[0]) {
                     amount -= 4500;
                 } else if (index === 1 && checkedItems[1]) {
@@ -40,9 +40,10 @@ function CashDeposit() {
 
     // Function to handle pay button click
     const handlePay = () => {
+        if(totalAmount!=0   ){         
         setTotalAmount(0); // Reset total amount to 0
         setPaymentMade(true); // Set payment made to true
-
+        }
         // Disable only the checked checkboxes after payment
         const newCheckedItems = { ...checkedItems };
         for (const key in newCheckedItems) {
