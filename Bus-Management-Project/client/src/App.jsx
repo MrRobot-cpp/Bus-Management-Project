@@ -5,11 +5,11 @@ import React from 'react';
 //import StudentProfile from './components/StudentProfile/StudentProfile/';
 //import Driver from './components/Driver/Driver';
 //import VerticalNavbar from './components/VerticalNavbar/VerticalNavbar';
-import Student from './components/Student/Student';
+//import Student from './components/Student/Student';
 //import Driver from './components/Driver/Driver'
 //import Home from './components/Home'
 //import AccountConfig from './components/Login-SignUp/AccountConfig';
-import Admin from './components/Admin/Admin'
+//import Admin from './components/Admin/Admin'
 //import Signup from './components/Login-SignUp/signUp';
 //import AccountConfig from './components/Login-SignUp/AccountConfig';
 //import VerticalNavbar from './components/VerticalNavbar/VerticalNavbar';
@@ -18,7 +18,7 @@ import Admin from './components/Admin/Admin'
 //import Home from './components/Home'
 
 //import Admin from './components/Admin/Admin'
-// import LandingPage from './components/LandingPage'
+import LandingPage from './components/LandingPage/LandingPage'
 function App() {
     // eslint-disable-next-line no-unused-vars
     const toggleDropDown = () => {
@@ -31,10 +31,10 @@ function App() {
             {/* <AccountConfig /> */}
             {/* <VerticalNavbar /> */}
            {/*  <Home/> */}
-            <Student/>   
+            {/* <Student/>    */}
             {/* <Driver/> */}
-            <Admin />
-            {/* <LandingPage/> */}
+            {/* <Admin /> */}
+            <LandingPage/>
         </>
     );
 }
