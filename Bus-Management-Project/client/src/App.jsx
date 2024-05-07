@@ -6,7 +6,7 @@ import React from 'react';
 //import StudentProfile from './components/StudentProfile/StudentProfile/';
 //import Driver from './components/Driver/Driver';
 //import VerticalNavbar from './components/VerticalNavbar/VerticalNavbar';
-//import Student from './components/Student/Student';
+import Student from './components/Student/Student';
 //import Driver from './components/Driver/Driver'
 //import Home from './components/Home'
 //import AccountConfig from './components/Login-SignUp/AccountConfig';
@@ -33,11 +33,11 @@ function App() {
     return (
         <>
            {/*  <Login /> */}
-            <Signup />
+            {/* <Signup /> */}
             {/* <AccountConfig /> */}
             {/* <VerticalNavbar /> */}
            {/*  <Home/> */}
-            {/* <Student/>    */}
+            <Student/>   
             {/* <Driver/> */}
             {/* <Admin /> */}
             {/* <LandingPage/> */}

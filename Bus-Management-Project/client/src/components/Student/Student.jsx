@@ -27,8 +27,8 @@ function Student(){
         <VerticalNavbar menuItems={menuItems}/>
         </div>
         <div className={styles["bottom-right-container"]}>
-        <CashDeposit/>
-        {/* <StudentProfile /> */}
+        {/* <CashDeposit/> */}
+        <StudentProfile />
         {/* <StudentTrip/> */}
         </div>
         </div>
