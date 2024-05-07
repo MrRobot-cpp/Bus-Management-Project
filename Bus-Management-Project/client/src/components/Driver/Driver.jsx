@@ -147,7 +147,7 @@ function Driver() {
   })();
   
   const menuItems = [
-    { text: "Trips" },
+    { text: "trips" },
     { text: "History" },
     { text: "Profile" },
   ];
@@ -159,14 +159,18 @@ function Driver() {
       </div>
       <div className={styles["container"]}>
         <div className={styles["navbar-container"]}>
-          <VerticalNavbar menuItems={menuItems} onQuery={setHeader} />
+          <VerticalNavbar menuItems={menuItems} onQuery={setHeader} type="driver"/>
         </div>
         <div className={styles["right-container"]}>
             <Routes>
               <Route
-                path={"/Home" || "/"}
+                path={"Login/driver-view/Home"}
                 element={<Home driver={driver} trips={trips} />}
               />
+               <Route 
+                  path={"Login/driver-view/"}
+                  element={<Home driver={driver} trips={trips} />}
+                />
               <Route path="/trips" element={<TripComponent />} />
             </Routes>
         </div>

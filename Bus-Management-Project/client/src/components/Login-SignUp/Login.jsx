@@ -1,7 +1,23 @@
 // eslint-disable-next-line no-unused-vars
 import React , {useState} from 'react';
-import { validateEmail, validatePassword } from '../validation';
-import './login.css'; // Assuming you have this CSS file in your project
+import { Link } from 'react-router-dom';
+import { validateEmail, validatePassword } from './validation';
+import './login.css';
+
+const driverCredntials = {
+    email: "ahmedsamersayed22@gmail.com",
+    password: "samortchy2004"
+}
+
+const studentCredntials = {
+    email: "shadyyasset@gmail.com",
+    password: "shdshddd2002"
+}
+
+const adminCredntials = {
+    email: "ghazouly2007@gmail.com",
+    password: "ghazou2007"
+}
 
 function Login() {
     const [email, setEmail] = useState('');
@@ -32,6 +48,21 @@ function Login() {
             console.log('Form submission failed. Please check input fields.');
         }
     };
+
+    const handleRedirection = () =>{
+        let link;
+        if(email===driverCredntials.email && password===driverCredntials.password){
+            link="driver-view"
+        }else 
+        if(email===adminCredntials.email && password===adminCredntials.password){
+            link="admin-view"
+        }else 
+        if(email===studentCredntials.email && password===studentCredntials.password){
+            link="student-view"
+        }else {console.log("invalid credntials")}
+        console.log(link);
+        return link
+    }
     return (
         <div className='login'>
         <div className="login-container">
@@ -56,9 +87,9 @@ function Login() {
                 <a className="Forgot-Password" href="">Forgot Password?</a>
                 <br />
                 <div className='login-div-holder'>
-                    <button className='Login-btn' type="submit" id="submit">Login</button>
+                    <Link to={handleRedirection()}><button className='Login-btn' type="submit" id="submit">Login</button></Link>
                 </div>
-                <h4 className="not-regist">Not Registered yet? <a className='create-account-login-link' href="">Create An Account</a></h4>
+                <h4 className="not-regist">Not Registered yet? <Link className='create-account-login-link' to="/sign-up">Create An Account</Link></h4>
                 <h4>Or Join with</h4>
                 <br />
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />

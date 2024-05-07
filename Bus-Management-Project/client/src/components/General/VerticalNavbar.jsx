@@ -14,7 +14,7 @@ function VerticalNavbar(props) {
     // eslint-disable-next-line no-unused-vars
     // const [hoverBoxMargin, setHoverBoxMargin] = useState("10px");
 
-    const {menuItems,onQuery} = props;
+    const {menuItems,onQuery,type} = props;
 
     const handleOnQuery = (text) => {
         return () => {
@@ -64,7 +64,7 @@ function VerticalNavbar(props) {
                         <li className={styles["hamburger-btn-line"]} onClick={handleOnQuery("Dashboard")}>
                             {/* <a href="#" className="{styles["dashboard-link" onClick={handleToggle} onMouseOver={handleMouseOver} 
                             onMouseOut={handleMouseOut} style={{width: hoverBox}}> */}
-                                <Link to="/home" className={styles["dashboard-link"]}>
+                                <Link to={`/Login/${type}-view/home`} className={styles["dashboard-link"]}>
                                 {/* <HamburgerBtn className="{styles["hamburger-btn" transform={`translate(${toggle?"0px":"-15px" },-20px)`} 
                                 backgroundColor={backgroundColor} toggle={toggle}/> */}
                                 Dashboard
@@ -72,7 +72,7 @@ function VerticalNavbar(props) {
                         </li>
                         {menuItems.map((item, index) => (
                             <li key={index} onClick={handleOnQuery(item.text)}>
-                                <Link to={`/${item.text}`}>
+                                <Link to={`/Login/${type}-view/${item.text}`}>
                                 {/* <i className={item.icon}/>    */}
                                 {item.text}
                                 </Link>

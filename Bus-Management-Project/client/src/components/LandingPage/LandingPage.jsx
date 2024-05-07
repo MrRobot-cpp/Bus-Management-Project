@@ -62,11 +62,11 @@ function LandingPage() {
             <div className="header-contents">
                 <div className="logo-nav"><h1 className="logo-placeholder">RouteMinder</h1></div>
                     <ul className="unordered-list">
-                        <li className="list"><MenuItemButtonRegular text="Home" hRef={"#"} /></li>
+                        <li className="list"><MenuItemButtonRegular text="Home" hRef={""} /></li>
                         <li className="list"><MenuItemButtonRegular text="Services" hRef={"#"} /></li>
                         <li className="list"><MenuItemButtonRegular text="About" hRef={"#"} /></li>
                         <li className="list"><MenuItemButtonRegular text="Contact Us" hRef={"#"} /></li>
-                        <MenuItemButtonHighlighted text="Login" classCondition={true} className2="header-login-btn"  />
+                        <MenuItemButtonHighlighted text="Login" classCondition={true} className2="header-login-btn" hRef="/Login" />
                     </ul>
 
                 <div className="toggle-btn" onClick={toggleDropDown}>
