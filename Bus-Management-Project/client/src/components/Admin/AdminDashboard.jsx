@@ -53,7 +53,7 @@ function AdminDashboard() {
     <h5> User Management<span>139</span></h5>
     <h5> Content Management <span>283</span></h5>
     <h5> Data Management <span>782</span></h5>
-    <h5> Configuration and Settings <span>1,923</span></h5>
+    <h5> Document Managemens <span>1,923</span></h5>
     <h5> Reporting and Analytics <span>103</span></h5>
     <h5> Integration and APIs<span>477</span></h5>
     <h5> Training and Support <span>280</span></h5>
