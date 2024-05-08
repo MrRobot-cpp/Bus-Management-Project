@@ -1,13 +1,15 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from './components/Login-SignUp/Login.jsx';
-//import Signup from './components/signUp.jsx';
-//import StudentProfile from './components/StudentProfile/StudentProfile/';
-//import Driver from './components/Driver/Driver';
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import Login from './components/Login-SignUp/Login.jsx';
+//import Student from './components/Student/Student';
+// import Admin from './components/Admin/Admin'
+// import Signup from './components/Login-SignUp/signUp';
+//import AccountConfig from './components/Login-SignUp/AccountConfig';
 //import VerticalNavbar from './components/VerticalNavbar/VerticalNavbar';
 // import Student from './components/Student/Student';
 //import Driver from './components/Driver/Driver'
+<<<<<<< HEAD
 //import AccountConfig from './components/Login-SignUp/AccountConfig';
 // import Admin from './components/Admin/Admin'
 import Signup from './components/Login-SignUp/signUp';
@@ -17,6 +19,9 @@ import Student from './components/Student/Student';
 import Driver from './components/Driver/Driver'
 //import Home from './components/Home'
 
+=======
+//import Home from './components/Home'
+>>>>>>> eacbaec91e5b6e00412601f921e3833779dfebdb
 import LandingPage from './components/LandingPage/LandingPage'
 function App() {
     // eslint-disable-next-line no-unused-vars
@@ -33,6 +38,7 @@ function App() {
             {/* <Student/>    */}
             {/* <Driver/> */}
             {/* <Admin /> */}
+<<<<<<< HEAD
             <Routes>
             <Route 
               path={"/Landing-page"}
@@ -64,6 +70,9 @@ function App() {
               />
               
             </Routes>
+=======
+            <LandingPage/>
+>>>>>>> eacbaec91e5b6e00412601f921e3833779dfebdb
         </>
     );
 }
