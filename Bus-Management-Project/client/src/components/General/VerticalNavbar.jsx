@@ -1,26 +1,23 @@
 /* eslint-disable react/prop-types */
 // eslint-disable-next-line no-unused-vars
-// import React, {useState} from "react";
-import { Link } from 'react-router-dom';
+import React, {useState} from "react";
 import styles from "./VerticalNavbar.module.css"
+import Logout from './Logout';
 
 function VerticalNavbar(props) {
-    // eslint-disable-next-line no-unused-vars
-    // const [toggle, setToggle] = useState(true);
-    // eslint-disable-next-line no-unused-vars
-    // const [backgroundColor, setBackgroundColor] = useState("#FFFBEB");
-    // eslint-disable-next-line no-unused-vars
-    // const [hoverBox, setHoverBox] = useState("14vw");
-    // eslint-disable-next-line no-unused-vars
-    // const [hoverBoxMargin, setHoverBoxMargin] = useState("10px");
-
-    const {menuItems,onQuery,type} = props;
+    const [toggle,setToggle] = useState(false)
+    const {menuItems,onQuery} = props;
 
     const handleOnQuery = (text) => {
+        console.log(text);
         return () => {
             onQuery(text);
         };
     };
+
+    const handleLogoutClick = () => {
+        setToggle(!toggle)
+    }
     
 
     
@@ -64,18 +61,19 @@ function VerticalNavbar(props) {
                         <li className={styles["hamburger-btn-line"]} onClick={handleOnQuery("Dashboard")}>
                             {/* <a href="#" className="{styles["dashboard-link" onClick={handleToggle} onMouseOver={handleMouseOver} 
                             onMouseOut={handleMouseOut} style={{width: hoverBox}}> */}
-                                <Link to={`/Login/${type}-view/home`} className={styles["dashboard-link"]}>
+                            <a href='#' className={styles["dashboard-link"]}>
                                 {/* <HamburgerBtn className="{styles["hamburger-btn" transform={`translate(${toggle?"0px":"-15px" },-20px)`} 
                                 backgroundColor={backgroundColor} toggle={toggle}/> */}
                                 Dashboard
-                            </Link>
+                            </a>
                         </li>
                         {menuItems.map((item, index) => (
                             <li key={index} onClick={handleOnQuery(item.text)}>
-                                <Link to={`/Login/${type}-view/${item.text}`}>
+    
+                                <a href="#">
                                 {/* <i className={item.icon}/>    */}
                                 {item.text}
-                                </Link>
+                                </a>
                             </li>
                         ))}
                     </ul>
@@ -90,8 +88,9 @@ function VerticalNavbar(props) {
                     </div> */}
             </div>
             <div className={styles["logout-bottom-container"]}>
-                <a>Logout</a>
+                <a onClick={handleLogoutClick}>Logout</a>
             </div>
+            {toggle&&<Logout onQuery={setToggle}/>}
         </div>
     </>
     );

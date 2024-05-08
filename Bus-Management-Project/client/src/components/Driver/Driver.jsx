@@ -2,12 +2,12 @@
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import VerticalNavbar from "../General/VerticalNavbar.jsx"; //done
-import Home from "./Home";
+import Home from "./Home.jsx";
 import PageHeader from "../Student/PageHeader/PageHeader.jsx"; //done
 import TripsTable from "./TripsTable.jsx"; //done
 import BubbleChat from "../General/BubbleChat.jsx";
 import styles from "./Driver.module.css"; //done
-
+import { Link} from 'react-router-dom'
 
 const trips = [
   {
@@ -104,7 +104,6 @@ const driver = {
   type: "driver",
 };
 
-
 // const router = BrowserRouter([
 //   {
 //     path: '/dashboard',
@@ -138,14 +137,15 @@ function TripComponent() {
   );
 }
 
+
 function Driver() {
   const [header, setHeader] = useState("Dashboard");
-  const [toggleChatBtn,setToggleChatBtn] = useState(true)
+  const [toggleChatBtn, setToggleChatBtn] = useState(true);
 
   const refreshTime = (() => {
     return toggleChatBtn ? { diplay: "block" } : { display: "none" };
   })();
-  
+
   const menuItems = [
     { text: "trips" },
     { text: "History" },
@@ -155,24 +155,19 @@ function Driver() {
     <div className={styles["main-container"]}>
       <PageHeader text={`Driver ${header}`} />
       <div className={styles["bubble-chat-container"]} style={refreshTime}>
-      <BubbleChat onQuery={setToggleChatBtn}/>
+        <BubbleChat onQuery={setToggleChatBtn} />
       </div>
       <div className={styles["container"]}>
         <div className={styles["navbar-container"]}>
-          <VerticalNavbar menuItems={menuItems} onQuery={setHeader} type="driver"/>
+          <VerticalNavbar
+            menuItems={menuItems}
+            onQuery={setHeader}
+          />
         </div>
         <div className={styles["right-container"]}>
-            <Routes>
-              <Route
-                path={"Login/driver-view/Home"}
-                element={<Home driver={driver} trips={trips} />}
-              />
-               <Route 
-                  path={"Login/driver-view/"}
-                  element={<Home driver={driver} trips={trips} />}
-                />
-              <Route path="/trips" element={<TripComponent />} />
-            </Routes>
+          {header==="Dashboard" && <Home driver={driver} trips={trips} /> }
+          {header==="trips" && <TripComponent /> }
+
         </div>
       </div>
     </div>

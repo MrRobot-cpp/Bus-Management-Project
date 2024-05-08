@@ -8,7 +8,6 @@ import Login from './components/Login-SignUp/Login.jsx';
 //import VerticalNavbar from './components/VerticalNavbar/VerticalNavbar';
 // import Student from './components/Student/Student';
 //import Driver from './components/Driver/Driver'
-//import Home from './components/Home'
 //import AccountConfig from './components/Login-SignUp/AccountConfig';
 // import Admin from './components/Admin/Admin'
 import Signup from './components/Login-SignUp/signUp';
@@ -63,6 +62,7 @@ function App() {
               path={"/Login/driver-view"}
               element={<Driver/>}
               />
+              
             </Routes>
         </>
     );
