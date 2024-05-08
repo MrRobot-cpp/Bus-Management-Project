@@ -29,6 +29,7 @@ function Login() {
     const [confirmPassword, setConfirmPassword] = useState('');
     const [newPasswordError, setNewPasswordError] = useState('');
     const [confirmPasswordError, setConfirmPasswordError] = useState('');
+    const [loginClicked, setLoginClicked] = useState(false);
 
     const handleEmailChange = (e) => {
         const value = e.target.value;
@@ -64,8 +65,20 @@ function Login() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Here you can add further validation if needed
-        if (validateEmail(email) && validatePassword(password)) {
+        setLoginClicked(true);
+        // Reset previous errors
+        setEmailError('');
+        setPasswordError('');
+        // Check if email is empty
+        if (!email) {
+            setEmailError('Email is required');
+        }
+        // Check if password is empty
+        if (!password) {
+            setPasswordError('Password is required');
+        }
+        // If both fields are not empty, proceed with form submission
+        if (email && password && validateEmail(email) && validatePassword(password)) {
             // Proceed with form submission
             console.log('Form submitted successfully!');
         } else {
@@ -107,6 +120,7 @@ function Login() {
                                 <div className="top-border"><label htmlFor="Email"> Email</label></div>
                                 <input className='login-input' type="email" id="Email" value={email} onChange={handleEmailChange}/>
                                 <br />
+                                {loginClicked && !email && <span className='error'>Email is required</span>}
                                 {emailError && <span className='error'>{emailError}</span>}
                             </div>
                             <br />
@@ -114,6 +128,7 @@ function Login() {
                                 <div className="top-border"><label htmlFor="Password"> Password</label></div>
                                 <input className='login-input' type="password" id="Password" maxLength="20" value={password} onChange={handlePasswordChange} />
                                 <br />
+                                {loginClicked && !password && <span className='error'>Password is required</span>}
                                 {passwordError && <span className='error'>{passwordError}</span>}
                             </div>
                             <br />
@@ -139,10 +154,14 @@ function Login() {
                             <a className='forgot-password-btn' onClick={handleReturnClick}>Return to Login</a>
                         </div>
                     )}
-                    <br />
-                    {!showForgotPassword && (
+                    {!showForgotPassword ? (
                         <div className='login-div-holder'>
-                            <Link to={handleRedirection()}><button className='Login-btn' type="submit" id="submit">{showForgotPassword ? 'Reset Password' : 'Login'}</button></Link>
+                            <Link to={handleRedirection()}><button className='Login-btn' type="submit" id="submit">Login</button></Link>
+                            {(loginClicked && (!email || !password)) && <span className='error'>Please fill in all required fields</span>}
+                        </div>
+                    ) : (
+                        <div className='login-div-holder'>
+                            <button className='Login-btn' type="submit" id="submit">Reset Password</button>
                         </div>
                     )}
                     <h4 className="not-regist">Not Registered yet? <Link className='create-account-login-link' to="/sign-up">Create An Account</Link></h4>
