@@ -1,144 +1,104 @@
-// PayMangment .js
+// eslint-disable-next-line no-unused-vars
+import React, { useState, useEffect } from 'react'
+import './PaymentsManagement.css'
 
-import  { useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
-import './PaymentsManagement.css';
 
 function PaymentsManagement() {
-  const [routes, setRoutes] = useState([
-    { id: uuidv4(), startFrom: 'A', endAt: 'B', tripType: 'Going to', numberOfStops: 3, startTime: '10:00 AM', endTime: '11:00 AM' },
-    { id: uuidv4(), startFrom: 'A', endAt: 'B', tripType: 'Going to', numberOfStops: 3, startTime: '10:00 AM', endTime: '11:00 AM' },
-    { id: uuidv4(), startFrom: 'A', endAt: 'B', tripType: 'Going to', numberOfStops: 3, startTime: '10:00 AM', endTime: '11:00 AM' },
-  ]);
+  const [cardNumber, setCardNumber] = useState('');
+  const [expiryDate, setExpiryDate] = useState('');
+  const [cvc, setCVC] = useState('');
 
-  const [selectedRoute, setSelectedRoute] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [modalPosition, setModalPosition] = useState({ x: 5000, y: 0 });
+  useEffect(() => {
+    const cardNumberInput = document.querySelector(".card_number");
+    const expiryDateInput = document.querySelector(".expiry_date");
+    const cvcInput = document.querySelector(".cvv");
 
-  const [editRoute, setEditRoute] = useState({
-    id: '',
-    startFrom: '',
-    endAt: '',
-    tripType: '',
-    numberOfStops: '',
-    startTime: '',
-    endTime: ''
-  });
+    if (cardNumberInput) {
+      cardNumberInput.addEventListener("input", handleCardNumberChange);
+    }
+    if (expiryDateInput) {
+      expiryDateInput.addEventListener("input", handleExpiryDateChange);
+    }
+    if (cvcInput) {
+      cvcInput.addEventListener("input", handleCVCChange);
+    }
 
-  const positionModal = (event) => {
-    const modal = document.querySelector('.modal');
-    const rect = event.target.getBoundingClientRect();
-    const modalWidth = modal.offsetWidth;
-    const modalHeight = modal.offsetHeight;
-    const clickX = rect.left + window.scrollX + rect.width / 2;
-    const clickY = rect.top + window.scrollY + rect.height / 2;
-    const newX = clickX - modalWidth / 2;
-    const newY = clickY - modalHeight / 2;
-    modal.style.left = `${newX}px`;
-    modal.style.top = `${newY}px`;
-  };
-
-  const addPayment = () => {
-    const newRoute = {
-      id: uuidv4(),
-      startFrom: '',
-      endAt: '',
-      tripType: '',
-      numberOfStops: 0,
-      startTime: '',
-      endTime: ''
-    };
-    setRoutes([...routes, newRoute]);
-  };
-
-  const handleEditRoute = (id, event) => {
-    const routeToEdit = routes.find(route => route.id === id);
-    setEditRoute(routeToEdit);
-    setSelectedRoute(id);
-    setIsModalOpen(true);
-    positionModal(event);
-  };
-
-  const handleConfirmEdit = () => {
-    const updatedRoutes = routes.map(route => {
-      if (route.id === selectedRoute) {
-        return editRoute;
+    return () => {
+      if (cardNumberInput) {
+        cardNumberInput.removeEventListener("input", handleCardNumberChange);
       }
-      return route;
-    });
-    setRoutes(updatedRoutes);
-    setIsModalOpen(false);
+      if (expiryDateInput) {
+        expiryDateInput.removeEventListener("input", handleExpiryDateChange);
+      }
+      if (cvcInput) {
+        cvcInput.removeEventListener("input", handleCVCChange);
+      }
+    };
+  }, []);
+
+  // Event handlers for input changes
+  const handleCardNumberChange = (e) => {
+    const value = e.target.value.replace(/\s/g, ''); // Remove spaces from input
+    setCardNumber(value);
   };
 
-  const handleDeleteRoute = (id) => {
-    const updatedRoutes = routes.filter(route => route.id !== id);
-    setRoutes(updatedRoutes);
-    setIsModalOpen(false);
+  const handleExpiryDateChange = (e) => {
+    const value = e.target.value.replace(/\D/g, ''); // Remove non-numeric characters
+    if (value.length <= 4) {
+      setExpiryDate(value.replace(/(\d{2})(\d{2})/, '$1/$2')); // Format as MM/YY
+    }
+  };
+
+  const handleCVCChange = (e) => {
+    const value = e.target.value.replace(/\D/g, ''); // Remove non-numeric characters
+    if (value.length <= 3) {
+      setCVC(value);
+    }
   };
 
   return (
-    <div className='PaymentManagment-container'>
-      <div className='routes-management-right-container'>
-        <div className='routes-container'>
-          <div className='routes-header-container'>
-            <div className='details-num-div'>
-              <h4 className='routes-header'>Students </h4>
-              <h4 className='numberOfRoutes'>{routes.length}</h4>
-            </div>
-            <div className='add-routes-btn'>
-              <button onClick={addPayment}>Add Payment</button>
-            </div>
+    <div className="payments-management">
+    <h1>Payments Management</h1>  
+    <div className="payment">
+      <div className="payment-logo">
+        <p>p</p>
+      </div>
+      <h2>Payment Gateway</h2>
+      <div className="form">
+        <div className="card space icon-relative">
+          <label className="label"> Card Holder:</label>
+          <input type="text" className="input card_holder" name="card_holder" placeholder=" Card owner" />
+          <i className="far fa-user"></i>
+        </div>
+        <div className="card space icon-relative">
+          <label className="label">Card number:</label>
+          <input type="text" className="input card_number" name="card_number" placeholder="Card Number" value={cardNumber} onChange={handleCardNumberChange} />
+          <i className="far fa-credit-card"></i>
+        </div>
+        <div className="card_grp space">
+          <div className="card_item icon-relative">
+            <label className="label">Expiry date (MM/YY):</label>
+            <input type="text" className="input expiry_date" name="expiry_date" placeholder="MM/YY" value={expiryDate} onChange={handleExpiryDateChange} />
+            <i className="far fa-calendar-alt"></i>
           </div>
-          <hr />
-          <table className="routes-table">
-            <thead>
-              <tr>
-                <th>Student-Name</th>
-                <th>Student-ID</th>
-                <th>Installment</th>
-                <th>Installment Number</th>
-                <th>Due-Date</th>
-                <th>Total-Left</th>
-              
-             
-              </tr>
-            </thead>
-            <tbody>
-              {routes.map((route) => (
-                <tr key={route.id}>
-                  <td>{route.id.slice(0, 8)}</td>
-                  <td>{route.startFrom}</td>
-                  <td>{route.endAt}</td>
-                  <td>{route.tripType}</td>
-                  <td>{route.numberOfStops}</td>
-                  <td>{route.startTime}</td>
-                  <td>{route.endTime}</td>
-                  <td>
-                    <button className='editRoute-btn' onClick={(event) => handleEditRoute(route.id, event)}>Edit</button>
-                    <button className='editRoute-btn' onClick={() => handleDeleteRoute(route.id)}>Delete</button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-          {isModalOpen && (
-            <div className={`modal`} style={{ top: setModalPosition.y + 'px', left: modalPosition.x + 'px' }}>
-              <div className="modal-content">
-                <p>Edit route:</p>
-                <input type="text" value={editRoute.startFrom} onChange={(e) => setEditRoute({ ...editRoute, startFrom: e.target.value })} placeholder="Start from" />
-                <input type="text" value={editRoute.endAt} onChange={(e) => setEditRoute({ ...editRoute, endAt: e.target.value })} placeholder="End at" />
-                <input type="text" value={editRoute.tripType} onChange={(e) => setEditRoute({ ...editRoute, tripType: e.target.value })} placeholder="Trip type" />
-                <input type="number" value={editRoute.numberOfStops} onChange={(e) => setEditRoute({ ...editRoute, numberOfStops: e.target.value })} placeholder="No. of stops" />
-                <input type="text" value={editRoute.startTime} onChange={(e) => setEditRoute({ ...editRoute, startTime: e.target.value })} placeholder="Start time" />
-                <input type="text" value={editRoute.endTime} onChange={(e) => setEditRoute({ ...editRoute, endTime: e.target.value })} placeholder="End time" />
-                <button onClick={handleConfirmEdit}>Save</button>
-              </div>
-            </div>
-          )}
+          <div className="card_item icon-relative">
+            <label className="label">CVC:</label>
+            <input type="text" className="input cvv" name="cvc" placeholder="000" value={cvc} onChange={handleCVCChange} />
+            <i className="fas fa-lock"></i>
+          </div>
+        </div>
+        <div className="btn" id="payButton">
+          Pay
         </div>
       </div>
     </div>
-  );
-}
+  </div>
 
-export default PaymentsManagement;
+    
+
+
+    
+  );
+};
+
+export default PaymentsManagement
