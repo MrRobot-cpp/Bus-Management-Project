@@ -11,8 +11,8 @@ function Admin() {
 const[header,setHeader] = useState('Dashboard')
 
   const menuItems = [
-    // {text: "Routes" },
-    // {text: "Drivers" },
+    {text: "Routes" },
+    {text: "Drivers" },
     {text: "Students" },
     {text: "Trips" },
     {text: "Payments" },
