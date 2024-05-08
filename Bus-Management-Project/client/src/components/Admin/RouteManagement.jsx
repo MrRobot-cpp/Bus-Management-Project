@@ -1,39 +1,47 @@
-// eslint-disable-next-line no-unused-vars
+// RouteManagement.js
+
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import './RouteManagement.css';
-function RouteManagement() {
 
+function RouteManagement() {
   const [routes, setRoutes] = useState([
-  
     { id: uuidv4(), startFrom: 'A', endAt: 'B', tripType: 'Going to', numberOfStops: 3, startTime: '10:00 AM', endTime: '11:00 AM' },
-        { id: uuidv4(), startFrom: 'A', endAt: 'B', tripType: 'Going to', numberOfStops: 3, startTime: '10:00 AM', endTime: '11:00 AM' },
-        { id: uuidv4(), startFrom: 'A', endAt: 'B', tripType: 'Going to', numberOfStops: 3, startTime: '10:00 AM', endTime: '11:00 AM' },
-    
+    { id: uuidv4(), startFrom: 'A', endAt: 'B', tripType: 'Going to', numberOfStops: 3, startTime: '10:00 AM', endTime: '11:00 AM' },
+    { id: uuidv4(), startFrom: 'A', endAt: 'B', tripType: 'Going to', numberOfStops: 3, startTime: '10:00 AM', endTime: '11:00 AM' },
   ]);
 
-  const [selectedRoute, setSelectedRoute] = useState(null); // Track the selected route for editing or deletion
+  const [selectedRoute, setSelectedRoute] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalPosition, setModalPosition] = useState({ x: 0, y: 0 });
-  // eslint-disable-next-line no-unused-vars
+
+  const [editRoute, setEditRoute] = useState({
+    id: '',
+    startFrom: '',
+    endAt: '',
+    tripType: '',
+    numberOfStops: '',
+    startTime: '',
+    endTime: ''
+  });
 
   const positionModal = (event) => {
     const modal = document.querySelector('.modal');
-    const rect = event.target.getBoundingClientRect(); // Get button's position
+    const rect = event.target.getBoundingClientRect();
     const modalWidth = modal.offsetWidth;
     const modalHeight = modal.offsetHeight;
-    const clickX = rect.left + window.scrollX + rect.width / 2; // Calculate X position relative to button
-    const clickY = rect.top + window.scrollY + rect.height / 2; // Calculate Y position relative to button
-    const newX = clickX - modalWidth / 2; // Adjust X position to center modal horizontally
-    const newY = clickY - modalHeight / 2; // Adjust Y position to center modal vertically
-    modal.style.left = `${newX}px`; // Set the new X position
-    modal.style.top = `${newY}px`; // Set the new Y position
+    const clickX = rect.left + window.scrollX + rect.width / 2;
+    const clickY = rect.top + window.scrollY + rect.height / 2;
+    const newX = clickX - modalWidth / 2;
+    const newY = clickY - modalHeight / 2;
+    modal.style.left = `${newX}px`;
+    modal.style.top = `${newY}px`;
   };
 
   const addRoute = () => {
     const newRoute = {
-      id: uuidv4(), // Generate a unique ID
-      startFrom: '', // Initialize other properties with default values
+      id: uuidv4(),
+      startFrom: '',
       endAt: '',
       tripType: '',
       numberOfStops: 0,
@@ -44,32 +52,28 @@ function RouteManagement() {
   };
 
   const handleEditRoute = (id, event) => {
-    if (selectedRoute === id && isModalOpen) {
-      setIsModalOpen(false); // Close the modal if already open for the same route
-    } else {
-      setSelectedRoute(id);
-      setIsModalOpen(true);
-      positionModal(event);
-    }
-  };
-
-  // eslint-disable-next-line no-unused-vars
-  const handleDeleteRoute = (id) => {
-    setSelectedRoute(id); // Set the selected route for deletion
-    setModalPosition({ x: event.clientX, y: event.clientY });
-    setIsModalOpen(true); // Open the modal
+    const routeToEdit = routes.find(route => route.id === id);
+    setEditRoute(routeToEdit);
+    setSelectedRoute(id);
+    setIsModalOpen(true);
+    positionModal(event);
   };
 
   const handleConfirmEdit = () => {
-    // Implement logic to edit the selected route
-    console.log('Editing route:', selectedRoute);
-    setIsModalOpen(false); // Close the modal
+    const updatedRoutes = routes.map(route => {
+      if (route.id === selectedRoute) {
+        return editRoute;
+      }
+      return route;
+    });
+    setRoutes(updatedRoutes);
+    setIsModalOpen(false);
   };
 
-  const handleConfirmDelete = () => {
-    // Implement logic to delete the selected route
-    setRoutes(routes.filter((route) => route.id !== selectedRoute)); // Remove the selected route from the routes array
-    setIsModalOpen(false); // Close the modal
+  const handleDeleteRoute = (id) => {
+    const updatedRoutes = routes.filter(route => route.id !== id);
+    setRoutes(updatedRoutes);
+    setIsModalOpen(false);
   };
 
   return (
@@ -78,12 +82,12 @@ function RouteManagement() {
         <div className='routes-container'>
           <div className='routes-header-container'>
             <div className='details-num-div'>
-            <h4 className='routes-header'>Details</h4>
-            <h4 className='numberOfRoutes'>{routes.length}</h4>
+              <h4 className='routes-header'>Details</h4>
+              <h4 className='numberOfRoutes'>{routes.length}</h4>
             </div>
             <div className='add-routes-btn'>
-            <button onClick={addRoute}>Add Route</button>
-          </div>
+              <button onClick={addRoute}>Add Route</button>
+            </div>
           </div>
           <hr />
           <table className="routes-table">
@@ -110,22 +114,26 @@ function RouteManagement() {
                   <td>{route.startTime}</td>
                   <td>{route.endTime}</td>
                   <td>
-                  <button onClick={(event) => handleEditRoute(route.id,event)}><i className="fa-solid fa-gear"></i></button>
+                    <button onClick={(event) => handleEditRoute(route.id, event)}>Edit</button>
+                    <button onClick={() => handleDeleteRoute(route.id)}>Delete</button>
                   </td>
                 </tr>
               ))}
             </tbody>
           </table>
           {isModalOpen && (
-        <div className={`modal modal-animation ${isModalOpen ? 'modal-animation-slide-in' : 'modal-animation-slide-out'}`} style={{ top: modalPosition.y + 'px', left: modalPosition.x + 'px' }} >
-          <div className="modal-content">
-            <p>Do you want to edit or delete this route?</p>
-            <div className='buttons-modal-holder'>
-            <button className='edit-btn-route' onClick={handleConfirmEdit}>Edit</button> 
-            <button onClick={handleConfirmDelete}>Delete</button>
+            <div className={`modal`} style={{ top: modalPosition.y + 'px', left: modalPosition.x + 'px' }}>
+              <div className="modal-content">
+                <p>Edit route:</p>
+                <input type="text" value={editRoute.startFrom} onChange={(e) => setEditRoute({ ...editRoute, startFrom: e.target.value })} placeholder="Start from" />
+                <input type="text" value={editRoute.endAt} onChange={(e) => setEditRoute({ ...editRoute, endAt: e.target.value })} placeholder="End at" />
+                <input type="text" value={editRoute.tripType} onChange={(e) => setEditRoute({ ...editRoute, tripType: e.target.value })} placeholder="Trip type" />
+                <input type="number" value={editRoute.numberOfStops} onChange={(e) => setEditRoute({ ...editRoute, numberOfStops: e.target.value })} placeholder="No. of stops" />
+                <input type="text" value={editRoute.startTime} onChange={(e) => setEditRoute({ ...editRoute, startTime: e.target.value })} placeholder="Start time" />
+                <input type="text" value={editRoute.endTime} onChange={(e) => setEditRoute({ ...editRoute, endTime: e.target.value })} placeholder="End time" />
+                <button onClick={handleConfirmEdit}>Save</button>
+              </div>
             </div>
-          </div>
-        </div>
           )}
         </div>
       </div>

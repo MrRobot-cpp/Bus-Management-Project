@@ -2,22 +2,9 @@
 import React from 'react';
 // import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import Login from './components/Login-SignUp/Login.jsx';
-<<<<<<< HEAD
 //import Student from './components/Student/Student';
 import Admin from './components/Admin/Admin'
 // import Signup from './components/Login-SignUp/signUp';
-=======
-//import Signup from './components/signUp.jsx';
-//import StudentProfile from './components/StudentProfile/StudentProfile/';
-//import Driver from './components/Driver/Driver';
-//import VerticalNavbar from './components/VerticalNavbar/VerticalNavbar';
-//import Student from './components/Student/Student';
-//import Driver from './components/Driver/Driver'
-//import Home from './components/Home'
-//import AccountConfig from './components/Login-SignUp/AccountConfig';
-import Admin from './components/Admin/Admin'
-//import Signup from './components/Login-SignUp/signUp';
->>>>>>> 0cb0c073c03c23c5c8d6efd001ad8b3b566c281b
 //import AccountConfig from './components/Login-SignUp/AccountConfig';
 //import VerticalNavbar from './components/VerticalNavbar/VerticalNavbar';
 // import Student from './components/Student/Student';
