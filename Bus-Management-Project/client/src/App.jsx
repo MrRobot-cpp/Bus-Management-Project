@@ -15,7 +15,7 @@ import Admin from './components/Admin/Admin'
 //import Student from './components/Student/Student';
 //import Driver from './components/Driver/Driver'
 //import LandingPage from './components/LandingPage/LandingPage'
-//import Admin from './components/Admin/Admin.jsx';
+//import Admin from './components/Admin/Admin.jsx;
 function App() {
     // eslint-disable-next-line no-unused-vars
     const toggleDropDown = () => {
@@ -45,7 +45,7 @@ function App() {
               path={"/admin-view"}
               element={<Admin/>}
               /> */}
-              <Admin/>
+              <Admin/> 
 
            {/*     <Route
               path={"/Login/student-view"}
