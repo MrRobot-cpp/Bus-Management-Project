@@ -19,7 +19,7 @@
 .card-info {
     display:flex;
     justify-content: space-between;
-    height: 40%;
+    max-height: 40%;
 }
 .profile-name {
     text-align: left;

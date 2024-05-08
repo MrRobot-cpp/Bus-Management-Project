@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Profile.css";
 
 function StudentProfile(props) {
@@ -49,8 +49,8 @@ function StudentProfile(props) {
                 alt=""
               />
               <div className="profile-txt">
-                <h2 className="profile-name">3bdel3aty</h2>
-                <h4 className="profile-name">ID: 123456</h4>
+                <h2 className="profile-name">{user.Name}</h2>
+                <h4 className="profile-name">ID:{user.Id}</h4>
               </div>
             </div>
             <div className="right-profile">
@@ -76,6 +76,7 @@ function StudentProfile(props) {
             <div className="table-info">
               <table className="student-table">
                 {Object.keys(user).map((propertyName, index) => (
+                  propertyName!=="Id"&&
                   <tr key={index}>
                     <td className="student-table-td">{propertyName}</td>
                     <td className="student-table-td">

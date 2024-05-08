@@ -6,6 +6,7 @@ import styles from "./Student.module.css"
 // import CashDeposit from "./CashDeposit/CashDeposit"
 const exampleObj = {
     Name: "shady",
+    Id:"123456",
     Email: "shadyyasset@gmail.com",
     Password: "shdshddd2002",
     Phone:"01284049697",
