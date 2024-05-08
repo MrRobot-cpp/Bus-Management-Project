@@ -50,17 +50,17 @@ function AdminDashboard() {
     <div className='compo6'>
     <h6>Admin Activity</h6>
     <h6 className='line-break'></h6>
-    <h5> People Added <span>139</span></h5>
-    <h5> Product Created <span>283</span></h5>
-    <h5> UTM Created <span>782</span></h5>
-    <h5> Email Send Created <span>1,923</span></h5>
-    <h5> Content added <span>103</span></h5>
-    <h5> Products Updated <span>477</span></h5>
-    <h5> Reports Downloaded <span>280</span></h5>
+    <h5> User Management<span>139</span></h5>
+    <h5> Content Management <span>283</span></h5>
+    <h5> Data Management <span>782</span></h5>
+    <h5> Document Managemens <span>1,923</span></h5>
+    <h5> Reporting and Analytics <span>103</span></h5>
+    <h5> Integration and APIs<span>477</span></h5>
+    <h5> Training and Support <span>280</span></h5>
     </div>
  
     <div className='compo7'>
-    <h6>Top Drivers </h6>
+    <h6>Top Drivers Rates </h6>
     <h6 className='line-break1'></h6>
     <ul>
       <h4>
@@ -139,9 +139,9 @@ Rakan Waleed
     </select>
     </div>
     <div className='compo6'>
-    <h6>Top Influencers</h6>
+    <h6>Top Routes Members </h6>
     <h6 className='line-break'></h6>
-    <h5> Quizzes taken <span>139</span></h5>
+    <h5> Downtown Cairo to Giza <span>139</span></h5>
     <h5> Questions Answered <span>283</span></h5>
     <h5> Assignments completed <span>782</span></h5>
     <h5> Comments posted <span>1,923</span></h5>
@@ -152,12 +152,12 @@ Rakan Waleed
     
     <div className='compo8'>
     <h6 className='line-break1'></h6>
-    <h4>$50k</h4>
-    <h4>$2k</h4>
-    <h4>$8k</h4>
-    <h4>$20k</h4>
-    <h4>$100k</h4>
-    <h4>$16k</h4>
+    <h4>4.9</h4>
+    <h4>2.0</h4>
+    <h4>1.3</h4>
+    <h4>2.2</h4>
+    <h4>5.0</h4>
+    <h4>3.4</h4>
 
 
     </div>

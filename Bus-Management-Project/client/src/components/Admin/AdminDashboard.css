@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 
-/* fo all desgin y3ny  */
 * {
     font-family: "Istok Web", sans-serif;
     padding: 0;
@@ -224,7 +223,7 @@
   }
   
 
-/* box el admin activity wel top influencers ahoooooo */
+/* box el admin activity wel top influencers  */
   .compo6{
     margin-top: 30px;
     padding-top: 25px;
@@ -238,7 +237,7 @@
     border: 1px ;
     opacity: 0px;
   }
-/*  8ny 3n el t3reef header 6  */
+
   .compo6 h6{
     padding-left: 20px;
     color: #4D4D4D;
@@ -247,7 +246,6 @@
     font-weight: bold;
 
   }
-  /* akeed lw 2oltlk m4 htsd2ny en da header 5 */
   .compo6 h5{
     display: flex;
     justify-content: space-between;
@@ -256,54 +254,53 @@
     padding-top: 15px;
     color: #606060;
     font-family: Inter;
-font-size: 14px;
-font-weight: 400;
-line-height: 16.94px;
-letter-spacing: -0.15399999916553497px;
-text-align: left;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.94px;
+    letter-spacing: -0.15px;
+    text-align: left;
   }
 
-  /* span y3ny space bs homa nas rewsha */
+  /* span y3ny space */
   .compo6 span{
 
-font-family: Inter;
-font-size: 14px;
-font-weight: 700;
-line-height: 16.94px;
-letter-spacing: -0.15399999916553497px;
-text-align: right;
-color: black;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16.94px;
+  letter-spacing: -0.15px;
+  text-align: right;
+  color: black;
   }
-  /* lw s2ltny ana m3rf4 zye zyk
-  p.s : fe comments   */
+ 
   .line-break {
     margin-left: 10px;
-    height: 1px; /* Adjust the thickness of the line */
-    width: 220px; /* Set the width to cover the entire container */
-    background-color: #E4E5E7; /* Set the color of the line */
+    height: 1px; 
+    width: 220px; 
+    background-color: #E4E5E7; 
     margin-top: 10px;
     left: 5%;
     }
 
-/* a5eran da a5er box ely hyb2a t7t 3la el 4emal lw7do w lw m4t8l4 ana hseebo fady 3mtn :) */
+/* a5er box ely hyb2a t7t 3la el 4emal lw7do  */
 .compo7{
 
-  width: 546px;
-height: 303px;
-top: -61px;
-left: -19px;
-gap: 0px;
-border-radius: 20px 0px 0px 20px;
-  margin-top: 30px;
-  padding-top: 25px;
-  width: 300px;
-  height: 303px;
-  top: -63px;
-  left: -22px;
-  gap: 0px;
-  background-color: #FFFBEB;
-  border: 1px ;
-  opacity: 0px;
+    width: 546px;
+    height: 303px;
+    top: -61px;
+    left: -19px;
+    gap: 0px;
+    border-radius: 20px 0px 0px 20px;
+    margin-top: 30px;
+    padding-top: 25px;
+    width: 300px;
+    height: 303px;
+    top: -63px;
+    left: -22px;
+    gap: 0px;
+    background-color: #FFFBEB;
+    border: 1px ;
+    opacity: 0px;
     }
   
 
@@ -315,7 +312,7 @@ border-radius: 20px 0px 0px 20px;
       font-weight: bold;
   
     }
-    /* akeed lw 2oltlk m4 htsd2ny en da header 5 */
+    
     .compo7 h5{
       display: flex;
       justify-content: space-between;
@@ -324,41 +321,41 @@ border-radius: 20px 0px 0px 20px;
       padding-top: 15px;
       color: #606060;
       font-family: Inter;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 16.94px;
-  letter-spacing: -0.15399999916553497px;
-  text-align: left;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16.94px;
+      letter-spacing: -0.15399999916553497px;
+      text-align: left;
     }
   
     /* span y3ny space bs homa nas rewsha */
     .compo7 span{
   
-  font-family: Inter;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 16.94px;
-  letter-spacing: -0.15399999916553497px;
-  text-align: right;
-  color: black;
+      font-family: Inter;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 16.94px;
+      letter-spacing: -0.15399999916553497px;
+      text-align: right;
+      color: black;
     }
 
 
     .compo8{
-      border-radius: 0px 20px 20px 0px;
-      border: 1px;
-      padding-left: 0;
-      margin-left: 0;    
-      margin-top: 30px;
-      padding-top: 25px;
-      width: 265px;
-      height: 303px;
-      top: -63px;
-      left: -22px;
-      gap: 0px;
-      background-color: #FFFBEB;
-      border: 1px ;
-      opacity: 0px;
+        border-radius: 0px 20px 20px 0px;
+        border: 1px;
+        padding-left: 0;
+        margin-left: 0;    
+        margin-top: 30px;
+        padding-top: 25px;
+        width: 265px;
+        height: 303px;
+        top: -63px;
+        left: -22px;
+        gap: 0px;
+        background-color: #FFFBEB;
+        border: 1px ;
+        opacity: 0px;
         }
       
     
@@ -370,7 +367,7 @@ border-radius: 20px 0px 0px 20px;
           font-weight: bold;
       
         }
-        /* akeed lw 2oltlk m4 htsd2ny en da header 5 */
+        /* header 5 */
         .compo8 h5{
           display: flex;
           justify-content: space-between;
@@ -379,49 +376,48 @@ border-radius: 20px 0px 0px 20px;
           padding-top: 15px;
           color: #606060;
           font-family: Inter;
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 16.94px;
-      letter-spacing: -0.15399999916553497px;
-      text-align: left;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 16.94px;
+          letter-spacing: -0.15px;
+          text-align: left;
         }
       
         .compo8 h4{
          
-font-family: Inter;
-font-size: 14px bold;
-font-weight: 1000;
-line-height: 16.94px;
-letter-spacing: -0.15399999916553497px;
-text-align: right;
-color: black;
-padding-right: 15px;
-padding-top: 23.5px;
+        font-family: Inter;
+        font-size: 10px bold;
+        font-weight: 888;
+        line-height: 16.94px;
+        letter-spacing: -0.15px;
+        text-align: right;
+        color: black;
+        padding-right: 15px;
+        padding-top: 23.5px;
         }
-        /* span y3ny space bs homa nas rewsha */
         .compo8 span{
       
-      font-family: Inter;
-      font-size: 14px;
-      font-weight: 700;
-      line-height: 16.94px;
-      letter-spacing: -0.15399999916553497px;
-      text-align: right;
-      color: black;
+        font-family: Inter;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 16.94px;
+        letter-spacing: -0.15px;
+        text-align: right;
+        color: black;
         }
         .compo8 .line-break1{
-          height: 1px; /* Adjust the thickness of the line */
-          width: 240px; /* Set the width to cover the entire container */
-          background-color: #E4E5E7; /* Set the color of the line */
+          height: 1px; 
+          width: 240px; 
+          background-color: #E4E5E7; 
           margin-top: 30.4px;
         }
       
 
         .compo7 .line-break1{
           margin-left: 10px;
-          height: 1px; /* Adjust the thickness of the line */
-          width: 220px; /* Set the width to cover the entire container */
-          background-color: #E4E5E7; /* Set the color of the line */
+          height: 1px; 
+          width: 220px; 
+          background-color: #E4E5E7; 
           margin-top: 10px;
           left: 5%;
           padding-right: 70px;
@@ -431,11 +427,7 @@ padding-top: 23.5px;
           list-style: none;
           padding: 0;
       }
-    /*   .compo7 img{
-        width: 46px;
-        height: 29px;
-        padding-right: 5px;
-      } */
+
       .compo7  ul li {
           margin-bottom: 5px;
       }
@@ -444,19 +436,19 @@ padding-top: 23.5px;
           padding-left: 10px;
           padding-right: 5px;
           padding: 6px;
-          font-size: 13.5px; /* Adjust the font size to make it slightly smaller */
-          color: #6B6B6B; /* Adjust the color if needed */
+          font-size: 14px; 
+          color: #6B6B6B; 
         text-align: justify;
         }
 
       .compo7 h4{
-font-family: Inter;
-font-size: 14px;
-font-weight: 500;
-line-height: 16.94px;
-letter-spacing: -0.15399999916553497px;
-padding-left: 5px;
-padding-top: 5px;
+        font-family: Inter;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 16.94px;
+        letter-spacing: -0.15px;
+        padding-left: 5px;
+        padding-top: 5px;
 
       }
       
