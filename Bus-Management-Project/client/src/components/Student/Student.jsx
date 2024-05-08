@@ -5,11 +5,13 @@ import PageHeader from "./PageHeader/PageHeader";
 import styles from "./Student.module.css"
 // import CashDeposit from "./CashDeposit/CashDeposit"
 const exampleObj = {
-    Email: "ahmedsamer@22gmail.com",
-    name: "ahmed",
-    age: 23,
-    gender: "male",
-    id: 20203
+    Name: "shady",
+    Email: "shadyyasset@gmail.com",
+    Password: "shdshddd2002",
+    Phone:"01284049697",
+    Location:"New Nozha",
+    Birthdate: "5/4/2002",
+    Gender: "male",
 }
 function Student(){
     const menuItems = [
