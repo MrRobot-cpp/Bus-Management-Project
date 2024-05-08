@@ -1,11 +1,11 @@
 
 
 
-.PaymentsManagement-container{
+.PaymentManagement-container{
     display: flex;
     flex-direction: row;
 }
-.Payment-container{
+.payment-container{
     margin-top: 3vh;
     margin-left: 4vw;
     background-color: #fffbeb;
@@ -18,24 +18,17 @@
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
     overflow: auto;
 }
-/* .Payment-container button{
-    color: #263159;
-    border: none;
-    background-color: transparent;
-    border-radius: 8px;
-    padding: 5px;
-} */
-.Payment-header{
+.payment-header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 0 2vw;
 }
-.numberOfPayment{
+.numberOfpayment{
     color: rgb(161, 161, 161);
 }
 
-.Payment-header-container{
+.payment-header-container{
     display: flex;
     flex-direction: row;
     margin: 1.2em 0.01em 1.2em 0em;
@@ -46,10 +39,10 @@
     display: flex;
     flex-direction: row;
 }
-.add-Payment-btn{
+.add-payment-btn{
     margin-right: 2.2vw;
 }
-.add-Payment-btn button{
+.add-payment-btn button{
     color: #fffbeb;
     background-color: #263159;
     padding: 12px;
@@ -57,18 +50,20 @@
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
     border-radius: 10px;
 }
-.add-Payment-btn button:hover{
+.add-payment-btn button:hover{
     transition: 0.5s ease;
     transform: scale(1.1);
 }
-.Payment-table{
+.payment-table{
     margin-top: 1.2em;
 }
-.Payment-table td{
+.payment-table td{
     color: rgb(161, 161, 161);
     border-bottom: 1px solid #ddd;
     font-weight: 100;
     font-size: small;
+    padding-left: 50px;
+    padding-top: 15px;
 }
 .modal {
     position:sticky;
@@ -80,7 +75,7 @@
     border-radius: 20px;
     width: 8vw;
 }
-.editPayment-btn{
+.editpayment-btn{
     background-color: #263159;
     color: #FFFBEB;
     font-family: inherit;
@@ -92,7 +87,7 @@
     margin-right: 5px;
 
 }
-.editPayment-btn:hover{
+.editpayment-btn:hover{
     background-color:#FFFBEB;
     color: #263159 ;
     transition: 0.5s ease-in-out;

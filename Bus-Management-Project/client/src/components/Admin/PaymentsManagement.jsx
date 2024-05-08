@@ -116,8 +116,8 @@ function PaymentsManagement() {
                   <td>{PaymentsetSelectedPayment.DueDate}</td>
                   <td>{PaymentsetSelectedPayment.TotalLeft}</td>
                   <td>
-                    <button className='editPaymentsetSelectedPayment-btn' onClick={(event) => handleEditPaymentsetSelectedPayment(PaymentsetSelectedPayment.ID, event)}>Edit</button>
-                    <button className='editPaymentsetSelectedPayment-btn' onClick={() => handleDeletePaymentsetSelectedPayment(PaymentsetSelectedPayment.ID)}>Delete</button>
+                    <button className='editpayment-btn' onClick={(event) => handleEditPaymentsetSelectedPayment(PaymentsetSelectedPayment.ID, event)}>Edit</button>
+                    <button className='editpayment-btn' onClick={() => handleDeletePaymentsetSelectedPayment(PaymentsetSelectedPayment.ID)}>Delete</button>
                   </td>
                 </tr>
               ))}
