@@ -263,13 +263,13 @@ letter-spacing: -0.15399999916553497px;
 text-align: left;
   }
 
-  /* span y3ny space bs homa nas rewsha */
+  /* span y3ny space */
   .compo6 span{
 
   font-family: Inter;
   font-size: 14px;
-font-weight: 700;
-line-height: 16.94px;
+  font-weight: 700;
+  line-height: 16.94px;
 letter-spacing: -0.15399999916553497px;
 text-align: right;
 color: black;
