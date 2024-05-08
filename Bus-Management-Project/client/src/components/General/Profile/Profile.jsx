@@ -1,5 +1,5 @@
 import  { useState } from "react";
-import "./StudentProfile.css";
+import "./Profile.css";
 import PropTypes from "prop-types";
 
 
