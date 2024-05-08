@@ -1,4 +1,20 @@
 
+.feature-card {
+    margin: 0 ;
+    background-color: #FFFBEB;
+    width: 230px;
+    height: 210px;
+    padding: 18px;
+    border-radius: 16px;
+}
+
+.feature-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    translate: 0 -25px;
+}
+
 .feature-card-headline {
     font-size: 24px;
 }
@@ -11,22 +27,6 @@
 .feature-card-description {
     opacity: 0.5;
     padding: 0;
-}
-
-.feature-card {
-    margin: 0 ;
-    background-color: #FFFBEB;
-    width: 230px;
-    height: 210px;
-    padding: 14px;
-    border-radius: 16px;
-}
-
-.feature-card-content {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    translate: 0 -25px;
 }
 
 .feature-card-icon {
@@ -44,4 +44,11 @@
     display: flex;
     justify-content: center;
     translate: 0 15px;
+}
+
+@media (max-width: 576px) {
+    .feature-card {
+        width: fit-content;
+        padding: 18px;
+    }
 }

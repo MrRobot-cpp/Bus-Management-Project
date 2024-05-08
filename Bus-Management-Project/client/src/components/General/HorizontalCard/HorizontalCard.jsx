@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 
 const HorizontalCard = (props) => {
   return (
-        <div className="horizontal-card" style={{backgroundColor: props.background}}>
+        <div className="horizontal-card" style={{backgroundColor: props.background, paddingBottom: props.bottomPadding}} >
             <div className="horizontal-card-content" style={{ flexDirection: props.imageSide === 'row' ? 'row' : 'row-reverse' }}>
             <div className="horizontal-card-info" >
                 <h1 className="headline" style={{color: props.textColor}}>{props.headlineText}</h1>
@@ -25,7 +25,9 @@ HorizontalCard.propTypes = {
   background: PropTypes.string,
   textColor: PropTypes.string,
   imageLink: PropTypes.string,
-  imageSize: PropTypes.string
+  imageSize: PropTypes.string,
+  bottomPadding: PropTypes.string
+
 }
 
 export default HorizontalCard;

@@ -63,9 +63,9 @@ function LandingPage() {
                 <div className="logo-nav"><h1 className="logo-placeholder">RouteMinder</h1></div>
                     <ul className="unordered-list">
                         <li className="list"><MenuItemButtonRegular text="Home" hRef={""} /></li>
-                        <li className="list"><MenuItemButtonRegular text="Services" hRef={"#"} /></li>
-                        <li className="list"><MenuItemButtonRegular text="About" hRef={"#"} /></li>
-                        <li className="list"><MenuItemButtonRegular text="Contact Us" hRef={"#"} /></li>
+                        <li className="list"><MenuItemButtonRegular text="Services" hRef={""} /></li>
+                        <li className="list"><MenuItemButtonRegular text="About" hRef={""} /></li>
+                        <li className="list"><MenuItemButtonRegular text="Contact Us" hRef={""} /></li>
                         <MenuItemButtonHighlighted text="Login" classCondition={true} className2="header-login-btn" hRef="/Login" />
                     </ul>
 
@@ -89,6 +89,7 @@ function LandingPage() {
             <HorizontalCard 
                 imageSide={"row"} 
                 imageLink={busImage1} 
+                imageSize={"500px"}
                 background={'#495579'} 
                 headlineText={"RouteMinder. - Simplifying Bus Transport."} 
                 descriptionText={"At RouteMinder, we understand the critical importance of safe, reliable, and efficient transportation for schools and universities. Whether you're a bustling urban campus or a quaint rural school district, our comprehensive transportation services are tailored to meet your unique needs."}
@@ -126,7 +127,7 @@ function LandingPage() {
                     iconLink={"fa-regular fa-user"} 
                     iconColor={'#4B5880'} 
                     headlineText={"Extensive Profile"} 
-                    descriptionText={"Streamline administrative tasks for route, driver, and student management."} 
+                    descriptionText={"Streamline tasks for route, driver, and student management."} 
                     />
 
                 </div>
@@ -141,16 +142,18 @@ function LandingPage() {
                 <h1 className="about-us-headline">About Us</h1>
                 <HorizontalCard 
                     imageSide={'row-reverse'} 
-                    imageLink={busImage2} 
+                    imageLink={busImage2}
                     imageSize={"450px"} 
                     headlineText={'Our Mission'}
                     textColor={"#000"} 
+                    bottomPadding={"0"}
                     descriptionText={"At RoutMinder., our mission is simple: to provide seamless transportation solutions that enhance the educational experience for all. We believe that access to safe and reliable transportation is essential for students to fully engage in their academic pursuits. Therefore, we are committed to delivering exceptional service that prioritizes safety, reliability, and convenience."} 
                 />
 
                 <HorizontalCard 
                     imageSide={'row'} 
                     imageLink={busImage3} 
+                    imageSize={"600px"}
                     headlineText={'Our Vision'} 
                     textColor={"#000"} 
                     descriptionText={"Our vision is to be the premier transportation provider for educational institutions nationwide. We envision a future where every school and university has access to top-notch transportation services that enable students, faculty, and staff to thrive. By continuously innovating and adapting to the evolving needs of our clients, we aim to set the standard for excellence in educational transportation."} 
@@ -261,6 +264,7 @@ function LandingPage() {
             {/* Accordion Section */}
             <div className="accordion-container">
                 <h1 className="accordion-headline">Frequently Asked Questions (FAQs)</h1>
+
                 <Accordion 
                     isOpen={isOpen}
                     setIsOpen={setIsOpen}
@@ -303,7 +307,7 @@ function LandingPage() {
 
             {/* Footer Section */}
             <div className="footer-container" >
-                    <div className="info-box">
+                    <div className="footer-info-box">
                         <h2 className='footer-logo'>RouteMinder.</h2>
                         <p className='footer-company-refer'>&copy; 2024 RouteMinder. Inc.</p>
                         <span className="social-media">

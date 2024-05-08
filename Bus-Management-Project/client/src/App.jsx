@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
- import Login from './components/Login-SignUp/Login.jsx';
+import Login from './components/Login-SignUp/Login.jsx';
 //import Student from './components/Student/Student';
 // import Admin from './components/Admin/Admin'
 // import Signup from './components/Login-SignUp/signUp';
@@ -32,7 +32,7 @@ function App() {
               path={"/Landing-page"}
               element={<LandingPage/>}
               />
-               <Route 
+              <Route 
               path={"/"}
               element={<LandingPage/>}
               />

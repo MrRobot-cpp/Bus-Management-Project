@@ -5,6 +5,7 @@
     height: 56px;
     padding: 24px;
     height: auto; 
+    margin-inline: 50px;
 }
 
 .headline {
@@ -12,10 +13,13 @@
 }
 
 .dropdown-btn {
-    transition: height 3s ease-in-out;
+    transition: rotate 3s ease-in-out;
     color: #263159;
     font-size: 50px;
     cursor: pointer;
+    border: none;
+    box-shadow: none;
+
 }
 
 .headline-and-button {
@@ -40,6 +44,8 @@
 .divider-and-description .open {
     height: 100px;
     opacity: 1;
+    transition: all 3s ease;
+    width: auto;
 }
 
 .divider {
@@ -47,8 +53,14 @@
     margin: 10px;
 }
 
-.description {
+p.description {
     font-size: 16px;
     padding: 24px;
-    padding-bottom: 0;
+    width: auto;
+}
+
+@media (max-width: 838px) {
+    .accordion {
+        width: auto;
+    }   
 }

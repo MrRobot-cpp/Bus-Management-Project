@@ -18,7 +18,8 @@ MenuItemButtonHighlighted.propTypes = {
   text: PropTypes.string,
   className2: PropTypes.string,
   classCondition: PropTypes.bool,
-  Width: PropTypes.string
+  Width: PropTypes.string,
+  hRef: PropTypes.string
 }
 
 MenuItemButtonHighlighted.defaultProp
