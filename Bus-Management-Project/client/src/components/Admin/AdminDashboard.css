@@ -274,13 +274,12 @@ letter-spacing: -0.15399999916553497px;
 text-align: right;
 color: black;
   }
-  /* lw s2ltny ana m3rf4 zye zyk
-  p.s : fe comments   */
+ 
   .line-break {
     margin-left: 10px;
     height: 1px; 
     width: 220px; 
-    background-color: #E4E5E7; /* Set the color of the line */
+    background-color: #E4E5E7; 
     margin-top: 10px;
     left: 5%;
     }
