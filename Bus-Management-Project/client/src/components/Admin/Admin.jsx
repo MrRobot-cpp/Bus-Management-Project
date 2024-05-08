@@ -1,8 +1,8 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import PageHeader from '../Student/PageHeader/PageHeader'
-// import AdminDashboard from './AdminDashboard';
-import RouteManagement from './RouteManagement'
+ import AdminDashboard from './AdminDashboard';
+//import RouteManagement from './RouteManagement'
 import VerticalNavbar from '../General/VerticalNavbar'
 import './Admin.css'
 function Admin() {

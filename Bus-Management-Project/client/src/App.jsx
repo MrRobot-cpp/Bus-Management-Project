@@ -52,10 +52,10 @@ function App() {
               path={"/Login/student-view"}
               element={<Student/>}
               />
-              <Route
+             {/*  <Route
               path={"/Login/driver-view"}
               element={<Driver/>}
-              />
+              /> */}
               
             </Routes>
             {/*SHAYFK YALY BTFKR TSHELHOM HA3DOK */}
