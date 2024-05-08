@@ -27,8 +27,8 @@ const[header,setHeader] = useState('Dashboard')
           <VerticalNavbar menuItems={menuItems} onQuery={setHeader}/>
         </div>
     <div className="admin-right-container">
-    {/* < AdminDashboard/> */}
-    <RouteManagement />
+    < AdminDashboard/>
+   {/*  <RouteManagement /> */}
     </div>
     </div>
     </div>
