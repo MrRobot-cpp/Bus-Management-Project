@@ -60,7 +60,7 @@ function AdminDashboard() {
     </div>
  
     <div className='compo7'>
-    <h6>Top Drivers </h6>
+    <h6>Top Drivers Rates </h6>
     <h6 className='line-break1'></h6>
     <ul>
       <h4>
