@@ -146,7 +146,7 @@ Rakan Waleed
     <h5> Mohandiseen to Maadi <span>383</span></h5>
     <h5> Nasr City to New Cairo <span>982</span></h5>
     <h5> Heliopolis to Old Cairo <span>103</span></h5>
-    <h5> Nasr City to CFC <span>477</span></h5>
+    <h5> Nasr City to CFC <span>577</span></h5>
     <h5>Abbassiya to Cairo UNI<span>1,080</span></h5>
     </div>
     
