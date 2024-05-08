@@ -19,7 +19,7 @@
 .main-container {
     display: flex;
 }
-.tempNav {
+.temp-Nav {
     padding: 0px;
     display: flex;
     justify-content: center;

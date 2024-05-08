@@ -8,12 +8,12 @@ import iconImage2 from '../../assets/Rectangle 2375.png';
 import chartimage from '../../assets/Order.png';
 import chartimage2 from '../../assets/chart.png';
 import chartimage3 from '../../assets/chart2.png';
-import iconImage3 from '../../assets/icon1.jpg';
+/* import iconImage3 from '../../assets/icon1.jpg';
 import iconImage4 from '../../assets/icon2.jpg';
 import iconImage5 from '../../assets/icon3.png';
 import iconImage6 from '../../assets/icon4.jpg';
 import iconImage7 from '../../assets/icon5.jpg';
-import iconImage8 from '../../assets/icon6.jpg';
+import iconImage8 from '../../assets/icon6.jpg'; */
 
 
 
@@ -64,40 +64,40 @@ function AdminDashboard() {
     <h6 className='line-break1'></h6>
     <ul>
       <h4>
-      <li className="small-text"><img src={iconImage3} alt="New Icon" />
+      <li className="small-text">{/* <img src={iconImage3} alt="New Icon" /> */}
       </li>
       </h4>
       <h4>
 
-<li className="small-text"><img src={iconImage4} alt="New Icon" />
+<li className="small-text">{/* <img src={iconImage4} alt="New Icon" /> */}
       FaceBook Ads 
 </li>
 </h4>
 
 <h4>
 
-<li className="small-text"><img src={iconImage5} alt="New Icon" />
+<li className="small-text">{/* <img src={iconImage5} alt="New Icon" /> */}
  Influencers 
 </li>
 </h4>
 
 <h4>
 
-<li className="small-text"><img src={iconImage6} alt="New Icon" />
+<li className="small-text">{/* <img src={iconImage6} alt="New Icon" /> */}
  Website 
 </li>
 </h4>
 
 <h4>
 
-<li className="small-text"><img src={iconImage7} alt="New Icon" />
+<li className="small-text">{/* <img src={iconImage7} alt="New Icon" /> */}
  Android App 
 </li>
 </h4>
 
 <h4>
 
-<li className="small-text"><img src={iconImage8} alt="New Icon" />
+<li className="small-text">{/* <img src={iconImage8} alt="New Icon" /> */}
 </li>
 </h4>
     </ul>
