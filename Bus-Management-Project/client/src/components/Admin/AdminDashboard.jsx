@@ -8,12 +8,7 @@ import iconImage2 from '../../assets/Rectangle 2375.png';
 import chartimage from '../../assets/Order.png';
 import chartimage2 from '../../assets/chart.png';
 import chartimage3 from '../../assets/chart2.png';
-/* import iconImage3 from '../../assets/icon1.jpg';
-import iconImage4 from '../../assets/icon2.jpg';
-import iconImage5 from '../../assets/icon3.png';
-import iconImage6 from '../../assets/icon4.jpg';
-import iconImage7 from '../../assets/icon5.jpg';
-import iconImage8 from '../../assets/icon6.jpg'; */
+
 
 
 
@@ -141,13 +136,13 @@ Rakan Waleed
     <div className='compo6'>
     <h6>Top Routes Members </h6>
     <h6 className='line-break'></h6>
-    <h5> Downtown Cairo to Giza <span>139</span></h5>
-    <h5> Questions Answered <span>283</span></h5>
-    <h5> Assignments completed <span>782</span></h5>
-    <h5> Comments posted <span>1,923</span></h5>
-    <h5> Challenges <span>103</span></h5>
-    <h5> Badges earned  <span>477</span></h5>
-    <h5> Reinforcements taken <span>280</span></h5>
+    <h5> Nozhat to MIU (UNI)<span>1,500</span></h5>
+    <h5> Rehab to GUC (UNI)<span>1,080</span></h5>
+    <h5> Mohandiseen to AUC (UNI)<span>383</span></h5>
+    <h5> Mokkataam to MTI (UNI)<span>582</span></h5>
+    <h5> 6th October to MSA (UNI)<span>1000</span></h5>
+    <h5> New Cairo to  FUE (UNI)<span>680</span></h5>
+    <h5> Abbassiya to Cairo (UNI)<span>350 </span></h5>
     </div>
     
     <div className='compo8'>
