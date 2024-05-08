@@ -1,9 +1,9 @@
 import VerticalNavbar from '../General/VerticalNavbar';
-import StudentProfile from "./StudentProfile/StudentProfile";
+import Profile from "../General/Profile/Profile";
 import PageHeader from "./PageHeader/PageHeader";
 // import StudentTrip from "./StudentTrip/StudentTrip";
 import styles from "./Student.module.css"
-import CashDeposit from "./CashDeposit/CashDeposit"
+// import CashDeposit from "./CashDeposit/CashDeposit"
 function Student(){
     const menuItems = [
         { text: "Trips" },
@@ -28,7 +28,7 @@ function Student(){
         </div>
         <div className={styles["bottom-right-container"]}>
         {/* <CashDeposit/> */}
-        <StudentProfile />
+        <Profile />
         {/* <StudentTrip/> */}
         </div>
         </div>
