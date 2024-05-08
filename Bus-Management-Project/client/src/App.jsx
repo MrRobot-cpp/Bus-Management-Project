@@ -6,12 +6,12 @@ import React from 'react';
 //import StudentProfile from './components/StudentProfile/StudentProfile/';
 //import Driver from './components/Driver/Driver';
 //import VerticalNavbar from './components/VerticalNavbar/VerticalNavbar';
-import Student from './components/Student/Student';
+//import Student from './components/Student/Student';
 //import Driver from './components/Driver/Driver'
 //import Home from './components/Home'
 //import AccountConfig from './components/Login-SignUp/AccountConfig';
-//import Admin from './components/Admin/Admin'
-import Signup from './components/Login-SignUp/signUp';
+import Admin from './components/Admin/Admin'
+//import Signup from './components/Login-SignUp/signUp';
 //import AccountConfig from './components/Login-SignUp/AccountConfig';
 //import VerticalNavbar from './components/VerticalNavbar/VerticalNavbar';
 // import Student from './components/Student/Student';
@@ -37,9 +37,9 @@ function App() {
             {/* <AccountConfig /> */}
             {/* <VerticalNavbar /> */}
            {/*  <Home/> */}
-            <Student/>   
+            {/* <Student/>    */}
             {/* <Driver/> */}
-            {/* <Admin /> */}
+            <Admin />
             {/* <LandingPage/> */}
         </>
     );

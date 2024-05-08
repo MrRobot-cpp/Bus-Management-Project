@@ -63,11 +63,12 @@
 }
 .routes-table td{
     color: rgb(161, 161, 161);
+    border-bottom: 1px solid #ddd;
     font-weight: 100;
     font-size: small;
 }
 .modal {
-    position: fixed;
+    position:sticky;
     align-items: center;
     justify-content: center;
     background-color: #fffbeb;
