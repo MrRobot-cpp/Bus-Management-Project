@@ -8,12 +8,7 @@ import iconImage2 from '../../assets/Rectangle 2375.png';
 import chartimage from '../../assets/Order.png';
 import chartimage2 from '../../assets/chart.png';
 import chartimage3 from '../../assets/chart2.png';
-/* import iconImage3 from '../../assets/icon1.jpg';
-import iconImage4 from '../../assets/icon2.jpg';
-import iconImage5 from '../../assets/icon3.png';
-import iconImage6 from '../../assets/icon4.jpg';
-import iconImage7 from '../../assets/icon5.jpg';
-import iconImage8 from '../../assets/icon6.jpg'; */
+
 
 
 
