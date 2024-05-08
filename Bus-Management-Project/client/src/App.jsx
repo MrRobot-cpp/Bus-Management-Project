@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
-//import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from './components/Login-SignUp/Login.jsx';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+ //import Login from './components/Login-SignUp/Login.jsx';
 //import Student from './components/Student/Student';
 // import Admin from './components/Admin/Admin'
 // import Signup from './components/Login-SignUp/signUp';
@@ -10,7 +10,7 @@ import Login from './components/Login-SignUp/Login.jsx';
 // import Student from './components/Student/Student';
 //import Driver from './components/Driver/Driver'
 //import AccountConfig from './components/Login-SignUp/AccountConfig';
-//import Admin from './components/Admin/Admin'
+import Admin from './components/Admin/Admin'
 //import Signup from './components/Login-SignUp/signUp';
 //import AccountConfig from './components/Login-SignUp/AccountConfig';
 //import VerticalNavbar from './components/VerticalNavbar/VerticalNavbar';
@@ -49,8 +49,8 @@ function App() {
               element={<Admin/>}
               /> */}
 
-              <Login />
-              {/* <Admin/> */}
+
+              <Admin/>
 
             {/*   <Route
               path={"/Login/student-view"}
