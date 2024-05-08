@@ -70,36 +70,44 @@ function AdminDashboard() {
       <h4>
 
 <li className="small-text">{/* <img src={iconImage4} alt="New Icon" /> */}
-      FaceBook Ads 
+      Abdelrahman Mohamed 
 </li>
 </h4>
 
 <h4>
 
 <li className="small-text">{/* <img src={iconImage5} alt="New Icon" /> */}
- Influencers 
-</li>
+ Mahmoud El-Maghraby
+ </li>
 </h4>
 
 <h4>
 
 <li className="small-text">{/* <img src={iconImage6} alt="New Icon" /> */}
- Website 
+Mohamed Badran 
 </li>
 </h4>
 
 <h4>
-
 <li className="small-text">{/* <img src={iconImage7} alt="New Icon" /> */}
- Android App 
+
+Wael Badran 
 </li>
 </h4>
 
 <h4>
 
 <li className="small-text">{/* <img src={iconImage8} alt="New Icon" /> */}
+Ahmed El-Ghazoly
 </li>
 </h4>
+
+<h4>
+<li className="small-text">{/* <img src={iconImage8} alt="New Icon" /> */}
+Rakan Waleed 
+</li>
+</h4>
+
     </ul>
     </div>
 
