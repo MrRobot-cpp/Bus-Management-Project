@@ -110,7 +110,7 @@
     margin: 4px;
     padding: 2px;
 }
-  /* Ensure modal stays within viewport */
+
 @keyframes slideIn {
     from {
 opacity: 0;
