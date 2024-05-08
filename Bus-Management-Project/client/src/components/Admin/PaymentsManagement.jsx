@@ -38,20 +38,27 @@ function PaymentsManagement() {
 
   // Event handlers for input changes
   const handleCardNumberChange = (e) => {
-    setCardNumber(e.target.value);
+    const value = e.target.value.replace(/\s/g, ''); // Remove spaces from input
+    setCardNumber(value);
   };
 
   const handleExpiryDateChange = (e) => {
-    setExpiryDate(e.target.value);
+    const value = e.target.value.replace(/\D/g, ''); // Remove non-numeric characters
+    if (value.length <= 4) {
+      setExpiryDate(value.replace(/(\d{2})(\d{2})/, '$1/$2')); // Format as MM/YY
+    }
   };
 
   const handleCVCChange = (e) => {
-    setCVC(e.target.value);
+    const value = e.target.value.replace(/\D/g, ''); // Remove non-numeric characters
+    if (value.length <= 3) {
+      setCVC(value);
+    }
   };
 
   return (
     <div className="payments-management">
-    <h1>Payments Management</h1>
+    <h1>Payments Management</h1>  
     <div className="payment">
       <div className="payment-logo">
         <p>p</p>
