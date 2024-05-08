@@ -3,7 +3,14 @@ import Profile from "../General/Profile/Profile";
 import PageHeader from "./PageHeader/PageHeader";
 // import StudentTrip from "./StudentTrip/StudentTrip";
 import styles from "./Student.module.css"
-// import CashDeposit from "./CashDeposit/CashDeposit"
+import CashDeposit from "./CashDeposit/CashDeposit"
+const exampleObj = {
+    Email: "ahmedsamer@22gmail.com",
+    name: "ahmed",
+    age: 23,
+    gender: "male",
+    id: 20203
+}
 function Student(){
     const menuItems = [
         { text: "Trips" },
@@ -28,7 +35,7 @@ function Student(){
         </div>
         <div className={styles["bottom-right-container"]}>
         {/* <CashDeposit/> */}
-        <Profile />
+        <Profile user={exampleObj}/>
         {/* <StudentTrip/> */}
         </div>
         </div>
