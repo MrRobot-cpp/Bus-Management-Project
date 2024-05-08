@@ -410,7 +410,7 @@ padding-top: 23.5px;
       color: black;
         }
         .compo8 .line-break1{
-          height: 1px; /* Adjust the thickness of the line */
+          height: 1px; 
           width: 240px; /* Set the width to cover the entire container */
           background-color: #E4E5E7; /* Set the color of the line */
           margin-top: 30.4px;
