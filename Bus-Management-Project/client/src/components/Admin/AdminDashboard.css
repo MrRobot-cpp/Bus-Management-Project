@@ -419,7 +419,7 @@ padding-top: 23.5px;
 
         .compo7 .line-break1{
           margin-left: 10px;
-          height: 1px; /* Adjust the thickness of the line */
+          height: 1px; 
           width: 220px; /* Set the width to cover the entire container */
           background-color: #E4E5E7; /* Set the color of the line */
           margin-top: 10px;
