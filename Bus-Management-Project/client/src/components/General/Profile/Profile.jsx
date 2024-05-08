@@ -1,12 +1,6 @@
-<<<<<<< HEAD:Bus-Management-Project/client/src/components/Student/StudentProfile/StudentProfile.jsx
-import { useState } from "react";
-import "./StudentProfile.css";
-=======
 import  { useState } from "react";
 import "./Profile.css";
-import PropTypes from "prop-types";
 
->>>>>>> d049ecc78bf26b9d468fe21599227835019245b1:Bus-Management-Project/client/src/components/General/Profile/Profile.jsx
 
 function StudentProfile(props) {
   const [isChecked, setIsChecked] = useState(false);
