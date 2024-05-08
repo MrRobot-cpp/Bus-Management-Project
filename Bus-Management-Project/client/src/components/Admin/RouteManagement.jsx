@@ -1,6 +1,6 @@
 // RouteManagement.js
 
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import './RouteManagement.css';
 
@@ -13,7 +13,7 @@ function RouteManagement() {
 
   const [selectedRoute, setSelectedRoute] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [modalPosition, setModalPosition] = useState({ x: 0, y: 0 });
+  const [modalPosition, setModalPosition] = useState({ x: 5000, y: 0 });
 
   const [editRoute, setEditRoute] = useState({
     id: '',
@@ -114,15 +114,15 @@ function RouteManagement() {
                   <td>{route.startTime}</td>
                   <td>{route.endTime}</td>
                   <td>
-                    <button onClick={(event) => handleEditRoute(route.id, event)}>Edit</button>
-                    <button onClick={() => handleDeleteRoute(route.id)}>Delete</button>
+                    <button className='editRoute-btn' onClick={(event) => handleEditRoute(route.id, event)}>Edit</button>
+                    <button className='editRoute-btn' onClick={() => handleDeleteRoute(route.id)}>Delete</button>
                   </td>
                 </tr>
               ))}
             </tbody>
           </table>
           {isModalOpen && (
-            <div className={`modal`} style={{ top: modalPosition.y + 'px', left: modalPosition.x + 'px' }}>
+            <div className={`modal`} style={{ top: setModalPosition.y + 'px', left: modalPosition.x + 'px' }}>
               <div className="modal-content">
                 <p>Edit route:</p>
                 <input type="text" value={editRoute.startFrom} onChange={(e) => setEditRoute({ ...editRoute, startFrom: e.target.value })} placeholder="Start from" />
