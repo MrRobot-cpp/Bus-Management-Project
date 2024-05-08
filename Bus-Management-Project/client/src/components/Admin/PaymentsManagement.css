@@ -1,11 +1,11 @@
 
 
 
-.RouteManagement-container{
+.PaymentsManagement-container{
     display: flex;
     flex-direction: row;
 }
-.routes-container{
+.Payment-container{
     margin-top: 3vh;
     margin-left: 4vw;
     background-color: #fffbeb;
@@ -18,24 +18,24 @@
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
     overflow: auto;
 }
-/* .routes-container button{
+/* .Payment-container button{
     color: #263159;
     border: none;
     background-color: transparent;
     border-radius: 8px;
     padding: 5px;
 } */
-.routes-header{
+.Payment-header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 0 2vw;
 }
-.numberOfRoutes{
+.numberOfPayment{
     color: rgb(161, 161, 161);
 }
 
-.routes-header-container{
+.Payment-header-container{
     display: flex;
     flex-direction: row;
     margin: 1.2em 0.01em 1.2em 0em;
@@ -46,10 +46,10 @@
     display: flex;
     flex-direction: row;
 }
-.add-routes-btn{
+.add-Payment-btn{
     margin-right: 2.2vw;
 }
-.add-routes-btn button{
+.add-Payment-btn button{
     color: #fffbeb;
     background-color: #263159;
     padding: 12px;
@@ -57,14 +57,14 @@
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
     border-radius: 10px;
 }
-.add-routes-btn button:hover{
+.add-Payment-btn button:hover{
     transition: 0.5s ease;
     transform: scale(1.1);
 }
-.routes-table{
+.Payment-table{
     margin-top: 1.2em;
 }
-.routes-table td{
+.Payment-table td{
     color: rgb(161, 161, 161);
     border-bottom: 1px solid #ddd;
     font-weight: 100;
@@ -80,7 +80,7 @@
     border-radius: 20px;
     width: 8vw;
 }
-.editRoute-btn{
+.editPayment-btn{
     background-color: #263159;
     color: #FFFBEB;
     font-family: inherit;
@@ -92,7 +92,7 @@
     margin-right: 5px;
 
 }
-.editRoute-btn:hover{
+.editPayment-btn:hover{
     background-color:#FFFBEB;
     color: #263159 ;
     transition: 0.5s ease-in-out;
