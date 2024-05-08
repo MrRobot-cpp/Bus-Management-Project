@@ -55,7 +55,7 @@ function AdminDashboard() {
     <h5> Data Management <span>782</span></h5>
     <h5> Configuration and Settings <span>1,923</span></h5>
     <h5> Reporting and Analytics <span>103</span></h5>
-    <h5> Products Updated <span>477</span></h5>
+    <h5> Security and Access Control<span>477</span></h5>
     <h5> Reports Downloaded <span>280</span></h5>
     </div>
  
