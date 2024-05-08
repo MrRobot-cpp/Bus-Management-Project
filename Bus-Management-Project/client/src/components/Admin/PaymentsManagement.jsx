@@ -82,7 +82,7 @@ function PaymentsManagement() {
         <div className='routes-container'>
           <div className='routes-header-container'>
             <div className='details-num-div'>
-              <h4 className='routes-header'>Students</h4>
+              <h4 className='routes-header'>Students </h4>
               <h4 className='numberOfRoutes'>{routes.length}</h4>
             </div>
             <div className='add-routes-btn'>
