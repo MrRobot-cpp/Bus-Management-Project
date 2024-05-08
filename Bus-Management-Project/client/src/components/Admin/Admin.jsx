@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import PageHeader from '../Student/PageHeader/PageHeader'
  import AdminDashboard from './AdminDashboard';
 //import RouteManagement from './RouteManagement'
-import PaymentsManagement from './PaymentsManagement';
+//import PaymentsManagement from './PaymentsManagement';
 import VerticalNavbar from '../General/VerticalNavbar'
 import './Admin.css'
 function Admin() {
@@ -29,9 +29,9 @@ const[header,setHeader] = useState('Dashboard')
           <VerticalNavbar menuItems={menuItems} onQuery={setHeader}/>
         </div>
     <div className="admin-right-container">
-    {/* < AdminDashboard/> */}
+    < AdminDashboard/>
        {/* <RouteManagement />  */}
-       <PaymentsManagement />
+     {/*   <PaymentsManagement /> */}
     </div>
     </div>
     </div>
