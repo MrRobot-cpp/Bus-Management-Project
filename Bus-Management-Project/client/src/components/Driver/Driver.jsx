@@ -6,8 +6,9 @@ import Home from "./Home.jsx";
 import PageHeader from "../Student/PageHeader/PageHeader.jsx"; //done
 import TripsTable from "./TripsTable.jsx"; //done
 import BubbleChat from "../General/BubbleChat.jsx";
+import Profile from "../General/Profile/Profile.jsx" 
 import styles from "./Driver.module.css"; //done
-import { Link} from 'react-router-dom'
+
 
 const trips = [
   {
@@ -167,6 +168,7 @@ function Driver() {
         <div className={styles["right-container"]}>
           {header==="Dashboard" && <Home driver={driver} trips={trips} /> }
           {header==="trips" && <TripComponent /> }
+          {header==="Profile" && <Profile user={driver}/>}
 
         </div>
       </div>
