@@ -380,17 +380,17 @@
           font-size: 14px;
           font-weight: 400;
           line-height: 16.94px;
-          letter-spacing: -0.15399999916553497px;
+          letter-spacing: -0.15px;
           text-align: left;
         }
       
         .compo8 h4{
          
         font-family: Inter;
-        font-size: 12px bold;
-        font-weight: 1000;
+        font-size: 10px bold;
+        font-weight: 888;
         line-height: 16.94px;
-        letter-spacing: -0.15399999916553497px;
+        letter-spacing: -0.15px;
         text-align: right;
         color: black;
         padding-right: 15px;
@@ -402,7 +402,7 @@
         font-size: 14px;
         font-weight: 700;
         line-height: 16.94px;
-        letter-spacing: -0.15399999916553497px;
+        letter-spacing: -0.15px;
         text-align: right;
         color: black;
         }
