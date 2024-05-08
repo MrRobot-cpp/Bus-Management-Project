@@ -144,10 +144,10 @@ Rakan Waleed
     <h5> Nozhat to MIU (UNI)   <span>1,500</span></h5>
     <h5> Rehab to GUC (UNI) <span>1,080</span></h5>
     <h5> Mohandiseen to AUC (UNI)  <span>383</span></h5>
-    <h5> Nasr City to New Cairo <span>982</span></h5>
+    <h5> Mokkataam to MTI (UNI) <span>982</span></h5>
     <h5> 6th October to MSA (UNI) <span>103</span></h5>
-    <h5>  New Cairo to  FUE (UNI)<span>577</span></h5>
-    <h5>Abbassiya to Cairo (UNI)<span>239 </span></h5>
+    <h5> New Cairo to  FUE (UNI)<span>577</span></h5>
+    <h5> Abbassiya to Cairo (UNI)<span>239 </span></h5>
     </div>
     
     <div className='compo8'>
