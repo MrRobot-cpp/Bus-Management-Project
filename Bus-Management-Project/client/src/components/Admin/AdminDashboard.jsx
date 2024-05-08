@@ -152,11 +152,11 @@ Rakan Waleed
     
     <div className='compo8'>
     <h6 className='line-break1'></h6>
-    <h4>$50k</h4>
+    <h4>4.9</h4>
     <h4>$2k</h4>
     <h4>$8k</h4>
     <h4>$20k</h4>
-    <h4>$100k</h4>
+    <h4>5.0</h4>
     <h4>$16k</h4>
 
 
