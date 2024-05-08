@@ -145,7 +145,7 @@ Rakan Waleed
     <h5> Downtown Cairo to Giza <span>139</span></h5>
     <h5> Mohandiseen to Maadi <span>283</span></h5>
     <h5> Nasr City to New Cairo <span>782</span></h5>
-    <h5> Challenges <span>103</span></h5>
+    <h5> Heliopolis to Old Cairo <span>103</span></h5>
     <h5> Badges earned  <span>477</span></h5>
     <h5> Reinforcements taken <span>280</span></h5>
     </div>
