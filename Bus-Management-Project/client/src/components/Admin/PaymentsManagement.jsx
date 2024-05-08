@@ -127,12 +127,15 @@ function PaymentsManagement() {
             <div className={`modal`} style={{ top: setModalPosition.y + 'px', left: modalPosition.x + 'px' }}>
               <div className="modal-content">
                 <p>Edit PaymentsetSelectedPayment:</p>
-                <input type="text" value={editPaymentsetSelectedPayment.studentName} onChange={(e) => setEditPaymentsetSelectedPayment({ ...editPaymentsetSelectedPayment, studentName: e.target.value })} placeholder="Start from" />
-                <input type="text" value={editPaymentsetSelectedPayment.ID} onChange={(e) => setEditPaymentsetSelectedPayment({ ...editPaymentsetSelectedPayment, ID: e.target.value })} placeholder="End at" />
-                <input type="text" value={editPaymentsetSelectedPayment.Installments} onChange={(e) => setEditPaymentsetSelectedPayment({ ...editPaymentsetSelectedPayment, Installments: e.target.value })} placeholder="Trip type" />
-                <input type="number" value={editPaymentsetSelectedPayment.InstallmentsNum} onChange={(e) => setEditPaymentsetSelectedPayment({ ...editPaymentsetSelectedPayment, InstallmentsNum: e.target.value })} placeholder="No. of stops" />
-                <input type="text" value={editPaymentsetSelectedPayment.DueDate} onChange={(e) => setEditPaymentsetSelectedPayment({ ...editPaymentsetSelectedPayment, DueDate: e.target.value })} placeholder="Start time" />
-                <input type="text" value={editPaymentsetSelectedPayment.TotalLeft} onChange={(e) => setEditPaymentsetSelectedPayment({ ...editPaymentsetSelectedPayment, TotalLeft: e.target.value })} placeholder="End time" />
+
+
+                	
+                <input type="text" value={editPaymentsetSelectedPayment.studentName} onChange={(e) => setEditPaymentsetSelectedPayment({ ...editPaymentsetSelectedPayment, studentName: e.target.value })} placeholder="student name" />
+                <input type="text" value={editPaymentsetSelectedPayment.ID} onChange={(e) => setEditPaymentsetSelectedPayment({ ...editPaymentsetSelectedPayment, ID: e.target.value })} placeholder="-" />
+                <input type="text" value={editPaymentsetSelectedPayment.Installments} onChange={(e) => setEditPaymentsetSelectedPayment({ ...editPaymentsetSelectedPayment, Installments: e.target.value })} placeholder="Installment" />
+                <input type="number" value={editPaymentsetSelectedPayment.InstallmentsNum} onChange={(e) => setEditPaymentsetSelectedPayment({ ...editPaymentsetSelectedPayment, InstallmentsNum: e.target.value })} placeholder="Installment number " />
+                <input type="text" value={editPaymentsetSelectedPayment.DueDate} onChange={(e) => setEditPaymentsetSelectedPayment({ ...editPaymentsetSelectedPayment, DueDate: e.target.value })} placeholder="Due-Date" />
+                <input type="text" value={editPaymentsetSelectedPayment.TotalLeft} onChange={(e) => setEditPaymentsetSelectedPayment({ ...editPaymentsetSelectedPayment, TotalLeft: e.target.value })} placeholder="Total-Left" />
                 <button onClick={handleConfirmEdit}>Save</button>
               </div>
             </div>
