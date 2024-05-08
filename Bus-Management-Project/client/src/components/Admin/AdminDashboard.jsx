@@ -142,7 +142,7 @@ Rakan Waleed
     <h6>Top Routes Members </h6>
     <h6 className='line-break'></h6>
     <h5> Downtown Cairo to Giza <span>139</span></h5>
-    <h5> Questions Answered <span>283</span></h5>
+    <h5> Mohandiseen to Maadi <span>283</span></h5>
     <h5> Assignments completed <span>782</span></h5>
     <h5> Comments posted <span>1,923</span></h5>
     <h5> Challenges <span>103</span></h5>
