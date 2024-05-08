@@ -50,9 +50,9 @@ function AdminDashboard() {
     <div className='compo6'>
     <h6>Admin Activity</h6>
     <h6 className='line-break'></h6>
-    <h5> People Added <span>139</span></h5>
-    <h5> Product Created <span>283</span></h5>
-    <h5> UTM Created <span>782</span></h5>
+    <h5>User Management<span>139</span></h5>
+    <h5> Content Management <span>283</span></h5>
+    <h5> Data Management <span>782</span></h5>
     <h5> Email Send Created <span>1,923</span></h5>
     <h5> Content added <span>103</span></h5>
     <h5> Products Updated <span>477</span></h5>
