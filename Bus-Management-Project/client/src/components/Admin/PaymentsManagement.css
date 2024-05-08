@@ -24,7 +24,7 @@ position: relative;
     text-align: center;
     letter-spacing: 2px;
     margin-bottom: 40px;
-    color:#0d3c64;
+    color:#263159;
 } 
 .form .label{
     display: block;
@@ -67,7 +67,7 @@ position: relative;
 }
 .btn{
     margin-top: 40px;
-    background: #2196f3;
+    background: #495579;
     padding: 12px;
     text-align: center;
     color:#f8f8f8;
@@ -95,7 +95,7 @@ line-height: 85px;
     left:5px;
     width: 90px;
     height: 90px;
-    background: #2196f3;
+    background:  #495579;
     border-radius: 50%;
 }
 .payment-logo p{
