@@ -54,17 +54,16 @@ function DepositGate({ onSuccess }) {
     };
 
     const handlePay = () => {
-        // Perform payment processing logic here
-        onSuccess(); // Notify parent component about payment success
+        onSuccess(); 
     };
 
     return (
         <div className="payments-management">
             <div className="payment">
                 <div className="payment-logo">
-                    <p>p</p>
+                    <p>Pay</p>
                 </div>
-                <h2>Payment Gateway</h2>
+                <h2>Deposit Gateway</h2>
                 <div className="form">
                     <div className="card space icon-relative">
                         <label className="label"> Card Holder:</label>
@@ -72,7 +71,7 @@ function DepositGate({ onSuccess }) {
                             type="text"
                             className="input card_holder"
                             name="card_holder"
-                            placeholder=" Card owner"
+                            placeholder="Holder name"
                         />
                         <i className="far fa-user"></i>
                     </div>

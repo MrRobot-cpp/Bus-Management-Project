@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Baloo+Bhaijaan|Ubuntu');
 
 .payment{
-    background-color: #f8f8f8;
+    background-color: #FFFBEB;
     max-width: 360px;
     margin: 80px auto;
     height: auto;
@@ -14,18 +13,18 @@ position: relative;
     text-align: center;
     letter-spacing: 2px;
     margin-bottom: 40px;
-    color:#0d3c64;
+    color:#263159;
 } 
 .form .label{
     display: block;
-    color:#555555;
+    color:rgb(85, 85, 85);
     margin-bottom: 6px;
 }
 .form .input{
     padding: 13px 0 13px 25px;
     width: 100%;
     text-align: center;
-    border: 2px solid #dddddd;
+    border: 2px solid white;
     border-radius: 5px;
     letter-spacing: 1px;
     word-wrap: 3px;
@@ -57,7 +56,7 @@ position: relative;
 }
 .btn{
     margin-top: 40px;
-    background: #2196f3;
+    background: #263159;
     padding: 12px;
     text-align: center;
     color:#f8f8f8;
@@ -85,7 +84,7 @@ line-height: 85px;
     left:5px;
     width: 90px;
     height: 90px;
-    background: #2196f3;
+    background: #263159;
     border-radius: 50%;
 }
 .payment-logo p{
@@ -99,17 +98,12 @@ line-height: 85px;
 
 
 
-/* styles.css */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #eaf4fd; /* Light blue background */
-}
 
 .container {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #ffffff; /* White container background */
+    background-color: white; /* White container background */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
 }
@@ -128,25 +122,6 @@ select {
     border: 1px solid #b3c8e6; /* Light blue border */
     border-radius: 4px;
     box-sizing: border-box;
-}
-
-input[type="submit"] {
-    background-color: #007bff; /* Blue submit button */
-    color: #ffffff; /* White text color */
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-input[type="submit"]:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-}
-
-.result {
-    margin-top: 20px;
-    font-weight: bold;
-    color: #333333; /* Dark gray text color */
 }
 
 .input-icon {
