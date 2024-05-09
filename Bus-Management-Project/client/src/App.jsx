@@ -12,44 +12,44 @@ function App() {
 
     return (
         <>
-      {/*SAMER: MA7DSH YL3B FL ROUTES ELY 3AOZ YGRB 7AGA Y COMMENT EL ROUTES W YKTB T7TEHA */}
-            <Routes> 
-              <Route 
-              path={"/Landing-page"}
-              element={<LandingPage/>}
-              />
-               <Route 
-              path={"/"}
-              element={<LandingPage/>}
-              />
-              <Route
-                path={"/Login"}
-                element={<Login/>}
-              />
-              <Route
-              path={"/sign-up"}
-              element={<Signup/>}
-              />  
-              <Route
-              path={"/account-configuration"}
-              element={<AccountConfig/>}
-              />  
-             <Route
-              path={"/Login/admin-view"}
-              element={<Admin/>}
-              /> 
+            {/*SAMER: MA7DSH YL3B FL ROUTES ELY 3AOZ YGRB 7AGA Y COMMENT EL ROUTES W YKTB T7TEHA */}
+            <Routes>
+                <Route
+                    path={"/Landing-page"}
+                    element={<LandingPage />}
+                />
+                <Route
+                    path={"/"}
+                    element={<LandingPage />}
+                />
+                <Route
+                    path={"/Login"}
+                    element={<Login />}
+                />
+                <Route
+                    path={"/sign-up"}
+                    element={<Signup />}
+                />
+                <Route
+                    path={"/account-configuration"}
+                    element={<AccountConfig />}
+                />
+                <Route
+                    path={"/Login/admin-view"}
+                    element={<Admin />}
+                />
 
-               <Route
-              path={"/Login/student-view"}
-              element={<Student/>}
-              />
-               <Route
-              path={"/Login/driver-view"}
-              element={<Driver/>}
-              /> 
-          
-              
-            </Routes>  
+                <Route
+                    path={"/Login/student-view"}
+                    element={<Student />}
+                />
+                <Route
+                    path={"/Login/driver-view"}
+                    element={<Driver />}
+                />
+
+
+            </Routes>
             {/*SHAYFK YALY BTFKR TSHELHOM HA3DOK */}
         </>
     );
