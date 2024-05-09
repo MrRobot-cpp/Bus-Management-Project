@@ -1,104 +1,149 @@
-// eslint-disable-next-line no-unused-vars
-import React, { useState, useEffect } from 'react'
-import './PaymentsManagement.css'
+// PayMangment .js
 
+import  { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
+import './PaymentsManagement.css';
 
 function PaymentsManagement() {
-  const [cardNumber, setCardNumber] = useState('');
-  const [expiryDate, setExpiryDate] = useState('');
-  const [cvc, setCVC] = useState('');
+  const [payment, setpayment] = useState([
+    { studentName: 'rahma wael', ID: uuidv4(),Installments: '13,000',InstallmentsNum: '2', DueDate: '15/5/2024', TotalLeft: '37,000'},
+    { studentName: 'shady yasser', ID: uuidv4(),Installments: '20,000',InstallmentsNum: '1', DueDate: '15/5/2024', TotalLeft: '30,000'},
+    { studentName: 'hanin wael', ID: uuidv4(),Installments: '10,000',InstallmentsNum: '1', DueDate: '15/5/2024', TotalLeft: '40,000'},
+   
+  ]);
 
-  useEffect(() => {
-    const cardNumberInput = document.querySelector(".card_number");
-    const expiryDateInput = document.querySelector(".expiry_date");
-    const cvcInput = document.querySelector(".cvv");
+  const [setSelectedPayment, setSelectedPaymentsetSelectedPayment] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalPosition, setModalPosition] = useState({ x: 5000, y: 0 });
 
-    if (cardNumberInput) {
-      cardNumberInput.addEventListener("input", handleCardNumberChange);
-    }
-    if (expiryDateInput) {
-      expiryDateInput.addEventListener("input", handleExpiryDateChange);
-    }
-    if (cvcInput) {
-      cvcInput.addEventListener("input", handleCVCChange);
-    }
+  const [editPaymentsetSelectedPayment, setEditPaymentsetSelectedPayment] = useState({
 
-    return () => {
-      if (cardNumberInput) {
-        cardNumberInput.removeEventListener("input", handleCardNumberChange);
-      }
-      if (expiryDateInput) {
-        expiryDateInput.removeEventListener("input", handleExpiryDateChange);
-      }
-      if (cvcInput) {
-        cvcInput.removeEventListener("input", handleCVCChange);
-      }
+    studentName: '',
+    ID: '',
+    Installments: '',
+    InstallmentsNum: '',
+    DueDate: '',
+    TotalLeft: '',
+  });
+
+  const positionModal = (event) => {
+    const modal = document.querySelector('.modal');
+    const rect = event.target.getBoundingClientRect();
+    const modalWidth = modal.offsetWidth;
+    const modalHeight = modal.offsetHeight;
+    const clickX = rect.left + window.scrollX + rect.width / 2;
+    const clickY = rect.top + window.scrollY + rect.height / 2;
+    const newX = clickX - modalWidth / 2;
+    const newY = clickY - modalHeight / 2;
+    modal.style.left = `${newX}px`;
+    modal.style.top = `${newY}px`;
+  };
+
+
+
+
+  const addPayment = () => {
+    const newPaymentsetSelectedPayment = {
+      ID: uuidv4(),
+      StudentName: '',
+      Installments: '',
+      InstallmentsNum: '',
+      DueDate: 0,
+      TotalLeft: ''
     };
-  }, []);
-
-  // Event handlers for input changes
-  const handleCardNumberChange = (e) => {
-    const value = e.target.value.replace(/\s/g, ''); // Remove spaces from input
-    setCardNumber(value);
+    setpayment([...payment, newPaymentsetSelectedPayment]);
   };
 
-  const handleExpiryDateChange = (e) => {
-    const value = e.target.value.replace(/\D/g, ''); // Remove non-numeric characters
-    if (value.length <= 4) {
-      setExpiryDate(value.replace(/(\d{2})(\d{2})/, '$1/$2')); // Format as MM/YY
-    }
+  const handleEditPaymentsetSelectedPayment = (ID, event) => {
+    const PaymentsetSelectedPaymentToEdit = payment.find(PaymentsetSelectedPayment => PaymentsetSelectedPayment.ID === ID);
+    setEditPaymentsetSelectedPayment(PaymentsetSelectedPaymentToEdit);
+    setSelectedPaymentsetSelectedPayment(ID);
+    setIsModalOpen(true);
+    positionModal(event);
   };
 
-  const handleCVCChange = (e) => {
-    const value = e.target.value.replace(/\D/g, ''); // Remove non-numeric characters
-    if (value.length <= 3) {
-      setCVC(value);
-    }
+  const handleConfirmEdit = () => {
+    const updatedpayment = payment.map(PaymentsetSelectedPayment => {
+      if (PaymentsetSelectedPayment.ID === setSelectedPayment) {
+        return editPaymentsetSelectedPayment;
+      }
+      return PaymentsetSelectedPayment;
+    });
+    setpayment(updatedpayment);
+    setIsModalOpen(false);
+  };
+
+  const handleDeletePaymentsetSelectedPayment = (ID) => {
+    const updatedpayment = payment.filter(PaymentsetSelectedPayment => PaymentsetSelectedPayment.ID !== ID);
+    setpayment(updatedpayment);
+    setIsModalOpen(false);
   };
 
   return (
-    <div className="payments-management">
-    <h1>Payments Management</h1>  
-    <div className="payment">
-      <div className="payment-logo">
-        <p>p</p>
-      </div>
-      <h2>Payment Gateway</h2>
-      <div className="form">
-        <div className="card space icon-relative">
-          <label className="label"> Card Holder:</label>
-          <input type="text" className="input card_holder" name="card_holder" placeholder=" Card owner" />
-          <i className="far fa-user"></i>
-        </div>
-        <div className="card space icon-relative">
-          <label className="label">Card number:</label>
-          <input type="text" className="input card_number" name="card_number" placeholder="Card Number" value={cardNumber} onChange={handleCardNumberChange} />
-          <i className="far fa-credit-card"></i>
-        </div>
-        <div className="card_grp space">
-          <div className="card_item icon-relative">
-            <label className="label">Expiry date (MM/YY):</label>
-            <input type="text" className="input expiry_date" name="expiry_date" placeholder="MM/YY" value={expiryDate} onChange={handleExpiryDateChange} />
-            <i className="far fa-calendar-alt"></i>
+    <div className='PaymentManagment-container'>
+      <div className='payment-management-right-container'>
+        <div className='payment-container'>
+          <div className='payment-header-container'>
+            <div className='details-num-div'>
+              <h4 className='payment-header'>Students </h4>
+              <h4 className='numberOfpayment'>{payment.length}</h4>
+            </div>
+            <div className='add-payment-btn'>
+              <button onClick={addPayment}>Add Payment</button>
+            </div>
           </div>
-          <div className="card_item icon-relative">
-            <label className="label">CVC:</label>
-            <input type="text" className="input cvv" name="cvc" placeholder="000" value={cvc} onChange={handleCVCChange} />
-            <i className="fas fa-lock"></i>
-          </div>
-        </div>
-        <div className="btn" id="payButton">
-          Pay
+          <hr />
+          <table className="payment-table">
+            <thead>
+              <tr>
+                <th>Student-Name</th>
+                <th>Student-ID</th>
+                <th>Installment</th>
+                <th>Installment Number</th>
+                <th>Due-Date</th>
+                <th>Total-Left</th>
+              
+             
+              </tr>
+            </thead>
+            <tbody>
+              {payment.map((PaymentsetSelectedPayment) => (
+                <tr key={PaymentsetSelectedPayment.ID}>
+                  <td>{PaymentsetSelectedPayment.studentName}</td>
+                  <td>{PaymentsetSelectedPayment.ID.slice(0, 8)}</td>
+                  <td>{PaymentsetSelectedPayment.Installments}</td>
+                  <td>{PaymentsetSelectedPayment.InstallmentsNum}</td>
+                  <td>{PaymentsetSelectedPayment.DueDate}</td>
+                  <td>{PaymentsetSelectedPayment.TotalLeft}</td>
+                  <td>
+                    <button className='editpayment-btn' onClick={(event) => handleEditPaymentsetSelectedPayment(PaymentsetSelectedPayment.ID, event)}>Edit</button>
+                    <button className='editpayment-btn' onClick={() => handleDeletePaymentsetSelectedPayment(PaymentsetSelectedPayment.ID)}>Delete</button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          {isModalOpen && (
+            <div className={`modal`} style={{ top: setModalPosition.y + 'px', left: modalPosition.x + 'px' }}>
+              <div className="modal-content">
+                <p>Edit PaymentsetSelectedPayment:</p>
+
+
+                	
+                <input type="text" value={editPaymentsetSelectedPayment.studentName} onChange={(e) => setEditPaymentsetSelectedPayment({ ...editPaymentsetSelectedPayment, studentName: e.target.value })} placeholder="student name" />
+                <input type="text" value={editPaymentsetSelectedPayment.ID} onChange={(e) => setEditPaymentsetSelectedPayment({ ...editPaymentsetSelectedPayment, ID: e.target.value })} placeholder="-" />
+                <input type="text" value={editPaymentsetSelectedPayment.Installments} onChange={(e) => setEditPaymentsetSelectedPayment({ ...editPaymentsetSelectedPayment, Installments: e.target.value })} placeholder="Installment" />
+                <input type="number" value={editPaymentsetSelectedPayment.InstallmentsNum} onChange={(e) => setEditPaymentsetSelectedPayment({ ...editPaymentsetSelectedPayment, InstallmentsNum: e.target.value })} placeholder="Installment number " />
+                <input type="text" value={editPaymentsetSelectedPayment.DueDate} onChange={(e) => setEditPaymentsetSelectedPayment({ ...editPaymentsetSelectedPayment, DueDate: e.target.value })} placeholder="Due-Date" />
+                <input type="text" value={editPaymentsetSelectedPayment.TotalLeft} onChange={(e) => setEditPaymentsetSelectedPayment({ ...editPaymentsetSelectedPayment, TotalLeft: e.target.value })} placeholder="Total-Left" />
+                <button onClick={handleConfirmEdit}>Save</button>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>
-  </div>
-
-    
-
-
-    
   );
-};
+}
 
-export default PaymentsManagement
+export default PaymentsManagement;
