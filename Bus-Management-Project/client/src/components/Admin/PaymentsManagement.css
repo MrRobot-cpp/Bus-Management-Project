@@ -81,7 +81,7 @@
     margin-right: 5px;
 
 }
-.editpayment  -btn:hover{
+.editpayment-btn:hover{
     background-color:#FFFBEB;
     color: #263159 ;
     transition: 0.5s ease-in-out;

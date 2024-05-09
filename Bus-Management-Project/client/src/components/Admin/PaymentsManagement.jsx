@@ -93,7 +93,7 @@ function PaymentsManagement() {
             </div>
           </div>
           <hr />
-          <table className="payment-table">
+          <table className="payment-tableI">
             <thead>
               <tr>
                 <th>Student-Name</th>
