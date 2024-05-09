@@ -5,8 +5,7 @@ import styles from './StudentTrip.module.css';
 function StudentTrip() {
     const [routes, setRoutes] = useState([
         { day: "Saturday", startFrom: 'A', endAt: 'B', tripType: 'Going to', goingTime: '10:00 AM', leavingTime: '3:00 PM' },
-        { day: "Monday", startFrom: 'X', endAt: 'Y', tripType: 'Leaving from', goingTime: '8:00 AM', leavingTime: '2:00 PM' },
-        { day: "Wednesday", startFrom: 'A', endAt: 'B', tripType: 'Going to', goingTime: '12:00 AM', leavingTime: '6:00 PM' },
+        { day: "Saturday", startFrom: 'B', endAt: 'A', tripType: 'Leaving from', goingTime: '3:00 PM', leavingTime: '4:00 PM' }
     ]);
 
     const [selectedRoute, setSelectedRoute] = useState(null);
@@ -114,9 +113,6 @@ function StudentTrip() {
                             <h4 className={styles['routes-header']}>Days</h4>
                             <h4 className={styles['numberOfRoutes']}>{routes.length}</h4>
                         </div>
-                        <div className={styles['add-routes-btn']}>
-                            <button onClick={addRoute}>Add Day</button>
-                        </div>
                     </div>
                     <hr />
                     <table className={styles["routes-tableI"]}>
@@ -128,7 +124,6 @@ function StudentTrip() {
                                 <th>Trip type</th>
                                 <th>goingTime</th>
                                 <th>leavingTime</th>
-                                <th>Options</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -140,30 +135,11 @@ function StudentTrip() {
                                     <td>{route.tripType}</td>
                                     <td>{route.goingTime}</td>
                                     <td>{route.leavingTime}</td>
-                                    <td>
-                                        <button className={styles['editRoute-btn']} onClick={(event) => handleEditRoute(route.id, event)}>Edit</button>
-                                        <button className={styles['editRoute-btn']} onClick={() => handleDeleteRoute(route.id)}>Delete</button>
-                                    </td>
+
                                 </tr>
                             ))}
                         </tbody>
                     </table>
-
-
-                    {isModalOpen && (
-                        <div className={styles[`modal`]} style={{ top: setModalPosition.y + 'px', left: modalPosition.x + 'px' }}>
-                            <div className={styles["modal-content"]}>
-                                <p>Edit route:</p>
-                                <input type="text" value={editRoute.day} onChange={(e) => setEditRoute({ ...editRoute, day: e.target.value })} placeholder="Day" />
-                                <input type="text" value={editRoute.startFrom} onChange={(e) => setEditRoute({ ...editRoute, startFrom: e.target.value })} placeholder="Start from" />
-                                <input type="text" value={editRoute.endAt} onChange={(e) => setEditRoute({ ...editRoute, endAt: e.target.value })} placeholder="End at" />
-                                <input type="text" value={editRoute.tripType} onChange={(e) => setEditRoute({ ...editRoute, tripType: e.target.value })} placeholder="Trip type" />
-                                <input type="text" value={editRoute.goingTime} onChange={(e) => setEditRoute({ ...editRoute, goingTime: e.target.value })} placeholder="Going time" />
-                                <input type="text" value={editRoute.leavingTime} onChange={(e) => setEditRoute({ ...editRoute, leavingTime: e.target.value })} placeholder="Leaving time" />
-                                <button onClick={handleConfirmEdit}>Save</button>
-                            </div>
-                        </div>
-                    )}
                 </div>
             </div>
         </div>
