@@ -8,12 +8,7 @@ import iconImage2 from '../../assets/Rectangle 2375.png';
 import chartimage from '../../assets/Order.png';
 import chartimage2 from '../../assets/chart.png';
 import chartimage3 from '../../assets/chart2.png';
-import iconImage3 from '../../assets/icon1.jpg';
-import iconImage4 from '../../assets/icon2.jpg';
-import iconImage5 from '../../assets/icon3.png';
-import iconImage6 from '../../assets/icon4.jpg';
-import iconImage7 from '../../assets/icon5.jpg';
-import iconImage8 from '../../assets/icon6.jpg';
+
 
 
 
@@ -50,56 +45,64 @@ function AdminDashboard() {
     <div className='compo6'>
     <h6>Admin Activity</h6>
     <h6 className='line-break'></h6>
-    <h5> People Added <span>139</span></h5>
-    <h5> Product Created <span>283</span></h5>
-    <h5> UTM Created <span>782</span></h5>
-    <h5> Email Send Created <span>1,923</span></h5>
-    <h5> Content added <span>103</span></h5>
-    <h5> Products Updated <span>477</span></h5>
-    <h5> Reports Downloaded <span>280</span></h5>
+    <h5> User Management<span>139</span></h5>
+    <h5> Content Management <span>283</span></h5>
+    <h5> Data Management <span>782</span></h5>
+    <h5> Document Managemens <span>1,923</span></h5>
+    <h5> Reporting and Analytics <span>103</span></h5>
+    <h5> Integration and APIs<span>477</span></h5>
+    <h5> Training and Support <span>280</span></h5>
     </div>
  
     <div className='compo7'>
-    <h6>Top Drivers </h6>
+    <h6>Top Drivers Rates </h6>
     <h6 className='line-break1'></h6>
     <ul>
       <h4>
-      <li className="small-text"><img src={iconImage3} alt="New Icon" />
+      <li className="small-text">{/* <img src={iconImage3} alt="New Icon" /> */}
       </li>
       </h4>
       <h4>
 
-<li className="small-text"><img src={iconImage4} alt="New Icon" />
-      FaceBook Ads 
+<li className="small-text">{/* <img src={iconImage4} alt="New Icon" /> */}
+      Abdelrahman Mohamed 
 </li>
 </h4>
 
 <h4>
 
-<li className="small-text"><img src={iconImage5} alt="New Icon" />
- Influencers 
+<li className="small-text">{/* <img src={iconImage5} alt="New Icon" /> */}
+ Mahmoud El-Maghraby
+ </li>
+</h4>
+
+<h4>
+
+<li className="small-text">{/* <img src={iconImage6} alt="New Icon" /> */}
+Mohamed Badran 
+</li>
+</h4>
+
+<h4>
+<li className="small-text">{/* <img src={iconImage7} alt="New Icon" /> */}
+
+Wael Badran 
 </li>
 </h4>
 
 <h4>
 
-<li className="small-text"><img src={iconImage6} alt="New Icon" />
- Website 
+<li className="small-text">{/* <img src={iconImage8} alt="New Icon" /> */}
+Ahmed El-Ghazoly
 </li>
 </h4>
 
 <h4>
-
-<li className="small-text"><img src={iconImage7} alt="New Icon" />
- Android App 
+<li className="small-text">{/* <img src={iconImage8} alt="New Icon" /> */}
+Rakan Waleed 
 </li>
 </h4>
 
-<h4>
-
-<li className="small-text"><img src={iconImage8} alt="New Icon" />
-</li>
-</h4>
     </ul>
     </div>
 
@@ -131,25 +134,25 @@ function AdminDashboard() {
     </select>
     </div>
     <div className='compo6'>
-    <h6>Top Influencers</h6>
+    <h6>Top Routes Members </h6>
     <h6 className='line-break'></h6>
-    <h5> Quizzes taken <span>139</span></h5>
-    <h5> Questions Answered <span>283</span></h5>
-    <h5> Assignments completed <span>782</span></h5>
-    <h5> Comments posted <span>1,923</span></h5>
-    <h5> Challenges <span>103</span></h5>
-    <h5> Badges earned  <span>477</span></h5>
-    <h5> Reinforcements taken <span>280</span></h5>
+    <h5> Nozhat to MIU (UNI)<span>1,500</span></h5>
+    <h5> Rehab to GUC (UNI)<span>1,080</span></h5>
+    <h5> Mohandiseen to AUC (UNI)<span>383</span></h5>
+    <h5> Mokkataam to MTI (UNI)<span>582</span></h5>
+    <h5> 6th October to MSA (UNI)<span>1000</span></h5>
+    <h5> New Cairo to  FUE (UNI)<span>680</span></h5>
+    <h5> Abbassiya to Cairo (UNI)<span>350 </span></h5>
     </div>
     
     <div className='compo8'>
     <h6 className='line-break1'></h6>
-    <h4>$50k</h4>
-    <h4>$2k</h4>
-    <h4>$8k</h4>
-    <h4>$20k</h4>
-    <h4>$100k</h4>
-    <h4>$16k</h4>
+    <h4>4.9</h4>
+    <h4>2.0</h4>
+    <h4>1.3</h4>
+    <h4>2.2</h4>
+    <h4>5.0</h4>
+    <h4>3.4</h4>
 
 
     </div>
