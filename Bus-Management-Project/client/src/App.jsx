@@ -6,6 +6,7 @@ import Admin from './components/Admin/Admin'
 import Signup from './components/Login-SignUp/signUp';
 import Student from './components/Student/Student';
 import Driver from './components/Driver/Driver'
+import AccountConfig from './components/Login-SignUp/AccountConfig.jsx'
 import LandingPage from './components/LandingPage/LandingPage'
 function App() {
 
@@ -28,6 +29,10 @@ function App() {
               <Route
               path={"/sign-up"}
               element={<Signup/>}
+              />  
+              <Route
+              path={"/account-configuration"}
+              element={<AccountConfig/>}
               />  
              <Route
               path={"/Login/admin-view"}
