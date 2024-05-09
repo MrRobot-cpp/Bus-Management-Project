@@ -122,7 +122,7 @@ function RouteManagement() {
             </div>
           </div>
           <hr />
-          <table className="routes-table">
+          <table className={styles["routes-tableI"]}>
             <thead>
               <tr>
                 <th>ID</th>

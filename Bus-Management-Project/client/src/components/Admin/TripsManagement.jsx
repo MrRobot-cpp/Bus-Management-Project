@@ -122,9 +122,18 @@ function TripsManagement() {
             <div className={styles['modal']}>
               <div className={styles["modal-content"]}>
                 <p>Edit route:</p>
+                <h6>Departure:</h6>
                 <input type="text" value={editRoute.startTime} onChange={(e) => setEditRoute({ ...editRoute, startTime: e.target.value })} placeholder="Departure" />
+                <h6>Arrival:</h6>
                 <input type="text" value={editRoute.endTime} onChange={(e) => setEditRoute({ ...editRoute, endTime: e.target.value })} placeholder="Arrival" />
-                <input type="text" value={editRoute.maxNoStudents} onChange={(e) => setEditRoute({ ...editRoute, endTime: e.target.value })} placeholder="Maximum Enrollment" />
+                <h6>Maximum Enrollment:</h6>
+                <input type="text" value={editRoute.maxNoStudents} onChange={(e) => setEditRoute({ ...editRoute, maxNoStudents: e.target.value })} placeholder="Maximum Enrollment" />
+                <h6>Speed Limit:</h6>
+                <input type="text" value={editRoute.speedLimit} onChange={(e) => setEditRoute({ ...editRoute, speedLimit: e.target.value })} placeholder="Speed Limit" />
+                <h6>ID:</h6>
+                <input type="text" value={editRoute.id.slice(0,8)} onChange={(e) => setEditRoute({ ...editRoute, id: e.target.value })} placeholder="User ID" />
+                <h6>Date:</h6>
+                <input type="text" value={editRoute.date} onChange={(e) => setEditRoute({ ...editRoute, date: e.target.value })} placeholder="Date" />
                 <button onClick={handleConfirmEdit}>Save</button>
               </div>
             </div>

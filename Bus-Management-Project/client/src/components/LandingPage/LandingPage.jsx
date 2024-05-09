@@ -56,7 +56,6 @@ function LandingPage() {
 
     return (
         <>
-            <div className='main-container'>
             {/* Header */}
             <nav className="header">
             <div className="header-contents">
@@ -313,7 +312,7 @@ function LandingPage() {
                         </span>
                     </div>
                 </div>
-            </div>
+            
             {/* End of Footer Section */}
 
 
