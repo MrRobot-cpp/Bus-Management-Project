@@ -30,7 +30,7 @@ align-items: center;
 }
 .bottom-right-container{
 display: flex;
-width: 100vw;
+width: 100%;
 height: 100%;
 align-items: center;
 justify-content: center;
