@@ -1,8 +1,7 @@
-// RouteManagement.js
-
-import  { useState } from 'react';
+// eslint-disable-next-line no-unused-vars
+import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import './RouteManagement.css';
+import styles from './RouteManagement.module.css';
 
 function RouteManagement() {
   const [routes, setRoutes] = useState([
@@ -24,6 +23,35 @@ function RouteManagement() {
     startTime: '',
     endTime: ''
   });
+
+  const validateInputs = () => {
+    // Validation logic for startFrom and endAt (start with letters)
+    const startFromRegex = /^[a-zA-Z]+$/;
+    const endAtRegex = /^[a-zA-Z]+$/;
+
+    // Validation logic for tripType (either 'Going to' or 'Returning from')
+    const validTripTypes = ['Going to', 'Returning from'];
+
+    // Validation logic for numberOfStops (must be a number from 1 to 40)
+    const numberOfStops = parseInt(editRoute.numberOfStops);
+    const isNumberOfStopsValid = !isNaN(numberOfStops) && numberOfStops >= 1 && numberOfStops <= 40;
+
+    // Validation logic for startTime and endTime (valid date and time)
+    const startTimeRegex = /^(0?[1-9]|1[0-2]):[0-5][0-9] (AM|PM)$/;
+    const endTimeRegex = /^(0?[1-9]|1[0-2]):[0-5][0-9] (AM|PM)$/;
+
+    const isStartTimeValid = startTimeRegex.test(editRoute.startTime);
+    const isEndTimeValid = endTimeRegex.test(editRoute.endTime);
+
+    return (
+      startFromRegex.test(editRoute.startFrom) &&
+      endAtRegex.test(editRoute.endAt) &&
+      validTripTypes.includes(editRoute.tripType) &&
+      isNumberOfStopsValid &&
+      isStartTimeValid &&
+      isEndTimeValid
+    );
+  };
 
   const positionModal = (event) => {
     const modal = document.querySelector('.modal');
@@ -60,14 +88,18 @@ function RouteManagement() {
   };
 
   const handleConfirmEdit = () => {
-    const updatedRoutes = routes.map(route => {
-      if (route.id === selectedRoute) {
-        return editRoute;
-      }
-      return route;
-    });
-    setRoutes(updatedRoutes);
-    setIsModalOpen(false);
+    if (validateInputs()) {
+      const updatedRoutes = routes.map(route => {
+        if (route.id === selectedRoute) {
+          return editRoute;
+        }
+        return route;
+      });
+      setRoutes(updatedRoutes);
+      setIsModalOpen(false);
+    } else {
+      alert('Please fill all fields correctly.');
+    }
   };
 
   const handleDeleteRoute = (id) => {
@@ -77,20 +109,20 @@ function RouteManagement() {
   };
 
   return (
-    <div className='RouteManagement-container'>
-      <div className='routes-management-right-container'>
-        <div className='routes-container'>
-          <div className='routes-header-container'>
-            <div className='details-num-div'>
-              <h4 className='routes-header'>Details</h4>
-              <h4 className='numberOfRoutes'>{routes.length}</h4>
+    <div className={styles['RouteManagement-container']}>
+      <div className={styles['routes-management-right-container']}>
+        <div className={styles['routes-container']}>
+          <div className={styles['routes-header-container']}>
+            <div className={styles['details-num-div']}>
+              <h4 className={styles['routes-header']}>Details</h4>
+              <h4 className={styles['numberOfRoutes']}>{routes.length}</h4>
             </div>
-            <div className='add-routes-btn'>
+            <div className={styles['add-routes-btn']}>
               <button onClick={addRoute}>Add Route</button>
             </div>
           </div>
           <hr />
-          <table className="routes-table">
+          <table className={styles["routes-tableI"]}>
             <thead>
               <tr>
                 <th>ID</th>
@@ -114,16 +146,16 @@ function RouteManagement() {
                   <td>{route.startTime}</td>
                   <td>{route.endTime}</td>
                   <td>
-                    <button className='editRoute-btn' onClick={(event) => handleEditRoute(route.id, event)}>Edit</button>
-                    <button className='editRoute-btn' onClick={() => handleDeleteRoute(route.id)}>Delete</button>
+                    <button className={styles['editRoute-btn']} onClick={(event) => handleEditRoute(route.id, event)}>Edit</button>
+                    <button className={styles['editRoute-btn']} onClick={() => handleDeleteRoute(route.id)}>Delete</button>
                   </td>
                 </tr>
               ))}
             </tbody>
           </table>
           {isModalOpen && (
-            <div className={`modal`} style={{ top: setModalPosition.y + 'px', left: modalPosition.x + 'px' }}>
-              <div className="modal-content">
+            <div className={styles[`modal`]} style={{ top: setModalPosition.y + 'px', left: modalPosition.x + 'px' }}>
+              <div className={styles["modal-content"]}>
                 <p>Edit route:</p>
                 <input type="text" value={editRoute.startFrom} onChange={(e) => setEditRoute({ ...editRoute, startFrom: e.target.value })} placeholder="Start from" />
                 <input type="text" value={editRoute.endAt} onChange={(e) => setEditRoute({ ...editRoute, endAt: e.target.value })} placeholder="End at" />

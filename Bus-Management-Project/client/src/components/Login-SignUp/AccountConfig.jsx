@@ -51,48 +51,48 @@ function AccountConfig() {
     };
 
     return (
-        <div className='login'>
-            <div className="login-container">
-                <div className='Config-text-div'>
+        <div className='Ilogin'>
+            <div className="Ilogin-container">
+                <div className='IConfig-text-div'>
                     <h4>Question {step > 4 ? 4 : step}</h4>
-                    <div className='loading-Questions'>
+                    <div className='Iloading-Questions'>
                         {[1, 2, 3, 4].map((item) => (
-                            <div key={item} className={`loading-dash ${step >= item ? 'active' : ''}`}></div>
+                            <div key={item} className={`Iloading-dash ${step >= item ? 'active' : ''}`}></div>
                         ))}
                     </div>
-                    <h2 className='login-header'>Tell us about yourself</h2>
+                    <h2 className='Ilogin-header'>Tell us about yourself</h2>
                     {step >= 1 && (
-                        <div className='drop-holder'>
+                        <div className='Idrop-holder'>
                             <Dropdown options={options1} onSelect={handleOption1Select} />
                         </div>
                     )}
                     {step >= 2 && (
-                        <div className='drop-holder'>
+                        <div className='Idrop-holder'>
                             <h4>{step >= 2 ? 'What’s your Location there?' : 'Select an option'}</h4>
                             <input
                                 type="text"
-                                className='location-input'
+                                className='Ilocation-input'
                                 value={locationInput}
                                 onChange={handleLocationInputChange}
                                 placeholder='Insert your location link'
                             />
                             {locationInput && !isGoogleMapsLink(locationInput) && (
-                                <p className="error">Please enter a valid Google Maps link.</p>
+                                <p className="Ierror">Please enter a valid Google Maps link.</p>
                             )}
                         </div>
                     )}
                     {step >= 3 && (
-                        <div className='drop-holder'>
+                        <div className='Idrop-holder'>
                             <h4>{step >= 3 ? 'What is your Destination?' : 'Select an option'}</h4>
                             <Dropdown options={options2} onSelect={handleOption2Select} />
                         </div>
                     )}
                     {step >= 4 && (
-                        <div className='drop-holder'>
+                        <div className='Idrop-holder'>
                             <h4>{step >= 4 ? 'How many days you go to this Destination?' : 'Select an option'}</h4>
                             <input
                                 type="number"
-                                className='NumberOfDays'
+                                className='INumberOfDays'
                                 min='1'
                                 max='7'
                                 value={numberOfDays}
@@ -103,7 +103,7 @@ function AccountConfig() {
                     )}
                 </div>
                 {/* Add continue button */}
-                <button className='Continue-Button' onClick={() => setStep(step + 1)} style={{ backgroundColor: continueButtonColor }}>Continue</button>
+                <button className='IContinue-Button' onClick={() => setStep(step + 1)} style={{ backgroundColor: continueButtonColor }}>Continue</button>
             </div>
         </div>
     );

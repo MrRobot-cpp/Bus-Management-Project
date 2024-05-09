@@ -125,3 +125,43 @@
     padding: 20px;
     margin: 12px;
 }
+
+
+
+
+/* responsive design */
+
+
+
+@media (max-width: 573px ) {
+    .login-container {
+        width: 100%;
+        margin: 30px;
+    }
+    .login-div-holder, button.Login-btn {
+        display: flex;
+        flex: 100%; 
+        min-width: 100%; 
+        }
+
+    .forgot-password-btn, .forgot-password-link {
+        margin: 0;
+        text-align: center;
+    }
+    
+    button.Login-btn {
+        width: 100px;
+        display: flex;
+        flex: 100%; 
+        min-width: 100%; 
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .login-form {
+        flex: 100%; 
+        min-width: 100%; 
+    } 
+
+}

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import "./Profile.css";
 
@@ -27,6 +28,15 @@ function StudentProfile(props) {
 
   const handleSaveClick = (propertyName) => {
     const newValue = editedValues[propertyName];
+    // Add validation logic here
+    if (propertyName === "Email" && !isValidEmail(newValue)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+    if (propertyName === "Password" && newValue.length < 8) {
+      alert("Password must be at least 8 characters long.");
+      return;
+    }
     // Update the corresponding value in your data or state
     const updatedUser = { ...user, [propertyName]: newValue };
     console.log(`Saving ${propertyName}: ${newValue}`);
@@ -35,6 +45,11 @@ function StudentProfile(props) {
     setEditedValues({ ...editedValues, [propertyName]: newValue });
     // Reset editableIndex to -1 to switch back to Edit mode
     setEditableIndex(-1);
+  };
+
+  const isValidEmail = (email) => {
+    // Basic email validation using a regular expression
+    return /\S+@\S+\.\S+/.test(email);
   };
 
   return (
@@ -76,45 +91,46 @@ function StudentProfile(props) {
             <div className="table-info">
               <table className="student-table">
                 {Object.keys(user).map((propertyName, index) => (
-                  propertyName!=="Id"&&
-                  <tr key={index}>
-                    <td className="student-table-td">{propertyName}</td>
-                    <td className="student-table-td">
-                      {editableIndex === index ? (
-                        <input
-                          id={`input-${index}`}
-                          type="text"
-                          value={editedValues[propertyName] ?? user[propertyName]}
-                          onChange={(event) => handleInputChange(event, propertyName)}
-                          className="input-personal-info"
-                        />
-                      ) : (
-                        <span>{user[propertyName]}</span>
-                      )}
-                    </td>
-                    <td className="student-table-td">
-                      {(propertyName === "Email" ||
-                        propertyName === "Password" ||
-                        propertyName === "Phone" ||
-                        propertyName === "Location") &&
-                        isChecked &&
-                        (editableIndex === index ? (
-                          <button
-                            onClick={() => handleSaveClick(propertyName)}
-                            className="edit-btn"
-                          >
-                            Save
-                          </button>
+                  propertyName !== "Id" && (
+                    <tr key={index}>
+                      <td className="student-table-td">{propertyName}</td>
+                      <td className="student-table-td">
+                        {editableIndex === index ? (
+                          <input
+                            id={`input-${index}`}
+                            type="text"
+                            value={editedValues[propertyName] ?? user[propertyName]}
+                            onChange={(event) => handleInputChange(event, propertyName)}
+                            className="input-personal-info"
+                          />
                         ) : (
-                          <button
-                            onClick={() => handleEditClick(index, propertyName)}
-                            className="edit-btn"
-                          >
-                            Edit
-                          </button>
-                        ))}
-                    </td>
-                  </tr>
+                          <span>{user[propertyName]}</span>
+                        )}
+                      </td>
+                      <td className="student-table-td">
+                        {(propertyName === "Email" ||
+                          propertyName === "Password" ||
+                          propertyName === "Phone" ||
+                          propertyName === "Location") &&
+                          isChecked &&
+                          (editableIndex === index ? (
+                            <button
+                              onClick={() => handleSaveClick(propertyName)}
+                              className="edit-btn"
+                            >
+                              Save
+                            </button>
+                          ) : (
+                            <button
+                              onClick={() => handleEditClick(index, propertyName)}
+                              className="edit-btn"
+                            >
+                              Edit
+                            </button>
+                          ))}
+                      </td>
+                    </tr>
+                  )
                 ))}
               </table>
             </div>
