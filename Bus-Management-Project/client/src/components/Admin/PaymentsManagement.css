@@ -1,162 +1,138 @@
-
-
-.payment{
-    background-color: #f8f8f8;
-    max-width: 360px;
-    margin: 80px auto;
-    height: auto;
-    padding: 35px;
-    padding-top: 70px;
-    border-radius: 5px;
-    position: relative;
-}
-.payment h2{
-    text-align: center;
-    letter-spacing: 2px;
-    margin-bottom: 40px;
-    color:#0d3c64;
-} 
-.form .label{
-    display: block;
-    color:#555555;
-    margin-bottom: 6px;
-}
-.form .input{
-    padding: 13px 0 13px 25px;
-    width: 100%;
-    text-align: center;
-    border: 2px solid #dddddd;
-    border-radius: 5px;
-    letter-spacing: 1px;
-    word-wrap: 3px;
-    outline: none;
-    font-size: 16px;
-    color:black;
-}
-.card_grp{
+.PaymentsManagement-container{
     display: flex;
+    flex-direction: row;
+    padding-right: 40px;
+    padding-bottom: 10px;
+}
+.payment-container{
+    background-color: #fffbeb;
+    display: flex;
+    flex-direction: column;
+    width: 83vw;
+    height: 80vh;
+    border: 1px solid #fffbeb;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+.payment-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 2vw;
+}
+.numberOfpayment{
+    color: rgb(161, 161, 161);
+}
+
+.payment-header-container{
+    display: flex;
+    flex-direction: row;
+    margin: 1.2em 0.01em 1.2em 0em;
+    align-items: center;
     justify-content: space-between;
 }
-.card_item{
-    width: 48%;
+.details-num-div{
+    display: flex;
+    flex-direction: row;
 }
-.space{
-    margin-bottom: 20px;
+.add-payment-btn{
+    margin-right: 2.2vw;
 }
-
-.icon-relative{
-    position: relative;
-}
-.icon-relative .fas,
-.icon-relative .far{
-    position:absolute;
-    bottom: 12px;
-    left:15px;
-    font-size: 20px;
-    color:#555555;
-}
-.btn{
-    margin-top: 40px;
-    background: #2196f3;
+.add-payment-btn button{
+    color: #fffbeb;
+    background-color: #263159;
     padding: 12px;
-    text-align: center;
-    color:#f8f8f8;
-    border-radius: 5px;
-    cursor: pointer;
+    font-weight: 700;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    border-radius: 10px;
 }
-
-.payment-logo{
-    position: absolute;
-    top:-50px;
-    left:50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 100px;
-    background:white;
-    border-radius: 50%;
-    box-shadow: 0 0 5px rgba(0,0,0,0,2);
-    text-align: center;
-    line-height: 85px;
+.add-payment-btn button:hover{
+    transition: 0.5s ease;
+    transform: scale(1.1);
 }
-.payment-logo:before{
-    content: "";
-    position: absolute;
-    top:5px;
-    left:5px;
-    width: 90px;
-    height: 90px;
-    background: #2196f3;
-    border-radius: 50%;
+.payment-tableI{
+    margin-top: 1.2em;
 }
-.payment-logo p{
-    color:#f8f8f8;
-    position: relative;
-    font-family: 'Baloo Bhaijaan',cursive;
-    font-size: 58px;
+.payment-tableI td{
+    color: rgb(161, 161, 161);
+    border-bottom: 1px solid #ddd;
+    font-weight: 100;
+    font-size: small;
 }
-
-
-
-
-
-
-
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #ffffff; /* White container background */
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
-}
-
-label {
-    display: block;
-    margin-bottom: 10px;
-    color: #333333; /* Dark gray text color */
-}
-
-input[type="text"],
-select {
-    width: 100%;
+.modal {
+    position:sticky;
+    align-items: center;
+    justify-content: center;
+    background-color: #fffbeb;
+    border: 1px solid #263159;
     padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #b3c8e6; /* Light blue border */
-    border-radius: 4px;
-    box-sizing: border-box;
+    border-radius: 20px;
+    width: 8vw;
 }
-
-input[type="submit"] {
-    background-color: #007bff; /* Blue submit button */
-    color: #ffffff; /* White text color */
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
+.editpayment-btn{
+    background-color: #263159;
+    color: #FFFBEB;
+    font-family: inherit;
+    border: 1px solid #263159;
+    border-radius: 8px;
     cursor: pointer;
+    padding: 6px;
+    margin-left: 5px;
+    margin-right: 5px;
+
+}
+.editpayment  -btn:hover{
+    background-color:#FFFBEB;
+    color: #263159 ;
+    transition: 0.5s ease-in-out;
+}
+.modal button{
+    cursor: pointer;
+    color: #fffbeb;
+    background-color: #263159;
+    margin: 4px;
+    padding: 6px;
+}
+.modal button:hover{
+    transform: scale(1.1);
+}
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4px;
+    padding: 2px;
+}
+  /* Ensure modal stays within viewport */
+@keyframes slideIn {
+    from {
+opacity: 0;
+transform: translateY(-20px);
+    }
+    to {
+    opacity: 1;
+    transform: translateY(0);
+    }
 }
 
-input[type="submit"]:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+@keyframes slideOut {
+    from {
+    opacity: 1;
+    transform: translateY(0);
+    }
+    to {
+    opacity: 0;
+    transform: translateY(-20px);
+    }
 }
-
-.result {
-    margin-top: 20px;
-    font-weight: bold;
-    color: #333333; /* Dark gray text color */
+.modal-animation{
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
 }
-
-.input-icon {
-    position: relative;
+.modal-animation-slide-in{
+    animation-name: slideIn;
 }
-
-.input-icon input {
-    padding-left: 30px;
-}
-
-.input-icon i {
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #666666; /* Gray icon color */
+.modal-animation-slide-out{
+    animation-name: slideOut;
 }
