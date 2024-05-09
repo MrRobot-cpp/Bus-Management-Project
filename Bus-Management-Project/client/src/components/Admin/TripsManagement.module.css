@@ -167,6 +167,8 @@ transform: translateY(-20px);
 
 .modal-content > input{
     width: 60%;
+    height: 20%;
+    border-radius: 10px;
     margin-bottom: 20px;
     border: none;
     background: #FFFBEB;
@@ -182,5 +184,6 @@ transform: translateY(-20px);
 }
 
 .modal-content > h6{
+    margin-top: 15px;
     margin-right: 170px;
 }

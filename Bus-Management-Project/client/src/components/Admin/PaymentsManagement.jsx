@@ -126,7 +126,7 @@ function PaymentsManagement() {
           {isModalOpen && (
             <div className={`modal`} style={{ top: setModalPosition.y + 'px', left: modalPosition.x + 'px' }}>
               <div className="modal-content">
-                <p>Edit PaymentsetSelectedPayment:</p>
+                <p>Edit-Payments:</p>
 
 
                 	
