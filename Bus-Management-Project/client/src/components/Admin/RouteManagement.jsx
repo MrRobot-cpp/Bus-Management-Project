@@ -1,6 +1,5 @@
-// RouteManagement.js
-
-import  { useState } from 'react';
+// eslint-disable-next-line no-unused-vars
+import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import './RouteManagement.css';
 
@@ -24,6 +23,35 @@ function RouteManagement() {
     startTime: '',
     endTime: ''
   });
+
+  const validateInputs = () => {
+    // Validation logic for startFrom and endAt (start with letters)
+    const startFromRegex = /^[a-zA-Z]+$/;
+    const endAtRegex = /^[a-zA-Z]+$/;
+
+    // Validation logic for tripType (either 'Going to' or 'Returning from')
+    const validTripTypes = ['Going to', 'Returning from'];
+
+    // Validation logic for numberOfStops (must be a number from 1 to 40)
+    const numberOfStops = parseInt(editRoute.numberOfStops);
+    const isNumberOfStopsValid = !isNaN(numberOfStops) && numberOfStops >= 1 && numberOfStops <= 40;
+
+    // Validation logic for startTime and endTime (valid date and time)
+    const startTimeRegex = /^(0?[1-9]|1[0-2]):[0-5][0-9] (AM|PM)$/;
+    const endTimeRegex = /^(0?[1-9]|1[0-2]):[0-5][0-9] (AM|PM)$/;
+
+    const isStartTimeValid = startTimeRegex.test(editRoute.startTime);
+    const isEndTimeValid = endTimeRegex.test(editRoute.endTime);
+
+    return (
+      startFromRegex.test(editRoute.startFrom) &&
+      endAtRegex.test(editRoute.endAt) &&
+      validTripTypes.includes(editRoute.tripType) &&
+      isNumberOfStopsValid &&
+      isStartTimeValid &&
+      isEndTimeValid
+    );
+  };
 
   const positionModal = (event) => {
     const modal = document.querySelector('.modal');
@@ -60,14 +88,18 @@ function RouteManagement() {
   };
 
   const handleConfirmEdit = () => {
-    const updatedRoutes = routes.map(route => {
-      if (route.id === selectedRoute) {
-        return editRoute;
-      }
-      return route;
-    });
-    setRoutes(updatedRoutes);
-    setIsModalOpen(false);
+    if (validateInputs()) {
+      const updatedRoutes = routes.map(route => {
+        if (route.id === selectedRoute) {
+          return editRoute;
+        }
+        return route;
+      });
+      setRoutes(updatedRoutes);
+      setIsModalOpen(false);
+    } else {
+      alert('Please fill all fields correctly.');
+    }
   };
 
   const handleDeleteRoute = (id) => {

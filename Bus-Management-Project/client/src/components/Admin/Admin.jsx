@@ -2,8 +2,8 @@
 import React, { useState } from 'react';
 import PageHeader from '../Student/PageHeader/PageHeader'
  //import AdminDashboard from './AdminDashboard';
-//import RouteManagement from './RouteManagement'
-import PaymentsManagement from './PaymentsManagement';
+import RouteManagement from './RouteManagement'
+// import PaymentsManagement from './PaymentsManagement';
 import VerticalNavbar from '../General/VerticalNavbar'
 import './Admin.css'
 function Admin() {
@@ -30,8 +30,8 @@ const[header,setHeader] = useState('Dashboard')
         </div>
     <div className="admin-right-container">
    {/*  < AdminDashboard/> */}
-     {/*   <RouteManagement />  */}
-     {<PaymentsManagement />}
+       <RouteManagement /> 
+     {/* {<PaymentsManagement />} */}
     </div>
     </div>
     </div>
