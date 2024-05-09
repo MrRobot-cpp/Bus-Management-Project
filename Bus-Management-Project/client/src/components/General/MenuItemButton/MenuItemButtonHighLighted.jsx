@@ -7,7 +7,7 @@ const MenuItemButtonHighlighted = (props) => {
   return (
     <Link to={props.hRef}>
     <button className={`menu-item-highlighted ${props.classCondition ? props.className2 : false}`}   
-      style={{width: props.Width}}  >{props.text}
+      style={{width: props.Width}}>{props.text}
       </button>
       </Link>
     

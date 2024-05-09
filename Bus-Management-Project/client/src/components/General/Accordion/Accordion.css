@@ -12,8 +12,7 @@
     font-size: 24px;
 }
 
-.dropdown-btn {
-    transition: rotate 3s ease-in-out;
+.accordion-dropdown-btn {
     color: #263159;
     font-size: 50px;
     cursor: pointer;
@@ -39,13 +38,22 @@
     opacity: 0;
     height: 0;
     overflow: hidden;
+    
 }
 
 .divider-and-description .open {
     height: 100px;
     opacity: 1;
-    transition: all 3s ease;
     width: auto;
+}
+
+@keyframes expandAccordion {
+    from {
+        max-height: 0;
+    }
+    to {
+        max-height: 200px; /* Adjust this value as needed */
+    }
 }
 
 .divider {

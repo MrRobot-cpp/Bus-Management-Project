@@ -3,6 +3,7 @@
     "@svgr/core": "^8.1.0"
   },
   "dependencies": {
-    "react-router-dom": "^6.23.0"
+    "react-router-dom": "^6.23.0",
+    "react-router-hash-link": "^2.4.3"
   }
 }

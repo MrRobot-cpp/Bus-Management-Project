@@ -10,6 +10,7 @@
     font-family: "Istok Web", sans-serif;
 }
 
+
 /* header section */
 .header {
     background-color: #ffffff;
@@ -34,7 +35,8 @@
 }
 
 .unordered-list, .list {
-    height: 50px;;
+    height: 50px;
+    cursor: pointer;
 }
 
 .list {
@@ -45,7 +47,6 @@
 .logo-placeholder {
     font-size: 30px;
     margin: 0;
-    
 }
 
 
@@ -60,17 +61,28 @@
 .dropdown-menu {
     margin: 0;
     border: none;
+    border-radius: none;
     display: none;
     position: absolute;
-    right: 2rem;
-    top: 60px;
-    width: 300px;
+    top: 42px;
     height: 0;
     background-color: #ffffff;
-
-    border-radius: 10px;
+    width: 100%;
+    padding-bottom: 10px;
     overflow: hidden;
-    transition: height  0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: dropdownAnimation 0.3s ease forwards; /* Add animation */
+
+}
+
+@keyframes dropdownAnimation {
+    0% { 
+        transform: translateY(-10px); /* Initial position above */
+        opacity: 0;
+    }
+    100% { 
+        transform: translateY(0); /* Bounce effect */
+        opacity: 1;
+    }
 }
 
 .dropdown-menu .list {
@@ -79,29 +91,35 @@
     justify-content: center;
 }
 
-.dropdown-menu  {
+
+.header-contents .dropdown-login-btn {
     width: 50%;
     padding: 0;
     height: 35px;
-    border-radius: 30px;
+    border-radius: 50px;
     transition: transform .2s ease; 
-    /* top: 20px; */
 }
+
+
 
 .dropdown-menu.open {
     height: 250px;
 }
 
-.dropdown-login-btn {
+.dropdown-menu.open .main-container {
+    backdrop-filter: blur(50%);
+}
+
+.header-dropdown-login-btn {
     background: #263159;
     border: none;
+    border-radius: 300px;
     color: #ffffff;
     font-size: 16px;
     text-decoration: none;
-    width: fit-content;
 }
 
-.dropdown-login-btn:hover {
+.header-dropdown-login-btn:hover {
     background: #020d19;
     opacity: 0.5;
     transform: scale(1.05);
@@ -369,10 +387,7 @@
         margin-right: 50px;
     }
     
-    .dropdown-menu {
-        display: block;
-        margin: 0;
-    }
+    
     
     .feature-card-display {
         display: grid;
@@ -395,6 +410,9 @@
         padding: 15px 0;
     }
 
+    .dropdown-menu {
+        display: block;
+    }
 
 }
 
@@ -408,11 +426,10 @@
 
 
 @media (max-width: 576px) {
-    .dropdown-menu {
+    /* .dropdown-menu {
         left: 2rem;
         width: unset;
-        top: 0;
-    }
+    } */
 
     .customer-card-scroller[data-animated=true] .customer-card-inner-scroller {
         /* overflow: auto; */

@@ -3,6 +3,8 @@ import "../General/MenuItemButton/MenuItemButton.css";
 
 import { addAnimation } from "../General/CustomerCard/scrollingAnimation.js";
 import { useEffect, useState } from 'react'
+// import { HashLink as Link } from 'react-router-hash-link';
+
 
 import MenuItemButtonRegular from "../General/MenuItemButton/MenuItemButtonRegular.jsx"
 import HorizontalCard from "../General/HorizontalCard/HorizontalCard.jsx";
@@ -36,10 +38,13 @@ function LandingPage() {
         const toggleBtnIcon = document.querySelector('.toggle-btn i');
         const dropDownMenu = document.querySelector('.dropdown-menu');
 
-        const isOpen = dropDownMenu.classList.toggle('open');
+        const openDropDown = dropDownMenu.classList.toggle('open');
 
-        toggleBtnIcon.classList.toggle('fa-bars', !isOpen);
-        toggleBtnIcon.classList.toggle('fa-xmark', isOpen);
+        toggleBtnIcon.classList.toggle('fa-bars', !openDropDown);
+        toggleBtnIcon.classList.toggle('fa-xmark', openDropDown);
+
+
+        dropDownMenu.style.display = openDropDown ? 'block' : 'none';
     };
 
     //check for media queries
@@ -52,7 +57,7 @@ function LandingPage() {
     }, []);
 
     const [isOpen, setIsOpen] = useState("");
-
+    
 
     return (
         <>
@@ -62,30 +67,33 @@ function LandingPage() {
             <div className="header-contents">
                 <div className="logo-nav"><h1 className="logo-placeholder">RouteMinder</h1></div>
                     <ul className="unordered-list">
-                        <li className="list"><MenuItemButtonRegular text="Home" hRef={""} /></li>
-                        <li className="list"><MenuItemButtonRegular text="Services" hRef={""} /></li>
-                        <li className="list"><MenuItemButtonRegular text="About" hRef={""} /></li>
-                        <li className="list"><MenuItemButtonRegular text="Contact Us" hRef={""} /></li>
-                        <MenuItemButtonHighlighted text="Login" classCondition={true} className2="header-login-btn" hRef="/Login" />
+                        <li className="list"><MenuItemButtonRegular text="Home" hRef="#" /></li>
+                        <li className="list"><MenuItemButtonRegular text="Services" hRef="#services" /></li>
+                        <li className="list"><MenuItemButtonRegular text="About" hRef="#about" /></li>
+                        <li className="list"><MenuItemButtonRegular text="Our Clients" hRef="#customer-review" /></li>
+                        <li className="list"><MenuItemButtonRegular text="Contact Us" hRef="#contact" /></li>
+                        <MenuItemButtonHighlighted text="Sign In" classCondition={true} className2="header-login-btn" hRef="/Login" />
                     </ul>
 
                 <div className="toggle-btn" onClick={toggleDropDown}>
                     <i className="fa-solid fa-bars toggle-btn-logo"></i>
                 </div>
-                <div className="dropdown-menu" >
-                    <li className="list"><MenuItemButtonRegular text="Home" hRef={"#"} /></li>
-                    <li className="list"><MenuItemButtonRegular text="Services" hRef={"#"} /></li>
-                    <li className="list"><MenuItemButtonRegular text="About" hRef={"#"} /></li>
-                    <li className="list"><MenuItemButtonRegular text="Contact Us" hRef={"#"} /></li>
-                    <li className="list"><MenuItemButtonHighlighted text="Login" classCondition={true} className2="dropdown-login-btn"/></li>
-                </div>
+            </div>
+            <div className="dropdown-menu" >
+                <li className="list"><MenuItemButtonRegular text="Home" hRef={"#home"} /></li>
+                <li className="list"><MenuItemButtonRegular text="Services" hRef={"#services"} /></li>
+                <li className="list"><MenuItemButtonRegular text="About" hRef={"#about"} /></li>
+                <li className="list"><MenuItemButtonRegular text="Contact Us" hRef={"#contact"} /></li>
+                <li className="list"><MenuItemButtonHighlighted text="Login" classCondition={true} className2="header-dropdown-login-btn"/></li>
             </div>
             </nav>
+            
             {/* End of Header */}
 
 
 
             {/* Title Area */}
+            {/* <div id='home'></div> */}
             <HorizontalCard 
                 imageSide={"row"} 
                 imageLink={busImage1} 
@@ -99,8 +107,8 @@ function LandingPage() {
 
 
             {/* Services Section */}
-            <div className="feature-card-container">
-                <h2 className="features-title">Services</h2>
+            <div className="feature-card-container" id='services' >
+                <h2 className="features-title" >Services</h2>
                 <div className="feature-card-display">
                     <FeatureCard 
                         iconLink={"fa-regular fa-hourglass-half"} 
@@ -138,7 +146,7 @@ function LandingPage() {
 
 
             {/* About Us Section */}
-            <div className="about-us-container">
+            <div className="about-us-container" id='about'>
                 <h1 className="about-us-headline">About Us</h1>
                 <HorizontalCard 
                     imageSide={'row-reverse'} 
@@ -165,7 +173,7 @@ function LandingPage() {
 
 
             {/* Customer Card Section */}
-            <div className="customer-card-container">
+            <div className="customer-card-container" id='customer-review'>
                 <h1 className="customer-card-headline">Hear From Our Customers</h1>
                     <div className="customer-card-scroller" data-animated={true} >
                         <div className="customer-card-display customer-card-inner-scroller">
@@ -268,36 +276,36 @@ function LandingPage() {
                 <Accordion 
                     isOpen={isOpen}
                     setIsOpen={setIsOpen}
-                    headlineText="headline1" 
-                    descriptionText="This is an answer to a frequently asked question. A couple more works to specify the subject further, provide more detail and make sure the user understands everything." 
+                    headlineText="Q: How do I track my bus in real-time?" 
+                    descriptionText="A: To track your bus in real-time, log in with your credentials, and you'll be able to see the exact location of your bus on the map. It's a convenient way to stay updated on your child's whereabouts during their commute." 
                 />
 
                 <Accordion 
                     isOpen={isOpen}
                     setIsOpen={setIsOpen}
-                    headlineText="headline2" 
-                    descriptionText="This is an answer to a frequently asked question. A couple more works to specify the subject further, provide more detail and make sure the user understands everything." 
+                    headlineText="Q: What if my bus is delayed?" 
+                    descriptionText="A: In the event of a delay, rest assured that our app will notify you promptly with updates on the status of your bus. Additionally, our support team is available to assist you and provide further information if needed. Your child's safety and punctuality are our top priorities." 
                 />
 
                 <Accordion 
                     isOpen={isOpen}
                     setIsOpen={setIsOpen}
-                    headlineText="headline3" 
-                    descriptionText="This is an answer to a frequently asked question. A couple more works to specify the subject further, provide more detail and make sure the user understands everything." 
+                    headlineText="Q: Can I communicate with the bus driver or team?" 
+                    descriptionText="A: Yes, communication with the bus driver or our support team is made easy through our app's built-in chat feature. Whether you have questions, concerns, or need to relay important information, you can do so directly within the app, ensuring clear and efficient communication." 
                 />
 
                 <Accordion 
                     isOpen={isOpen}
                     setIsOpen={setIsOpen}
-                    headlineText="headline4" 
-                    descriptionText="This is an answer to a frequently asked question. A couple more works to specify the subject further, provide more detail and make sure the user understands everything." 
+                    headlineText="Q: How do you ensure my child's safety on the bus?" 
+                    descriptionText="A: Ensuring the safety of your child is paramount to us. Our buses are equipped with state-of-the-art safety features, including GPS tracking, onboard cameras, and regular maintenance checks. Our drivers are extensively trained in safety protocols and undergo thorough background checks to provide you with peace of mind." 
                 />
                 
                 <Accordion 
                     isOpen={isOpen}
                     setIsOpen={setIsOpen}
-                    headlineText="headline5" 
-                    descriptionText="This is an answer to a frequently asked question. A couple more works to specify the subject further, provide more detail and make sure the user understands everything." 
+                    headlineText="Q: What amenities are available on your buses?" 
+                    descriptionText="A: Our buses are designed with comfort and convenience in mind. They are equipped with amenities such as air conditioning, comfortable seating, and onboard entertainment options to make your child's commute as pleasant as possible. Additionally, we offer WiFi connectivity so students can stay connected while on the go." 
                 />
             </div>
             {/* End of Accordion Section */}
@@ -306,7 +314,7 @@ function LandingPage() {
 
 
             {/* Footer Section */}
-            <div className="footer-container" >
+            <div className="footer-container" id='contact' >
                     <div className="footer-info-box">
                         <h2 className='footer-logo'>RouteMinder.</h2>
                         <p className='footer-company-refer'>&copy; 2024 RouteMinder. Inc.</p>
@@ -317,10 +325,10 @@ function LandingPage() {
                         </span>
                     </div>
                 </div>
-            </div>
             {/* End of Footer Section */}
 
 
+            </div>
         </>
     );
 }

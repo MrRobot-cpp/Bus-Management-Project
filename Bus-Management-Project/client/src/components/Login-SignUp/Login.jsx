@@ -102,7 +102,7 @@ function Login() {
                     <br />
                     <br />
                     {!showForgotPassword && (
-                        <div>
+                        <div className='user-credentials'>
                             <div className='login-div-holder'>
                                 <div className="top-border"><label htmlFor="Email"> Email</label></div>
                                 <input className='login-input' type="email" id="Email" value={email} onChange={handleEmailChange}/>
