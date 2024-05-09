@@ -13,6 +13,10 @@
 }
 
 .accordion-dropdown-btn {
+<<<<<<< HEAD
+=======
+    transition: height 3s ease-in-out;
+>>>>>>> 29ea82b3316e9a151f0932f2b6da925ac6025cef
     color: #263159;
     font-size: 50px;
     cursor: pointer;

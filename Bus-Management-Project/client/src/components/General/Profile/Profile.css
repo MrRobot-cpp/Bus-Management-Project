@@ -1,15 +1,15 @@
 .card-container{
     display:flex;
     flex-direction: column;
-    height: 89.2vh;
+    height: 90%;
+    width: 90%;
     justify-content: center;
     align-items: center;
-    background-color: #263159;
+    overflow: hidden;
 }
 .card {
     display: flex;
     flex-direction: column;
-    background-color: #263159;
     height: 100%;
     width: 100%;
     overflow: hidden;
@@ -19,18 +19,16 @@
 .card-info {
     display:flex;
     justify-content: space-between;
-    height: 15.6vh;
-    padding: 1em;
-    margin: 1em;
+    max-height: 40%;
 }
 .profile-name {
     text-align: left;
     color: #263159;
 }
+
 .top-profile{
     display: flex;
     flex-direction: row;
-    overflow: hidden;
     width: 100%;
     justify-content: space-between;
     align-items: center ;
@@ -49,16 +47,21 @@
 }
 .student-profile-body{
     display: flex;
+    align-items: flex-start;
+    justify-content: center;
     flex-direction: row;
 }
 .personal-info-container{
     display: flex;
+    justify-content: center;
     flex-direction: column;
+    height: 85%;
     width: 50%;
+    overflow: hidden;
 }
 .personal-info{
-    margin: 1em;
-    margin-bottom: 0.3em;
+    margin-top: 5px;
+    margin-bottom: 5px;
     width: auto;
     text-align: center;
     color: #FFFBEB;
@@ -92,7 +95,6 @@
     border-radius: 10px;
     display: block;
     cursor: pointer;
-
 }
 .edit-btn:hover{
     transition: 0.5s ease;
@@ -100,13 +102,13 @@
     border-color: #646cff;
 }
 .table-info {
-    width: auto;
-    height:auto;
+    width: 85%;
+    height:70%;
     box-shadow: 0px 5px 15px rgba(1, 1, 1, 0.25); 
     overflow: hidden;
     border: 5px solid #fffbeb;
     border-radius: 15px;
-    margin: 2em;
+    margin: 15px;
 }
 
 .student-table{
@@ -138,18 +140,28 @@
 }
 .upcoming-trip-container{
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
-    width: 50%;}
+    height: 85%;
+    width: 50%;
+}
+
+.upcoming-trip-container>.personal-info{
+    margin-top: 18px;
+}
 .bottom-upcoming-trip{
     display:flex;
-    justify-content: space-between;
-    height: 15vh;
-    padding: 1em;
-    margin: 1em;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 90%;
+    margin-top: -10px;
 }
 .upcoming-trip-info{
     width: 100%;
-    justify-content: space-between;
+    height: 80%;
+    justify-content: center;
     align-items: center ;
     border-radius: 15px;
     box-shadow: 0px 5px 15px rgba(1, 1, 1, 0.25);

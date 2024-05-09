@@ -2,6 +2,7 @@
 import React , {useState} from 'react';
 import { validateEmail, validatePassword, validateName } from './validation';
 import './signUp.css'; // Assuming you have this CSS file in your project
+import TermsAndConditions from './TermsAndConditions';
 function Signup() {
 
     const [firstName, setFirstName] = useState('');
@@ -10,6 +11,7 @@ function Signup() {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [isChecked, setIsChecked] = useState(false);
+    const [toggleIsChecked,setToggleIsChecked] = useState(false)
     const [firstNameError, setFirstNameError] = useState('');
     const [lastNameError, setLastNameError] = useState('');
     const [emailError, setEmailError] = useState('');
@@ -65,6 +67,10 @@ function Signup() {
             console.log('Form submission failed. Please check input fields.');
         }
     };
+
+    const handleToggleTerms = () => {
+        setToggleIsChecked(!toggleIsChecked)
+    }
     
 
     return (
@@ -114,7 +120,7 @@ function Signup() {
                 </div>
                 <div className='termsLine'>
                     <br />
-                <h5><input className='checker' type="checkbox" checked={isChecked} onChange={handleTermsChange}/> I Have Read the<a  href=""> Terms & Conditions</a></h5>
+                <h5><input className='checker' type="checkbox" checked={isChecked} onChange={handleTermsChange}/> I Have Read the<a  href="#" onClick={handleToggleTerms}> Terms & Conditions</a></h5>
                 {termsError && <span className="error"  >{termsError}</span>}
                 </div>
                 <div className='sign-div-holder'>
@@ -131,6 +137,7 @@ function Signup() {
                 </div>
             </form>
         </div>
+        {toggleIsChecked&&<TermsAndConditions onQuery={setIsChecked} onQueryII={setToggleIsChecked}/>}
         </div>
     );
 }
