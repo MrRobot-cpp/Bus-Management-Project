@@ -25,7 +25,7 @@ const Accordion = ({ headlineText, descriptionText, isOpen, setIsOpen }) => {
                 </span>
             </div>
 
-            <div className={(isOpen === headlineText ? 'open' : '') + "divider-and-description"}>
+            <div className={(isOpen === headlineText ? 'open' : '') + "divider-and-description"} >
                 <hr className="divider" />
                 <p className="description">{descriptionText}</p>
             </div>
