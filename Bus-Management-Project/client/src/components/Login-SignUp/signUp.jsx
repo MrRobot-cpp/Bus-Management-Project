@@ -3,6 +3,7 @@ import React , {useState} from 'react';
 import { validateEmail, validatePassword, validateName } from './validation';
 import './signUp.css'; // Assuming you have this CSS file in your project
 import TermsAndConditions from './TermsAndConditions';
+import { Link } from 'react-router-dom'
 function Signup() {
 
     const [firstName, setFirstName] = useState('');
@@ -124,7 +125,7 @@ function Signup() {
                 {termsError && <span className="error"  >{termsError}</span>}
                 </div>
                 <div className='sign-div-holder'>
-                    <button className='Sign-btn' type="submit" id="submit">Sign Up</button>
+                    <Link to="/account-configuration"><button className='Sign-btn' type="submit" id="submit">Sign Up</button></Link>
                 </div>
                 <h4 className="not-regist">Already Have An Account? <a className="create-acc-link" href="">Login</a></h4>
                 <h4>Or Join with</h4>
