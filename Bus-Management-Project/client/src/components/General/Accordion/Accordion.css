@@ -5,17 +5,24 @@
     height: 56px;
     padding: 24px;
     height: auto; 
+    margin-inline: 50px;
 }
 
 .headline {
     font-size: 24px;
 }
 
-.dropdown-btn {
+.accordion-dropdown-btn {
+<<<<<<< HEAD
+=======
     transition: height 3s ease-in-out;
+>>>>>>> 29ea82b3316e9a151f0932f2b6da925ac6025cef
     color: #263159;
     font-size: 50px;
     cursor: pointer;
+    border: none;
+    box-shadow: none;
+
 }
 
 .headline-and-button {
@@ -35,11 +42,22 @@
     opacity: 0;
     height: 0;
     overflow: hidden;
+    
 }
 
 .divider-and-description .open {
     height: 100px;
     opacity: 1;
+    width: auto;
+}
+
+@keyframes expandAccordion {
+    from {
+        max-height: 0;
+    }
+    to {
+        max-height: 200px; /* Adjust this value as needed */
+    }
 }
 
 .divider {
@@ -47,8 +65,14 @@
     margin: 10px;
 }
 
-.description {
+p.description {
     font-size: 16px;
     padding: 24px;
-    padding-bottom: 0;
+    width: auto;
+}
+
+@media (max-width: 838px) {
+    .accordion {
+        width: auto;
+    }   
 }

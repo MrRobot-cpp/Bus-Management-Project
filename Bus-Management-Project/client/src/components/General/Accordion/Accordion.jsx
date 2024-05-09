@@ -20,12 +20,12 @@ const Accordion = ({ headlineText, descriptionText, isOpen, setIsOpen }) => {
                         setIsOpen(headlineText);
                     }
                 }}
-                className="dropdown-btn">
+                className="accordion-dropdown-btn">
                     <i className={`fa-solid fa-circle-chevron-${isOpen === headlineText ? 'up' : 'down'}`}></i>
                 </span>
             </div>
 
-            <div className={(isOpen === headlineText ? 'open' : '') + "divider-and-description"}>
+            <div className={(isOpen === headlineText ? 'open' : '') + "divider-and-description"} >
                 <hr className="divider" />
                 <p className="description">{descriptionText}</p>
             </div>

@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
 }
-.login{
+.Ilogin{
     width: 100vw;
     height: 100vh;
     margin: 0;
@@ -18,34 +18,34 @@
     background-color: #263159;
     place-items: center;
 }
-.login-header{
+.Ilogin-header{
     font-size: 2.5em;
     line-height: 1.1;
     color: #263159;
 }
-.buttons-holder{
+.Ibuttons-holder{
     display: flex;
     flex-direction: row;
 }
-.Config-text-div{
+.IConfig-text-div{
     text-align: left;
     width: 55%;
 }
-.login-container h4{
+.Ilogin-container h4{
     color:#838383 ;
     text-align: left;
     margin: 4px 0px;
 }
-.login-container div{
+.Ilogin-container div{
     text-align: left;
     
 }
-.loading-Questions{
+.Iloading-Questions{
     display: flex;
     flex-direction: row;
     align-items: left;
 }
-.loading-dash {
+.Iloading-dash {
     margin: 2px 5px;
     border: 0.5px solid #263159;
     color: #FFFBEB;
@@ -53,10 +53,10 @@
     height: 2px;
 }
 
-.loading-dash.active {
+.Iloading-dash.Iactive {
     background-color: #263159; 
 }
-.Login-btn{
+.ILogin-btn{
     width: 100%;
     height: 6vh;
     border-radius: 8px;
@@ -72,23 +72,23 @@
     transition: border-color 0.25s;
     margin: 0.2em 1.6em 0.2em 0em;
 }
-.Login-btn:hover{
+.ILogin-btn:hover{
     transition: 0.5s ease;
     transform: scale(1.1);
     border-color: #646cff;
 }
-.Continue-Button{
+.IContinue-Button{
     width: 52%;
     height: 8%;
     background-color: #E4E5E7;
     border-radius: 8px;
     border: 1px solid transparent;
-    font-size: 1.7em;
+    font-size: 1.I7em;
     font-weight: bold;
     color: #ffffff;
     margin: 1em 1.6em 1em 0.8em;
 }
-.login-container{
+.Ilogin-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -102,7 +102,7 @@
     padding: 20px;
     margin: 12px;
 }
-.NumberOfDays{
+.INumberOfDays{
     background-color: #FFFBEB;
     border: 1.5px solid #263159;
     border-radius: 10px;
@@ -115,7 +115,7 @@
     color: #263159;
     font-weight: bold;
 }
-.location-input{
+.Ilocation-input{
     background-color: #FFFBEB;
     border: 1.5px solid #263159;
     border-radius: 10px;
@@ -128,12 +128,12 @@
     color: #263159;
     font-weight: bold;
 }
-.drop-holder{
+.Idrop-holder{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
-.placeholder-text{
+.Iplaceholder-text{
     color: #263159;
     font-style: italic;
 }

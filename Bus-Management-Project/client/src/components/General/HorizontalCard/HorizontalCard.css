@@ -2,6 +2,7 @@
 .horizontal-card {
   padding: 96px 190px;
   margin: 0;
+  text-align: center;
 }
 
 .horizontal-card-content {
@@ -13,23 +14,22 @@
 }
 
 .horizontal-card-info{
-      color: #ffffff;
-      width: 430px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      padding: 0;
-      margin: 0;
-      text-align: left;
+  color: #ffffff;
+  width: 430px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0;
+  margin: 30px;
+  text-align: left;
 }
 
-.hc-image {
-  width: 500px;
-}
+
 
 p.description {
   line-height: 23px;
   font-size: 17px;
+  width: 400px;
   padding: 0;
   margin: 0;
 }
@@ -38,7 +38,21 @@ p.description {
 @media (max-width: 1221px) {
   .horizontal-card-content {
       margin: 0 auto;
-      display: table;
+      display: inline-block;
   }
+
+  .hc-image {
+    width: auto;
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .horizontal-card {
+    width: auto;
+    /* padding: 60px; */
+  }
+
+
 
 }

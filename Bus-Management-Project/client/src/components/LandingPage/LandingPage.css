@@ -10,6 +10,7 @@
     font-family: "Istok Web", sans-serif;
 }
 
+
 /* header section */
 .header {
     background-color: #ffffff;
@@ -34,7 +35,8 @@
 }
 
 .unordered-list, .list {
-    height: 50px;;
+    height: 50px;
+    cursor: pointer;
 }
 
 .list {
@@ -45,7 +47,6 @@
 .logo-placeholder {
     font-size: 30px;
     margin: 0;
-    
 }
 
 
@@ -60,17 +61,28 @@
 .dropdown-menu {
     margin: 0;
     border: none;
+    border-radius: none;
     display: none;
     position: absolute;
-    right: 2rem;
-    top: 60px;
-    width: 300px;
+    top: 42px;
     height: 0;
     background-color: #ffffff;
-
-    border-radius: 10px;
+    width: 100%;
+    padding-bottom: 10px;
     overflow: hidden;
-    transition: height  0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: dropdownAnimation 0.3s ease forwards; /* Add animation */
+
+}
+
+@keyframes dropdownAnimation {
+    0% { 
+        transform: translateY(-10px); /* Initial position above */
+        opacity: 0;
+    }
+    100% { 
+        transform: translateY(0); /* Bounce effect */
+        opacity: 1;
+    }
 }
 
 .dropdown-menu .list {
@@ -79,32 +91,42 @@
     justify-content: center;
 }
 
-.dropdown-menu .dropdown-login-btn {
+
+.header-contents .dropdown-login-btn {
     width: 50%;
     padding: 0;
     height: 35px;
-    border-radius: 30px;
+    border-radius: 50px;
     transition: transform .2s ease; 
 }
+
+
 
 .dropdown-menu.open {
     height: 250px;
 }
 
-.dropdown-login-btn {
+.dropdown-menu.open .main-container {
+    backdrop-filter: blur(50%);
+}
+
+.header-dropdown-login-btn {
     background: #263159;
     border: none;
+    border-radius: 300px;
     color: #ffffff;
     font-size: 16px;
     text-decoration: none;
 }
 
-.dropdown-login-btn:hover {
+.header-dropdown-login-btn:hover {
     background: #020d19;
     opacity: 0.5;
     transform: scale(1.05);
     color: #ffffff;
 }
+
+
 
 
   /* features card */
@@ -117,7 +139,8 @@
     flex-direction: column;
     align-items: center;
     width: auto;
-    padding-bottom: 20px;
+    padding-bottom: 44px;
+    gap: 20px;
 }
 
 .features-title {
@@ -180,15 +203,18 @@
 
 
 .customer-card-scroller {
-    max-width: 1300px;
-    outline: 3px solid lime;
-    padding-top: 2.5rem;
+    width: 1300px;
+    /* padding-top: 2.5rem; */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: hidden;
+    height: 1000px;
+    display: flex;
     
 }
 
 .customer-card-inner-scroller {
     display: flex;
-    flex-wrap: wrap
+    flex-wrap: nowrap;
 }
 
 
@@ -207,8 +233,7 @@
     .customer-card-scroller[data-animated=true] .customer-card-inner-scroller {
         flex-wrap: nowrap;
         animation: scroll 35s linear infinite;
-        width: fit-content;
-        
+        width: fit-content;   
     }
     
     
@@ -221,8 +246,16 @@
 
     /* CTA Section */
 
+    .cta-container {
+        background-color: #495579;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 44px;
+    }
+
     .cta {
-        min-width: 1152px;
+        width: 1152px;
         background: rgb(37,23,73);
         background: linear-gradient(121deg, 
         rgba(37,23,73,1) 0%, 
@@ -238,7 +271,7 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        color: #fff;    
+        color: #fff;   
     }
     
     .cta, .cta-contents  {
@@ -279,12 +312,6 @@
         font-weight: 530;
     }
     
-    .cta-container {
-        background-color: #495579;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
 
 
 
@@ -298,12 +325,13 @@
         flex-direction: column;
         align-items: center;
         gap: 12px;
-        padding: 130px;
+        padding-block: 200px;
     }
 
 
     .accordion-headline {
         padding-block: 30px;
+        text-align: center;
     }
 
 
@@ -315,6 +343,8 @@
     background: #000;
     position: relative;
     bottom: 0;
+    text-align: center;
+    top: 50px;
 }
 
 .social-media-logo {
@@ -330,7 +360,7 @@
     color: #fff;
 }
 
-.info-box {
+.footer-info-box {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -344,12 +374,9 @@
 }
 
 
-@media (max-width: 622px) {
-    
-}
-
 /* responsive design */
 @media (max-width: 1221px) {    
+
     .unordered-list, .header-login-btn {
         display: none;
     }
@@ -360,48 +387,83 @@
         margin-right: 50px;
     }
     
-    .dropdown-menu {
-        display: block;
-    }
+    
     
     .feature-card-display {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        padding: 10px;
+        padding: 18px;
     }
     
     .cta {
-        min-width: 700px;
+        min-width: none;
     }
     
     .accordion-container {
-        min-width: 700px;
-        flex-grow: 1;
-        overflow-y: auto;
-        padding-bottom: 100px;
-    }
-
-    .info-box  {
-        display: inline-block;
+        /* flex-grow: 1;
+        overflow-y: auto; */
+        padding-bottom: 200px;
+        width: auto;
     }
     
     p {
         padding: 15px 0;
     }
 
-    
+    .dropdown-menu {
+        display: block;
+    }
 
 }
+
+@media (max-width: 838px) {
+
+    .iphone-image {
+        display: none;
+    }
+}
+
+
 
 @media (max-width: 576px) {
-    .dropdown-menu {
+    /* .dropdown-menu {
         left: 2rem;
         width: unset;
-        top: 0;
-    }
+    } */
 
     .customer-card-scroller[data-animated=true] .customer-card-inner-scroller {
-        overflow: auto;
-        
+        /* overflow: auto; */
+        width: auto;
+    }
+
+    .customer-card-scroller[data-animated=true] {
+        width: auto;
+    }
+
+    .customer-card-inner-scroller {
+        min-width: 300px;
+    }
+
+
+    .footer-info-box  {
+        display: inline-block;
+        /* padding-inline: 200px; */
+        text-align:center; 
+    }
+
+    .feature-card-display {
+        gap: 12px;
+        padding: 30px;
+        grid-template-columns: repeat(1, 266px);
+        grid-gap: 20px;
+    }
+
+    .cta {
+        padding-inline: 10px;
+    }
+
+    .footer-container {
+        top: 100px;
     }
 }
+

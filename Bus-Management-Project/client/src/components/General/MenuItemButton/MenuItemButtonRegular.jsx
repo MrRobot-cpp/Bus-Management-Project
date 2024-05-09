@@ -1,12 +1,13 @@
 import './MenuItemButton.css'
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+// import { HashLink } from 'react-router-hash-link'; 
 
 const MenuItemButtonRegular = (props) => {
 return (
   <button className="menu-item-regular">
-      <Link className="link-animation" to={props.hRef}>{props.text}</Link>
-    </button> 
+      <a className="link-animation" href={props.hRef}>{props.text}</a> 
+    </button>  
 );
 }
 

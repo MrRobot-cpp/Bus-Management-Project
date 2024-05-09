@@ -1,3 +1,5 @@
+// PayMangment .js
+
 import  { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import './PaymentsManagement.css';
@@ -6,7 +8,7 @@ function PaymentsManagement() {
   const [payment, setpayment] = useState([
     { studentName: 'rahma wael', ID: uuidv4(),Installments: '13,000',InstallmentsNum: '2', DueDate: '15/5/2024', TotalLeft: '37,000'},
     { studentName: 'shady yasser', ID: uuidv4(),Installments: '20,000',InstallmentsNum: '1', DueDate: '15/5/2024', TotalLeft: '30,000'},
-    { studentName: 'haneen wael', ID: uuidv4(),Installments: '10,000',InstallmentsNum: '1', DueDate: '15/5/2024', TotalLeft: '40,000'},
+    { studentName: 'hanin wael', ID: uuidv4(),Installments: '10,000',InstallmentsNum: '1', DueDate: '15/5/2024', TotalLeft: '40,000'},
    
   ]);
 
