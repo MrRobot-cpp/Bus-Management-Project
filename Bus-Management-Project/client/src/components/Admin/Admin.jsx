@@ -19,7 +19,7 @@ const[header,setHeader] = useState('Dashboard')
     // {text: "Drivers" },
     // {text: "Students" },
     {text: "Trips" },
-    // {text: "Payments" },
+    {text: "Payments" },
     {text: "Profile" },
 
   ];
