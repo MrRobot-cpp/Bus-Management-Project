@@ -2,13 +2,7 @@
 import React from 'react';
 import { Routes, Route } from "react-router-dom";
 import Login from './components/Login-SignUp/Login.jsx';
-//import Student from './components/Student/Student';
-// import Admin from './components/Admin/Admin'
-// import Signup from './components/Login-SignUp/signUp';
-//import AccountConfig from './components/Login-SignUp/AccountConfig';
-// import Student from './components/Student/Student';
-//import Driver from './components/Driver/Driver'
-//import AccountConfig from './components/Login-SignUp/AccountConfig';
+import Admin from './components/Admin/Admin'
 import Signup from './components/Login-SignUp/signUp';
 import Student from './components/Student/Student';
 import Driver from './components/Driver/Driver'
@@ -35,10 +29,10 @@ function App() {
               path={"/sign-up"}
               element={<Signup/>}
               />  
-             {/*  <Route
-              path={"/admin-view"}
+             <Route
+              path={"/Login/admin-view"}
               element={<Admin/>}
-              /> */}
+              /> 
 
                <Route
               path={"/Login/student-view"}

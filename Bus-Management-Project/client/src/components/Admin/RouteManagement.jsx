@@ -2,7 +2,7 @@
 
 import  { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import './RouteManagement.css';
+import styles from './RouteManagement.module.css';
 
 function RouteManagement() {
   const [routes, setRoutes] = useState([
@@ -77,15 +77,15 @@ function RouteManagement() {
   };
 
   return (
-    <div className='RouteManagement-container'>
-      <div className='routes-management-right-container'>
-        <div className='routes-container'>
-          <div className='routes-header-container'>
-            <div className='details-num-div'>
-              <h4 className='routes-header'>Details</h4>
-              <h4 className='numberOfRoutes'>{routes.length}</h4>
+    <div className={styles['RouteManagement-container']}>
+      <div className={styles['routes-management-right-container']}>
+        <div className={styles['routes-container']}>
+          <div className={styles['routes-header-container']}>
+            <div className={styles['details-num-div']}>
+              <h4 className={styles['routes-header']}>Details</h4>
+              <h4 className={styles['numberOfRoutes']}>{routes.length}</h4>
             </div>
-            <div className='add-routes-btn'>
+            <div className={styles['add-routes-btn']}>
               <button onClick={addRoute}>Add Route</button>
             </div>
           </div>
@@ -114,16 +114,16 @@ function RouteManagement() {
                   <td>{route.startTime}</td>
                   <td>{route.endTime}</td>
                   <td>
-                    <button className='editRoute-btn' onClick={(event) => handleEditRoute(route.id, event)}>Edit</button>
-                    <button className='editRoute-btn' onClick={() => handleDeleteRoute(route.id)}>Delete</button>
+                    <button className={styles['editRoute-btn']} onClick={(event) => handleEditRoute(route.id, event)}>Edit</button>
+                    <button className={styles['editRoute-btn']} onClick={() => handleDeleteRoute(route.id)}>Delete</button>
                   </td>
                 </tr>
               ))}
             </tbody>
           </table>
           {isModalOpen && (
-            <div className={`modal`} style={{ top: setModalPosition.y + 'px', left: modalPosition.x + 'px' }}>
-              <div className="modal-content">
+            <div className={styles[`modal`]} style={{ top: setModalPosition.y + 'px', left: modalPosition.x + 'px' }}>
+              <div className={styles["modal-content"]}>
                 <p>Edit route:</p>
                 <input type="text" value={editRoute.startFrom} onChange={(e) => setEditRoute({ ...editRoute, startFrom: e.target.value })} placeholder="Start from" />
                 <input type="text" value={editRoute.endAt} onChange={(e) => setEditRoute({ ...editRoute, endAt: e.target.value })} placeholder="End at" />
