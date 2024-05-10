@@ -21,8 +21,11 @@ Trips: Allows users to view trip details, including routes, start/end times, and
 **Notifications**: Displays alerts and reminders for upcoming trips, schedule changes, and messages from administrators or students.
 ### Technologies Used
 **Frontend**: HTML, CSS, JavaScript, React.js
+
 **Backend**: Node.js, Express.js
+
 **Database**: MongoDB
+
 **External Libraries**: Font Awesome (for icons)
 ### Getting Started
 To run the project locally, follow these steps:
