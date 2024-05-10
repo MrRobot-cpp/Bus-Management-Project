@@ -38,11 +38,11 @@ Description of Video 1.
 Description of Video 2.
 
 ### Authors
-[Shady Yasser: mrrobot-cpp](https://github.com/MrRobot-cpp) - Project Lead & Developer
-[Ahmed Samer: Samortchy](https://github.com/Samortchy) - 
-[Ahmed Mohamed: Ahmed Elghazouly](https://github.com/Ahmed-Elghazouly) - 
-[Angie Medhat: elsegeinyangie](https://github.com/elsegeinyangie) - 
-[Rahma Wael: RAHMAWAEL0](https://github.com/RAHMAWAEL0) - 
+- [Shady Yasser: mrrobot-cpp](https://github.com/MrRobot-cpp) - Project Lead & Developer
+- [Ahmed Samer: Samortchy](https://github.com/Samortchy) - 
+- [Ahmed Mohamed: Ahmed Elghazouly](https://github.com/Ahmed-Elghazouly) - 
+- [Angie Medhat: elsegeinyangie](https://github.com/elsegeinyangie) - 
+- [Rahma Wael: RAHMAWAEL0](https://github.com/RAHMAWAEL0) - 
 
 ### Acknowledgments
 Mention any acknowledgments or credits for external libraries, tutorials, or resources used in the project.
