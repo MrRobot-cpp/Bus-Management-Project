@@ -37,13 +37,8 @@ Description of Video 1.
 
 Description of Video 2.
 
-### Contributing
-Contributions are welcome! Please fork the repository and submit a pull request with your changes.
-
 ### Authors
-Your Name - Project Lead & Developer
-### License
-This project is licensed under the MIT License - see the LICENSE.md file for details.
+[Shady Yasser - mrrobot-cpp](https://github.com/MrRobot-cpp) - Project Lead & Developer
 
 ### Acknowledgments
 Mention any acknowledgments or credits for external libraries, tutorials, or resources used in the project.
