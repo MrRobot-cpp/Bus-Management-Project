@@ -38,7 +38,7 @@ Description of Video 1.
 Description of Video 2.
 
 ### Authors
-[Shady Yasser - mrrobot-cpp](https://github.com/MrRobot-cpp) - Project Lead & Developer
+[Shady Yasser: mrrobot-cpp](https://github.com/MrRobot-cpp) - Project Lead & Developer
 
 ### Acknowledgments
 Mention any acknowledgments or credits for external libraries, tutorials, or resources used in the project.
