@@ -13,12 +13,12 @@ The Bus Management System is a web-based application designed to streamline the 
 ### Functionality
 The system includes the following main functionalities:
 
-**Dashboard**: Provides an overview of assigned trips, upcoming schedules, and notifications for administrators, drivers, and students.
-Trips: Allows users to view trip details, including routes, start/end times, and estimated arrival at each stop.
-**Communication**: Enables real-time chat functionality between drivers and students during trips.
-**Navigation**: Provides navigation assistance to drivers, including maps, directions, and GPS guidance.
-**Status Updates**: Allows drivers to update trip statuses in real-time, indicating departure, arrival, and completion milestones.
-**Notifications**: Displays alerts and reminders for upcoming trips, schedule changes, and messages from administrators or students.
+- **Dashboard**: Provides an overview of assigned trips, upcoming schedules, and notifications for administrators, drivers, and students.
+- **Trips**: Allows users to view trip details, including routes, start/end times, and estimated arrival at each stop.
+- **Communication**: Enables real-time chat functionality between drivers and students during trips.
+- **Navigation**: Provides navigation assistance to drivers, including maps, directions, and GPS guidance.
+- **Status Updates**: Allows drivers to update trip statuses in real-time, indicating departure, arrival, and completion milestones.
+- **Notifications**: Displays alerts and reminders for upcoming trips, schedule changes, and messages from administrators or students.
 ### Technologies Used
 **Frontend**: HTML, CSS, JavaScript, React.js
 
