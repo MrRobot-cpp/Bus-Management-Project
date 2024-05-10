@@ -165,13 +165,25 @@ transform: translateY(-20px);
     text-align: left;
 }
 
-.modal-content > input{
-    width: 60%;
+.modal-content >div> input{
+    width: 50%;
     height: 20%;
     border-radius: 10px;
-    margin-bottom: 20px;
-    border: none;
+    border: 10px solid #FFFBEB;
     background: #FFFBEB;
+}
+
+.modal-content > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 80%;
+    height: 12%;
+}
+
+.modal-content > div > h6{
+    word-wrap: break-all;
 }
 
 .modal-content > button{
@@ -181,6 +193,11 @@ transform: translateY(-20px);
     height: 10%;
     border-radius: 10px;
     text-align: center;
+    margin-top: 40px;
+}
+
+.modal-content > p{
+    margin-bottom: 20px;
 }
 
 .modal-content > h6{

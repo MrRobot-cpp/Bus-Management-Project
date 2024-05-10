@@ -105,17 +105,6 @@ const driver = {
   type: "driver",
 };
 
-// const router = BrowserRouter([
-//   {
-//     path: '/dashboard',
-//     element: <Home/>
-//   },
-//   {
-//     path: '/trips',
-//     element: <TripComponent/>
-//   }
-// ])
-
 function TripComponent() {
   return (
     <>
@@ -168,7 +157,7 @@ function Driver() {
         <div className={styles["right-container"]}>
           {header==="Dashboard" && <Home driver={driver} trips={trips} /> }
           {header==="trips" && <TripComponent /> }
-          {header==="Profile" && <Profile user={driver}/>}
+          {header==="Profile" && <Profile user={driver} component={<p>ahmed is here</p>}/>}
 
         </div>
       </div>
