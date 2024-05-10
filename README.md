@@ -5,11 +5,9 @@ The Bus Management System is a web-based application designed to streamline the 
 
 ### Features
 
-**Admin Dashboard**: Allows administrators to manage routes, drivers, and students. They can add, edit, or remove routes, assign drivers to trips, and monitor bus schedules.
-
-**Driver Interface**: Provides drivers with access to their assigned trips, navigation assistance, real-time status updates, and communication with students.
-
-**Student Portal**: Enables students to track buses in real-time, receive notifications about trip arrivals, and communicate with drivers during trips.
+- **Admin Dashboard**: Allows administrators to manage routes, drivers, and students. They can add, edit, or remove routes, assign drivers to trips, and monitor bus schedules.
+- **Driver Interface**: Provides drivers with access to their assigned trips, navigation assistance, real-time status updates, and communication with students.
+- **Student Portal**: Enables students to track buses in real-time, receive notifications about trip arrivals, and communicate with drivers during trips.
 ### Functionality
 The system includes the following main functionalities:
 
@@ -20,13 +18,10 @@ The system includes the following main functionalities:
 - **Status Updates**: Allows drivers to update trip statuses in real-time, indicating departure, arrival, and completion milestones.
 - **Notifications**: Displays alerts and reminders for upcoming trips, schedule changes, and messages from administrators or students.
 ### Technologies Used
-**Frontend**: HTML, CSS, JavaScript, React.js
-
-**Backend**: Node.js, Express.js
-
-**Database**: MongoDB
-
-**External Libraries**: Font Awesome (for icons)
+- **Frontend**: HTML, CSS, JavaScript, React.js
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB
+- **External Libraries**: Font Awesome (for icons)
 ### Getting Started
 To run the project locally, follow these steps:
 
