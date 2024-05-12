@@ -39,7 +39,7 @@ Description of Video 2.
 
 ### Authors
 - [Shady Yasser: mrrobot-cpp](https://github.com/MrRobot-cpp) - Project Lead & Developer
-- [Ahmed Samer: Samortchy](https://github.com/Samortchy) - 
+- [Ahmed Samer: Samortchy](https://github.com/Samortchy) - Full Stack Developer (Frontend & Backend)
 - [Ahmed Mohamed: Ahmed Elghazouly](https://github.com/Ahmed-Elghazouly) - 
 - [Angie Medhat: elsegeinyangie](https://github.com/elsegeinyangie) - 
 - [Rahma Wael: RAHMAWAEL0](https://github.com/RAHMAWAEL0) - 
