@@ -32,17 +32,17 @@ To run the project locally, follow these steps:
 5. Open your web browser and go to http://localhost:3000 to access the application.
 ### Videos
 
-Description of Video 1.
+Description of Video 1. (Frontend Video)
 
 
-Description of Video 2.
+Description of Video 2. (The Full Project)
 
 ### Authors
 - [Shady Yasser: mrrobot-cpp](https://github.com/MrRobot-cpp) - Project Lead & Developer
 - [Ahmed Samer: Samortchy](https://github.com/Samortchy) - Full Stack Developer (Frontend & Backend)
-- [Ahmed Mohamed: Ahmed Elghazouly](https://github.com/Ahmed-Elghazouly) - 
-- [Angie Medhat: elsegeinyangie](https://github.com/elsegeinyangie) - 
-- [Rahma Wael: RAHMAWAEL0](https://github.com/RAHMAWAEL0) - 
+- [Ahmed Mohamed: Ahmed Elghazouly](https://github.com/Ahmed-Elghazouly) - Full Stack Developer (Frontend & Backend)
+- [Angie Medhat: elsegeinyangie](https://github.com/elsegeinyangie) - Full Stack Developer (Frontend & Backend)
+- [Rahma Wael: RAHMAWAEL0](https://github.com/RAHMAWAEL0) - Frontend Developer
 
 ### Acknowledgments
 Mention any acknowledgments or credits for external libraries, tutorials, or resources used in the project. (when the project if finalized)
