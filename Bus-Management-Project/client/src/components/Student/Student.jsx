@@ -4,7 +4,7 @@ import Profile from "../General/Profile/Profile";
 import PageHeader from "./PageHeader/PageHeader";
 import StudentTrip from "./StudentTrip/StudentTrip";
 import CashDeposit from "./CashDeposit/CashDeposit";
-import styles from "./Student.module.css"
+import styles from "./Student.module.css";
 
 const exampleObj = {
     Name: "shady",
@@ -36,8 +36,8 @@ function Student(){
         <VerticalNavbar menuItems={menuItems} onQuery={setHeader}/>
         </div>
         <div className={styles["bottom-right-container"]}>
-          {header==="Deposit" &&<CashDeposit/> }
-          {header==="Trips" && <StudentTrip/> }
+        {header==="Deposit" &&<CashDeposit/> }
+        {header==="Trips" && <StudentTrip/> }
           {header==="Profile" && <Profile user={exampleObj}/>}        {/* <StudentTrip/> */}
         </div>
         </div>
