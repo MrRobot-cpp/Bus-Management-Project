@@ -104,7 +104,7 @@ function StudentTrip() {
         setIsModalOpen(false);
     };
 
-    
+
     return (
         <div className={styles['RouteManagement-container']}>
             <div className={styles['routes-management-right-container']}>
@@ -136,7 +136,6 @@ function StudentTrip() {
                                     <td>{route.tripType}</td>
                                     <td>{route.goingTime}</td>
                                     <td>{route.leavingTime}</td>
-
                                 </tr>
                             ))}
                         </tbody>
