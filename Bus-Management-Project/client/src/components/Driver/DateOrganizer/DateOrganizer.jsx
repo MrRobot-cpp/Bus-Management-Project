@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import styles from "./DataOrganizer.module.css";
-import Overlay from "./Overlay";
+import Overlay from "../overlay/Overlay";
 // eslint-disable-next-line no-unused-vars
 import React, {useState} from "react";
 

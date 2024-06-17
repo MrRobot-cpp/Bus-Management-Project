@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React, {useState} from "react";
 import "./Trip.css"
-import ProgressBar from "./ProgressBar";
+import ProgressBar from "../progressbar/ProgressBar";
 
 function Trip(props){
 // eslint-disable-next-line react/prop-types
