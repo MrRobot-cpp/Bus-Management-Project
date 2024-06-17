@@ -1,0 +1,31 @@
+.welcome-container {
+    width:1098px;
+    height: 170px;
+    background: linear-gradient(121deg, 
+    rgb(23, 25, 73) 5%, 
+    rgba(73,85,121,1) 50%, 
+    rgb(232, 228, 214) 98%);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: rgb(232, 228, 214) solid 1px;
+    margin-top: 40px;
+}
+
+.student-logo {
+    margin-right: 100px;
+}
+
+.welcome-text {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+}
+
+
+/* schedule */
+
+/* driver info */

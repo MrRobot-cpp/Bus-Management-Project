@@ -4,6 +4,7 @@ import Profile from "../General/Profile/Profile";
 import PageHeader from "./PageHeader/PageHeader";
 import StudentTrip from "./StudentTrip/StudentTrip";
 import styles from "./Student.module.css";
+import StudentDashboard from './studentDashboard/StudentDashboard.jsx'
 
 const exampleObj = {
     Name: "shady",
@@ -38,6 +39,7 @@ function Student(){
                     </div>
                     <div className={styles["bottom-right-container"]}>
                         {/* {header==="Deposit" &&<CashDeposit/> } */}
+                        {header==="Dashboard" && <StudentDashboard/> }
                         {header==="Trips" && <StudentTrip/> }
                         {header==="Profile" && <Profile user={exampleObj}/>}        {/* <StudentTrip/> */}
                     </div>
