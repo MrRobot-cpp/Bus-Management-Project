@@ -1,15 +1,16 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import PageHeader from '../Student/PageHeader/PageHeader'
-import AdminDashboard from './AdminDashboard';
-import StudentsManagment from './StudentsManagement';
-import DriversManagment from './DriversManagement';
-import AdminProfile from './AdminProfile'
-import PaymentsManagement from './PaymentsManagement';
-import RouteManagement from './RouteManagement';
-import TripsManagement from './TripsManagement'
+import AdminDashboard from './adminDashboard/AdminDashboard';
+import StudentsManagment from './studentManagement/StudentsManagement';
+import DriversManagment from './driversManagement/DriversManagement';
+import AdminProfile from './adminprofile/AdminProfile'
+import PaymentsManagement from './paymentsManagement/PaymentsManagement';
+import RouteManagement from './RouteManagement/RouteManagement';
+import TripsManagement from './tripsManagement/TripsManagement'
 import VerticalNavbar from '../General/VerticalNavbar'
 import styles from './Admin.module.css'
+
 function Admin() {
 
 const[header,setHeader] = useState('Dashboard')

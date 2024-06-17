@@ -16,6 +16,8 @@ const exampleObj = {
     Birthdate: "5/4/2002",
     Gender: "male",
 }
+
+
 function Student(){
     const [header, setHeader] = useState("Dashboard");
 

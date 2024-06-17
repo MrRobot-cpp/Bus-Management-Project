@@ -42,7 +42,7 @@ Description of Video 2. (The Full Project)
 - [Ahmed Samer: Samortchy](https://github.com/Samortchy) - Full Stack Developer (Frontend & Backend)
 - [Ahmed Mohamed: Ahmed Elghazouly](https://github.com/Ahmed-Elghazouly) - Full Stack Developer (Frontend & Backend)
 - [Angie Medhat: elsegeinyangie](https://github.com/elsegeinyangie) - Full Stack Developer (Frontend & Backend)
-- [Rahma Wael: RAHMAWAEL0](https://github.com/RAHMAWAEL0) - Frontend Developer
+- [Rahma Wael: RAHMAWAEL0](https://github.com/RAHMAWAEL0) - Full Stack Developer (Frontend & Backend)
 
 ### Acknowledgments
 Mention any acknowledgments or credits for external libraries, tutorials, or resources used in the project. (when the project if finalized)
