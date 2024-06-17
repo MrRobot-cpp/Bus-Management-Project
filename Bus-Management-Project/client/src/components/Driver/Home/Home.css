@@ -96,3 +96,33 @@
       transition: 0.2s ease-in-out;
     }
   }
+  
+/* daily summer */
+
+
+.daily-summary {
+  display: flex;
+  flex-direction: column;
+  background-color:#FFFBEB;
+  border-radius: 20px;
+  font-size: 15px;
+}
+
+.daily-summary p {
+  margin: 10px ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 10px;
+}
+
+.daily-summary input {
+  border: 1px solid #FFFBEB;
+  background-color:#FFFBEB;
+  border-radius: 4px;
+  padding: 15px;
+  width: 60px;
+  text-align: center;
+  color: #333;
+  font-size: 1em;
+}
