@@ -98,12 +98,12 @@
   color:#263159;
 }
 
-.test hr {
-  margin-left: 10px;
-  background-color:#495579; 
-  margin-top: 10px;
-  left: 10%;
-  }
+.thick-line {
+  height: 50px; /* Adjust the height to make it thicker */
+  background-color: black; /* Change the color as needed */
+  border: none; /* Remove default border */
+
+}
 
 .driverHeader p {
   color: #888;

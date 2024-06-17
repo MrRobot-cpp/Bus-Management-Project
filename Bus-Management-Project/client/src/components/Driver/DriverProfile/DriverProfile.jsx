@@ -20,9 +20,9 @@ function DriverProfile(props){
           className={styles.driverImage} 
         /> }
 
-        <div className='test'>
+        <div>
          <h1>Driver Information </h1>
-         <hr className='line-break'/>
+         <hr class="thick-line"/>
           <h3>Rahma Soliman</h3>
           <p>#a48c7856</p>
         </div>
