@@ -9,6 +9,7 @@
     border-radius: 20px;
     overflow: hidden;
     color: #263159;
+    
 }
 
 .profile{
@@ -44,31 +45,84 @@
 
 }
 
-.star-rating {
-    font-size: 40px;
-    padding-bottom: 15px;
-  }
-  
-  .star {
-    cursor: pointer;
-    color: #ccc;
-  }
-  
-  .filled {
-    color: #ffcc00;
-  }
+
   
 
-.driver-info{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1vh;
-    align-items: center;
-    text-align: center;
-    width: 70%;
-}
 
+/* info of driver */
 .age-info p,.trip-info p{
   font-size: 20px;
   margin-bottom: 1vh;
+}
+.driverInformation {
+  background-color:#FFFBEB;
+  padding: 20px;
+  border-radius: 20px;
+  height: 150px;
+  width: 1000px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  justify-content: space-between;
+  margin-top: -200px;
+
+}
+
+.driverHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  color:#263159;
+}
+
+.driverImage {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.driverHeader h3 {
+  margin: 0;
+  font-size: 17px;
+  margin-right: 300px;
+  padding: 10px;
+
+}
+
+.driverHeader h1{
+  margin-right:250px;
+  font-size: 26px;
+  color:#263159;
+}
+line{
+  color:  #495579;
+}
+
+.driverHeader p {
+  color: #888;
+  margin-right: 300px;
+  margin-top: -10px;
+  margin-left: -45px;
+  font-size: 13px;
+}
+
+.driverRating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 10px;
+}
+
+.stars {
+  color: #FFD700;
+  font-size: 25px;
+  margin-top: -10px;
+}
+
+.ratingValue {
+  margin-top: 5px;
+  font-size: 1.3em;
+  color:#495579;
 }

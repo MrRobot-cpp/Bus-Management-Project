@@ -12,40 +12,33 @@ function DriverProfile(props){
   };
 
     return(<>
-      <div className={styles['driver-profile']}>
-
-        <div className={styles.profile}>
-        <div className={styles['profile-pic']}/>
-        <h1>{name}</h1>
-        <h3 className={styles['type-text']}>{type}</h3>
+      <div className={styles.driverInformation}>
+      <div className={styles.driverHeader}>
+        {/* <img 
+          src="driver-image-url" 
+          alt="Driver" 
+          className={styles.driverImage} 
+        /> */}
+        <div>
+         <h1>Driver Information </h1>
+         <hr className="line"></hr>
+          <h3>Ahmed Samer</h3>
+          <p>#a48c7856</p>
         </div>
-
-        <div className={styles['driver-info']}>
-           <div className={styles['age-info']}>
-            <p>Age</p>
-            <p>{age}</p>
-          </div>
-          <div className={styles['trip-info']}>
-            <p>Trips</p>
-            <p>{noOfTrips}</p>
-          </div>
+      </div>
+      <div className={styles.driverRating}>
+        <div className={styles.stars}>
+          {[...Array(5)].map((star, index) => (
+            <i key={index} className="fas fa-star"></i>
+          ))}
         </div>
+        <p className={styles.ratingValue}>4.83</p>
+      </div>
+    </div>
 
-        <div className={styles['star-rating']}>
-      {[...Array(5)].map((_, index) => {
-        const starValue = index + 1;
-        return(
-          <span
-            key={index}
-            className={starValue <= rating ? styles.filled : styles.star}
-            onClick={() => handleClick(starValue)}>
-            &#9733;
-          </span>
-        );
-      })}
-        </div>
+    
 
-      </div>    
+    
     </>)
 }
 export default DriverProfile;
