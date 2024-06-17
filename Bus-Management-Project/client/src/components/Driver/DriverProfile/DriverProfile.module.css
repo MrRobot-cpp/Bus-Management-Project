@@ -58,14 +58,16 @@
   background-color:#FFFBEB;
   padding: 20px;
   border-radius: 20px;
-  height: 150px;
-  width: 1000px;
+  height: 120px;
+  width: 700px;
   text-align: center;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   justify-content: space-between;
   margin-top: -200px;
 
+
 }
+
 
 .driverHeader {
   display: flex;
@@ -95,9 +97,13 @@
   font-size: 26px;
   color:#263159;
 }
-line{
-  color:  #495579;
-}
+
+.test hr {
+  margin-left: 10px;
+  background-color:#495579; 
+  margin-top: 10px;
+  left: 10%;
+  }
 
 .driverHeader p {
   color: #888;
