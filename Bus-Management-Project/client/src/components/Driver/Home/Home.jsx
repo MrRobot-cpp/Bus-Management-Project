@@ -41,10 +41,10 @@ function Home(props) {
           
           <div className="general-tips">
       <h2>General Tips</h2>
-      <p>Waiting Time after arrival: <input type="text" value="3 Mins" readOnly /></p>
+      <p>Waiting Time after arrival:   <input type="text"  value="3 Mins" readOnly /></p>
       <p>Number of stops: <input type="text" value="14" readOnly /></p>
       <p>Earning Per Trip: <input type="text" value="400 EGP" readOnly /></p>
-      <p>Driving Time For today: <input type="text" value="6 Hours" readOnly /></p>
+      
     </div>
       
           </div>
