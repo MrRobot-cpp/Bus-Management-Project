@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import VerticalNavbar from "../General/VerticalNavbar.jsx"; //done
 import Home from "./Home/Home.jsx";
 import PageHeader from "../Student/PageHeader/PageHeader.jsx"; //done
-import TripsTable from "./TripsTable.jsx"; //done
+import TripsTable from "./tripstable/TripsTable.jsx"; //done
 import BubbleChat from "../General/BubbleChat.jsx";
 import Profile from "../General/Profile/Profile.jsx" 
 import styles from "./Driver.module.css"; //done

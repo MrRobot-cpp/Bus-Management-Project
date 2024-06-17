@@ -2,7 +2,8 @@
 import "./Home.css";
 import Trip from "../trips/Trip";
 import DriverProfile from "../DriverProfile/DriverProfile";
-import DateOrganizer from "./DateOrganizer";
+// import DateOrganizer from "./DateOrganizer/DateOrganizer.jsx";
+import DateOrganizer from "../DateOrganizer/DateOrganizer";
 
 
 function Home(props) {
