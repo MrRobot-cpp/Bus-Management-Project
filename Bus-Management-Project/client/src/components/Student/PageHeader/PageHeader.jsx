@@ -1,7 +1,7 @@
 import "./PageHeader.css";
 import PropTypes from "prop-types";
 
-function StudentHeader(props) {
+function PageHeader(props) {
     
     return(
         <>
@@ -14,8 +14,8 @@ function StudentHeader(props) {
         </>
     );
 }
-StudentHeader.propTypes={
+PageHeader.propTypes={
     text: PropTypes.string
 }
 
-export default StudentHeader;
+export default PageHeader;

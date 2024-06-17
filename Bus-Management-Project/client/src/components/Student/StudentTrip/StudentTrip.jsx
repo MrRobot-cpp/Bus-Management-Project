@@ -104,6 +104,7 @@ function StudentTrip() {
         setIsModalOpen(false);
     };
 
+    
     return (
         <div className={styles['RouteManagement-container']}>
             <div className={styles['routes-management-right-container']}>
