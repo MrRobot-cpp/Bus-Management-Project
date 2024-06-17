@@ -63,6 +63,9 @@
 
 .chat-btn i{
     transform: rotateY(180deg);
+    background-color: #495579;
+    color: #FFFBEB;
+    border-radius: 40px;
 }
 
 

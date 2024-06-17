@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
+// eslint-disable-next-line no-unused-vars
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import VerticalNavbar from "../General/VerticalNavbar.jsx"; //done
 import Home from "./Home.jsx";
@@ -138,8 +139,8 @@ function Driver() {
 
   const menuItems = [
     { text: "trips" },
-    { text: "History" },
-    { text: "Profile" },
+    { text: "Navigation"},
+    { text: "Profile"},
   ];
   return (
     <div className={styles["main-container"]}>
