@@ -4,6 +4,7 @@ import styles from "./BubbleChat.module.css";
 function BubbleChat(props) {
   const [toggle, setToggle] = useState(false);
   const [inputValue, setInputValue] = useState("");
+  // eslint-disable-next-line no-unused-vars
   const [type, setType] = useState("student");
   const [messages, setMessages] = useState([
     { text: "hi", type: "student" },
@@ -18,6 +19,7 @@ function BubbleChat(props) {
 
   ]);
 
+  // eslint-disable-next-line react/prop-types
   const {onQuery} = props
 
   const handleOnQuery = () => {
@@ -25,6 +27,7 @@ function BubbleChat(props) {
         onQuery(toggle);
     };
 };
+  // eslint-disable-next-line no-unused-vars
   const handleTypeBtn = (type) => {return type}
 
   const handleChange = (event) => {
@@ -107,11 +110,9 @@ function BubbleChat(props) {
                 type="text"
                 value={inputValue}
                 placeholder="  Message"
-                onChange={handleChange}
-              />
+                onChange={handleChange}/>
               <button onClick={handleSendButton}>
-                <i className="fa-solid fa-paper-plane"></i>
-              </button>
+              <i className="far fa-comments"></i></button>
             </div>
           </div>
         </div>

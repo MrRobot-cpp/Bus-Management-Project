@@ -6,7 +6,7 @@ function StudentProfile(props) {
   const [isChecked, setIsChecked] = useState(false);
   const [editableIndex, setEditableIndex] = useState(-1);
   const [editedValues, setEditedValues] = useState({});
-  const { user } = props;
+  const { user,component } = props;
 
   const handleInputChange = (event, propertyName) => {
     const newValue = event.target.value;
@@ -141,6 +141,7 @@ function StudentProfile(props) {
             </div>
             <div className="bottom-upcoming-trip">
               <div className="upcoming-trip-info">
+                {component}
                 <h2 className="upcoming-trip-txt">Data</h2>
               </div>
             </div>

@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
+// eslint-disable-next-line no-unused-vars
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import VerticalNavbar from "../General/VerticalNavbar.jsx"; //done
 import Home from "./Home.jsx";
@@ -105,17 +106,6 @@ const driver = {
   type: "driver",
 };
 
-// const router = BrowserRouter([
-//   {
-//     path: '/dashboard',
-//     element: <Home/>
-//   },
-//   {
-//     path: '/trips',
-//     element: <TripComponent/>
-//   }
-// ])
-
 function TripComponent() {
   return (
     <>
@@ -149,8 +139,8 @@ function Driver() {
 
   const menuItems = [
     { text: "trips" },
-    { text: "History" },
-    { text: "Profile" },
+    { text: "Navigation"},
+    { text: "Profile"},
   ];
   return (
     <div className={styles["main-container"]}>
@@ -168,7 +158,7 @@ function Driver() {
         <div className={styles["right-container"]}>
           {header==="Dashboard" && <Home driver={driver} trips={trips} /> }
           {header==="trips" && <TripComponent /> }
-          {header==="Profile" && <Profile user={driver}/>}
+          {header==="Profile" && <Profile user={driver} component={<p>ahmed is here</p>}/>}
 
         </div>
       </div>
