@@ -3,7 +3,7 @@ import React, { useState } from "react";
 // eslint-disable-next-line no-unused-vars
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import VerticalNavbar from "../General/VerticalNavbar.jsx"; //done
-import Home from "./Home.jsx";
+import Home from "./Home/Home.jsx";
 import PageHeader from "../Student/PageHeader/PageHeader.jsx"; //done
 import TripsTable from "./TripsTable.jsx"; //done
 import BubbleChat from "../General/BubbleChat.jsx";

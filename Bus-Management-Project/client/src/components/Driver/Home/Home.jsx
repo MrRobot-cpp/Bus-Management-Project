@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import "./Home.css";
-import Trip from "./Trip";
-import DriverProfile from "./DriverProfile";
+import Trip from "../trips/Trip";
+import DriverProfile from "../DriverProfile/DriverProfile";
 import DateOrganizer from "./DateOrganizer";
 
 
