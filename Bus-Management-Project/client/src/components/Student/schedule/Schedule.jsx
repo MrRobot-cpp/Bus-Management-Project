@@ -59,23 +59,30 @@ const Schedule = () => {
                 })}
             </div>
             <hr />
-            <h3 className='schedule-title'>Schedule</h3>
+            <p className='schedule-title'>Schedule</p>
+            <div className="schedule-content">
             <div className="schedule-item">
-                <h4>Shobra to MIU</h4>
-                <p>7:30 AM - 8:30 AM</p>
-                <span className='status-more'>
-                <p className='status'>In Progress</p>
-                <p>more</p> {/* will link to trips page*/}
-                </span>
+                <div className="name-time">
+                    <h4>Shobra to MIU</h4>
+                    <p>7:30 AM - 8:30 AM</p>
+                </div>
+                <div className='status-more'>
+                    <p className='status'>In Progress</p>
+                    <p>More</p> {/* will link to trips page*/}
+                </div>
             </div>
             <div className="schedule-item">
-                <h4>Shobra to MIU</h4>
-                <p>7:30 AM - 8:30 AM</p>
-                <span className='status-more'>
-                <p className='status'>In Progress</p>
-                <p>more</p> {/* will link to trips page*/}
-                </span>
+                <div className="name-time">
+                    <h4>Shobra to MIU</h4>
+                    <p>7:30 AM - 8:30 AM</p>
+                </div>
+                <div className='status-more'>
+                    <p className='status'>In Progress</p>
+                    <p>More</p> {/* will link to trips page*/}
+                </div>
             </div>
+            </div>
+            
         </div>
 
         </>

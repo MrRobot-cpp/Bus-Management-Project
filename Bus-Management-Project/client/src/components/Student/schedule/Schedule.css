@@ -1,12 +1,12 @@
 .schedule {
-    width: 330px;
+    width: 450px;
     height: 320px;
     background-color: #FFFBEB;
     padding: 20px;
     border-radius: 20px;
 }
 
-.month-title {
+.month-title, .schedule-title {
     font-size: 26px;
     font-weight: 400;
 }
@@ -19,12 +19,13 @@
 }
 
 .current-day {
-    width: 50px;
-    height: 65px;
+    width: 45px;
+    height: 55px;
     text-align: center;
     align-content: center;
     color: #FFFBEB;
     border-radius: 10px;
+    padding: 5px;
 }
 
 hr {
@@ -33,29 +34,38 @@ hr {
     margin: 10px;
 }
 
-.schedule-title {
-    font-size: 22px;
-}
+
 
 .schedule-item {
-    width: 290px;
+    width: 400px;
     background-color: #263159;
     color: #FFFBEB;
-    padding: 10px;
+    padding-inline: 15px;
+    padding-block: 10px;
     margin-inline: 10px;
     margin-block: 5px;
     border-radius: 20px;
     display: flex;
-    flex-direction: column;
     gap: 2px;
+    align-content: center;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
 }
 
 .status {
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .status-more {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     opacity: 0.8;
+    text-align: right;
+}
+
+.status-more, .name-time, .schedule-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }

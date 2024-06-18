@@ -54,8 +54,8 @@ router.get('/',async (req,res)=>{
         const admins = await Admin.find({});
 
         return res.status(200).json({
-         count: admins.length,
-         data: admins,
+        count: admins.length,
+        data: admins,
         });
     }
     catch(error){
