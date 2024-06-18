@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { validateEmail, validatePassword } from './validation';
+import { validatePassword } from './validation';
 import './login.css';
 
 const driverCredentials = {
@@ -22,8 +22,6 @@ const adminCredentials = {
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [emailError, setEmailError] = useState('');
-    const [passwordError, setPasswordError] = useState('');
     const [showForgotPassword, setShowForgotPassword] = useState(false);
     const [newPassword, setNewPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
@@ -35,13 +33,11 @@ const Login = () => {
     const handleEmailChange = (e) => {
         const value = e.target.value;
         setEmail(value);
-        setEmailError(validateEmail(value) ? '' : 'Invalid email');
     };
 
     const handlePasswordChange = (e) => {
         const value = e.target.value;
         setPassword(value);
-        setPasswordError(validatePassword(value) ? '' : 'Password must be at least 8 characters');
     };
 
     const handleNewPasswordChange = (e) => {
@@ -64,38 +60,12 @@ const Login = () => {
         setShowForgotPassword(false);
     };
 
-    const handleBlurEmail = () => {
-        if (!email) {
-            setEmailError('Email is required');
-        }
-    };
-
-    const handleBlurPassword = () => {
-        if (!password) {
-            setPasswordError('Password is required');
-        }
-    };
-
     const handleSubmit = (e) => {
         e.preventDefault();
         setLoginClicked(true);
         setCredentialsError('');
-        // Reset previous errors
-        setEmailError('');
-        setPasswordError('');
 
-        // Check if email is empty
-        if (!email) {
-            setEmailError('Email is required');
-        }
-
-        // Check if password is empty
-        if (!password) {
-            setPasswordError('Password is required');
-        }
-
-        // If both fields are not empty, proceed with form submission
-        if (email && password && validateEmail(email) && validatePassword(password)) {
+        if (email && password) {
             // Check credentials
             if (
                 (email === driverCredentials.email && password === driverCredentials.password) ||
@@ -104,30 +74,15 @@ const Login = () => {
             ) {
                 console.log('Form submitted successfully!');
             } else {
-                setCredentialsError("This account isn't correct");
-                console.log("This account isn't correct");
+                setCredentialsError("Invalid Email or Password");
+                console.log("Invalid credentials");
             }
-        } else {
-            console.log('Form submission failed. Please check input fields.');
         }
     };
 
     const handleResetPassword = (e) => {
         e.preventDefault();
         // Perform password reset logic here
-    };
-
-    // eslint-disable-next-line no-unused-vars
-    const handleRedirection = () => {
-        if (email === driverCredentials.email && password === driverCredentials.password) {
-            return "driver-view";
-        } else if (email === adminCredentials.email && password === adminCredentials.password) {
-            return "admin-view";
-        } else if (email === studentCredentials.email && password === studentCredentials.password) {
-            return "student-view";
-        } else {
-            return "#";
-        }
     };
 
     return (
@@ -143,7 +98,6 @@ const Login = () => {
                         <div className='user-credentials'>
                             <div className='login-div-holder'>
                                 {loginClicked && !email && <span className='error'>Email is required</span>}
-                                {emailError && <span className='error'>{emailError}</span>}
                                 <br />
                                 <div className="top-border"><label htmlFor="Email">Email</label></div>
                                 <input
@@ -152,13 +106,11 @@ const Login = () => {
                                     id="Email"
                                     value={email}
                                     onChange={handleEmailChange}
-                                    onBlur={handleBlurEmail}
                                 />
                             </div>
                             <br />
                             <div className='login-div-holder'>
                                 {loginClicked && !password && <span className='error'>Password is required</span>}
-                                {passwordError && <span className='error'>{passwordError}</span>}
                                 <br />
                                 <div className="top-border"><label htmlFor="Password">Password</label></div>
                                 <input
@@ -168,7 +120,6 @@ const Login = () => {
                                     maxLength="20"
                                     value={password}
                                     onChange={handlePasswordChange}
-                                    onBlur={handleBlurPassword}
                                 />
                             </div>
                             <br />
@@ -211,7 +162,6 @@ const Login = () => {
                     )}
                     {!showForgotPassword ? (
                         <div className='login-div-holder'>
-                            {(loginClicked && (!email || !password)) && <span className='error'>Please fill in all required fields</span>}
                             <br />
                             <button className='Login-btn' type="submit" id="submit">Login</button>
                         </div>
