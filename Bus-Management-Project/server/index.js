@@ -1,5 +1,5 @@
 import express, { response } from "express";
-import { PORT, mongoDBURL_trip, mongoDBURL_user} from "./config.js";
+import { PORT, mongoDBURL_trip, mongoDBURL_user} from "./config/config.js";
 import { Trip } from "./Model/tripModel.js";
 import { Admin, Driver, Student } from "./Model/userModel.js";
 import tripRoutes from "./routes/tripRoutes.js";
