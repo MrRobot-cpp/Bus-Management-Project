@@ -179,6 +179,8 @@ const Login = () => {
                         <div>
                             <div className='login-div-holder'>
                                 {newPasswordError && <span className='error'>{newPasswordError}</span>}
+                                <br />
+                                <br />
                                 <div className="top-border"><label htmlFor="NewPassword">New Password</label></div>
                                 <input
                                     className='login-input'
@@ -192,6 +194,7 @@ const Login = () => {
                             <br />
                             <div className='login-div-holder'>
                                 {confirmPasswordError && <span className='error'>{confirmPasswordError}</span>}
+                                <br />
                                 <div className="top-border"><label htmlFor="ConfirmPassword">Confirm Password</label></div>
                                 <input
                                     className='login-input'
@@ -208,8 +211,9 @@ const Login = () => {
                     )}
                     {!showForgotPassword ? (
                         <div className='login-div-holder'>
-                            <button className='Login-btn' type="submit" id="submit">Login</button>
                             {(loginClicked && (!email || !password)) && <span className='error'>Please fill in all required fields</span>}
+                            <br />
+                            <button className='Login-btn' type="submit" id="submit">Login</button>
                         </div>
                     ) : (
                         <div className='login-div-holder'>
