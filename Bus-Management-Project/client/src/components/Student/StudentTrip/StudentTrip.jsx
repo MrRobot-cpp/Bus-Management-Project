@@ -1,15 +1,15 @@
-// StudentTrip.js
 import { useState } from 'react';
 import RouteRow from './RouteRow/RouteRow';
 import styles from './StudentTrip.module.css';
 
 function StudentTrip() {
     const [routes, setRoutes] = useState([
-        { id: 1, day: "Saturday", startFrom: 'A', endAt: 'B', tripType: 'Going to', goingTime: '10:00 AM', leavingTime: '3:00 PM' },
-        { id: 2, day: "Saturday", startFrom: 'B', endAt: 'A', tripType: 'Leaving from', goingTime: '3:00 PM', leavingTime: '4:00 PM' }
+        { id: 1, day: "Sat, 26/5", startFrom: 'A', endAt: 'B', tripType: 'Going to', goingTime: '10:00 AM', leavingTime: '11:00 M' },
+        { id: 2, day: "Sun, 27/5", startFrom: 'B', endAt: 'A', tripType: 'Leaving from', goingTime: '3:00 PM', leavingTime: '4:00 PM' }
     ]);
 
     const [editMode, setEditMode] = useState(false);
+    const [addMode, setAddMode] = useState(false);
     const [deleteMode, setDeleteMode] = useState(false);
     const [selectedRouteId, setSelectedRouteId] = useState(null);
 
@@ -25,11 +25,16 @@ function StudentTrip() {
         };
         setRoutes([...routes, newRoute]);
         setEditMode(true);
+        setAddMode(true);
         setSelectedRouteId(newRoute.id);
     };
 
     const handleUpdateRoute = (id, updatedRoute) => {
         setRoutes(routes.map(route => (route.id === id ? { ...updatedRoute, id } : route)));
+        if (addMode) {
+            setEditMode(false);
+            setAddMode(false);
+        }
     };
 
     const handleDeleteRoute = (id) => {
@@ -40,6 +45,7 @@ function StudentTrip() {
 
     const toggleEditMode = () => {
         setEditMode(!editMode);
+        setAddMode(false);
         setDeleteMode(false);
         setSelectedRouteId(null);
     };
@@ -47,6 +53,7 @@ function StudentTrip() {
     const toggleDeleteMode = () => {
         setDeleteMode(!deleteMode);
         setEditMode(false);
+        setAddMode(false);
         setSelectedRouteId(null);
     };
 
@@ -58,10 +65,10 @@ function StudentTrip() {
                         <p className={styles["trip-func-text"]}>Add Trip</p>
                     </div>
                     <div className={styles["trip-func-btn"]} onClick={toggleEditMode}>
-                        <p className={styles["trip-func-text"]}>{editMode ? 'Done' : 'Edit Trip'}</p>
+                        <p className={styles["trip-func-text"]}>{editMode && !addMode ? 'Done' : 'Edit Trip'}</p>
                     </div>
                     <div className={styles["trip-func-btn"]} onClick={toggleDeleteMode}>
-                        <p className={styles["trip-func-text"]}>{deleteMode ? 'Done' : 'Delete Trip'}</p>
+                        <p className={styles["trip-func-text"]}>Delete Trip</p>
                     </div>
                 </div>
 
@@ -93,7 +100,8 @@ function StudentTrip() {
                                         route={route}
                                         onUpdate={handleUpdateRoute}
                                         onDelete={handleDeleteRoute}
-                                        isEditing={editMode || deleteMode}
+                                        isEditing={editMode}
+                                        isDeleting={deleteMode}
                                         onSelect={setSelectedRouteId}
                                         isSelected={selectedRouteId === route.id}
                                     />
