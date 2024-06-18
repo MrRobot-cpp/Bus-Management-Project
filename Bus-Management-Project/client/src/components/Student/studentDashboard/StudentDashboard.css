@@ -1,5 +1,15 @@
+.left-right-sections {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.right-section {
+    padding-top: 30px;
+}
+
 .welcome-container {
-    width:1098px;
+    width: 1350px;
     height: 170px;
     background: linear-gradient(121deg, 
     rgb(23, 25, 73) 5%, 
@@ -11,6 +21,7 @@
     padding: 10px;
     border: rgb(232, 228, 214) solid 1px;
     margin-top: 40px;
+    margin-bottom: 15px;
 }
 
 .student-logo {
@@ -25,7 +36,194 @@
     padding: 20px;
 }
 
-
-/* schedule */
-
 /* driver info */
+.driver-info {
+    width: 450px;
+    height: 190px;
+    padding-inline: 20px;
+    background-color: #FFFBEB;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    margin-top: 15px;
+    border-radius: 20px ;
+}
+
+.driver-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.profile-pic {
+    margin: 0;
+    width: 130px;
+    height: 130px;
+}
+
+.star-rating {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.star-rating-icons {
+    display: flex;
+    gap: 5px;
+}
+
+/* current trip */
+
+.current-trip {
+    width: 800px;
+    height: 200px;
+    background-color: #FFFBEB;
+    margin-right: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.current-trip-title, .payments-title {
+    font-size: 25px;
+}
+
+.current-trip-info {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 15px;
+    padding-left: 0;
+    
+}
+
+.current-trip-text {
+    display: flex;
+    gap: 15px;
+}
+.current-trip-text {
+    font-size: 20px;
+}
+
+.current-trip-time {
+    border: #0000006f solid 1px;
+    padding: 5px;
+    width: 90px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.current-trip-contents {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 40px;
+}
+
+.trip-status-bar {
+    width: 350px;
+}
+
+
+/* payments */
+.payments {
+    background-color: #FFFBEB;
+    margin-right: 30px;
+    border-radius: 20px;
+    padding: 20px;
+    height: 200px;
+    align-content: center;
+}
+
+
+.payments-text {
+    display: flex;
+    gap: 15px;
+}
+
+.payments-text p {
+    font-size: 20px;
+}
+
+.payments-content {
+    padding-block: 10px;
+    padding-inline: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.payments-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.payments-info, .payments-date {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.payments-amount {    
+    width: 120px;
+}
+
+.payments-date-1, .payments-date-2, .payments-amount {
+    border: #0000006f solid 1px;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.payments-date-1 {
+    width: 150px;
+}
+
+.payments-date-2 {
+    width: 90px;
+}
+
+
+/* Media Queries */
+@media (max-width: 1550px) {
+    .welcome-container {
+        align-items: center;
+        width: auto;
+    }
+
+    .student-logo {
+        width: 170px;
+        height: 170px;
+    }
+
+    .left-right-sections {
+        flex-direction: column;
+    }
+
+    .current-trip, .payments {
+        width: 100%;
+    }
+}
+
+@media (max-width: 965px) {
+    .student-logo {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+
+    
+    .welcome-container {
+        width: 500px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .current-trip-time, .payments-date-1, .payments-date-2 {
+        width: 70px;
+        font-size: 0.8em;
+    }
+}

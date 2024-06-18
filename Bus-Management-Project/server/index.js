@@ -1,7 +1,7 @@
 import express, { response } from "express";
-import { PORT, mongoDBURL} from "./config.js";
-import { Trip } from "./Models/tripModel.js";
-import { Admin, Driver, Student } from "./Models/userModel.js";
+import { PORT, mongoDBURL_trip, mongoDBURL_user} from "./config/config.js";
+import { Trip } from "./Model/tripModel.js";
+import { Admin, Driver, Student } from "./Model/userModel.js";
 import tripRoutes from "./routes/tripRoutes.js";
 import adminRoutes from "./routes/adminRoutes.js";
 import studentRoutes from "./routes/studentRoutes.js";

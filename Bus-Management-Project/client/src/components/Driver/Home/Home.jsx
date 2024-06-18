@@ -49,7 +49,18 @@ function Home(props) {
       
           </div>
          
+        
+          <div className="current-trip">
+      <h2>Current Trip</h2>
+      <p>Final Destination: <input type="text" value="ACTIVE USERS" readOnly /></p>
+      <p>Percentage: <input type="text" value="80%" readOnly /></p>
+      <div className="progress-bar">
+        <div className="progress"></div>
+      </div>
+    </div>
 
+
+{/* 
           <div className="trip-container">
             <Trip
               departure={trips[0].departure}
@@ -62,7 +73,7 @@ function Home(props) {
               endPoint={trips[0].endPoint}
               status={trips[0].status}
             ></Trip>
-          </div>
+          </div> */}
         </div>
 
         <div className="right-container">
