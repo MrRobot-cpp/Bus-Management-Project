@@ -38,7 +38,6 @@ function App() {
                     path={"/Login/admin-view"}
                     element={<Admin />}
                 />
-
                 <Route
                     path={"/Login/student-view"}
                     element={<Student />}
@@ -47,8 +46,6 @@ function App() {
                     path={"/Login/driver-view"}
                     element={<Driver />}
                 />
-
-
             </Routes>
             {/*SHAYFK YALY BTFKR TSHELHOM HA3DOK */}
         </>
