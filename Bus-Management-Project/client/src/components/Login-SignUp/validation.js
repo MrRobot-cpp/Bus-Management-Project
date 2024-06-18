@@ -14,8 +14,13 @@ export const validateName = (name) => {
 };
 
 export const validateConfirmPassword = (password, confirmPassword) => {
-    // Confirm password validation: must match password
+    // Confirm password validation: should match the password
     return password === confirmPassword;
+};
+
+export const validatePhoneNumber = (phoneNumber) => {
+    // Phone number validation: digits only, 10 digits long
+    return /^\d{10}$/.test(phoneNumber);
 };
 
 export const validateTermsAndConditions = (isChecked) => {

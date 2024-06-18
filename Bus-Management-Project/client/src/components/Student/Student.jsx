@@ -3,8 +3,8 @@ import VerticalNavbar from '../General/VerticalNavbar';
 import Profile from "../General/Profile/Profile";
 import PageHeader from "./PageHeader/PageHeader";
 import StudentTrip from "./StudentTrip/StudentTrip";
-import CashDeposit from "./CashDeposit/CashDeposit";
 import styles from "./Student.module.css";
+import StudentDashboard from './studentDashboard/StudentDashboard.jsx'
 
 const exampleObj = {
     Name: "shady",
@@ -29,21 +29,22 @@ function Student(){
     
     return(
         <>
-        <div className={styles["main-container"]} >
-        <div className={styles["top-container"]} >
-        <PageHeader text={`Student ${header}`}/>
-        </div>
-        <div className={styles["bottom-container"]}>
-        <div className={styles["bottom-left-container"]}>
-        <VerticalNavbar menuItems={menuItems} onQuery={setHeader}/>
-        </div>
-        <div className={styles["bottom-right-container"]}>
-        {header==="Deposit" &&<CashDeposit/> }
-        {header==="Trips" && <StudentTrip/> }
-          {header==="Profile" && <Profile user={exampleObj}/>}        {/* <StudentTrip/> */}
-        </div>
-        </div>
-        </div>
+            <div className={styles["main-container"]} >
+                <div className={styles["top-container"]} >
+                    <PageHeader text={`Student ${header}`}/>
+                </div>
+                <div className={styles["bottom-container"]}>
+                    <div className={styles["bottom-left-container"]}>
+                        <VerticalNavbar menuItems={menuItems} onQuery={setHeader}/>
+                    </div>
+                    <div className={styles["bottom-right-container"]}>
+                        {/* {header==="Deposit" &&<CashDeposit/> } */}
+                        {header==="Dashboard" && <StudentDashboard/> }
+                        {header==="Trips" && <StudentTrip/> }
+                        {header==="Profile" && <Profile user={exampleObj}/>}        {/* <StudentTrip/> */}
+                    </div>
+                </div>
+            </div>
         </>
     )
 

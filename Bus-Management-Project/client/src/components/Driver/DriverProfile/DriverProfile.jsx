@@ -14,15 +14,16 @@ function DriverProfile(props){
     return(<>
       <div className={styles.driverInformation}>
       <div className={styles.driverHeader}>
-        {/* <img 
-          src="driver-image-url" 
+        {<img 
+          src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png" 
           alt="Driver" 
           className={styles.driverImage} 
-        /> */}
+        /> }
+
         <div>
          <h1>Driver Information </h1>
-         <hr className="line"></hr>
-          <h3>Ahmed Samer</h3>
+         <hr class="thick-line"/>
+          <h3>Rahma Soliman</h3>
           <p>#a48c7856</p>
         </div>
       </div>
@@ -36,6 +37,8 @@ function DriverProfile(props){
       </div>
     </div>
 
+   
+     
     
 
     

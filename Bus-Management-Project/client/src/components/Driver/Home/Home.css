@@ -34,7 +34,9 @@
   justify-content: flex-start;
   align-items: flex-end;
   height: 99%;
-  width: 50%;
+  width: 60%;
+margin-left: -100px;
+
   /* background: blue; */
 }
 
@@ -46,24 +48,23 @@
     font-size: 14px;
     height: 90%;
     width: 98%;
-    
     margin-bottom: 4.7vh;
     /* background: orange; */
 }
-
-
-
-
-
 
 .trip-container{
   display:flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 30%;
+  width: 780px;
+  height: 330px;
   transition: 0.9s ease;
   font-size: 14px;
+  margin-bottom: 50px;
+  margin-left: -10px;
+
+
+
   /* background: pink; */
 
 }
@@ -74,8 +75,10 @@
   align-items: center;
   transition: 0.9s ease;
   font-size: 14px;
-  height: 70%;
+  height: 100%;
   width: 100%;
+  margin-top: 200px;
+
   /* background: purple; */
 }
 
@@ -96,3 +99,80 @@
       transition: 0.2s ease-in-out;
     }
   }
+  
+/* daily summer */
+
+
+.daily-summary {
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #FFFBEB; /* Matching the background color */
+  border-radius: 20px;
+  font-size: 15px; /* Adjusting the font size */
+  padding: 20px; /* Adding padding for better spacing */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
+  width: 315px;
+ 
+}
+
+.daily-summary p {
+  margin: 10px 10px ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 10px;
+}
+
+.daily-summary input {
+  border: 1px solid #263159;
+  background-color:#FFFBEB;
+  border-radius: 10px;
+  padding: 7px;
+  width: 100px;
+  text-align: center;
+  color: #333;
+  font-size: 1em;
+  border-radius: 7px;
+}
+
+/* general trip */
+.general-tips {
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #FFFBEB; /* Matching the background color */
+  border-radius: 20px;
+  font-size: 15px; /* Adjusting the font size */
+  padding: 20px; /* Adding padding for better spacing */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
+  width: 315px;
+}
+
+.general-tips p {
+  margin: 10px 10px; /* Adding margin between paragraphs */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 10px; /* Adjusting the font size */
+}
+
+.general-tips input {
+  border: 1px solid #263159;/* Matching the border color */
+  background-color: #FFFBEB; /* Matching the background color */
+  border-radius: 10px; /* Adding border radius */
+  padding: 7px; /* Adding padding for better spacing */
+  width: 100px; /* Adjusting the width */
+  text-align: center; /* Centering the text */
+  color: #333; /* Setting the text color */
+  font-size: 1em; /* Adjusting the font size */
+  border-radius: 7px;
+}
+
+.DG{
+  display:flex;
+  padding: 10px;
+  gap: 30px;
+
+
+}

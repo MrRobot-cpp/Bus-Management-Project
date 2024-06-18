@@ -10,15 +10,17 @@ function Home(props) {
   const {driver,trips} = props;
   return (
     <>
-      <div className="home-container">
+      {/* <div className="home-container"> */}
         <div className="left-container">
+          \
           {/* <div className="welcome-container">
             <div className="welcome">
               <p className="welcome-text">Welcome Home!</p>
             </div>
-          </div> */}
+  </div> */}
 
-          <div className="driver-profile-container">
+
+ <div className="driver-profile-container">
             <DriverProfile
               name={driver.name}
               age={driver.age}
@@ -26,6 +28,27 @@ function Home(props) {
               type={driver.type}
             />
           </div>
+
+        
+<div className="DG">
+          <div className="daily-summary">
+          <h2>Daily Summary</h2>
+          <p>Trips For Today: <input type="text" value="9" readOnly /></p>
+          <p>Trips Left: <input type="text" value="4" readOnly /></p>
+          <p>Trips Completed: <input type="text" value="5" readOnly /></p>
+          <p>Driving Time For today: <input type="text" value="6 Hours" readOnly /></p>
+          </div>
+          
+          <div className="general-tips">
+      <h2>General Tips</h2>
+      <p>Waiting Time after arrival:   <input type="text"  value="3 Mins" readOnly /></p>
+      <p>Number of stops: <input type="text" value="14" readOnly /></p>
+      <p>Earning Per Trip: <input type="text" value="400 EGP" readOnly /></p>
+      
+    </div>
+      
+          </div>
+         
 
           <div className="trip-container">
             <Trip
@@ -47,7 +70,7 @@ function Home(props) {
             <DateOrganizer trips={trips}/>
           </div>
         </div>
-      </div>
+      {/* </div> */}
     </>
   );
 }
