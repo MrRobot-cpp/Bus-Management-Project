@@ -1,0 +1,61 @@
+.schedule {
+    width: 330px;
+    height: 320px;
+    background-color: #FFFBEB;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.month-title {
+    font-size: 26px;
+    font-weight: 400;
+}
+
+.current-week {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 10px;
+}
+
+.current-day {
+    width: 50px;
+    height: 65px;
+    text-align: center;
+    align-content: center;
+    color: #FFFBEB;
+    border-radius: 10px;
+}
+
+hr {
+    border: #263159 solid 1px;
+    opacity: 0.3;
+    margin: 10px;
+}
+
+.schedule-title {
+    font-size: 22px;
+}
+
+.schedule-item {
+    width: 290px;
+    background-color: #263159;
+    color: #FFFBEB;
+    padding: 10px;
+    margin-inline: 10px;
+    margin-block: 5px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.status {
+    opacity: 0.7;
+}
+
+.status-more {
+    display: flex;
+    justify-content: space-between;
+    opacity: 0.8;
+}

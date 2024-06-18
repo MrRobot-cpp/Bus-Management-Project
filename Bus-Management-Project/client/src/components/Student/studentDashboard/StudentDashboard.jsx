@@ -1,6 +1,9 @@
 import './StudentDashboard.css'
+import Schedule from '../schedule/Schedule';
+
 import studentLogo from '../../../assets/studenticon.png'
 import profilePic from '../../../assets/profilepic.png'
+
 
 function StudentDashboard() {
     
@@ -33,7 +36,7 @@ function StudentDashboard() {
         }
     }
 
-    
+
 
     return (
     <>
@@ -46,13 +49,10 @@ function StudentDashboard() {
             <img className='student-logo' src={studentLogo} alt="student icon" />
         </div>
 
-        <div className="left-container">
-            <div className="schedule">
-                <h2>{`${getDate("month")} ${getDate('year')}`}</h2>
-                <div className="current-week">
-                    <div className="day">{}</div>
-                </div>
-            </div>
+
+        <div className="left-section">
+            <Schedule/>
+
 
             <div className="driver-info">
                 <img className='profile-pic' src={profilePic} alt="profile picture" />
@@ -70,12 +70,12 @@ function StudentDashboard() {
             </div>
         </div>
 
-        <div className="right-container">
+        <div className="right-section">
             <div className="current-trip"></div>
             <div className="payments"></div>
         </div>
     </>
     );
+    
 }
-
 export default StudentDashboard;
