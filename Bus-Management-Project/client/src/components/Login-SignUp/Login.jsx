@@ -4,22 +4,22 @@ import { Link } from 'react-router-dom';
 import { validateEmail, validatePassword } from './validation';
 import './login.css';
 
-const driverCredntials = {
+const driverCredentials = {
     email: "ahmedsamersayed22@gmail.com",
     password: "samortchy2004"
-}
+};
 
-const studentCredntials = {
+const studentCredentials = {
     email: "shadyyasset@gmail.com",
     password: "shdshddd2002"
-}
+};
 
-const adminCredntials = {
+const adminCredentials = {
     email: "ghazouly2007@gmail.com",
     password: "ghazou2007"
-}
+};
 
-function Login() {
+const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [emailError, setEmailError] = useState('');
@@ -30,6 +30,7 @@ function Login() {
     const [newPasswordError, setNewPasswordError] = useState('');
     const [confirmPasswordError, setConfirmPasswordError] = useState('');
     const [loginClicked, setLoginClicked] = useState(false);
+    const [credentialsError, setCredentialsError] = useState('');
 
     const handleEmailChange = (e) => {
         const value = e.target.value;
@@ -63,26 +64,50 @@ function Login() {
         setShowForgotPassword(false);
     };
 
+    const handleBlurEmail = () => {
+        if (!email) {
+            setEmailError('Email is required');
+        }
+    };
+
+    const handleBlurPassword = () => {
+        if (!password) {
+            setPasswordError('Password is required');
+        }
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
         setLoginClicked(true);
+        setCredentialsError('');
         // Reset previous errors
         setEmailError('');
         setPasswordError('');
+
         // Check if email is empty
         if (!email) {
             setEmailError('Email is required');
         }
+
         // Check if password is empty
         if (!password) {
             setPasswordError('Password is required');
         }
+
         // If both fields are not empty, proceed with form submission
         if (email && password && validateEmail(email) && validatePassword(password)) {
-            // Proceed with form submission
-            console.log('Form submitted successfully!');
+            // Check credentials
+            if (
+                (email === driverCredentials.email && password === driverCredentials.password) ||
+                (email === studentCredentials.email && password === studentCredentials.password) ||
+                (email === adminCredentials.email && password === adminCredentials.password)
+            ) {
+                console.log('Form submitted successfully!');
+            } else {
+                setCredentialsError("This account isn't correct");
+                console.log("This account isn't correct");
+            }
         } else {
-            // Display error messages or handle invalid input
             console.log('Form submission failed. Please check input fields.');
         }
     };
@@ -92,20 +117,18 @@ function Login() {
         // Perform password reset logic here
     };
 
-    const handleRedirection = () =>{
-        let link;
-        if(email===driverCredntials.email && password===driverCredntials.password){
-            link="driver-view"
-        }else 
-        if(email===adminCredntials.email && password===adminCredntials.password){
-            link="admin-view"
-        }else 
-        if(email===studentCredntials.email && password===studentCredntials.password){
-            link="student-view"
-        }else {console.log("invalid credntials")}
-        console.log(link);
-        return link
-    }
+    // eslint-disable-next-line no-unused-vars
+    const handleRedirection = () => {
+        if (email === driverCredentials.email && password === driverCredentials.password) {
+            return "driver-view";
+        } else if (email === adminCredentials.email && password === adminCredentials.password) {
+            return "admin-view";
+        } else if (email === studentCredentials.email && password === studentCredentials.password) {
+            return "student-view";
+        } else {
+            return "#";
+        }
+    };
 
     return (
         <div className='login'>
@@ -113,23 +136,40 @@ function Login() {
                 <form className='login-form' onSubmit={showForgotPassword ? handleResetPassword : handleSubmit}>
                     <h1 className='login-header'>{showForgotPassword ? 'Reset Password' : 'Sign In'}</h1>
                     <br />
+                    {credentialsError && !showForgotPassword && <span className='error'>{credentialsError}</span>}
+                    <br />
                     <br />
                     {!showForgotPassword && (
                         <div className='user-credentials'>
                             <div className='login-div-holder'>
-                                <div className="top-border"><label htmlFor="Email"> Email</label></div>
-                                <input className='login-input' type="email" id="Email" value={email} onChange={handleEmailChange}/>
-                                <br />
                                 {loginClicked && !email && <span className='error'>Email is required</span>}
                                 {emailError && <span className='error'>{emailError}</span>}
+                                <br />
+                                <div className="top-border"><label htmlFor="Email">Email</label></div>
+                                <input
+                                    className='login-input'
+                                    type="email"
+                                    id="Email"
+                                    value={email}
+                                    onChange={handleEmailChange}
+                                    onBlur={handleBlurEmail}
+                                />
                             </div>
                             <br />
                             <div className='login-div-holder'>
-                                <div className="top-border"><label htmlFor="Password"> Password</label></div>
-                                <input className='login-input' type="password" id="Password" maxLength="20" value={password} onChange={handlePasswordChange} />
-                                <br />
                                 {loginClicked && !password && <span className='error'>Password is required</span>}
                                 {passwordError && <span className='error'>{passwordError}</span>}
+                                <br />
+                                <div className="top-border"><label htmlFor="Password">Password</label></div>
+                                <input
+                                    className='login-input'
+                                    type="password"
+                                    id="Password"
+                                    maxLength="20"
+                                    value={password}
+                                    onChange={handlePasswordChange}
+                                    onBlur={handleBlurPassword}
+                                />
                             </div>
                             <br />
                             <a className="forgot-password-link" href="#" onClick={handleForgotPasswordClick}>Forgot Password?</a>
@@ -138,17 +178,29 @@ function Login() {
                     {showForgotPassword && (
                         <div>
                             <div className='login-div-holder'>
-                                <div className="top-border"><label htmlFor="NewPassword"> New Password</label></div>
-                                <input className='login-input' type="password" id="NewPassword" maxLength="20" value={newPassword} onChange={handleNewPasswordChange} />
-                                <br />
                                 {newPasswordError && <span className='error'>{newPasswordError}</span>}
+                                <div className="top-border"><label htmlFor="NewPassword">New Password</label></div>
+                                <input
+                                    className='login-input'
+                                    type="password"
+                                    id="NewPassword"
+                                    maxLength="20"
+                                    value={newPassword}
+                                    onChange={handleNewPasswordChange}
+                                />
                             </div>
                             <br />
                             <div className='login-div-holder'>
-                                <div className="top-border"><label htmlFor="ConfirmPassword"> Confirm Password</label></div>
-                                <input className='login-input' type="password" id="ConfirmPassword" maxLength="20" value={confirmPassword} onChange={handleConfirmPasswordChange} />
-                                <br />
                                 {confirmPasswordError && <span className='error'>{confirmPasswordError}</span>}
+                                <div className="top-border"><label htmlFor="ConfirmPassword">Confirm Password</label></div>
+                                <input
+                                    className='login-input'
+                                    type="password"
+                                    id="ConfirmPassword"
+                                    maxLength="20"
+                                    value={confirmPassword}
+                                    onChange={handleConfirmPasswordChange}
+                                />
                             </div>
                             <br />
                             <a className='forgot-password-btn' onClick={handleReturnClick}>Return to Login</a>
@@ -156,7 +208,7 @@ function Login() {
                     )}
                     {!showForgotPassword ? (
                         <div className='login-div-holder'>
-                            <Link to={handleRedirection()}><button className='Login-btn' type="submit" id="submit">Login</button></Link>
+                            <button className='Login-btn' type="submit" id="submit">Login</button>
                             {(loginClicked && (!email || !password)) && <span className='error'>Please fill in all required fields</span>}
                         </div>
                     ) : (
@@ -177,5 +229,6 @@ function Login() {
             </div>
         </div>
     );
-}
+};
+
 export default Login;
