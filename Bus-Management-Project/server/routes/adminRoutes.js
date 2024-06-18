@@ -49,80 +49,84 @@ router.post('/', async (req, res) => {
 });
 
 
-router.get('/',async (req,res)=>{
-    try{
+// Get all Admins
+router.get('/', async (req, res) => {
+    try {
         const admins = await Admin.find({});
-
         return res.status(200).json({
-        count: admins.length,
-        data: admins,
+            count: admins.length,
+            data: admins,
         });
-    }
-    catch(error){
+    } catch (error) {
         console.log(error.message);
-        res.status(500).send({message: error.message});    
+        res.status(500).send({ message: error.message });
     }
-})
+});
 
-router.get('/:id',async (req,res)=>{
-    try{
-
+// Get an Admin by ID
+router.get('/:id', async (req, res) => {
+    try {
         const { id } = req.params;
-
         const admin = await Admin.findById(id);
 
+        if (!admin) {
+            return res.status(404).json({ message: 'Admin not found' });
+        }
+
         return res.status(200).json(admin);
-    }
-    catch(error){
+    } catch (error) {
         console.log(error.message);
-        res.status(500).send({message: error.message});    
+        res.status(500).send({ message: error.message });
     }
-})
+});
 
-router.put('/:id',async(req,res)=>{
-    try{
-        if(
-            !req.body.title ||
-            !req.body.author ||
-            !req.body.publishYear 
-        ){
+// Update an Admin by ID
+router.put('/:id', async (req, res) => {
+    try {
+        const { id } = req.params;
+        const { name, email, password, gender, birthdate, billingInfo, role, busTypes } = req.body;
+
+        if (!name || !email || !password || !gender || !birthdate || !billingInfo || !role || !busTypes) {
             return res.status(400).send({
-                message: 'send all required fields: title, author, publishYear',
-            })
+                message: 'Send all required fields: name, email, password, gender, birthdate, billingInfo, role, busTypes',
+            });
         }
-        const { id }=req.params;
 
-        const result = await Admin.findByIdAndUpdate(id,req.body);
+        const updatedAdmin = {
+            name, email, password, gender, birthdate, billingInfo, role, busTypes
+        };
 
-        if(!result){
-            return res.status(404).json({message: "admin not found"})
+        const result = await Admin.findByIdAndUpdate(id, updatedAdmin, { new: true });
+
+        if (!result) {
+            return res.status(404).json({ message: 'Admin not found' });
         }
-        return res.status(200).json({message: "admin updated successfully!"})
 
+        return res.status(200).json({ message: 'Admin updated successfully!', data: result });
 
-    }
-    catch(error){
+    } catch (error) {
         console.log(error.message);
-        res.status(500).send({message: error.message});
+        res.status(500).send({ message: error.message });
     }
-})
+});
 
-router.delete('/:id',async (req,res)=>{
-    try{
+// Delete an Admin by ID
+router.delete('/:id', async (req, res) => {
+    try {
         const { id } = req.params;
 
         const result = await Admin.findByIdAndDelete(id);
 
-        if(!result){
-            return res.status(404).json({message: 'admin not found'})
+        if (!result) {
+            return res.status(404).json({ message: 'Admin not found' });
         }
 
-        return res.status(200).send({message: 'admin deleted successfully'})
-    }
-    catch(error){
+        return res.status(200).send({ message: 'Admin deleted successfully' });
+    } catch (error) {
         console.log(error.message);
-        res.status(500).send({message: error.message});
+        res.status(500).send({ message: error.message });
     }
-})
+});
+
 
 export default router;
