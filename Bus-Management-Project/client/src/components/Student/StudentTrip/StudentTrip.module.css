@@ -63,7 +63,7 @@
 }
 .routes-tableI td{
     color: rgb(161, 161, 161);
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid rgb(161, 161, 161);
     font-weight: 100;
     font-size: small;
 }
@@ -163,4 +163,14 @@ transform: translateY(-20px);
 
 .trip-func-text {
     font-weight: bold;
+}
+
+.routes-tableI th,
+.routes-tableI td {
+    color: #333; /* Change this to a darker color */
+}
+
+
+.routes-tableI td {
+    font-size: 15px;
 }
