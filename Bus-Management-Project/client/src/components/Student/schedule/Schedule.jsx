@@ -26,12 +26,15 @@ function getDate(type) {
     ];
 
     const year = today.getFullYear();
+    const date = today.getDate();
     const month = monthNames[today.getMonth()]; // Get month name
 
     if (type == 'month') {
         return month;
-    } else {
+    } else if (type == 'year') {
         return year;
+    } else if (type == 'monthDate') {
+        return `${month} ${date}`;
     }
 }
 

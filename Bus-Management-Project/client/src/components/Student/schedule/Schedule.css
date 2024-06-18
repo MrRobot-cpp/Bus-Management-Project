@@ -69,3 +69,20 @@ hr {
     flex-direction: column;
     gap: 5px;
 }
+
+
+@media (max-width: 480px) {
+    .month-title, .schedule-title {
+        font-size: 22px;
+    }
+
+    .current-day {
+        width: 35px;
+        height: 45px;
+    }
+
+    .schedule-item {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+}

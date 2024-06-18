@@ -1,6 +1,7 @@
 .left-right-sections {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .right-section {
@@ -181,4 +182,48 @@
 
 .payments-date-2 {
     width: 90px;
+}
+
+
+/* Media Queries */
+@media (max-width: 1550px) {
+    .welcome-container {
+        align-items: center;
+        width: auto;
+    }
+
+    .student-logo {
+        width: 170px;
+        height: 170px;
+    }
+
+    .left-right-sections {
+        flex-direction: column;
+    }
+
+    .current-trip, .payments {
+        width: 100%;
+    }
+}
+
+@media (max-width: 965px) {
+    .student-logo {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+
+    
+    .welcome-container {
+        width: 500px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .current-trip-time, .payments-date-1, .payments-date-2 {
+        width: 70px;
+        font-size: 0.8em;
+    }
 }
