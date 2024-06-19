@@ -31,7 +31,6 @@
     padding: 20px;
     border: 1px solid #FFFBEB;
 
-
 }
 
 
@@ -153,6 +152,7 @@ opacity: 0px;
     color: #FFFBEB;
     overflow: hidden; 
     transition: 0.3s ease;
+    padding-bottom: 80px;
     /* background: red; */
 }
 
@@ -170,12 +170,18 @@ opacity: 0px;
 .data > p{
   font-size: 20px;
   color: #263159;
-
+  font: bold;
+  
 }
 
-.test{
-margin-top: -100px;
-padding: 10px 0;
 
+.t1{
+width: 420px;
+margin-left: -10px;
 }
-
+.thick-line {
+  height: 50px; /* Adjust the height to make it thicker */
+  background-color: black; /* Change the color as needed */
+  border: none; /* Remove default border */
+width: 100px;
+}

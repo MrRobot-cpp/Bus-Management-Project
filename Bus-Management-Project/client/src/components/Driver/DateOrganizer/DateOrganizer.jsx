@@ -141,8 +141,11 @@ const today = new Date();
                 return null; // Return null if the condition is not met
               })}
             </ul>
+
           </div>
-             <p className={styles["test"]}>Schedule</p>
+              <hr className={styles.t1} />
+             <p className={styles.test}>Schedule</p>
+
              <div className={styles["upcoming-data"]}>
           <ul className={styles["trip-list"]}>
               {trips.map((trip, index) => {
@@ -177,6 +180,7 @@ const today = new Date();
             </ul>
           </div>
 
+          <hr className={styles.t1} />
 
              <p>Upcoming</p>
 
