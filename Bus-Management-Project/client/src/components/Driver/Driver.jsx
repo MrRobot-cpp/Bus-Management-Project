@@ -8,6 +8,7 @@ import PageHeader from "../Student/PageHeader/PageHeader.jsx"; //done
 import TripsTable from "./tripstable/TripsTable.jsx"; //done
 import BubbleChat from "../General/BubbleChat.jsx";
 import Profile from "../General/Profile/Profile.jsx" 
+import MapRoutes from "./MapRoutes/MapRoutes"
 import styles from "./Driver.module.css"; //done
 
 
@@ -155,14 +156,15 @@ function Driver() {
             onQuery={setHeader}
           />
         </div>
-        {/* <div className={styles["right-container"]}> */}
+        <div className={styles["right-container"]}>
           {header==="Dashboard" && <Home driver={driver} trips={trips} /> }
           {header==="trips" && <TripComponent /> }
+          {header==="Navigation" && <MapRoutes/> }
           {header==="Profile" && <Profile user={driver} component={<p>ahmed is here</p>}/>}
 
         </div>
       </div>
-    // </div>
+    </div>
   );
 }
 

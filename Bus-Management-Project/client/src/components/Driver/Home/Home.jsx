@@ -10,9 +10,8 @@ function Home(props) {
   const {driver,trips} = props;
   return (
     <>
-      {/* <div className="home-container"> */}
+      <div className="home-container">
         <div className="left-container">
-          \
           {/* <div className="welcome-container">
             <div className="welcome">
               <p className="welcome-text">Welcome Home!</p>
@@ -87,7 +86,7 @@ function Home(props) {
             <DateOrganizer trips={trips}/>
           </div>
         </div>
-      {/* </div> */}
+      </div>
     </>
   );
 }
