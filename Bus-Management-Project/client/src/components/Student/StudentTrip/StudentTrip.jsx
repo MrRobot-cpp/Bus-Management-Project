@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import RouteRow from './RouteRow/RouteRow';
+import RouteRow from '../../Admin/RouteRow/RouteRow';
 import styles from './StudentTrip.module.css';
 
 function StudentTrip() {

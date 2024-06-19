@@ -8,12 +8,15 @@ import Student from './components/Student/Student';
 import Driver from './components/Driver/Driver'
 import AccountConfig from './components/Login-SignUp/AccountConfig.jsx'
 import LandingPage from './components/LandingPage/LandingPage'
-function App() {
 
+
+function App() {
     return (
         <>
             {/*SAMER: MA7DSH YL3B FL ROUTES ELY 3AOZ YGRB 7AGA Y COMMENT EL ROUTES W YKTB T7TEHA */}
-            <Routes>
+            <Admin/>
+
+            {/* <Routes>
                 <Route
                     path={"/Landing-page"}
                     element={<LandingPage />}
@@ -46,7 +49,7 @@ function App() {
                     path={"/Login/driver-view"}
                     element={<Driver />}
                 />
-            </Routes>
+            </Routes> */}
             {/*SHAYFK YALY BTFKR TSHELHOM HA3DOK */}
         </>
     );
