@@ -39,19 +39,17 @@ function Home(props) {
           <p>Driving Time For today: <input type="text" value="6 Hours" readOnly /></p>
           </div>
           
-          <div className="general-tips">
-      <h2>General Tips</h2>
-      <hr className="thick-line" />
-      <p>Waiting Time after arrival:   <input type="text"  value="3 Mins" readOnly /></p>
-      <p>Number of stops: <input type="text" value="14" readOnly /></p>
-      <p>Earning Per Trip: <input type="text" value="400 EGP" readOnly /></p>
-      
+      <div className="general-tips">
+        <h2>General Tips</h2>
+        <hr className="thick-line" />
+        <p>Waiting Time after arrival:   <input type="text"  value="3 Mins" readOnly /></p>
+        <p>Number of stops: <input type="text" value="14" readOnly /></p>
+        <p>Earning Per Trip: <input type="text" value="400 EGP" readOnly /></p>
     </div>
-      
           </div>
-         
+  
         
-   <div className="current-trip">
+  <div className="current-trip">
       <h2>Current Trip</h2>
       <p>Final Destination: <input type="text" value="ACTIVE USERS" readOnly /></p>
       <p>Percentage: <input type="text" value="80%" readOnly /></p>

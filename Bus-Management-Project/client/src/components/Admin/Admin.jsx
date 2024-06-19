@@ -16,7 +16,7 @@ function Admin() {
 const[header,setHeader] = useState('Dashboard')
 
   const menuItems = [
-    {text: "Routes" },
+    // {text: "Routes" },
     // {text: "Drivers" },
     // {text: "Students" },
     {text: "Trips" },
@@ -34,7 +34,7 @@ const[header,setHeader] = useState('Dashboard')
         </div>
     <div className={styles["admin-right-container"]}>
      {header==="Dashboard"&&< AdminDashboard/>} 
-      {header==="Routes"&&<RouteManagement /> }
+      {/* {header==="Routes"&&<RouteManagement /> } */}
      {header==="Payments"&&<PaymentsManagement />}
      {header==="Drivers"&&<DriversManagment/>}
      {header==="Students"&&<StudentsManagment/>}

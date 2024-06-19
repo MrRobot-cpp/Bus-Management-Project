@@ -36,6 +36,7 @@ function TripsManagement() {
   };
 
   const handleSaveNewRoute = (newRouteData) => {
+    // Save the new route and exit adding state
     setRoutes((prevRoutes) =>
       prevRoutes.map((route) =>
         route.id === newRouteData.id ? newRouteData : route
@@ -73,12 +74,9 @@ function TripsManagement() {
           <table className={styles["routes-table"]}>
             <thead>
               <tr>
-                <th>Departure</th>
-                <th>Arrival</th>
-                <th>Maximum Enrollment</th>
-                <th>Route ID</th>
-                <th>Speed Limit</th>
-                <th>Date</th>
+                {Object.keys(routes[0]).map((key) => (
+                  <th key={key}>{key.charAt(0).toUpperCase() + key.slice(1)}</th>
+                ))}
                 <th>Options</th>
               </tr>
             </thead>
@@ -101,3 +99,5 @@ function TripsManagement() {
 }
 
 export default TripsManagement;
+
+

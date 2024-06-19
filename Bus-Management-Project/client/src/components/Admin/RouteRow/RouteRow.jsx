@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 import './RouteRow.css';
 import styles from '../tripsManagement/TripsManagement.module.css'
 
-
 function RouteRow({ route, onSave, onDelete, isEditing }) {
   const [isEditable, setIsEditable] = useState(isEditing);
   const [routeData, setRouteData] = useState({ ...route });
@@ -20,13 +19,8 @@ function RouteRow({ route, onSave, onDelete, isEditing }) {
 
   const handleSave = () => {
     // Validation check for empty fields
-    if (
-      !routeData.startTime ||
-      !routeData.endTime ||
-      !routeData.maxNoStudents ||
-      !routeData.speedLimit ||
-      !routeData.date
-    ) {
+    const isEmptyField = Object.values(routeData).some(value => value === '');
+    if (isEmptyField) {
       alert('All fields must be filled in before saving.');
       return;
     }
@@ -40,67 +34,21 @@ function RouteRow({ route, onSave, onDelete, isEditing }) {
 
   return (
     <tr>
-      <td>
-        {isEditable ? (
-          <input
-            type="text"
-            name="startTime"
-            value={routeData.startTime}
-            onChange={handleInputChange}
-          />
-        ) : (
-          routeData.startTime
-        )}
-      </td>
-      <td>
-        {isEditable ? (
-          <input
-            type="text"
-            name="endTime"
-            value={routeData.endTime}
-            onChange={handleInputChange}
-          />
-        ) : (
-          routeData.endTime
-        )}
-      </td>
-      <td>
-        {isEditable ? (
-          <input
-            type="number"
-            name="maxNoStudents"
-            value={routeData.maxNoStudents}
-            onChange={handleInputChange}
-          />
-        ) : (
-          routeData.maxNoStudents
-        )}
-      </td>
-      <td>{routeData.id.slice(0, 8)}</td>
-      <td>
-        {isEditable ? (
-          <input
-            type="number"
-            name="speedLimit"
-            value={routeData.speedLimit}
-            onChange={handleInputChange}
-          />
-        ) : (
-          routeData.speedLimit
-        )}
-      </td>
-      <td>
-        {isEditable ? (
-          <input
-            type="date"
-            name="date"
-            value={routeData.date}
-            onChange={handleInputChange}
-          />
-        ) : (
-          routeData.date
-        )}
-      </td>
+      {Object.keys(routeData).map((key) => (
+        <td key={key}>
+          {isEditable ? (
+            <input
+              type={key === 'date' ? 'date' : key === 'maxNoStudents' || key === 'speedLimit' ? 'number' : 'text'}
+              name={key}
+              value={routeData[key]}
+              onChange={handleInputChange}
+              disabled={key === 'id'} // Disable editing for the 'id' field
+            />
+          ) : (
+            key === 'id' ? routeData[key].slice(0, 8) : routeData[key]
+          )}
+        </td>
+      ))}
       <td>
         {isEditable ? (
           <button className={styles['saveRoute-btn']} onClick={handleSave}>Save</button>
