@@ -1,5 +1,5 @@
 // MapComponent.jsx
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import L from 'leaflet';
 import 'leaflet-routing-machine';
 import 'leaflet-control-geocoder';
@@ -11,6 +11,8 @@ import 'leaflet.locatecontrol/dist/L.Control.Locate.min.css';
 import styles from './MapRoutes.module.css'; // Import the CSS Module for this component
 
 const MapComponent = () => {
+  const [currentLocationMarker, setCurrentLocationMarker] = useState(null);
+
   useEffect(() => {
     // Map initialization
     const map = L.map('map').setView([29.9537564, 31.5370003], 13);
@@ -53,21 +55,27 @@ const MapComponent = () => {
     });
     L.marker(destinationPoint, { icon: redIcon }).addTo(map);
 
-    // Function to handle routing with current location as starting point
-    let currentLocationMarker;
+    // Function to create a blue arrow icon
+    const createBlueArrowIcon = () => {
+      return L.divIcon({
+        className: styles['custom-div-icon'],
+        html: '<div class="' + styles.arrow + '"></div>',
+        iconSize: [25, 25],
+        iconAnchor: [12, 12]
+      });
+    };
+
+    // Initialize routing control with custom line options
     const routingControl = L.Routing.control({
       waypoints: [L.latLng(29.9537564, 31.5370003), intermediatePoint, destinationPoint],
       routeWhileDragging: true,
+      addWaypoints: false, // Disable adding waypoints by clicking/dragging the route line
+      lineOptions: {
+        addWaypoints: false // Disable adding waypoints by clicking/dragging the route line
+      },
       createMarker: function(i, wp, n) {
         if (i === 0) {
-          return L.circleMarker(wp.latLng, {
-            radius: 8,
-            fillColor: "#007bff",
-            color: "#007bff",
-            weight: 1,
-            opacity: 1,
-            fillOpacity: 0.8
-          });
+          return L.marker(wp.latLng, { icon: blueIcon }); // Start marker
         }
         if (i === n - 1) {
           return L.marker(wp.latLng, { icon: redIcon }); // Destination marker
@@ -81,27 +89,28 @@ const MapComponent = () => {
     const onLocationFound = (e) => {
       const currentLocation = e.latlng;
 
+      // Remove previous marker if exists
       if (currentLocationMarker) {
         map.removeLayer(currentLocationMarker);
       }
 
-      currentLocationMarker = L.circleMarker(currentLocation, {
-        radius: 8,
-        fillColor: "#007bff",
-        color: "#007bff",
-        weight: 1,
-        opacity: 1,
-        fillOpacity: 0.8
+      // Create marker with blue arrow icon
+      const marker = L.marker(currentLocation, {
+        icon: createBlueArrowIcon()
       }).addTo(map);
 
+      // Update routing waypoints with current location
       const waypoints = [currentLocation, intermediatePoint, destinationPoint];
       routingControl.setWaypoints(waypoints);
-    }
+
+      // Update state to track current location marker
+      setCurrentLocationMarker(marker);
+    };
 
     // Handle location errors
     const onLocationError = (e) => {
       alert(e.message);
-    }
+    };
 
     // Request user's location and track it
     map.on('locationfound', onLocationFound);
@@ -127,6 +136,6 @@ const MapComponent = () => {
   }, []); // Empty dependency array ensures this runs only once
 
   return <div id="map" className={styles.mapContainer}></div>;
-}
+};
 
 export default MapComponent;
