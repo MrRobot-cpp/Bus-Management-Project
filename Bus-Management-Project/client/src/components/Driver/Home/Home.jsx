@@ -56,6 +56,12 @@ function Home(props) {
       <p>Percentage: <input type="text" value="80%" readOnly /></p>
       <div className="progress-bar">
         <div className="progress"></div>
+        <div className="icons">
+          <span className="icon">📍</span>
+          <span className="icon">🏠</span>
+          <span className="icon">👤</span>
+          <span className="icon">✔️</span>
+        </div>
       </div>
     </div>
 
