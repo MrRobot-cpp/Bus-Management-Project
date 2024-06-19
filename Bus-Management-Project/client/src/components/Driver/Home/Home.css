@@ -8,7 +8,7 @@
     margin-left: 50px;
     margin-top: 5px;
     margin-bottom: 5px;
-    height: 98%;
+    height: 100%;
     width: 90%;
     overflow: hidden;
     /* background: #FFFBEB; */
@@ -24,6 +24,7 @@
   align-items: flex-start;
   height: 100%;
   width: 50%;
+  margin-right: 20px;
   /* overflow: hidden; */
   /* background: red; */
   /* transform: translateX(160px);*/
@@ -33,8 +34,8 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  height: 99%;
-  width: 60%;
+  height: 100%;
+  width: 80%;
 margin-left: -100px;
 
   /* background: blue; */
@@ -47,8 +48,9 @@ margin-left: -100px;
     transition: 0.9s ease;
     font-size: 14px;
     height: 90%;
-    width: 98%;
+    width: 100%;
     margin-bottom: 4.7vh;
+    margin-left: 25px;
     /* background: orange; */
 }
 
@@ -75,9 +77,9 @@ margin-left: -100px;
   align-items: center;
   transition: 0.9s ease;
   font-size: 14px;
-  height: 100%;
-  width: 100%;
-  margin-top: 200px;
+  height: -500px;
+  width: 600px;
+  margin-top: 300px;
 
   /* background: purple; */
 }
@@ -107,12 +109,13 @@ margin-left: -100px;
   display:flex;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: #FFFBEB; /* Matching the background color */
+  background-color: #FFFBEB;
+  color: #263159; /* Matching the background color */
   border-radius: 20px;
   font-size: 15px; /* Adjusting the font size */
   padding: 20px; /* Adding padding for better spacing */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
-  width: 315px;
+  width: 240px;
  
 }
 
@@ -141,12 +144,13 @@ margin-left: -100px;
   display:flex;
   flex-direction: column;
   justify-content: flex-start;
+  color: #263159;
   background-color: #FFFBEB; /* Matching the background color */
   border-radius: 20px;
   font-size: 15px; /* Adjusting the font size */
   padding: 20px; /* Adding padding for better spacing */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
-  width: 315px;
+  width: 240px;
 }
 
 .general-tips p {
@@ -184,7 +188,7 @@ margin-left: -100px;
   border-radius: 20px;
   padding: 20px;
   font-size: 15px;
-  width: 700px; /* Adjust the width as needed */
+  width: 100%; /* Adjust the width as needed */
   margin: 10px; /* Adjust margin as needed */
   border: 1px solid #263159;
   height: 300px;

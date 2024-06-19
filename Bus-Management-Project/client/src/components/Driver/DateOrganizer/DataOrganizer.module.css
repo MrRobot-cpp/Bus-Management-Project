@@ -11,8 +11,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 63%;
+    width: 70%;
+    margin-left: 30px;
     height: 100%;
+    margin-left: 100px;
     /* padding: 10px; */
     /* transform: translateY(50px); */
 }

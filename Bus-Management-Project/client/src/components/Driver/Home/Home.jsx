@@ -32,6 +32,7 @@ function Home(props) {
 <div className="DG">
           <div className="daily-summary">
           <h2>Daily Summary</h2>
+      <hr className="thick-line" />
           <p>Trips For Today: <input type="text" value="9" readOnly /></p>
           <p>Trips Left: <input type="text" value="4" readOnly /></p>
           <p>Trips Completed: <input type="text" value="5" readOnly /></p>
@@ -40,6 +41,7 @@ function Home(props) {
           
           <div className="general-tips">
       <h2>General Tips</h2>
+      <hr className="thick-line" />
       <p>Waiting Time after arrival:   <input type="text"  value="3 Mins" readOnly /></p>
       <p>Number of stops: <input type="text" value="14" readOnly /></p>
       <p>Earning Per Trip: <input type="text" value="400 EGP" readOnly /></p>
