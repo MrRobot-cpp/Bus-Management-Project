@@ -1,5 +1,5 @@
 // TripsManagement.js
-
+import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import RouteRow from '../RouteRow/RouteRow.jsx';
@@ -57,6 +57,10 @@ function TripsManagement() {
     );
   };
 
+  const shouldShowLocationButton = (route) => {
+    return true;
+  };
+
   return (
     <div className={styles['RouteManagement-container']}>
       <div className={styles['routes-management-right-container']}>
@@ -88,6 +92,7 @@ function TripsManagement() {
                   onSave={isAdding && route.id === routes[routes.length - 1].id ? handleSaveNewRoute : handleUpdateRoute}
                   onDelete={handleDeleteRoute}
                   isEditing={isAdding && route.id === routes[routes.length - 1].id}
+                  showLocationButton={shouldShowLocationButton(route)}
                 />
               ))}
             </tbody>
@@ -99,5 +104,3 @@ function TripsManagement() {
 }
 
 export default TripsManagement;
-
-

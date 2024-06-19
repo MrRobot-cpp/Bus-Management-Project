@@ -1,10 +1,9 @@
 // RouteRow.js
-
 import React, { useState, useEffect } from 'react';
 import './RouteRow.css';
-import styles from '../tripsManagement/TripsManagement.module.css'
+import styles from '../tripsManagement/TripsManagement.module.css';
 
-function RouteRow({ route, onSave, onDelete, isEditing }) {
+function RouteRow({ route, onSave, onDelete, isEditing, showLocationButton }) {
   const [isEditable, setIsEditable] = useState(isEditing);
   const [routeData, setRouteData] = useState({ ...route });
 
@@ -32,6 +31,11 @@ function RouteRow({ route, onSave, onDelete, isEditing }) {
     setIsEditable(!isEditable);
   };
 
+  const handleLocationClick = () => {
+    console.log('Location button clicked for route:', routeData);
+    // Implement location-specific functionality here
+  };
+
   return (
     <tr>
       {Object.keys(routeData).map((key) => (
@@ -56,6 +60,9 @@ function RouteRow({ route, onSave, onDelete, isEditing }) {
           <button className={styles['editRoute-btn']} onClick={handleEditToggle}>Edit</button>
         )}
         <button className={styles['deleteRoute-btn']} onClick={() => onDelete(routeData.id)}>Delete</button>
+        {showLocationButton && (
+          <button className={styles['location-btn']} onClick={handleLocationClick}>Location</button>
+        )}
       </td>
     </tr>
   );

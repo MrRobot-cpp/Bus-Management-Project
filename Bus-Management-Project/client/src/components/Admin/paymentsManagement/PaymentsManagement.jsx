@@ -1,5 +1,5 @@
 // TripsManagement.js
-
+import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import RouteRow from '../RouteRow/RouteRow.jsx';
@@ -36,6 +36,7 @@ function PaymentsManagement() {
   };
 
   const handleSaveNewRoute = (newRouteData) => {
+    // Save the new route and exit adding state
     setRoutes((prevRoutes) =>
       prevRoutes.map((route) =>
         route.id === newRouteData.id ? newRouteData : route
@@ -56,6 +57,10 @@ function PaymentsManagement() {
     );
   };
 
+  const shouldShowLocationButton = (route) => {
+    return false;
+  };
+
   return (
     <div className={styles['RouteManagement-container']}>
       <div className={styles['routes-management-right-container']}>
@@ -73,12 +78,9 @@ function PaymentsManagement() {
           <table className={styles["routes-table"]}>
             <thead>
               <tr>
-                <th>Departure</th>
-                <th>Arrival</th>
-                <th>Maximum Enrollment</th>
-                <th>Route ID</th>
-                <th>Speed Limit</th>
-                <th>Date</th>
+                {Object.keys(routes[0]).map((key) => (
+                  <th key={key}>{key.charAt(0).toUpperCase() + key.slice(1)}</th>
+                ))}
                 <th>Options</th>
               </tr>
             </thead>
@@ -90,6 +92,7 @@ function PaymentsManagement() {
                   onSave={isAdding && route.id === routes[routes.length - 1].id ? handleSaveNewRoute : handleUpdateRoute}
                   onDelete={handleDeleteRoute}
                   isEditing={isAdding && route.id === routes[routes.length - 1].id}
+                  showLocationButton={shouldShowLocationButton(route)}
                 />
               ))}
             </tbody>
