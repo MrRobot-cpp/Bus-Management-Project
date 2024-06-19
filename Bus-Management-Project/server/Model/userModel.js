@@ -37,7 +37,7 @@ export const Admin = User.discriminator('Admin', adminSchema);
 // Driver Schema
 const driverSchema = new Schema({
   trips: [{ type: Schema.Types.ObjectId, ref: 'Trip' }], // Reference to Trip documents
-  averageRating: { type: Number, default: 0 },
+  averageRating: { type: Number, default: 5 },
   salary: { type: Number, required: true },
   address: { type: String, required: true }
 });

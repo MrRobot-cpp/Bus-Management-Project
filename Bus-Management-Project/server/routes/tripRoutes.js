@@ -1,9 +1,30 @@
 import express from 'express';
 import { Trip } from '../Model/tripModel.js';
+import { body, param, validationResult } from 'express-validator';
+
+
 const router = express.Router();
 
+// Validation middleware
+const validateTrip = [
+    body('route').optional().isArray().withMessage('Route should be an array'),
+    body('time.openingTime').optional().isISO8601().toDate().withMessage('Invalid opening time format'),
+    body('time.startTime').optional().isISO8601().toDate().withMessage('Invalid start time format'),
+    body('time.endTime').optional().isISO8601().toDate().withMessage('Invalid end time format'),
+    body('type.busType').optional().notEmpty().withMessage('Bus type is required'),
+    body('type.numberOfSeats').optional().isNumeric().withMessage('Number of seats should be a number'),
+    body('students').optional().isArray().withMessage('Students should be an array'),
+    body('tripId').optional().isNumeric().withMessage('Trip ID should be a number'),
+    body('active').optional().isBoolean().withMessage('Active should be a boolean')
+];
+
+// Validation middleware for ObjectId
+const validateObjectId = [
+    param('id').isMongoId().withMessage('Invalid ID format')
+];
+
 // Create a Trip
-router.post('/', async (req, res) => {
+router.post('/', validateTrip, async (req, res) => {
     try {
         const { route, time, type, students, tripId, active } = req.body;
 
@@ -41,7 +62,7 @@ router.get('/', async (req, res) => {
 });
 
 // Get a Trip by ID
-router.get('/:id', async (req, res) => {
+router.get('/:id', validateObjectId, async (req, res) => {
     try {
         const { id } = req.params;
         const trip = await Trip.findById(id);
@@ -58,7 +79,7 @@ router.get('/:id', async (req, res) => {
 });
 
 // Update a Trip by ID
-router.put('/:id', async (req, res) => {
+router.put('/:id', validateObjectId, validateTrip, async (req, res) => {
     try {
         const { id } = req.params;
         const { route, time, type, students, tripId, active } = req.body;
@@ -87,8 +108,33 @@ router.put('/:id', async (req, res) => {
     }
 });
 
+// Update a Trip by ID (partial update)
+router.patch('/:id', validateObjectId, validateTrip, async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+        return res.status(400).json({ errors: errors.array() });
+    }
+
+    try {
+        const { id } = req.params;
+        const updates = req.body;
+
+        const result = await Trip.findByIdAndUpdate(id, updates, { new: true });
+
+        if (!result) {
+            return res.status(404).json({ message: 'Trip not found' });
+        }
+
+        return res.status(200).json({ message: 'Trip updated successfully!', data: result });
+
+    } catch (error) {
+        console.log(error.message);
+        res.status(500).send({ message: error.message });
+    }
+});
+
 // Delete a Trip by ID
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', validateObjectId, async (req, res) => {
     try {
         const { id } = req.params;
 
