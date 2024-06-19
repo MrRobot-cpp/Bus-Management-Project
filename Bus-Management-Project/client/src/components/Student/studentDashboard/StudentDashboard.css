@@ -1,12 +1,11 @@
-.left-right-sections {
+.student-left-right-sections {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    gap: 8em;
+    margin: 0;
+    padding: 0;
 }
 
-.right-section {
-    padding-top: 30px;
-}
 
 .welcome-container {
     width: 1350px;
@@ -83,9 +82,10 @@
     padding: 20px;
     border-radius: 20px;
     margin-bottom: 20px;
+    border: 0;
 }
 
-.current-trip-title, .payments-title {
+.student-current-trip-title, .payments-title {
     font-size: 25px;
 }
 

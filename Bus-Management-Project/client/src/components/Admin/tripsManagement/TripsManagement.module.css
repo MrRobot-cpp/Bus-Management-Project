@@ -62,13 +62,13 @@
     margin-top: 1.2em;
 }
 .routes-table td{
-    color: rgb(161, 161, 161);
+    color: rgb(105, 104, 104);
     border-bottom: 1px solid #ddd;
-    font-weight: 100;
+    font-weight: 500;
     font-size: small;
 }
 
-.editRoute-btn{
+.editRoute-btn, .saveRoute-btn, .deleteRoute-btn, .location-btn{
     background-color: #263159;
     color: #FFFBEB;
     font-family: inherit;
@@ -80,7 +80,7 @@
     margin-right: 5px;
 
 }
-.editRoute-btn:hover{
+.editRoute-btn:hover, .saveRoute-btn:hover, .deleteRoute-btn:hover, .location-btn:hover{
     background-color:#FFFBEB;
     color: #263159 ;
     transition: 0.5s ease-in-out;

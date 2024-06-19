@@ -51,7 +51,7 @@ function StudentDashboard() {
             <img className='student-logo' src={studentLogo} alt="student icon" />
         </div>
 
-        <div className="left-right-sections">
+        <div className="student-left-right-sections">
 
             <div className="left-section">
                 <Schedule/>
@@ -80,7 +80,7 @@ function StudentDashboard() {
 
             </div>
 
-            <div className="right-section">
+            <div className="student-right-section">
 
                 <div className="current-trip">
                     <p className="current-trip-title">Current Trip</p>
@@ -96,7 +96,6 @@ function StudentDashboard() {
                             <p className='current-trip-time'>00:00</p>
                         </span>
                     </div>
-                    <img className="trip-status-bar" src={tripStatus} alt="trip status" />
                     </div>
                 </div>
 
