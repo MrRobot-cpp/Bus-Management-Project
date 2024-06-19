@@ -1,7 +1,7 @@
-// RouteRow.js
 import React, { useState, useEffect } from 'react';
+import './RouteRow.css';
 
-function RouteRow({ route, onUpdate, onDelete, isEditing, isSelected, onSelect }) {
+function RouteRow({ route, onUpdate, onDelete, isEditing, isDeleting, isSelected, onSelect }) {
     const [isEditable, setIsEditable] = useState(isEditing && isSelected);
     const [routeData, setRouteData] = useState({ ...route });
 
@@ -9,20 +9,37 @@ function RouteRow({ route, onUpdate, onDelete, isEditing, isSelected, onSelect }
         setIsEditable(isEditing && isSelected);
     }, [isEditing, isSelected]);
 
+    useEffect(() => {
+        if (isDeleting) {
+            setIsEditable(false);
+        }
+    }, [isDeleting]);
+
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setRouteData((prevData) => ({ ...prevData, [name]: value }));
     };
 
     const handleSave = () => {
+        const { day, startFrom, endAt, tripType, goingTime, leavingTime } = routeData;
+
+        if (!day || !startFrom || !endAt || !tripType || !goingTime || !leavingTime) {
+            alert('Please fill out all fields before saving.');
+            return;
+        }
+
         onUpdate(route.id, routeData);
         setIsEditable(false);
+    };
+
+    const handleDelete = () => {
+        onDelete(route.id);
     };
 
     return (
         <tr>
             <td>
-                {isEditing && (
+                {(isEditing || isDeleting) && (
                     <input
                         type="checkbox"
                         checked={isSelected}
@@ -37,6 +54,7 @@ function RouteRow({ route, onUpdate, onDelete, isEditing, isSelected, onSelect }
                         name="day"
                         value={routeData.day}
                         onChange={handleInputChange}
+                        required
                     />
                 ) : (
                     route.day
@@ -49,6 +67,7 @@ function RouteRow({ route, onUpdate, onDelete, isEditing, isSelected, onSelect }
                         name="startFrom"
                         value={routeData.startFrom}
                         onChange={handleInputChange}
+                        required
                     />
                 ) : (
                     route.startFrom
@@ -61,6 +80,7 @@ function RouteRow({ route, onUpdate, onDelete, isEditing, isSelected, onSelect }
                         name="endAt"
                         value={routeData.endAt}
                         onChange={handleInputChange}
+                        required
                     />
                 ) : (
                     route.endAt
@@ -73,6 +93,7 @@ function RouteRow({ route, onUpdate, onDelete, isEditing, isSelected, onSelect }
                         name="tripType"
                         value={routeData.tripType}
                         onChange={handleInputChange}
+                        required
                     />
                 ) : (
                     route.tripType
@@ -85,6 +106,7 @@ function RouteRow({ route, onUpdate, onDelete, isEditing, isSelected, onSelect }
                         name="goingTime"
                         value={routeData.goingTime}
                         onChange={handleInputChange}
+                        required
                     />
                 ) : (
                     route.goingTime
@@ -97,14 +119,19 @@ function RouteRow({ route, onUpdate, onDelete, isEditing, isSelected, onSelect }
                         name="leavingTime"
                         value={routeData.leavingTime}
                         onChange={handleInputChange}
+                        required
                     />
                 ) : (
                     route.leavingTime
                 )}
             </td>
             <td>
-                {isEditable && (
-                    <button onClick={handleSave}>Save</button>
+                {isEditable ? (
+                    <button className='save-btn' onClick={handleSave}>Save</button>
+                ) : (
+                    isDeleting && isSelected && (
+                        <button className='delete-btn' onClick={handleDelete}>Delete</button>
+                    )
                 )}
             </td>
         </tr>
