@@ -1,78 +1,59 @@
-// RouteManagement.js
+// TripsManagement.js
 
-import  { useState } from 'react';
+import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import RouteRow from '../RouteRow/RouteRow.jsx';
 import styles from './TripsManagement.module.css';
 
 function TripsManagement() {
   const [routes, setRoutes] = useState([
-    { id: uuidv4(), startTime: '10:00 AM', endTime: '11:00 AM', speedLimit: 60, maxNoStudents: 10, date: new Date("2024-05-11").toISOString().split('T')[0] },
-    { id: uuidv4(), startTime: '10:00 AM', endTime: '11:00 AM', speedLimit: 60, maxNoStudents: 10, date: new Date("2024-05-11").toISOString().split('T')[0] },
-    { id: uuidv4(), startTime: '10:00 AM', endTime: '11:00 AM', speedLimit: 60, maxNoStudents: 10, date: new Date("2024-05-11").toISOString().split('T')[0] },
+    {
+      id: uuidv4(),
+      startTime: '10:00 AM',
+      endTime: '11:00 AM',
+      speedLimit: 60,
+      maxNoStudents: 10,
+      date: new Date("2024-05-11").toISOString().split('T')[0]
+    },
+    // Additional initial routes...
   ]);
 
-  const [selectedRoute, setSelectedRoute] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [editToggle,setEditToggle] = useState(false)
+  const [isAdding, setIsAdding] = useState(false);
 
-  const [editRoute, setEditRoute] = useState({
-    id: '',
-    maxNoStudents: 0,
-    startTime: '',
-    endTime: '',
-    speedLimit: 0,
-    date: ''
-  });
-
-  // const positionModal = (event) => {
-  //   const modal = document.querySelector('.modal');
-  //   const rect = event.target.getBoundingClientRect();
-  //   const modalWidth = modal.offsetWidth;
-  //   const modalHeight = modal.offsetHeight;
-  //   const clickX = rect.left + window.scrollX + rect.width / 2;
-  //   const clickY = rect.top + window.scrollY + rect.height / 2;
-  //   const newX = clickX - modalWidth / 2;
-  //   const newY = clickY - modalHeight / 2;
-  //   modal.style.left = `${newX}px`;
-  //   modal.style.top = `${newY}px`;
-  // };
-
-  const addRoute = () => {
-    const newRoute = {
-      id: uuidv4(),
-      maxNoStudents: 0,
-      startTime: '',
-      endTime: '',
-      speedLimit: 0,
-      date: ''
-    };
-    setRoutes([...routes, newRoute]);
+  const handleAddRoute = () => {
+    if (!isAdding) {
+      const newRoute = {
+        id: uuidv4(),
+        startTime: '',
+        endTime: '',
+        speedLimit: 0,
+        maxNoStudents: 0,
+        date: new Date().toISOString().split('T')[0] // default to today
+      };
+      setRoutes((prevRoutes) => [...prevRoutes, newRoute]);
+      setIsAdding(true);
+    }
   };
 
-  const handleEditRoute = (id, event) => {
-    const routeToEdit = routes.find(route => route.id === id);
-    setEditRoute(routeToEdit);
-    setSelectedRoute(id);
-    setIsModalOpen(true);
-    positionModal(event);
-    setEditToggle(!edit);
-  };
-
-  const handleConfirmEdit = () => {
-    const updatedRoutes = routes.map(route => {
-      if (route.id === selectedRoute) {
-        return editRoute;
-      }
-      return route;
-    });
-    setRoutes(updatedRoutes);
-    setIsModalOpen(false);
+  const handleSaveNewRoute = (newRouteData) => {
+    setRoutes((prevRoutes) =>
+      prevRoutes.map((route) =>
+        route.id === newRouteData.id ? newRouteData : route
+      )
+    );
+    setIsAdding(false);
   };
 
   const handleDeleteRoute = (id) => {
-    const updatedRoutes = routes.filter(route => route.id !== id);
-    setRoutes(updatedRoutes);
-    setIsModalOpen(false);
+    setRoutes((prevRoutes) => prevRoutes.filter((route) => route.id !== id));
+  };
+
+  const handleUpdateRoute = (updatedRoute) => {
+    setRoutes((prevRoutes) =>
+      prevRoutes.map((route) =>
+        route.id === updatedRoute.id ? updatedRoute : route
+      )
+    );
   };
 
   return (
@@ -85,7 +66,7 @@ function TripsManagement() {
               <h4 className={styles['numberOfRoutes']}>{routes.length}</h4>
             </div>
             <div className={styles['add-routes-btn']}>
-              <button onClick={addRoute}>Add Route</button>
+              <button onClick={handleAddRoute}>Add Route</button>
             </div>
           </div>
           <hr />
@@ -103,59 +84,16 @@ function TripsManagement() {
             </thead>
             <tbody>
               {routes.map((route) => (
-                <tr key={route.id}>
-                  <td>{route.startTime}</td>
-                  <td>{route.endTime}</td>
-                  <td>{route.maxNoStudents}</td>
-                  <td>{route.id.slice(0, 8)}</td>
-                  <td>{route.speedLimit}</td>
-                  <td>{route.date}</td>
-                  <td>
-                    <button className={styles['editRoute-btn']} onClick={(event) => handleEditRoute(route.id, event)}>Edit</button>
-                    <button className={styles['editRoute-btn']} onClick={() => handleDeleteRoute(route.id)}>Delete</button>
-                  </td>
-                </tr>
+                <RouteRow
+                  key={route.id}
+                  route={route}
+                  onSave={isAdding && route.id === routes[routes.length - 1].id ? handleSaveNewRoute : handleUpdateRoute}
+                  onDelete={handleDeleteRoute}
+                  isEditing={isAdding && route.id === routes[routes.length - 1].id}
+                />
               ))}
             </tbody>
           </table>
-          {isModalOpen && (
-            <div className={styles['modal']}>
-              <div className={styles["modal-content"]}>
-                <p>Edit route:</p>
-                <div>
-                <h6>Departure:</h6>
-                <input type="text" value={editRoute.startTime} onChange={(e) => setEditRoute({ ...editRoute, startTime: e.target.value })} placeholder="Departure" />
-                </div>
-
-                <div>
-                <h6>Arrival:</h6>
-                <input type="text" value={editRoute.endTime} onChange={(e) => setEditRoute({ ...editRoute, endTime: e.target.value })} placeholder="Arrival" />
-                </div>
-
-                <div>
-                <h6>Maximum Enrollment:</h6>
-                <input type="text" value={editRoute.maxNoStudents} onChange={(e) => setEditRoute({ ...editRoute, maxNoStudents: e.target.value })} placeholder="Maximum Enrollment" />
-                </div>
-
-                <div>
-                <h6>Speed Limit:</h6>
-                <input type="text" value={editRoute.speedLimit} onChange={(e) => setEditRoute({ ...editRoute, speedLimit: e.target.value })} placeholder="Speed Limit" />
-                </div>
-
-                <div>
-                <h6>ID:</h6>
-                <input type="text" value={editRoute.id.slice(0,8)} onChange={(e) => setEditRoute({ ...editRoute, id: e.target.value })} placeholder="User ID" />
-                </div>
-                
-                <div>
-                <h6>Date:</h6>
-                <input type="text" value={editRoute.date} onChange={(e) => setEditRoute({ ...editRoute, date: e.target.value })} placeholder="Date" />
-                </div>
-                
-                <button onClick={handleConfirmEdit}>Save</button>
-              </div>
-            </div>
-          )}
         </div>
       </div>
     </div>

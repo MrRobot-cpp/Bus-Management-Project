@@ -44,5 +44,5 @@ tripSchema.pre('save', function (next) {
 
 export const Trip = mongoose.model('Trip', tripSchema);
 
- 
+
 
