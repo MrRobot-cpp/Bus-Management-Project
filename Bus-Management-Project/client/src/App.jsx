@@ -13,9 +13,8 @@ import LandingPage from './components/LandingPage/LandingPage'
 function App() {
     return (
         <>
+        <Driver/>
             {/*SAMER: MA7DSH YL3B FL ROUTES ELY 3AOZ YGRB 7AGA Y COMMENT EL ROUTES W YKTB T7TEHA */}
-            <Admin/>
-
             {/* <Routes>
                 <Route
                     path={"/Landing-page"}

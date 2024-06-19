@@ -176,3 +176,67 @@ margin-left: -100px;
 
 
 }
+/* current trip */
+.current-trip {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFBEB;
+  border-radius: 20px;
+  padding: 20px;
+  font-size: 15px;
+  width: 700px; /* Adjust the width as needed */
+  margin: 10px; /* Adjust margin as needed */
+  border: 1px solid #263159;
+  height: 300px;
+}
+
+.current-trip h2 {
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  color: #263159;
+}
+
+.current-trip p {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1em;
+}
+
+.current-trip input {
+  border: 1px solid #263159;
+  background-color: #FFFBEB;
+  border-radius: 7px;
+  padding: 5px;
+  width: 150px;
+  text-align: center;
+  color:#263159;
+  font-size: 12px;
+}
+
+.progress-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.progress {
+  background-color: #263159;
+  height: 10px;
+  width: 80%; /* Adjust this width to represent the progress percentage */
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.icon {
+  font-size: 20px;
+  color:#263159;
+}

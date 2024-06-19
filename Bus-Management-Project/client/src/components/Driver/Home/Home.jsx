@@ -50,12 +50,18 @@ function Home(props) {
           </div>
          
         
-          <div className="current-trip">
+   <div className="current-trip">
       <h2>Current Trip</h2>
       <p>Final Destination: <input type="text" value="ACTIVE USERS" readOnly /></p>
       <p>Percentage: <input type="text" value="80%" readOnly /></p>
       <div className="progress-bar">
         <div className="progress"></div>
+        <div className="icons">
+          <span className="icon">📍</span>
+          <span className="icon">🏠</span>
+          <span className="icon">👤</span>
+          <span className="icon">✔️</span>
+        </div>
       </div>
     </div>
 
