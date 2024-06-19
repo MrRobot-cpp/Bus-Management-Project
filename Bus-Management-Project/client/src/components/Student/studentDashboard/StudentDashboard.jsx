@@ -73,7 +73,6 @@ function StudentDashboard() {
                         <p className='rating-number'>4.38</p>
                     </div>
                     <div className="driver-contact">
-                    <p className="driver-phone">+201204837593</p>
                     <p className="live-loc">Live Location</p> {/* should link to navigation tab */}
                     </div>
                 </div>
@@ -82,8 +81,8 @@ function StudentDashboard() {
 
             <div className="student-right-section">
 
-                <div className="current-trip">
-                    <p className="current-trip-title">Current Trip</p>
+                <div className="student-current-trip">
+                    <p className="student-current-trip-title">Current Trip</p>
                     <hr />
                     <div className="current-trip-contents">
                     <div className="current-trip-info">
