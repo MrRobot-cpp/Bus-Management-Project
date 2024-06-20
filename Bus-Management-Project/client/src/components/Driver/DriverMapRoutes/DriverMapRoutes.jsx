@@ -1,4 +1,3 @@
-// MapComponent.jsx
 import React, { useEffect, useState } from 'react';
 import L from 'leaflet';
 import 'leaflet-routing-machine';
@@ -8,6 +7,7 @@ import 'leaflet/dist/leaflet.css';
 import 'leaflet-routing-machine/dist/leaflet-routing-machine.css';
 import 'leaflet-control-geocoder/dist/Control.Geocoder.css';
 import 'leaflet.locatecontrol/dist/L.Control.Locate.min.css';
+import DriverMark from '../../../assets/DriverMark.svg';
 import styles from './DriverMapRoutes.module.css'; // Import the CSS Module for this component
 
 const MapComponent = () => {
@@ -25,7 +25,7 @@ const MapComponent = () => {
     osm.addTo(map);
 
     // Streets layer
-    const googleStreets = L.tileLayer('http://{s}.google.com/vt?lyrs=m&x={x}&y={y}&z={z}', {
+    const googleStreets = L.tileLayer('https://{s}.google.com/vt?lyrs=m&x={x}&y={y}&z={z}', {
       maxZoom: 20,
       subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
     });
@@ -75,7 +75,15 @@ const MapComponent = () => {
       },
       createMarker: function(i, wp, n) {
         if (i === 0) {
-          return L.marker(wp.latLng, { icon: blueIcon }); // Start marker
+          return L.marker(wp.latLng, {
+            icon: L.icon({
+              iconUrl: DriverMark,
+              iconSize: [25, 41],
+              iconAnchor: [12, 41],
+              popupAnchor: [1, -34],
+              shadowSize: [41, 41]
+            })
+          }); // Current location marker with DriverMark.svg icon
         }
         if (i === n - 1) {
           return L.marker(wp.latLng, { icon: redIcon }); // Destination marker
@@ -94,9 +102,15 @@ const MapComponent = () => {
         map.removeLayer(currentLocationMarker);
       }
 
-      // Create marker with blue arrow icon
+      // Create marker with DriverMark.svg icon
       const marker = L.marker(currentLocation, {
-        icon: createBlueArrowIcon()
+        icon: L.icon({
+          iconUrl: DriverMark,
+          iconSize: [25, 41],
+          iconAnchor: [12, 41],
+          popupAnchor: [1, -34],
+          shadowSize: [41, 41]
+        })
       }).addTo(map);
 
       // Update routing waypoints with current location
@@ -118,7 +132,21 @@ const MapComponent = () => {
     map.locate({ watch: true, setView: true, maxZoom: 16 });
 
     // Current location control
-    L.control.locate().addTo(map);
+    const locateControl = L.control.locate({
+      position: 'topleft', // Change position to top left
+      setView: 'untilPan',
+      keepCurrentZoomLevel: true,
+      flyTo: true,
+      onLocationFound: function(e) {
+        map.setView(e.latlng, 17); // Adjust zoom level for 200m scale
+      },
+      strings: {
+        title: "Show me where I am"
+      },
+      locateOptions: {
+        enableHighAccuracy: true
+      }
+    }).addTo(map);
 
     // Leaflet search
     L.Control.geocoder().addTo(map);

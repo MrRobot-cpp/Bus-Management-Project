@@ -1,0 +1,28 @@
+/* MapComponent.module.css */
+.mapContainer {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+    border-radius: 5px;
+    /* padding: 20px;
+    margin: 20px; */
+  }
+  .StudentMapContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding :20px;
+
+  }
+  .routeInfo {
+    position: absolute;
+    bottom: 17px;
+    right: 5px;
+    color: rgba(255, 255, 255, 0.8);
+    background: #263159;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+  }

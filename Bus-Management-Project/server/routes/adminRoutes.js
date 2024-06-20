@@ -1,5 +1,6 @@
 import express from 'express';
 import { Admin } from '../Model/userModel.js';
+import { isAuthenticated } from '../auth.js';
 import { body, param, validationResult } from 'express-validator';
 
 const router = express.Router();
@@ -76,7 +77,7 @@ router.get('/', async (req, res) => {
 });
 
 // Get an Admin by ID
-router.get('/:id', validateObjectId, async (req, res) => {
+router.get('/:id', isAuthenticated, validateObjectId, async (req, res) => {
     try {
         const { id } = req.params;
         const admin = await Admin.findById(id);
@@ -93,7 +94,7 @@ router.get('/:id', validateObjectId, async (req, res) => {
 });
 
 // Update an Admin by ID
-router.put('/:id', validateObjectId, validateAdmin, async (req, res) => {
+router.put('/:id', isAuthenticated, validateObjectId, validateAdmin, async (req, res) => {
     try {
         const { id } = req.params;
         const { name, email, password, gender, 
@@ -126,7 +127,7 @@ router.put('/:id', validateObjectId, validateAdmin, async (req, res) => {
 });
 
 // Update an Admin by ID (partial update)
-router.patch('/:id', validateObjectId, validateAdmin, async (req, res) => {
+router.patch('/:id', isAuthenticated, validateObjectId, validateAdmin, async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
         return res.status(400).json({ errors: errors.array() });
@@ -151,7 +152,7 @@ router.patch('/:id', validateObjectId, validateAdmin, async (req, res) => {
 });
 
 // Delete an Admin by ID
-router.delete('/:id', validateObjectId, async (req, res) => {
+router.delete('/:id', isAuthenticated, validateObjectId, async (req, res) => {
     try {
         const { id } = req.params;
 
