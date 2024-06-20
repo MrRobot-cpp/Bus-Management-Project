@@ -10,9 +10,8 @@ function Home(props) {
   const {driver,trips} = props;
   return (
     <>
-      {/* <div className="home-container"> */}
+      <div className="home-container">
         <div className="left-container">
-          \
           {/* <div className="welcome-container">
             <div className="welcome">
               <p className="welcome-text">Welcome Home!</p>
@@ -33,35 +32,29 @@ function Home(props) {
 <div className="DG">
           <div className="daily-summary">
           <h2>Daily Summary</h2>
+      <hr className="thick-line" />
           <p>Trips For Today: <input type="text" value="9" readOnly /></p>
           <p>Trips Left: <input type="text" value="4" readOnly /></p>
           <p>Trips Completed: <input type="text" value="5" readOnly /></p>
           <p>Driving Time For today: <input type="text" value="6 Hours" readOnly /></p>
           </div>
           
-          <div className="general-tips">
-      <h2>General Tips</h2>
-      <p>Waiting Time after arrival:   <input type="text"  value="3 Mins" readOnly /></p>
-      <p>Number of stops: <input type="text" value="14" readOnly /></p>
-      <p>Earning Per Trip: <input type="text" value="400 EGP" readOnly /></p>
-      
+      <div className="general-tips">
+        <h2>General Tips</h2>
+        <hr className="thick-line" />
+        <p>Waiting Time after arrival:   <input type="text"  value="3 Mins" readOnly /></p>
+        <p>Number of stops: <input type="text" value="14" readOnly /></p>
+        <p>Earning Per Trip: <input type="text" value="400 EGP" readOnly /></p>
     </div>
-      
           </div>
-         
+  
         
-   <div className="current-trip">
+  <div className="current-trip">
       <h2>Current Trip</h2>
-      <p>Final Destination: <input type="text" value="ACTIVE USERS" readOnly /></p>
-      <p>Percentage: <input type="text" value="80%" readOnly /></p>
-      <div className="progress-bar">
-        <div className="progress"></div>
-        <div className="icons">
-          <span className="icon">📍</span>
-          <span className="icon">🏠</span>
-          <span className="icon">👤</span>
-          <span className="icon">✔️</span>
-        </div>
+      <hr className="thick-line"/>
+      <div className="test1">
+      <p>Final Destination: <input  type="text" value="ACTIVE USERS" readOnly /> </p>
+      <p>Percentage: <input  type="text" value="80%" readOnly /> </p>
       </div>
     </div>
 
@@ -87,7 +80,7 @@ function Home(props) {
             <DateOrganizer trips={trips}/>
           </div>
         </div>
-      {/* </div> */}
+      </div>
     </>
   );
 }

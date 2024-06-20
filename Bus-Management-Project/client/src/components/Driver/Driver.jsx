@@ -156,7 +156,7 @@ function Driver() {
             onQuery={setHeader}
           />
         </div>
-        {/* <div className={styles["right-container"]}> */}
+        <div className={styles["right-container"]}>
           {header==="Dashboard" && <Home driver={driver} trips={trips} /> }
           {header==="trips" && <TripComponent /> }
           {header==="Navigation" && <MapRoutes/> }
@@ -164,7 +164,7 @@ function Driver() {
 
         </div>
       </div>
-    // </div>
+    </div>
   );
 }
 

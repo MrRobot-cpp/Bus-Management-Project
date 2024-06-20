@@ -12,30 +12,36 @@ function DriverProfile(props){
   };
 
     return(<>
-      <div className={styles.driverInformation}>
-      <div className={styles.driverHeader}>
-        {<img 
-          src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png" 
-          alt="Driver" 
-          className={styles.driverImage} 
-        /> }
+    <div className={styles.driverInformation}>
+  <div className={styles.driverHeader}>
+   
+    <div>
+      <h1>Driver Information</h1>
+      <hr className="thick-line" />
+     
+      <img 
+      src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png" 
+      alt="Driver" 
+      className={styles.driverImage} 
+    />
+      <h3>Rahma Soliman</h3>
+      <div className={styles.driverDetails}>
+        <p>#a48c7856</p>
+       
+     
+        <div className={styles.driverRating}>
+       <span className={styles.ratingValue}> 4.83</span> 
 
-        <div>
-         <h1>Driver Information </h1>
-         <hr class="thick-line"/>
-          <h3>Rahma Soliman</h3>
-          <p>#a48c7856</p>
+          <div className={styles.stars}>
+            {[...Array(5)].map((star, index) => (
+              <i key={index} className="fas fa-star"></i>
+            ))}
+          </div>
         </div>
-      </div>
-      <div className={styles.driverRating}>
-        <div className={styles.stars}>
-          {[...Array(5)].map((star, index) => (
-            <i key={index} className="fas fa-star"></i>
-          ))}
-        </div>
-        <p className={styles.ratingValue}>4.83</p>
       </div>
     </div>
+  </div>
+</div>
 
    
      

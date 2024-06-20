@@ -51,7 +51,7 @@ function TripsTable(props) {
 
   return (
     <>
-      <div className={styles["trips-table-container"]} style={tripTableStyles}>
+      <div className={styles["trips-table-container-driver"]} style={tripTableStyles}>
         <div className={styles["table-head"]} style={tripHeadStyles}>
           <p>{tripHead}</p>
           <MinBtn onButtonClick={handleButtonClick} />

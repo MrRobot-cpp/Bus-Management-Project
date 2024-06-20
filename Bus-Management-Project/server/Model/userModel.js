@@ -7,7 +7,8 @@ const { Schema } = mongoose;
 const billingInfoSchema = new Schema({
   cardNumber: { type: String, required: true },
   expiryDate: { type: String, required: true },
-  cvv: { type: String, required: true }
+  cvv: { type: String, required: true },
+  cardHolderName: { type: String, required: true}
 });
 
 const userSchema = new Schema({
@@ -60,5 +61,10 @@ userSchema.pre('save', async function(next) {
   this.password = await bcrypt.hash(this.password, salt);
   next();
 });
+
+// Method to match passwords
+userSchema.methods.matchPassword = async function(enteredPassword) {
+  return await bcrypt.compare(enteredPassword, this.password);
+};
 
 export const Student = User.discriminator('Student', studentSchema);

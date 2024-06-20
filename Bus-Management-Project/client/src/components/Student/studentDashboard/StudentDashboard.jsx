@@ -51,7 +51,7 @@ function StudentDashboard() {
             <img className='student-logo' src={studentLogo} alt="student icon" />
         </div>
 
-        <div className="left-right-sections">
+        <div className="student-left-right-sections">
 
             <div className="left-section">
                 <Schedule/>
@@ -73,17 +73,16 @@ function StudentDashboard() {
                         <p className='rating-number'>4.38</p>
                     </div>
                     <div className="driver-contact">
-                    <p className="driver-phone">+201204837593</p>
                     <p className="live-loc">Live Location</p> {/* should link to navigation tab */}
                     </div>
                 </div>
 
             </div>
 
-            <div className="right-section">
+            <div className="student-right-section">
 
-                <div className="current-trip">
-                    <p className="current-trip-title">Current Trip</p>
+                <div className="student-current-trip">
+                    <p className="student-current-trip-title">Current Trip</p>
                     <hr />
                     <div className="current-trip-contents">
                     <div className="current-trip-info">
@@ -96,7 +95,6 @@ function StudentDashboard() {
                             <p className='current-trip-time'>00:00</p>
                         </span>
                     </div>
-                    <img className="trip-status-bar" src={tripStatus} alt="trip status" />
                     </div>
                 </div>
 
