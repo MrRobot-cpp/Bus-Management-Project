@@ -12,6 +12,7 @@ function Overlay(props) {
         <div className={styles["trip-info-container"]}>
       <div className={styles["trip-info"]}>
         <h2>Trip Details</h2>
+        <hr className={styles["thick-line2"]} />
         <p>
           Departure Time: {trip.departure.hour}:{trip.departure.minute}{" "}
           {trip.departure.period}
@@ -20,9 +21,8 @@ function Overlay(props) {
           Arrival Time: {trip.arrival.hour}:{trip.arrival.minute}{" "}
           {trip.arrival.period}
         </p>
-        <p>Number of Students: {trip.numStudents}</p>
+        <p>Number of Stops: {trip.numStudents}</p>
         <p>Maximum Number of Students: {trip.maxNumberStudents}</p>
-        <p>Speed Limit: {trip.speedLimit} mph</p>
         <p>Stops: {trip.stops.join(", ")}</p>
         <p>Start Point: {trip.startPoint}</p>
         <p>End Point: {trip.endPoint}</p>

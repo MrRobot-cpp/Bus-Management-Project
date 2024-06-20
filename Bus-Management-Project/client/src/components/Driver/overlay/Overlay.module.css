@@ -25,7 +25,7 @@
     width: 40vw;
     font-size: 20px;
     line-height: 35px;
-    background: #FFFBEB;
+    background:#263159;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
@@ -35,9 +35,14 @@
   
   .trip-info p {
     margin: 5px 0;
+    font-size: 0.75em;
   }
   
   .trip-info p:first-child {
     margin-top: 0;
   }
-  
+  .thick-line2 {
+    border: none;
+    border-bottom: 2px solid #ccc; /* adjust the color and thickness to your liking */
+    margin: 10px 0;
+  }
