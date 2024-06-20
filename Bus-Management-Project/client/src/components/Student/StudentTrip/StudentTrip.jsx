@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import styles from './StudentTrip.module.css';
+import MenuItemButtonHighlighted from '../../General/MenuItemButton/MenuItemButtonHighLighted';
 
 function StudentTrip() {
     const [routes, setRoutes] = useState([
@@ -106,6 +107,21 @@ function StudentTrip() {
 
     return (
         <div className={styles['RouteManagement-container']}>
+            <div className={styles["location-choice-container"]}>
+                <div className={styles["location-choice"]}>
+                    <p className={styles['loc-choice-title']}>Trip Choice:</p>
+                    <hr />
+                    <div className={styles["location-choice-content"]}>
+                        <div className={styles["start-end-loc"]}>
+                            <input type="text"className={styles['start-input']} />
+                            <i className="fa-solid fa-arrow-right-arrow-left"></i>
+                            <input type="text" className={styles['end-input']} />
+                        </div>
+                        <button className={styles["show-trips-btn"]}>Show Trips</button>
+                    </div>
+                </div>
+            </div>
+
             <div className={styles['routes-management-right-container']}>
                 <div className={styles['routes-container']}>
                     <div className={styles['routes-header-container']}>
