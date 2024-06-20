@@ -107,7 +107,7 @@ function StudentTrip() {
 
     return (
         <div className={styles['RouteManagement-container']}>
-            <div className={styles["location-choice-container"]}>
+            {/* <div className={styles["location-choice-container"]}>
                 <div className={styles["location-choice"]}>
                     <p className={styles['loc-choice-title']}>Trip Choice:</p>
                     <hr />
@@ -118,10 +118,10 @@ function StudentTrip() {
                             <input type="text" className={styles['end-input']} />
                         </div>
                         <button className={styles["show-trips-btn"]}>Show Trips</button>
-                        <Dropdown/>/
+    
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             <div className={styles['routes-management-right-container']}>
                 <div className={styles['routes-container']}>
