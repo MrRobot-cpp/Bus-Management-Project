@@ -8,9 +8,8 @@ import Student from './components/Student/Student';
 import Driver from './components/Driver/Driver'
 import AccountConfig from './components/Login-SignUp/AccountConfig.jsx'
 import LandingPage from './components/LandingPage/LandingPage'
-
-
 function App() {
+
     return (
         <>
         <Student/>

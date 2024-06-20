@@ -3,7 +3,6 @@ import Schedule from '../schedule/Schedule';
 
 import studentLogo from '../../../assets/studenticon.png'
 import profilePic from '../../../assets/profilepic.png'
-import tripStatus from '../../../assets/tripstatus.png'
 import MenuItemButtonHighlighted from '../../General/MenuItemButton/MenuItemButtonHighLighted';
 
 

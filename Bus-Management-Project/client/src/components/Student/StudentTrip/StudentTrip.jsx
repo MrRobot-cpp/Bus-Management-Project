@@ -106,6 +106,21 @@ function StudentTrip() {
 
     return (
         <div className={styles['RouteManagement-container']}>
+            <div className={styles["location-choice-container"]}>
+                <div className={styles["location-choice"]}>
+                    <p className={styles['loc-choice-title']}>Trip Choice:</p>
+                    <hr />
+                    <div className={styles["location-choice-content"]}>
+                        <div className={styles["start-end-loc"]}>
+                            <input type="text"className={styles['start-input']} />
+                            <i className="fa-solid fa-arrow-right-arrow-left"></i>
+                            <input type="text" className={styles['end-input']} />
+                        </div>
+                        <button className={styles["show-trips-btn"]}>Show Trips</button>
+                    </div>
+                </div>
+            </div>
+
             <div className={styles['routes-management-right-container']}>
                 <div className={styles['routes-container']}>
                     <div className={styles['routes-header-container']}>
@@ -118,24 +133,22 @@ function StudentTrip() {
                     <table className={styles["routes-tableI"]}>
                         <thead>
                             <tr>
-                                <th>Day</th>
-                                <th>Start from</th>
-                                <th>End at</th>
-                                <th>Trip type</th>
-                                <th>goingTime</th>
-                                <th>leavingTime</th>
+                                <th>Date</th>
+                                <th>Trip Type</th>
+                                <th>Start Time</th>
+                                <th>End TIme</th>
                             </tr>
                         </thead>
                         <tbody>
                             {routes.map((route) => (
                                 <tr key={route.day}>
                                     <td>{route.day}</td>
-                                    <td>{route.startFrom}</td>
-                                    <td>{route.endAt}</td>
                                     <td>{route.tripType}</td>
                                     <td>{route.goingTime}</td>
                                     <td>{route.leavingTime}</td>
-
+                                    <td>
+                                        <button className={styles['choose-trip-btn']} >Choose Trip</button>
+                                    </td>
                                 </tr>
                             ))}
                         </tbody>
