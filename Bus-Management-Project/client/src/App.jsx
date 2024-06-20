@@ -8,12 +8,11 @@ import Student from './components/Student/Student';
 import Driver from './components/Driver/Driver'
 import AccountConfig from './components/Login-SignUp/AccountConfig.jsx'
 import LandingPage from './components/LandingPage/LandingPage'
-
-
 function App() {
+
     return (
         <>
-        <Student/>
+        <Driver/>
             {/*SAMER: MA7DSH YL3B FL ROUTES ELY 3AOZ YGRB 7AGA Y COMMENT EL ROUTES W YKTB T7TEHA */}
             {/* <Routes>
                 <Route

@@ -4,8 +4,9 @@ import Profile from "../General/Profile/Profile";
 import PageHeader from "./PageHeader/PageHeader";
 import StudentTrip from "./StudentTrip/StudentTrip";
 import styles from "./Student.module.css";
-import StudentDashboard from './studentDashboard/StudentDashboard.jsx';
+import StudentDashboard from "./StudentDashboard/StudentDashboard"
 import StudentDeposit from "./StudentDeposit/StudentDeposit.jsx";
+import StudentMapRoutes from "./StudentMapRoutes/StudentMapRoutes"
 
 const exampleObj = {
     Name: "shady",
@@ -25,6 +26,7 @@ function Student(){
     const menuItems = [
         { text: "Trips" },
         { text: "Deposit" },
+        { text: "Navigation" },
         { text: "Profile" },
     ];
     
@@ -42,6 +44,7 @@ function Student(){
                         {header==="Dashboard" && <StudentDashboard/> }
                         {header==="Trips" && <StudentTrip/> }
                         {header==="Deposit" &&<StudentDeposit/> }
+                        {header==="Navigation" &&<StudentMapRoutes/> }
                         {header==="Profile" && <Profile user={exampleObj}/>}        {/* <StudentTrip/> */}
                     </div>
                 </div>
