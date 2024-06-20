@@ -53,9 +53,9 @@ function StudentDashboard() {
         <div className="student-left-right-sections">
 
             <div className="left-section">
+                <div className='schedule-div'>
                 <Schedule/>
-
-
+                </div>
                 <div className="driver-info">
                     <div className="pic-name-rate">
                         <img className='profile-pic' src={profilePic} alt="profile picture" />
