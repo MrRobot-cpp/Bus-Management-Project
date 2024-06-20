@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import io from 'socket.io-client';
 import styles from "./BubbleChat.module.css";
 
-function BubbleChat(props) {
+function BubbleChat() {
   const [toggle, setToggle] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const [messages, setMessages] = useState([]);
