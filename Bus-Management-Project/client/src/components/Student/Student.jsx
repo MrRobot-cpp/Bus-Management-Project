@@ -4,7 +4,7 @@ import Profile from "../General/Profile/Profile";
 import PageHeader from "./PageHeader/PageHeader";
 import StudentTrip from "./StudentTrip/StudentTrip";
 import styles from "./Student.module.css";
-import StudentDashboard from "./StudentDashboard/StudentDashboard"
+import StudentDashboard from './studentDashboard/StudentDashboard.jsx'
 import StudentDeposit from "./StudentDeposit/StudentDeposit.jsx";
 import StudentMapRoutes from "./StudentMapRoutes/StudentMapRoutes"
 
