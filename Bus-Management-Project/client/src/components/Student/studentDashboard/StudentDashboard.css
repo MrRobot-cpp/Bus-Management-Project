@@ -74,8 +74,8 @@
 
 /* current trip */
 
-.current-trip {
-    width: 800px;
+.student-current-trip {
+    width: 700px;
     height: 200px;
     background-color: #FFFBEB;
     margin-right: 30px;
@@ -117,7 +117,7 @@
 
 .current-trip-contents {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding-inline: 40px;
 }
 
@@ -132,8 +132,15 @@
     margin-right: 30px;
     border-radius: 20px;
     padding: 20px;
-    height: 200px;
+    height: 260px;
     align-content: center;
+
+}
+
+.payments-title {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
 }
 
 
@@ -147,7 +154,7 @@
 }
 
 .payments-content {
-    padding-block: 10px;
+    padding-block: 20px;
     padding-inline: 40px;
     display: flex;
     justify-content: space-between;
@@ -162,8 +169,10 @@
 .payments-info, .payments-date {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 25px;
+    padding: 10px;
 }
+
 
 .payments-amount {    
     width: 120px;
