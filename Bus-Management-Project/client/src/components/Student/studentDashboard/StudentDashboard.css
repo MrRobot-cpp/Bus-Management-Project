@@ -1,15 +1,36 @@
 .student-left-right-sections {
     display: flex;
     flex-wrap: wrap;
-    gap: 8em;
+    width: 100%;
     margin: 0;
     padding: 0;
+}
+.left-section{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    padding-top: 30px;
+    align-items: center;
+    
+}
+
+.student-right-section{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    padding-top: 30px;
+    align-items: center;
+
 }
 
 
 .welcome-container {
-    width: 1350px;
-    height: 170px;
+    width: 95%;
+    height: 20%;
     background: linear-gradient(121deg, 
     rgb(23, 25, 73) 5%, 
     rgba(73,85,121,1) 50%, 
@@ -19,13 +40,12 @@
     justify-content: space-between;
     padding: 10px;
     border: rgb(232, 228, 214) solid 1px;
-    margin-top: 40px;
-    margin-bottom: 15px;
+    margin-top: 35px;
 }
 
-.student-logo {
+/* .student-logo {
     margin-right: 100px;
-}
+} */
 
 .welcome-text {
     color: #fff;
@@ -35,30 +55,33 @@
     padding: 20px;
 }
 
+.schedule-div{
+    width: 100%;
+    height: 40%;
+}
 /* driver info */
 .driver-info {
-    width: 450px;
-    height: 190px;
-    padding-inline: 20px;
+    width: 100%;
+    height: 50%; 
+    padding: 10px;
     background-color: #FFFBEB;
     display: flex;
     justify-content: space-between;
     text-align: center;
     align-items: center;
     margin-top: 15px;
+    margin-left: 20px;
     border-radius: 20px ;
 }
 
 .driver-contact {
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
 
 .profile-pic {
-    margin: 0;
-    width: 130px;
-    height: 130px;
+    width: 50px;
+    height: 50px;
 }
 
 .star-rating {
@@ -75,11 +98,10 @@
 /* current trip */
 
 .student-current-trip {
-    width: 700px;
-    height: 200px;
+    width: 85%;
+    height: 30%;
     background-color: #FFFBEB;
-    margin-right: 30px;
-    padding: 20px;
+    padding: 10px;
     border-radius: 20px;
     margin-bottom: 20px;
     border: 0;
@@ -90,7 +112,7 @@
 }
 
 .current-trip-info {
-    padding: 40px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -118,7 +140,6 @@
 .current-trip-contents {
     display: flex;
     justify-content: center;
-    padding-inline: 40px;
 }
 
 .trip-status-bar {
@@ -129,10 +150,10 @@
 /* payments */
 .payments {
     background-color: #FFFBEB;
-    margin-right: 30px;
     border-radius: 20px;
-    padding: 20px;
-    height: 260px;
+    padding: 10px;
+    width: 85%;
+    height: 50%;
     align-content: center;
 
 }
@@ -146,7 +167,6 @@
 
 .payments-text {
     display: flex;
-    gap: 15px;
 }
 
 .payments-text p {
@@ -154,8 +174,6 @@
 }
 
 .payments-content {
-    padding-block: 20px;
-    padding-inline: 40px;
     display: flex;
     justify-content: space-between;
 }
@@ -169,13 +187,8 @@
 .payments-info, .payments-date {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 5px;
     padding: 10px;
-}
-
-
-.payments-amount {    
-    width: 120px;
 }
 
 .payments-date-1, .payments-date-2, .payments-amount {
@@ -194,7 +207,7 @@
 }
 
 
-/* Media Queries */
+/* Media Queries
 @media (max-width: 1550px) {
     .welcome-container {
         align-items: center;
@@ -207,7 +220,7 @@
     }
 
     .left-right-sections {
-        flex-direction: column;
+        flex-direction: row;
     }
 
     .current-trip, .payments {
@@ -235,4 +248,4 @@
         width: 70px;
         font-size: 0.8em;
     }
-}
+} */

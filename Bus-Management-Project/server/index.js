@@ -1,4 +1,6 @@
 import express, { response } from "express";
+import http from 'http';
+import { Server } from 'socket.io';
 import { PORT, mongoDBURL} from "./config/config.js";
 import { Trip } from "./Model/tripModel.js";
 import { Admin, Driver, Student } from "./Model/userModel.js";
@@ -11,32 +13,42 @@ import mongoose from 'mongoose';
 import cors from "cors";
 
 const app = express();
+const server = http.createServer(app); // Create HTTP server
+const io = new Server(server); // Initialize Socket.io
 
 app.use(express.json());
-
 app.use(cors());
 
 app.use('/trips', tripRoutes);
 app.use('/admin', adminRoutes);
 app.use('/student', studentRoutes);
 app.use('/driver', driverRoutes);
-
 app.use('/auth', authRoutes);
 
+// Socket.io connection handling
+io.on('connection', (socket) => {
+  console.log('A user connected');
 
+  // Handle message events
+  socket.on('message', (data) => {
+    // Broadcast the message to all connected clients
+    io.emit('message', data);
+  });
 
-
-
+  socket.on('disconnect', () => {
+    console.log('A user disconnected');
+  });
+});
 
 // Connect to MongoDB for trips collection
 mongoose
-    .connect(mongoDBURL)
-    .then(() => {
-        console.log('app connected to db');
-        app.listen(PORT, ()=>{
-            console.log(`App is listening to port: ${PORT}`);
-        });
-    })
-    .catch((error) => {
-        console.log(error);
+  .connect(mongoDBURL)
+  .then(() => {
+    console.log('App connected to db');
+    server.listen(PORT, () => {
+      console.log(`App is listening to port: ${PORT}`);
     });
+  })
+  .catch((error) => {
+    console.log(error);
+  });
