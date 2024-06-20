@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import styles from './StudentTrip.module.css';
+import Dropdown from '../../General/Dropdown'; 
 
 function StudentTrip() {
     const [routes, setRoutes] = useState([
@@ -106,7 +107,7 @@ function StudentTrip() {
 
     return (
         <div className={styles['RouteManagement-container']}>
-            <div className={styles["location-choice-container"]}>
+            {/* <div className={styles["location-choice-container"]}>
                 <div className={styles["location-choice"]}>
                     <p className={styles['loc-choice-title']}>Trip Choice:</p>
                     <hr />
@@ -117,9 +118,10 @@ function StudentTrip() {
                             <input type="text" className={styles['end-input']} />
                         </div>
                         <button className={styles["show-trips-btn"]}>Show Trips</button>
+    
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             <div className={styles['routes-management-right-container']}>
                 <div className={styles['routes-container']}>
