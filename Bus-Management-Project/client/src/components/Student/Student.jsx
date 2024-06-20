@@ -5,8 +5,8 @@ import PageHeader from "./PageHeader/PageHeader";
 import StudentTrip from "./StudentTrip/StudentTrip";
 import styles from "./Student.module.css";
 import StudentDashboard from './studentDashboard/StudentDashboard.jsx'
-import StudentDeposit from "./StudentDeposit/StudentDeposit.jsx";
 import StudentMapRoutes from "./StudentMapRoutes/StudentMapRoutes"
+import CashDeposit from './CashDeposit/CashDeposit.jsx'
 
 const exampleObj = {
     Name: "shady",
@@ -25,8 +25,8 @@ function Student(){
 
     const menuItems = [
         { text: "Trips" },
-        { text: "Deposit" },
         { text: "Navigation" },
+        { text: "Deposit" },
         { text: "Profile" },
     ];
     
@@ -43,7 +43,7 @@ function Student(){
                     <div className={styles["bottom-right-container"]}>
                         {header==="Dashboard" && <StudentDashboard/> }
                         {header==="Trips" && <StudentTrip/> }
-                        {header==="Deposit" &&<StudentDeposit/> }
+                        {header==="Deposit" &&<CashDeposit/> }
                         {header==="Navigation" &&<StudentMapRoutes/> }
                         {header==="Profile" && <Profile user={exampleObj}/>}        {/* <StudentTrip/> */}
                     </div>

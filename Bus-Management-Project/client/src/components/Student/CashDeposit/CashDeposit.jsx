@@ -2,7 +2,7 @@ import { useState } from 'react';
 import styles from './CashDeposit.module.css';
 import Dropdown from '../../General/Dropdown';
 import PaymentGif from '../../../assets/Payment.png';
-import DepositGate from '../DepositGate/DepositGate';
+import DepositGate from '../DepositGate/DepositGate.jsx';
 
 function CashDeposit() {
     const banks = ['Visa/Credit Card', 'HSBC Bank', 'CIB Bank', 'ADIB Bank'];
