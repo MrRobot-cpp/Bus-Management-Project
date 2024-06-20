@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@cometchat-pro/chat": "^3.0.13",
     "@fortawesome/fontawesome-free": "^6.5.2",
     "leaflet": "^1.9.4",
     "leaflet-control-geocoder": "^2.4.0",
