@@ -1,5 +1,6 @@
 import express, { response } from "express";
 import http from 'http';
+import { Server } from 'socket.io';
 import { PORT, mongoDBURL} from "./config/config.js";
 import { Trip } from "./Model/tripModel.js";
 import { Admin, Driver, Student } from "./Model/userModel.js";
