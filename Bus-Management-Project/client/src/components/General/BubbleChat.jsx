@@ -19,7 +19,7 @@ function BubbleChat() {
       // Close socket connection on component unmount
       socket.disconnect();
     };
-  }, []);
+  }, [socket]);
 
   const handleToggle = () => {
     setToggle(!toggle);

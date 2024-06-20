@@ -47,7 +47,7 @@ function App() {
                     path={"/Login/driver-view"}
                     element={<Driver />}
                 />
-            </Routes> *
+            </Routes> 
             {/*SHAYFK YALY BTFKR TSHELHOM HA3DOK*/}
         </>
     );
