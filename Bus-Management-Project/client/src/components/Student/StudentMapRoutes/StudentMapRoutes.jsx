@@ -8,6 +8,7 @@ import 'leaflet-routing-machine/dist/leaflet-routing-machine.css';
 import 'leaflet-control-geocoder/dist/Control.Geocoder.css';
 import 'leaflet.locatecontrol/dist/L.Control.Locate.min.css';
 import DriverMark from '../../../assets/DriverMark.svg';
+import BusStopLocation from '../../../assets/bus-stop-location.svg';
 import styles from './StudentMapRoutes.module.css'; // Import the CSS Module for this component
 
 const MapComponent = () => {
