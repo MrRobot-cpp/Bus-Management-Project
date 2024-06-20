@@ -30,26 +30,19 @@ const validateObjectId = [
 // Create a Driver
 router.post('/', validateStudent, async (req, res) => {
     try {
-        const { name, email, password, id, gender, birthdate, billingInfo, role, trips, averageRating, salary, address } = req.body;
+        const { name, email, password, id, gender, birthdate, billingInfo, 
+            trips, averageRating, salary, address } = req.body;
 
-        if (!name || !email || !password || !id || !gender || !birthdate || !billingInfo || !role || !salary || !address) {
+        if (!name || !email || !password || !id || !gender || !birthdate || 
+            !billingInfo || !salary || !address) {
             return res.status(400).send({
                 message: 'Send all required fields: name, email, password, id, gender, birthdate, billingInfo, role, salary, address',
             });
         }
 
         const newDriver = {
-            name,
-            email,
-            password,
-            id,
-            gender,
-            birthdate,
-            billingInfo,
-            role,
-            trips,
-            averageRating,
-            salary,
+            name,email,password,id,gender,birthdate,
+            billingInfo,trips,averageRating,salary,
             address
         };
 
@@ -97,25 +90,19 @@ router.get('/:id', validateObjectId, async (req, res) => {
 router.put('/:id', validateObjectId, validateStudent, async (req, res) => {
     try {
         const { id } = req.params;
-        const { name, email, password, gender, birthdate, billingInfo, role, trips, averageRating, salary, address } = req.body;
+        const { name, email, password, gender, birthdate, billingInfo,
+             trips, averageRating, salary, address } = req.body;
 
-        if (!name || !email || !password || !gender || !birthdate || !billingInfo || !role || !salary || !address) {
+        if (!name || !email || !password || !gender || !birthdate || 
+            !billingInfo || !salary || !address) {
             return res.status(400).send({
                 message: 'Send all required fields: name, email, password, gender, birthdate, billingInfo, role, salary, address',
             });
         }
 
         const updatedDriver = {
-            name,
-            email,
-            password,
-            gender,
-            birthdate,
-            billingInfo,
-            role,
-            trips,
-            averageRating,
-            salary,
+            name, email, password, gender, birthdate,
+            billingInfo, trips, averageRating, salary,
             address
         };
 

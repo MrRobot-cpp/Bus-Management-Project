@@ -33,16 +33,19 @@ router.post('/', validateStudent, async (req, res) => {
 
 
     try {
-        const { name, email, password, id, gender, birthdate, billingInfo, chosenTrips, address } = req.body;
+        const { name, email, password, id, gender, birthdate, billingInfo,
+             chosenTrips, address } = req.body;
 
-        if (!name || !email || !password || !id || !gender || !birthdate || !billingInfo || !address) {
+        if (!name || !email || !password || !id || !gender || !birthdate 
+            || !billingInfo || !address) {
             return res.status(400).send({
                 message: 'Send all required fields: name, email, password, id, gender, birthdate, billingInfo, address',
             });
         }
 
         const newStudent = {
-            name, email, password, id, gender, birthdate, billingInfo, chosenTrips, address
+            name, email, password, id, gender, birthdate,
+             billingInfo, chosenTrips, address
         };
 
         const student = await Student.create(newStudent);
@@ -99,16 +102,19 @@ router.put('/:id', validateStudent, validateObjectId, async (req, res) => {
 
     try {
         const { id } = req.params;
-        const { name, email, password, gender, birthdate, billingInfo, chosenTrips, address } = req.body;
+        const { name, email, password, gender, birthdate, 
+            billingInfo, chosenTrips, address } = req.body;
 
-        if (!name || !email || !password || !gender || !birthdate || !billingInfo || !address) {
+        if (!name || !email || !password || !gender 
+            || !birthdate || !billingInfo || !address) {
             return res.status(400).send({
                 message: 'Send all required fields: name, email, password, gender, birthdate, billingInfo, address',
             });
         }
 
         const updatedStudent = {
-            name, email, password, gender, birthdate, billingInfo, chosenTrips, address
+            name, email, password, gender, 
+            birthdate, billingInfo, chosenTrips, address
         };
 
         const result = await Student.findByIdAndUpdate(id, updatedStudent, { new: true });
