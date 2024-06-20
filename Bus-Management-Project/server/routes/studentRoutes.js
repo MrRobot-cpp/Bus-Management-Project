@@ -1,5 +1,6 @@
 import express from 'express';
 import { Student } from '../Model/userModel.js';
+import { isAuthenticated } from '../auth.js';
 import { body, param, validationResult } from 'express-validator';
 
 const router = express.Router();
@@ -25,24 +26,24 @@ const validateObjectId = [
 
 // Create a Student
 router.post('/', validateStudent, async (req, res) => {
-
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
         return res.status(400).json({ errors: errors.array() });
     }
 
-
     try {
         const { name, email, password, id, gender, birthdate, billingInfo, chosenTrips, address } = req.body;
 
-        if (!name || !email || !password || !id || !gender || !birthdate || !billingInfo || !address) {
-            return res.status(400).send({
-                message: 'Send all required fields: name, email, password, id, gender, birthdate, billingInfo, address',
-            });
-        }
-
         const newStudent = {
-            name, email, password, id, gender, birthdate, billingInfo, chosenTrips, address
+            name,
+            email,
+            password,
+            id,
+            gender,
+            birthdate,
+            billingInfo,
+            chosenTrips,
+            address
         };
 
         const student = await Student.create(newStudent);
@@ -55,7 +56,7 @@ router.post('/', validateStudent, async (req, res) => {
 });
 
 // Get all Students
-router.get('/', async (req, res) => {
+router.get('/', isAuthenticated, async (req, res) => {
     try {
         const students = await Student.find({});
         return res.status(200).json({
@@ -69,7 +70,7 @@ router.get('/', async (req, res) => {
 });
 
 // Get a Student by ID
-router.get('/:id', validateObjectId, async (req, res) => {
+router.get('/:id', isAuthenticated, validateObjectId, async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
         return res.status(400).json({ errors: errors.array() });
@@ -91,7 +92,7 @@ router.get('/:id', validateObjectId, async (req, res) => {
 });
 
 // Update a Student by ID
-router.put('/:id', validateStudent, validateObjectId, async (req, res) => {
+router.put('/:id', isAuthenticated, validateStudent, validateObjectId, async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
         return res.status(400).json({ errors: errors.array() });
@@ -99,16 +100,19 @@ router.put('/:id', validateStudent, validateObjectId, async (req, res) => {
 
     try {
         const { id } = req.params;
-        const { name, email, password, gender, birthdate, billingInfo, chosenTrips, address } = req.body;
+        const { name, email, password, gender, birthdate, 
+            billingInfo, chosenTrips, address } = req.body;
 
-        if (!name || !email || !password || !gender || !birthdate || !billingInfo || !address) {
+        if (!name || !email || !password || !gender 
+            || !birthdate || !billingInfo || !address) {
             return res.status(400).send({
                 message: 'Send all required fields: name, email, password, gender, birthdate, billingInfo, address',
             });
         }
 
         const updatedStudent = {
-            name, email, password, gender, birthdate, billingInfo, chosenTrips, address
+            name, email, password, gender, 
+            birthdate, billingInfo, chosenTrips, address
         };
 
         const result = await Student.findByIdAndUpdate(id, updatedStudent, { new: true });
@@ -126,7 +130,7 @@ router.put('/:id', validateStudent, validateObjectId, async (req, res) => {
 });
 
 // Update a Student by ID (partial update)
-router.patch('/:id', validateStudent, validateObjectId, async (req, res) => {
+router.patch('/:id', isAuthenticated, validateStudent, validateObjectId, async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
         return res.status(400).json({ errors: errors.array() });
@@ -151,7 +155,7 @@ router.patch('/:id', validateStudent, validateObjectId, async (req, res) => {
 });
 
 // Delete a Student by ID
-router.delete('/:id', validateObjectId, async (req, res) => {
+router.delete('/:id', isAuthenticated, validateObjectId, async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
         return res.status(400).json({ errors: errors.array() });

@@ -1,5 +1,6 @@
 import express from 'express';
 import { Admin } from '../Model/userModel.js';
+import { isAuthenticated } from '../auth.js';
 import { body, param, validationResult } from 'express-validator';
 
 const router = express.Router();
@@ -27,15 +28,10 @@ router.post('/', validateAdmin, async (req, res) => {
     try {
         // Check if all required fields are present in the request body
         if (
-            !req.body.name ||
-            !req.body.email ||
-            !req.body.password ||
-            !req.body.id ||
-            !req.body.gender ||
-            !req.body.birthdate ||
-            !req.body.billingInfo ||
-            !req.body.role || // Assuming role is provided
-            !req.body.busTypes // Assuming busTypes is provided for Admin
+            !req.body.name || !req.body.email ||
+            !req.body.password || !req.body.id ||
+            !req.body.gender || !req.body.birthdate ||
+            !req.body.billingInfo || !req.body.busTypes // Assuming busTypes is provided for Admin
         ) {
             return res.status(400).send({
                 message: 'Send all required fields: name, email, password, id, gender, birthdate, billingInfo, role, busTypes',
@@ -51,7 +47,6 @@ router.post('/', validateAdmin, async (req, res) => {
             gender: req.body.gender,
             birthdate: req.body.birthdate,
             billingInfo: req.body.billingInfo,
-            role: req.body.role,
             busTypes: req.body.busTypes
         };
 
@@ -82,7 +77,7 @@ router.get('/', async (req, res) => {
 });
 
 // Get an Admin by ID
-router.get('/:id', validateObjectId, async (req, res) => {
+router.get('/:id', isAuthenticated, validateObjectId, async (req, res) => {
     try {
         const { id } = req.params;
         const admin = await Admin.findById(id);
@@ -99,19 +94,22 @@ router.get('/:id', validateObjectId, async (req, res) => {
 });
 
 // Update an Admin by ID
-router.put('/:id', validateObjectId, validateAdmin, async (req, res) => {
+router.put('/:id', isAuthenticated, validateObjectId, validateAdmin, async (req, res) => {
     try {
         const { id } = req.params;
-        const { name, email, password, gender, birthdate, billingInfo, role, busTypes } = req.body;
+        const { name, email, password, gender, 
+            birthdate, billingInfo, busTypes } = req.body;
 
-        if (!name || !email || !password || !gender || !birthdate || !billingInfo || !role || !busTypes) {
+        if (!name || !email || !password || !gender || !birthdate 
+            || !billingInfo || !busTypes) {
             return res.status(400).send({
                 message: 'Send all required fields: name, email, password, gender, birthdate, billingInfo, role, busTypes',
             });
         }
 
         const updatedAdmin = {
-            name, email, password, gender, birthdate, billingInfo, role, busTypes
+            name, email, password, gender, 
+            birthdate, billingInfo, busTypes
         };
 
         const result = await Admin.findByIdAndUpdate(id, updatedAdmin, { new: true });
@@ -129,7 +127,7 @@ router.put('/:id', validateObjectId, validateAdmin, async (req, res) => {
 });
 
 // Update an Admin by ID (partial update)
-router.patch('/:id', validateObjectId, validateAdmin, async (req, res) => {
+router.patch('/:id', isAuthenticated, validateObjectId, validateAdmin, async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
         return res.status(400).json({ errors: errors.array() });
@@ -154,7 +152,7 @@ router.patch('/:id', validateObjectId, validateAdmin, async (req, res) => {
 });
 
 // Delete an Admin by ID
-router.delete('/:id', validateObjectId, async (req, res) => {
+router.delete('/:id', isAuthenticated, validateObjectId, async (req, res) => {
     try {
         const { id } = req.params;
 

@@ -6,7 +6,7 @@ import tripRoutes from "./routes/tripRoutes.js"
 import adminRoutes from "./routes/adminRoutes.js";
 import studentRoutes from "./routes/studentRoutes.js";
 import driverRoutes from "./routes/driverRoutes.js";
-
+import authRoutes from './routes/authRoutes.js';
 import mongoose from 'mongoose';
 import cors from "cors";
 
@@ -20,6 +20,9 @@ app.use('/trips', tripRoutes);
 app.use('/admin', adminRoutes);
 app.use('/student', studentRoutes);
 app.use('/driver', driverRoutes);
+
+app.use('/auth', authRoutes);
+
 
 
 

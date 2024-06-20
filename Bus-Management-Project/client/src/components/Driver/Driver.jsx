@@ -8,7 +8,7 @@ import PageHeader from "../Student/PageHeader/PageHeader.jsx"; //done
 import TripsTable from "./tripstable/TripsTable.jsx"; //done
 import BubbleChat from "../General/BubbleChat.jsx";
 import Profile from "../General/Profile/Profile.jsx" 
-import MapRoutes from "./MapRoutes/MapRoutes"
+import MapRoutes from "./DriverMapRoutes/DriverMapRoutes.jsx"
 import styles from "./Driver.module.css"; //done
 
 

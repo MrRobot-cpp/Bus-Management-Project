@@ -68,7 +68,7 @@
     font-size: small;
 }
 
-.editRoute-btn, .saveRoute-btn, .deleteRoute-btn{
+.editRoute-btn, .saveRoute-btn, .deleteRoute-btn, .location-btn{
     background-color: #263159;
     color: #FFFBEB;
     font-family: inherit;
@@ -80,7 +80,7 @@
     margin-right: 5px;
 
 }
-.editRoute-btn:hover, .saveRoute-btn:hover, .deleteRoute-btn:hover{
+.editRoute-btn:hover, .saveRoute-btn:hover, .deleteRoute-btn:hover, .location-btn:hover{
     background-color:#FFFBEB;
     color: #263159 ;
     transition: 0.5s ease-in-out;

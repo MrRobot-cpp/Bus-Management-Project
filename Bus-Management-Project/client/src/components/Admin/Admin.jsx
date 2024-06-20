@@ -17,8 +17,8 @@ const[header,setHeader] = useState('Dashboard')
 
   const menuItems = [
     // {text: "Routes" },
-    // {text: "Drivers" },
-    // {text: "Students" },
+    {text: "Drivers" },
+    {text: "Students" },
     {text: "Trips" },
     {text: "Payments" },
     {text: "Profile" },
