@@ -1,7 +1,6 @@
 import { useState } from 'react';
 
 import styles from './StudentTrip.module.css';
-import MenuItemButtonHighlighted from '../../General/MenuItemButton/MenuItemButtonHighLighted';
 
 function StudentTrip() {
     const [routes, setRoutes] = useState([
@@ -134,24 +133,22 @@ function StudentTrip() {
                     <table className={styles["routes-tableI"]}>
                         <thead>
                             <tr>
-                                <th>Day</th>
-                                <th>Start from</th>
-                                <th>End at</th>
-                                <th>Trip type</th>
-                                <th>goingTime</th>
-                                <th>leavingTime</th>
+                                <th>Date</th>
+                                <th>Trip Type</th>
+                                <th>Start Time</th>
+                                <th>End TIme</th>
                             </tr>
                         </thead>
                         <tbody>
                             {routes.map((route) => (
                                 <tr key={route.day}>
                                     <td>{route.day}</td>
-                                    <td>{route.startFrom}</td>
-                                    <td>{route.endAt}</td>
                                     <td>{route.tripType}</td>
                                     <td>{route.goingTime}</td>
                                     <td>{route.leavingTime}</td>
-
+                                    <td>
+                                        <button className={styles['choose-trip-btn']} >Choose Trip</button>
+                                    </td>
                                 </tr>
                             ))}
                         </tbody>

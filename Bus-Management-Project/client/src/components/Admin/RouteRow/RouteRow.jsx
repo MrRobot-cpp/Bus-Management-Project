@@ -40,7 +40,7 @@ return (
 {Object.keys(routeData).map((key) => (
 <td key={key}>
 {isEditable ? (
-<input
+<input className='routeRow-input'
 type={key === 'date' ? 'date' : key === 'maxNoStudents' || key === 'speedLimit' ? 'number' : 'text'}
 name={key}
 value={routeData[key]}
