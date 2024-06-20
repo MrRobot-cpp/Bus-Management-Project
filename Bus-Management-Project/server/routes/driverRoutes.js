@@ -1,6 +1,9 @@
 import express from 'express';
 import { Driver } from '../Model/userModel.js';
+import { isAuthenticated } from '../auth.js';
 import { body, param, validationResult } from 'express-validator';
+import bcrypt from 'bcryptjs';
+import { SECRET_KEY } from '../config/config.js';
 
 const router = express.Router();
 
@@ -28,28 +31,24 @@ const validateObjectId = [
 
 
 // Create a Driver
-router.post('/', validateStudent, async (req, res) => {
+router.post('/',  validateStudent, async (req, res) => {
     try {
-        const { name, email, password, id, gender, birthdate, billingInfo, role, trips, averageRating, salary, address } = req.body;
+        const { name, email, password, id, gender, birthdate, billingInfo, 
+            trips, averageRating, salary, address } = req.body;
 
-        if (!name || !email || !password || !id || !gender || !birthdate || !billingInfo || !role || !salary || !address) {
+        if (!name || !email || !password || !id || !gender || !birthdate || 
+            !billingInfo || !salary || !address) {
             return res.status(400).send({
                 message: 'Send all required fields: name, email, password, id, gender, birthdate, billingInfo, role, salary, address',
             });
         }
 
+        const hashedPassword = await bcrypt.hash(password, 10);
+
+
         const newDriver = {
-            name,
-            email,
-            password,
-            id,
-            gender,
-            birthdate,
-            billingInfo,
-            role,
-            trips,
-            averageRating,
-            salary,
+            name,email,password : hashedPassword,id,gender,birthdate,
+            billingInfo,trips,averageRating,salary,
             address
         };
 
@@ -77,7 +76,7 @@ router.get('/', async (req, res) => {
 });
 
 // Get a Driver by ID
-router.get('/:id', validateObjectId, async (req, res) => {
+router.get('/:id', isAuthenticated, validateObjectId, async (req, res) => {
     try {
         const { id } = req.params;
         const driver = await Driver.findById(id);
@@ -85,6 +84,8 @@ router.get('/:id', validateObjectId, async (req, res) => {
         if (!driver) {
             return res.status(404).json({ message: 'Driver not found' });
         }
+
+        const token = jwt.sign(driver, SECRET_KEY)
 
         return res.status(200).json(driver);
     } catch (error) {
@@ -94,28 +95,22 @@ router.get('/:id', validateObjectId, async (req, res) => {
 });
 
 // Update a Driver by ID
-router.put('/:id', validateObjectId, validateStudent, async (req, res) => {
+router.put('/:id', isAuthenticated, validateObjectId, validateStudent, async (req, res) => {
     try {
         const { id } = req.params;
-        const { name, email, password, gender, birthdate, billingInfo, role, trips, averageRating, salary, address } = req.body;
+        const { name, email, password, gender, birthdate, billingInfo,
+             trips, averageRating, salary, address } = req.body;
 
-        if (!name || !email || !password || !gender || !birthdate || !billingInfo || !role || !salary || !address) {
+        if (!name || !email || !password || !gender || !birthdate || 
+            !billingInfo || !salary || !address) {
             return res.status(400).send({
                 message: 'Send all required fields: name, email, password, gender, birthdate, billingInfo, role, salary, address',
             });
         }
 
         const updatedDriver = {
-            name,
-            email,
-            password,
-            gender,
-            birthdate,
-            billingInfo,
-            role,
-            trips,
-            averageRating,
-            salary,
+            name, email, password, gender, birthdate,
+            billingInfo, trips, averageRating, salary,
             address
         };
 
@@ -134,7 +129,7 @@ router.put('/:id', validateObjectId, validateStudent, async (req, res) => {
 });
 
 // Update a Driver by ID (partial update)
-router.patch('/:id', validateObjectId, validateStudent, async (req, res) => {
+router.patch('/:id', isAuthenticated, validateObjectId, validateStudent, async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
         return res.status(400).json({ errors: errors.array() });
@@ -159,7 +154,7 @@ router.patch('/:id', validateObjectId, validateStudent, async (req, res) => {
 });
 
 // Delete a Driver by ID
-router.delete('/:id', validateObjectId, async (req, res) => {
+router.delete('/:id', isAuthenticated, validateObjectId, async (req, res) => {
     try {
         const { id } = req.params;
 

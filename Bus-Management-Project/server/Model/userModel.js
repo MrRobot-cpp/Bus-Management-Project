@@ -14,13 +14,28 @@ const billingInfoSchema = new Schema({
 const userSchema = new Schema({
   name: { type: String, required: true },
   email: { type: String, required: true, unique: true },
-  password: { type: String, required: true, unique: false},
+  password: { type: String, required: true },
   id: { type: String, required: true, unique: true },
   gender: { type: String, required: true },
   birthdate: { type: Date, required: true },
   billingInfo: billingInfoSchema,
   role: { type: String, required: true, enum: ['Admin', 'Driver', 'Student'] } // Added role field to distinguish the type
 }, { discriminatorKey: 'role' }); // `role` is used as the key to discriminate between types
+
+// Hash password before saving
+userSchema.pre('save', async function(next) {
+  if (!this.isModified('password')) {
+      return next();
+  }
+  this.password = await bcrypt.hash(this.password, 10);
+  next();
+});
+
+// Method to match passwords
+userSchema.methods.matchPassword = async function(enteredPassword) {
+  return await bcrypt.compare(enteredPassword, this.password);
+};
+
 
 export const User = mongoose.model('User', userSchema);
 
@@ -52,19 +67,5 @@ const studentSchema = new Schema({
   address: { type: String, required: true }
 });
 
-// Hash password before saving
-userSchema.pre('save', async function(next) {
-  if (!this.isModified('password')) {
-      return next();
-  }
-  const salt = await bcrypt.genSalt(10);
-  this.password = await bcrypt.hash(this.password, salt);
-  next();
-});
-
-// Method to match passwords
-userSchema.methods.matchPassword = async function(enteredPassword) {
-  return await bcrypt.compare(enteredPassword, this.password);
-};
 
 export const Student = User.discriminator('Student', studentSchema);
