@@ -93,33 +93,77 @@ function RouteRow({ route, onSave, onDelete, isEditing, busTypeOptions, showLoca
         <div className="overlay">
           <div className="route-info-container">
             <div className="route-info">
-              <h2>Route Details</h2>
-              <div className="route-top-container">
-                <div className="navigation-map">
-                  <p>working</p>
+
+              <div className="route-popup-header">
+
+                <div className="exit-title">
+                  <h2 className='popup-title'>Route Details</h2>
+                  <button className='exit-btn' onClick={handleClosePopup}><i className="fa-solid fa-xmark"></i></button>
                 </div>
-                <div className="route-details"></div>
+
+                <hr />
               </div>
-              <div className="route-bottom-container">
-                <div className={styles["route-choice-container"]}>
-                  <div className={styles["route-choice"]}>
-                      <p className={styles['route-choice-title']}>Trip Choice:</p>
-                      <hr />
-                      <div className={styles["route-choice-content"]}>
-                          <div className={styles["start-end-route"]}>
-                              <input type="text"className={styles['start-input']} />
-                              <i className="fa-solid fa-arrow-right-arrow-left"></i>
-                              <input type="text" className={styles['end-input']} />
-                          </div>
-                          <button className={styles["show-trips-btn"]}>Show Trips</button>
-                      </div>
+
+
+              <div className="route-popup-contents">
+
+                <div className="route-top-contents">
+                  <div className="navigation-map">
+                    <p>working</p>
+                  </div>
+                  <div className="route-details">
+                    <span className='info-span'>
+                      <p>Start Point: </p>
+                      <p className='route-data'>x,y</p>
+                    </span>
+                    <span className='info-span'>
+                      <p>Stop 1: </p>
+                      <span className='stop-info'>
+                        <p className='route-data'>stopName</p>
+                        <p className='route-data'>x,y</p>
+                      </span>
+                    </span>
+                    <span className='info-span'>
+                      <p>End Point: </p>
+                      <p className='route-data'>x,y</p>
+                    </span>
+                  </div>
+                </div>
+
+                  <div className="route-bottom-contents">
+                        <div className="route-choice">
+                            <div className="route-choice-content">
+                                <div className="start-end-route">
+                                  <div className="start-end-text">
+                                    <p>Start Point: </p>
+                                    <p>End Point: </p>
+                                  </div>
+                                  <div className="start-end-inputs">
+                                  </div>
+                                    <input type="text"className='start-input' />
+                                    <i className="fa-solid fa-arrow-right-arrow-left"></i>
+                                    <input type="text" className='end-input'/>
+                                </div>
+                                <div className="stop-name-loc">
+                                  <div className="stop-name-loc-text">
+                                    <p>Stop Name: </p>
+                                    <p>Stop Location: </p>
+                                  </div>
+                                  <div className="stop-name-loc-inputs">
+                                      <input type="text"className='start-input' />
+                                      <i className="fa-solid fa-arrow-right-arrow-left"></i>
+                                      <input type="text" className='end-input'/>
+                                  </div>
+                                </div>
+                                <button className={styles["add-trips-btn"]}>Add Trip</button>
+                            </div>
+                        </div>
+                    </div>
+
                   </div>
               </div>
             </div>
-              <button onClick={handleClosePopup}>Exit</button>
           </div>
-        </div>
-        </div>
       )}
     </>
   );
