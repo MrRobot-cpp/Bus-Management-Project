@@ -374,18 +374,30 @@
 }
 
 
-/* responsive design */
-@media (max-width: 1221px) {    
-
+@media (max-width: 1343px) {
     .unordered-list, .header-login-btn {
         display: none;
     }
-    
+
     .toggle-btn {
         display: block;
         margin-left: 50px;
         margin-right: 50px;
     }
+}
+
+/* responsive design */
+@media (max-width: 1221px) {    
+
+    /* .unordered-list, .header-login-btn {
+        display: none;
+    } */
+    
+    /* .toggle-btn {
+        display: block;
+        margin-left: 50px;
+        margin-right: 50px;
+    } */
     
     
     
@@ -414,6 +426,9 @@
         display: block;
     }
 
+    .customer-card-scroller {
+        width: 90%;
+    }
 }
 
 @media (max-width: 838px) {
@@ -423,7 +438,11 @@
     }
 }
 
-
+@media (max-width: 768px) {
+    .customer-card-scroller {
+        width: 80%;
+    }
+}
 
 @media (max-width: 576px) {
     /* .dropdown-menu {
@@ -465,5 +484,11 @@
     .footer-container {
         top: 100px;
     }
+
+    .customer-card-scroller {
+        width: 70%;
+    }
 }
+
+
 
