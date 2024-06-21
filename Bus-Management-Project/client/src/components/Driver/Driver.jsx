@@ -6,11 +6,11 @@ import VerticalNavbar from "../General/VerticalNavbar.jsx"; //done
 import Home from "./Home/Home.jsx";
 import PageHeader from "../Student/PageHeader/PageHeader.jsx"; //done
 import TripsTable from "./tripstable/TripsTable.jsx"; //done
-import BubbleChat from "../General/BubbleChat.jsx";
+// import BubbleChat from "../General/BubbleChat.jsx";
 import Profile from "../General/Profile/Profile.jsx" 
 import MapRoutes from "./DriverMapRoutes/DriverMapRoutes.jsx"
 import styles from "./Driver.module.css"; //done
-
+import ChatWidget from "../chat/ChatWidget.jsx"
 
 const trips = [
   {
@@ -132,11 +132,11 @@ function TripComponent() {
 
 function Driver() {
   const [header, setHeader] = useState("Dashboard");
-  const [toggleChatBtn, setToggleChatBtn] = useState(true);
+  // const [toggleChatBtn, setToggleChatBtn] = useState(true);
 
-  const refreshTime = (() => {
-    return toggleChatBtn ? { diplay: "block" } : { display: "none" };
-  })();
+  // const refreshTime = (() => {
+  //   return toggleChatBtn ? { diplay: "block" } : { display: "none" };
+  // })();
 
   const menuItems = [
     { text: "trips" },
@@ -146,9 +146,10 @@ function Driver() {
   return (
     <div className={styles["main-container"]}>
       <PageHeader text={`Driver ${header}`} />
-      <div className={styles["bubble-chat-container"]} style={refreshTime}>
-        <BubbleChat onQuery={setToggleChatBtn} />
-      </div>
+      {/* <div className={styles["bubble-chat-container"]} style={refreshTime}> */}
+        {/* <BubbleChat onQuery={setToggleChatBtn} /> */}
+        <ChatWidget />
+      {/* </div> */}
       <div className={styles["container"]}>
         <div className={styles["navbar-container"]}>
           <VerticalNavbar

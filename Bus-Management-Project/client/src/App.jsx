@@ -12,7 +12,7 @@ function App() {
 
     return (
         <>
-        <Driver/>
+        <Student/>
             {/*SAMER: MA7DSH YL3B FL ROUTES ELY 3AOZ YGRB 7AGA Y COMMENT EL ROUTES W YKTB T7TEHA */}
             {/* <Routes>
                 <Route
@@ -47,8 +47,12 @@ function App() {
                     path={"/Login/driver-view"}
                     element={<Driver />}
                 />
-            </Routes> */}
-            {/*SHAYFK YALY BTFKR TSHELHOM HA3DOK */}
+<<<<<<< HEAD
+            </Routes> 
+=======
+            </Routes>  */}
+>>>>>>> a07ef986ad05b2f885931705fd69a0997a27948d
+            {/*SHAYFK YALY BTFKR TSHELHOM HA3DOK*/}
         </>
     );
 }

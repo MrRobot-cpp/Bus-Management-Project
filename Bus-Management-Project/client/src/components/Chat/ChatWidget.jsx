@@ -3,9 +3,9 @@ import React, { useState, useEffect } from 'react';
 import { CometChat } from '@cometchat-pro/chat';
 import './ChatWidget.css';
 
-const appID = 'YOUR_APP_ID';
-const region = 'YOUR_APP_REGION';
-const apiKey = 'YOUR_API_KEY';
+const appID = '2595958bbb92c7d2';
+const region = 'eu';
+const apiKey = '0bf6348e36b651a1f2c2e8120538f88f6ddc523f';
 const receiverID = 'ADMIN_UID'; // The UID of the admin or support team member
 const receiverType = CometChat.RECEIVER_TYPE.USER;
 
