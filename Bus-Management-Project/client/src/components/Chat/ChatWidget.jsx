@@ -123,11 +123,11 @@ const ChatWidget = () => {
 
     return (
         <div className="chat-widget">
-            <button className="chat-button" onClick={() => setIsOpen(!isOpen)}>
-                {/* <img src="chat-icon.png" alt="Chat Icon" width="30" height="30" /> */}
-                {/* <i className="fa-solid fa-comments"></i> */}
-                <i className="fa-regular fa-comments"></i>
-            </button>
+           {!isOpen && (
+                <button className="chat-button" onClick={() => setIsOpen(true)}>
+                    <i className="fa fa-comments" aria-hidden="true"></i>
+                </button>
+            )}
             {isOpen && (
                 <div className="chat-window">
                     <div className="chat-header">
