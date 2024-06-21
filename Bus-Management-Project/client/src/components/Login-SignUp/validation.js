@@ -33,12 +33,3 @@ export const validateOption1 = (option) => {
     return option !== ''; // You can add more complex validation logic as needed
 };
 
-export const validateOption2 = (option) => {
-    // Validation logic for the second dropdown (options2)
-    return option !== ''; // You can add more complex validation logic as needed
-};
-
-export const validateNumberOfDays = (numberOfDays) => {
-    // Validation logic for the number of days input
-    return numberOfDays !== '' && numberOfDays >= 1 && numberOfDays <= 7; // Validate if it's not empty and within the range of 1 to 7
-};
