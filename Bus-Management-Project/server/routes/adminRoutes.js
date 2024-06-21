@@ -2,12 +2,12 @@ import express from 'express';
 import { Admin, Driver, Student } from '../Model/userModel.js';
 import { isAuthenticated, isAdmin } from '../auth.js';
 import { body, param, validationResult } from 'express-validator';
-import tripRoutes from './routes/tripRoutes.js';
+import tripRoutes from '../routes/tripRoutes.js';
 
 const router = express.Router();
 
 //trip routes
-app.use('/trips', tripRoutes);
+router.use('/trips', tripRoutes);
 
 // Validation middleware
 const validateAdmin = [
