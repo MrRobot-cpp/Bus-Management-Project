@@ -165,3 +165,76 @@ function RouteRow({ route, onSave, onDelete, isEditing, busTypeOptions, showLoca
 }
 
 export default RouteRow;
+
+
+
+
+<div className={styles["overlay"]}>
+          <div className={styles["route-info-container"]}>
+            <div className={styles["route-info"]}>
+              <div className={styles["route-popup-header"]}>
+                <div className={styles["exit-title"]}>
+                  <h2 className={styles['popup-title']}>Route Details</h2>
+                  <button className={styles['exit-btn']} onClick={handleClosePopup}><i className="fa-solid fa-xmark"></i></button>
+                </div>
+                <hr />
+              </div>
+              <div className={styles["route-popup-contents"]}>
+                <div className={styles["route-top-contents"]}>
+                  <div className={styles["navigation-map"]}>
+                    <p>working</p>
+                  </div>
+                  <div className={styles["route-details"]}>
+                    <span className={styles['info-span']}>
+                      <p>Start Point: </p>
+                      <p className={styles['route-data']}>x,y</p>
+                    </span>
+                    <span className={styles['info-span']}>
+                      <p>Stop 1: </p>
+                      <span className={styles['stop-info']}>
+                        <p className={styles['route-data']}>stopName</p>
+                        <p className={styles['route-data']}>x,y</p>
+                      </span>
+                    </span>
+                    <span className={styles['info-span']}>
+                      <p>Stop 2: </p>
+                      <span className={styles['stop-info']}>
+                        <p className={styles['route-data']}>stopName</p>
+                        <p className={styles['route-data']}>x,y</p>
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <div className={styles["route-bottom-contents"]}>
+                <div className={styles["route-choice"]}>
+                    <div className={styles["route-choice-content"]}>
+                      <div className={styles["start-end-route"]}>
+                        <div className={styles["start-end-text"]}>
+                          <p>Start Point: </p>
+                          <p>End Point: </p>
+                        </div>
+                        <div className={styles["start-end-inputs"]}>
+                        </div>
+                          <input type="text"className={styles['start-input']} />
+                          <i className="fa-solid fa-arrow-right-arrow-left"></i>
+                          <input type="text" className={styles['end-input']}/>
+                      </div>
+                      <div className={styles["stop-name-loc"]}>
+                        <div className={styles["stop-name-loc-text"]}>
+                          <p>Stop Name: </p>
+                          <p>Stop Location: </p>
+                        </div>
+                        <div className={styles["stop-name-loc-inputs"]}>
+                            <input type="text"className={styles['start-input']} />
+                            <i className="fa-solid fa-arrow-right-arrow-left"></i>
+                            <input type="text" className={styles['end-input']}/>
+                        </div>
+                      </div>
+                      <button className={styles["add-trips-btn"]}>Add Trip</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>

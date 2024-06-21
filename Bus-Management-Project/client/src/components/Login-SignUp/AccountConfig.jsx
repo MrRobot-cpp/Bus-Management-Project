@@ -2,108 +2,88 @@
 import React, { useState, useEffect } from 'react';
 import './AccountConfig.css';
 import Dropdown from '../General/Dropdown.jsx';
-import { validateNumberOfDays } from './validation.js'; 
 
 function AccountConfig() {
-    const options1 = ['Nozha', 'Shobra', 'Heliopolis', '5th settlement', 'El Rehab'];
-    const options2 = ['MIU - Misr International University', 'BUE - British University in Egypt', 'El Galala University','GUC - German University in Cairo'];
+    const options1 = ['Nozha', 'Sheraton', 'Shobra', 'Heliopolis', '5th settlement', 'El Rehab', 'Nasr City', '6 October'];
 
     const [step, setStep] = useState(1);
     const [selectedOption1, setSelectedOption1] = useState('');
-    const [selectedOption2, setSelectedOption2] = useState('');
-    const [numberOfDays, setNumberOfDays] = useState('');
     const [locationInput, setLocationInput] = useState('');
-    const [continueButtonColor, setContinueButtonColor] = useState('#E4E5E7');
+    const [inputValid, setInputValid] = useState(false);
 
     useEffect(() => {
-        // Check if all dropdowns and inputs are filled and valid
-        if (step === 4 && validateNumberOfDays(numberOfDays) && selectedOption1 && selectedOption2 && isGoogleMapsLink(locationInput)) {
-            setContinueButtonColor('#263159');
+        // Validate input and enable continue button only when area and location are selected and valid
+        if (step === 2 && selectedOption1 && inputValid) {
+            setInputValid(true);
         } else {
-            setContinueButtonColor('#E4E5E7');
+            setInputValid(false);
         }
-    }, [step, selectedOption1, selectedOption2, numberOfDays, locationInput]);
+    }, [step, selectedOption1, inputValid]);
 
     const handleOption1Select = (option) => {
         setSelectedOption1(option);
         setStep(2);
     };
 
-    const handleOption2Select = (option) => {
-        setSelectedOption2(option);
-        setStep(4); 
+    const handleLocationInputChange = (e) => {
+        const value = e.target.value;
+        setLocationInput(value);
+        setInputValid(validateInput(value));
     };
 
-    const handleLocationInputChange = (e) => {
-        setLocationInput(e.target.value);
-        if (isGoogleMapsLink(e.target.value)) {
-            setStep(3);
-        }
+    const validateInput = (input) => {
+        const regex = /^[0-9]+(\s[A-Za-z]+)+$/;
+        return regex.test(input);
     };
-    const handleNumberOfDaysChange = (e) => {
-        const days = parseInt(e.target.value);
-        if (!isNaN(days) && days >= 1 && days <= 7) {
-            setNumberOfDays(days);
+
+    const handleContinue = () => {
+        // Ensure step does not exceed 2
+        if (step < 2) {
+            setStep(step + 1);
         }
-    };
-    const isGoogleMapsLink = (input) => {
-        return /^https?:\/\/maps\.app\.goo\.gl\/.*$/.test(input);
     };
 
     return (
         <div className='Ilogin'>
             <div className="Ilogin-container">
                 <div className='IConfig-text-div'>
-                    <h4>Question {step > 4 ? 4 : step}</h4>
+                    <h4>Question {step > 2 ? 2 : step}</h4>
                     <div className='Iloading-Questions'>
-                        {[1, 2, 3, 4].map((item) => (
-                            <div key={item} className={`Iloading-dash ${step >= item ? 'active' : ''}`}></div>
-                        ))}
+                        <div key={1} className={`Iloading-dash ${step >= 1 ? 'active' : ''}`}></div>
+                        <div key={2} className={`Iloading-dash ${step >= 2 ? 'active' : ''}`}></div>
                     </div>
                     <h2 className='Ilogin-header'>Tell us about yourself</h2>
                     {step >= 1 && (
                         <div className='Idrop-holder'>
+                            <h4>Where do you live?</h4>
                             <Dropdown options={options1} onSelect={handleOption1Select} />
                         </div>
                     )}
                     {step >= 2 && (
                         <div className='Idrop-holder'>
-                            <h4>{step >= 2 ? 'What’s your Location there?' : 'Select an option'}</h4>
+                            <h4>What’s your home address?</h4>
                             <input
                                 type="text"
                                 className='Ilocation-input'
                                 value={locationInput}
                                 onChange={handleLocationInputChange}
-                                placeholder='Insert your location link'
+                                placeholder='Enter your home address'
                             />
-                            {locationInput && !isGoogleMapsLink(locationInput) && (
-                                <p className="Ierror">Please enter a valid Google Maps link.</p>
+                            {!inputValid && locationInput && (
+                                <p className="Ierror">Please enter a valid home address (e.g., "123 Main St").</p>
                             )}
                         </div>
                     )}
-                    {step >= 3 && (
-                        <div className='Idrop-holder'>
-                            <h4>{step >= 3 ? 'What is your Destination?' : 'Select an option'}</h4>
-                            <Dropdown options={options2} onSelect={handleOption2Select} />
-                        </div>
-                    )}
-                    {step >= 4 && (
-                        <div className='Idrop-holder'>
-                            <h4>{step >= 4 ? 'How many days you go to this Destination?' : 'Select an option'}</h4>
-                            <input
-                                type="number"
-                                className='INumberOfDays'
-                                min='1'
-                                max='7'
-                                value={numberOfDays}
-                                onChange={handleNumberOfDaysChange}
-                                placeholder='Enter the days in numbers here'
-                            />
-                        </div>
-                    )}
                 </div>
-                {/* Add continue button */}
-                <button className='IContinue-Button' onClick={() => setStep(step + 1)} style={{ backgroundColor: continueButtonColor }}>Continue</button>
+                {/* Continue button */}
+                {step === 2 && (
+                    <button 
+                        className={`IContinue-Button ${inputValid ? 'active' : ''}`}
+                        onClick={handleContinue} 
+                        disabled={!inputValid}>
+                        Continue
+                    </button>
+                )}
             </div>
         </div>
     );
