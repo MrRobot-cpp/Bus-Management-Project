@@ -2,30 +2,39 @@ import express from 'express';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
 import { SECRET_KEY } from '../config/config.js';
-import { User , Driver } from '../Model/userModel.js';
+import { v4 as uuidv4 } from 'uuid';
+import { body, param, validationResult } from 'express-validator';
+import { User , Driver, Student } from '../Model/userModel.js';
 
 const router = express.Router();
 
+const validateStudent = [
+    body('name').notEmpty().withMessage('Name is required'),
+    body('email').isEmail().withMessage('Invalid email format'),
+    body('password').notEmpty().withMessage('Password is required'),
+    body('address').notEmpty().withMessage('Address is required'),
+    body('id').notEmpty().withMessage('ID is required'),
+    body('agreeOnTerms').custom(value => {
+        if (value !== true) {
+            throw new Error('mustBeTrue must be true');
+        }
+    })
+]
 
-//test
-router.post('/search', async (req, res) => {
-    const { name } = req.body;
-  
-    try {
-      const users = await Driver.find({ name: name });
-  
-      res.json(users);
-    } catch (err) {
-      console.error('Error searching users:', err);
-      res.status(500).json({ error: 'Error searching users' });
-    }
-  });
+
+
 
 // Signup route
-router.post('/signup', async (req, res) => {
+router.post('/signup', validateStudent, async (req, res) => {
+    const errors = validationResult(req);
     try {
-        const { name, email, password, id, gender, birthdate, billingInfo, role } = req.body;
+        const { name, email, password, address, agreeOnTerms } = req.body;
         
+        // Validate input
+        if (!name || !email || !password || !address) {
+            return res.status(400).json({ message: 'All fields are required' });
+        }
+
         // Check if user already exists
         const existingUser = await User.findOne({ email });
         if (existingUser) {
@@ -33,20 +42,15 @@ router.post('/signup', async (req, res) => {
         }
 
         // Create new user
-        const newUser = new User({ name, email, password, id, gender, birthdate, billingInfo, role });
+        const newUser = new Student({ name, email, password, address, id: uuidv4(), agreeOnTerms, role: "Student" });
         await newUser.save();
 
-        // Create JWT token
-        const token = jwt.sign({ userId: newUser._id }, SECRET_KEY, { expiresIn: '1h' });
-
-        return res.status(201).json({ token, user: newUser });
-
+        return res.status(201).json(newUser);
     } catch (error) {
         console.error(error.message);
-        return res.status(500).json({ message: error.message });
+        return res.status(500).json({ message: 'Internal server error' });
     }
 });
-
 // Login route
 // Login route
 router.post('/login', async (req, res) => {

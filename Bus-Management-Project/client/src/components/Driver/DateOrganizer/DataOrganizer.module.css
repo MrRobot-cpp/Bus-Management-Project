@@ -41,6 +41,7 @@
 }
 
 
+
 .current-date-container{
     display: flex;
     justify-content: flex-start;
@@ -165,6 +166,7 @@ opacity: 0px;
   justify-content: space-between;
   padding: 10px;
   gap: 10px;
+  
 }
 
 .data > p{
