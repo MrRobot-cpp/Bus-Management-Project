@@ -1,21 +1,3 @@
-.save-btn, .delete-btn {
-    background-color: #495579; 
-    border: none;
-    color: white;
-    padding: 10px 24px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 12px;
-}
-
-
-.save-btn:hover, .delete-btn:hover {
-    background: #263159;
-}
 
 .route-data {
     color: black;
@@ -108,12 +90,23 @@
 
 
   
-  .route-choice-container {
+  .route-popup-contents {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     margin-bottom: 20px;
+    gap: 20px;
     }
     
+    .route-top-contents {
+      display: flex;
+    }
+
+    div.exit-title {
+      display: flex;
+      justify-content: space-between;
+    }
+
     .route-choice {
       background-color: #FFFBEB;
       width: 500px;
@@ -129,6 +122,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 7px;
 }
 
 .start-end-route {
@@ -158,3 +152,64 @@
   height: 1000%;
   background-color: #FFF;
 }
+
+.route-top-container {
+  display: flex;
+  gap: 10px;
+}
+
+.exit-btn {
+  text-align: right;
+  background-color: transparent;
+  border: none;
+  
+}
+
+
+.exit-btn i {
+  font-size: 25px;
+  padding: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  width: auto;
+}
+
+.exit-btn i:hover {
+  color: #FFFBEB;
+  background-color: #263159;
+}
+
+.route-details {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 10px;
+  width: 80%;
+  height: 80%;
+}
+
+.info-span {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+
+.stop-info {
+  display: flex;
+  gap: 10px;
+}
+
+.route-data  {
+  /* border: 1px solid rgba(0, 0, 0, 0.278);
+  border-radius: 10px;
+  padding: 5px; */
+  width: auto;
+  color: #495579;
+}
+
+.start-end-text, .stop-name-loc-text {
+  display: flex;
+  justify-content: space-between;
+}  
+
+.ro

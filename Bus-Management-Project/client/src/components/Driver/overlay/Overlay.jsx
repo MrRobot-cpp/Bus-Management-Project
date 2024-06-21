@@ -11,7 +11,7 @@ function Overlay(props) {
     <div className={styles["overlay"]}>
         <div className={styles["trip-info-container"]}>
       <div className={styles["trip-info"]}>
-        <h2>Trip Details</h2>
+        <h2> Trip Details </h2>
         <hr className={styles["thick-line2"]} />
         <p>
           Departure Time: {trip.departure.hour}:{trip.departure.minute}{" "}
