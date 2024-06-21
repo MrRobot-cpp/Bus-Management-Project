@@ -88,13 +88,12 @@
 .trip-info {
     display: block;
     width: 400px;
-height: 125px;
-top: 150px;
-left: 983px;
-gap: 0px;
-border-radius: 20px ;
-opacity: 0px;
-
+    height: 125px;
+    top: 150px;
+    left: 983px;
+    gap: 0px;
+    border-radius: 20px ;
+    opacity: 0px;
     background-color: #263159;
     padding: 5px;
     margin-bottom: 1vh;
@@ -154,7 +153,7 @@ opacity: 0px;
     overflow: hidden; 
     transition: 0.3s ease;
     padding-bottom: 80px;
-    /* background: red; */
+   
 }
 
 .upcoming-data:hover{
@@ -182,8 +181,8 @@ width: 420px;
 margin-left: -10px;
 }
 .thick-line {
-  height: 50px; /* Adjust the height to make it thicker */
-  background-color: black; /* Change the color as needed */
-  border: none; /* Remove default border */
+  height: 50px; 
+  background-color: black; 
+  border: none; 
 width: 100px;
 }

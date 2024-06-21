@@ -4,20 +4,20 @@ import { Link } from 'react-router-dom';
 import { validatePassword } from './validation';
 import './login.css';
 
-const driverCredentials = {
-    email: "ahmedsamersayed22@gmail.com",
-    password: "samortchy2004"
-};
-
-const studentCredentials = {
-    email: "shadyyasset@gmail.com",
-    password: "shdshddd2002"
-};
-
-const adminCredentials = {
-    email: "ghazouly2007@gmail.com",
-    password: "ghazou2007"
-};
+//const driverCredentials = {
+//    email: "ahmedsamersayed22@gmail.com",
+//    password: "samortchy2004"
+//};
+//
+//const studentCredentials = {
+//    email: "shadyyasset@gmail.com",
+//    password: "shdshddd2002"
+//};
+//
+//const adminCredentials = {
+//    email: "ghazouly2007@gmail.com",
+//    password: "ghazou2007"
+//};
 
 const Login = () => {
     const [email, setEmail] = useState('');

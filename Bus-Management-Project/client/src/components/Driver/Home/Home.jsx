@@ -12,7 +12,7 @@ function Home(props) {
     <>
       <div className="home-container">
         <div className="left-container">
-          {/* <div className="welcome-container">
+          {/*<div className="welcome-container">
             <div className="welcome">
               <p className="welcome-text">Welcome Home!</p>
             </div>
@@ -59,8 +59,7 @@ function Home(props) {
     </div>
 
 
-{/* 
-          <div className="trip-container">
+{/*<div className="trip-container">
             <Trip
               departure={trips[0].departure}
               arrival={trips[0].arrival}
