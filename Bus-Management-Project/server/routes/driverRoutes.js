@@ -1,6 +1,6 @@
 import express from 'express';
 import mongoose from 'mongoose';
-import { Driver } from '../Model/userModel.js';
+import { Driver, User } from '../Model/userModel.js';
 //import { isAuthenticated } from '../auth.js';
 import { body, param, validationResult } from 'express-validator';
 import bcrypt from 'bcryptjs';
@@ -73,13 +73,13 @@ router.post('/search', async (req, res) => {
 // Create a Driver
 router.post('/',  validateDriver, async (req, res) => {
     try {
-        const { name, email, password, id, gender, birthdate, billingInfo, 
+        const { name, email, password, id, gender, birthdate, 
             trips, averageRating, salary, address } = req.body;
 
         if (!name || !email || !password || !id || !gender || !birthdate || 
-            !billingInfo || !salary || !address) {
+            !salary || !address) {
             return res.status(400).send({
-                message: 'Send all required fields: name, email, password, id, gender, birthdate, billingInfo, role, salary, address',
+                message: 'Send all required fields: name, email, password, id, gender, birthdate, role, salary, address',
             });
         }
 
@@ -87,7 +87,7 @@ router.post('/',  validateDriver, async (req, res) => {
 
         const newDriver = {
             name,email,password,id,gender,birthdate,
-            billingInfo,trips,averageRating,salary,
+            trips,averageRating,salary,
             address
         };
 
@@ -100,36 +100,6 @@ router.post('/',  validateDriver, async (req, res) => {
     }
 });
 
-// Get all Drivers
-router.get('/', async (req, res) => {
-    try {
-        const drivers = await Driver.find({});
-        return res.status(200).json({
-            count: drivers.length,
-            data: drivers,
-        });
-    } catch (error) {
-        console.log(error.message);
-        res.status(500).send({ message: error.message });
-    }
-});
-
-// Get a Driver by ID
-router.get('/:id',  validateObjectId, async (req, res) => {
-    try {
-        const { id } = req.params;
-        const driver = await Driver.findById(id);
-
-        if (!driver) {
-            return res.status(404).json({ message: 'Driver not found' });
-        }
-
-        return res.status(200).json(driver);
-    } catch (error) {
-        console.log(error.message);
-        res.status(500).send({ message: error.message });
-    }
-});
 
 // Update a Driver by ID
 router.put('/:id',  validateObjectId, validateDriver, async (req, res) => {
