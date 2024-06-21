@@ -1,6 +1,7 @@
 import express from 'express';
+import mongoose from 'mongoose';
 import { Driver } from '../Model/userModel.js';
-import { isAuthenticated } from '../auth.js';
+//import { isAuthenticated } from '../auth.js';
 import { body, param, validationResult } from 'express-validator';
 import bcrypt from 'bcryptjs';
 import { SECRET_KEY } from '../config/config.js';
@@ -8,7 +9,7 @@ import { SECRET_KEY } from '../config/config.js';
 const router = express.Router();
 
 // Validation middleware
-const validateStudent = [
+const validateDriver = [
     body('name').notEmpty().withMessage('Name is required'),
     body('email').isEmail().withMessage('Invalid email format'),
     body('password').notEmpty().withMessage('Password is required'),
@@ -29,9 +30,48 @@ const validateObjectId = [
     param('id').isMongoId().withMessage('Invalid ID format')
 ];
 
+// Get a Driver by ID or Name
+router.get('/:idOrName',  async (req, res) => {
+    try {
+        const { idOrName } = req.params;
+        
+        let driver;
+        if (mongoose.Types.ObjectId.isValid(idOrName)) {
+            // If idOrName is a valid MongoDB ObjectId, search by id
+            driver = await Driver.findById(idOrName);
+        } else {
+            // Otherwise, search by name
+            driver = await Driver.findOne({ name: idOrName });
+        }
+
+        if (!driver) {
+            return res.status(404).json({ message: 'Driver not found' });
+        }
+
+        return res.status(200).json(driver);
+    } catch (error) {
+        console.log(error.message);
+        res.status(500).send({ message: error.message });
+    }
+});
+
+
+//test
+router.post('/search', async (req, res) => {
+    const { name } = req.body;
+  
+    try {
+      const users = await User.find({ name: name });
+  
+      res.json(users);
+    } catch (err) {
+      console.error('Error searching users:', err);
+      res.status(500).json({ error: 'Error searching users' });
+    }
+  });
 
 // Create a Driver
-router.post('/',  validateStudent, async (req, res) => {
+router.post('/',  validateDriver, async (req, res) => {
     try {
         const { name, email, password, id, gender, birthdate, billingInfo, 
             trips, averageRating, salary, address } = req.body;
@@ -43,11 +83,10 @@ router.post('/',  validateStudent, async (req, res) => {
             });
         }
 
-        const hashedPassword = await bcrypt.hash(password, 10);
 
 
         const newDriver = {
-            name,email,password : hashedPassword,id,gender,birthdate,
+            name,email,password,id,gender,birthdate,
             billingInfo,trips,averageRating,salary,
             address
         };
@@ -76,7 +115,7 @@ router.get('/', async (req, res) => {
 });
 
 // Get a Driver by ID
-router.get('/:id', isAuthenticated, validateObjectId, async (req, res) => {
+router.get('/:id',  validateObjectId, async (req, res) => {
     try {
         const { id } = req.params;
         const driver = await Driver.findById(id);
@@ -84,8 +123,6 @@ router.get('/:id', isAuthenticated, validateObjectId, async (req, res) => {
         if (!driver) {
             return res.status(404).json({ message: 'Driver not found' });
         }
-
-        const token = jwt.sign(driver, SECRET_KEY)
 
         return res.status(200).json(driver);
     } catch (error) {
@@ -95,7 +132,7 @@ router.get('/:id', isAuthenticated, validateObjectId, async (req, res) => {
 });
 
 // Update a Driver by ID
-router.put('/:id', isAuthenticated, validateObjectId, validateStudent, async (req, res) => {
+router.put('/:id',  validateObjectId, validateDriver, async (req, res) => {
     try {
         const { id } = req.params;
         const { name, email, password, gender, birthdate, billingInfo,
@@ -129,7 +166,7 @@ router.put('/:id', isAuthenticated, validateObjectId, validateStudent, async (re
 });
 
 // Update a Driver by ID (partial update)
-router.patch('/:id', isAuthenticated, validateObjectId, validateStudent, async (req, res) => {
+router.patch('/:id',  validateObjectId, validateDriver, async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
         return res.status(400).json({ errors: errors.array() });
@@ -154,7 +191,7 @@ router.patch('/:id', isAuthenticated, validateObjectId, validateStudent, async (
 });
 
 // Delete a Driver by ID
-router.delete('/:id', isAuthenticated, validateObjectId, async (req, res) => {
+router.delete('/:id',  validateObjectId, async (req, res) => {
     try {
         const { id } = req.params;
 
