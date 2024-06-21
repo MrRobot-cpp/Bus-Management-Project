@@ -1,65 +1,73 @@
-.card-container{
-    display:flex;
+.card-container {
+    display: flex;
     flex-direction: column;
     height: 90%;
     width: 90%;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-}
-.card {
+  }
+  
+  .card {
     display: flex;
     flex-direction: column;
     height: 100%;
     width: 100%;
     overflow: hidden;
     border-radius: 15px;
-    transition: 0.5s ease;   
-}
-.card-info {
-    display:flex;
+    transition: 0.5s ease;
+  }
+  
+  .card-info {
+    display: flex;
     justify-content: space-between;
     max-height: 40%;
-}
-.profile-name {
+  }
+  
+  .profile-name {
     text-align: left;
     color: #263159;
-}
-
-.top-profile{
+  }
+  
+  .top-profile {
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
-    align-items: center ;
+    align-items: center;
     border-radius: 15px;
     box-shadow: 0px 5px 15px rgba(1, 1, 1, 0.25);
-    background-color:#FFFBEB;
-}
-.left-profile{
+    background-color: #FFFBEB;
+  }
+  
+  .left-profile {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-}
-.right-profile{
+  }
+  
+  .right-profile {
     margin: 2em;
-}
-.student-profile-body{
+  }
+  
+  .student-profile-body {
     display: flex;
     align-items: flex-start;
     justify-content: center;
     flex-direction: row;
-}
-.personal-info-container{
+  }
+  
+  .personal-info-container {
     display: flex;
     justify-content: center;
     flex-direction: column;
     height: 85%;
     width: 50%;
     overflow: hidden;
-}
-.personal-info{
+  }
+  
+  .personal-info {
     margin-top: 5px;
     margin-bottom: 5px;
     width: auto;
@@ -67,11 +75,12 @@
     color: #FFFBEB;
     background-color: transparent;
     border-radius: 15px;
-    box-shadow: 0px 5px 15px rgba(1 1 1 /0.25);
-}
-.profile-pic {
+    box-shadow: 0px 5px 15px rgba(1 1 1 / 0.25);
+  }
+  
+  .profile-pic {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     text-align: center;
     font-size: 2.7em;
@@ -80,9 +89,10 @@
     color: #FFFBEB;
     border-radius: 64px;
     margin: 12px;
-}
-
-.edit-btn{
+    cursor: pointer;
+  }
+  
+  .edit-btn {
     width: 5.5vw;
     height: 3.6vh;
     float: right;
@@ -95,28 +105,32 @@
     border-radius: 10px;
     display: block;
     cursor: pointer;
-}
-.edit-btn:hover{
+  }
+  
+  .edit-btn:hover {
     transition: 0.5s ease;
     transform: scale(1.1);
     border-color: #646cff;
-}
-.table-info {
+  }
+  
+  .table-info {
     width: 85%;
-    height:70%;
-    box-shadow: 0px 5px 15px rgba(1, 1, 1, 0.25); 
+    height: 70%;
+    box-shadow: 0px 5px 15px rgba(1, 1, 1, 0.25);
     overflow: hidden;
     border: 5px solid #fffbeb;
     border-radius: 15px;
     margin: 15px;
-}
-
-.student-table{
+    margin-bottom: 0px;
+  }
+  
+  .student-table {
     width: 100%;
     background-color: #fffbeb;
-    box-shadow: 0px 5px 25px rgba(1 1 1 /25%);
-}
-.student-table-td {
+    box-shadow: 0px 5px 25px rgba(1 1 1 / 25%);
+  }
+  
+  .student-table-td {
     width: 5.5vw;
     height: 3.6vh;
     padding: 8px;
@@ -125,10 +139,9 @@
     color: #263159;
     font-size: 1em;
     font-family: inherit;
-
-}
-
-.input-personal-info{
+  }
+  
+  .input-personal-info {
     width: 13.7vw;
     height: 2vh;
     font-size: 1em;
@@ -136,60 +149,76 @@
     background-color: transparent;
     text-decoration: none;
     border: none;
-
-}
-.upcoming-trip-container{
+  }
+  
+  .upcoming-trip-container {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     height: 85%;
     width: 50%;
-}
-
-.upcoming-trip-container>.personal-info{
+  }
+  
+  .upcoming-trip-container > .personal-info {
     margin-top: 18px;
-}
-.bottom-upcoming-trip{
-    display:flex;
+  }
+  
+  .bottom-upcoming-trip {
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 90%;
     width: 90%;
     margin-top: -10px;
-}
-.upcoming-trip-info{
+  }
+  
+  .upcoming-trip-info {
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 80%;
     justify-content: center;
-    align-items: center ;
+    align-items: center;
     border-radius: 15px;
     box-shadow: 0px 5px 15px rgba(1, 1, 1, 0.25);
-    background-color:#FFFBEB;
-}
-.upcoming-trip-txt{
+    background-color: #FFFBEB;
+  }
+  
+  .Trip-history-student-profile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 20%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(1, 1, 1, 0.25);
+    background-color: #FFFBEB;
+    margin-top: 10px;
+  }
+  
+  .upcoming-trip-txt {
     padding: 1em;
     text-align: center;
     color: #263159;
-}
-
-
-.edit-toggle-txt{
+  }
+  
+  .edit-toggle-txt {
     text-align: center;
     margin-left: 5px;
-    transform: translate(10px,8px);
+    transform: translate(10px, 8px);
     color: #263159;
-}
-.toggle-checkbox {
+  }
+  
+  .toggle-checkbox {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     display: none;
-}
-
-.toggle-switch {
+  }
+  
+  .toggle-switch {
     background-color: gray;
     width: 78px;
     height: 32px;
@@ -197,9 +226,9 @@
     position: relative;
     transition: 0.3s;
     cursor: pointer;
-}
-
-.toggle-switch::before {
+  }
+  
+  .toggle-switch::before {
     content: "";
     font-weight: 900;
     background-color: white;
@@ -214,15 +243,20 @@
     align-items: center;
     color: #ddd;
     transition: 0.3s;
-    
-}
-
-.toggle-checkbox:checked+.toggle-switch  {
+  }
+  
+  .toggle-checkbox:checked + .toggle-switch {
     background-color: #263159;
-
-}
-.toggle-checkbox:checked+.toggle-switch::before ,.edit-toggle-txt {
+  }
+  
+  .toggle-checkbox:checked + .toggle-switch::before,
+  .edit-toggle-txt {
     content: "";
     left: 50px;
     color: #263159;
-}
+  }
+  
+  .upload-input {
+    display: none;
+  }
+  

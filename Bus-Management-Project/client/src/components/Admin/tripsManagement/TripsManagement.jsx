@@ -18,7 +18,8 @@ function TripsManagement() {
       'start Time': '10:00 AM',
       "end Time": '11:00 AM',
       'bus type': 'Mini Bus',
-      seats: 15
+      seats: 15,
+      'Driver Assigned': '' // New column added here
     },
     // Additional initial routes...
   ]);
@@ -33,7 +34,8 @@ function TripsManagement() {
         'start Time': '',
         'end Time': '',
         'bus type': '',
-        seats: 0
+        seats: 0,
+        'Driver Assigned': '' // Default value for new column
       };
       setRoutes((prevRoutes) => [...prevRoutes, newRoute]);
       setIsAdding(true);
@@ -41,13 +43,11 @@ function TripsManagement() {
   };
 
   const handleSaveNewRoute = (newRouteData) => {
-    // Find the bus type option to get the seats
     const busTypeOption = busTypeOptions.find(option => option.type === newRouteData['bus type']);
     if (busTypeOption) {
       newRouteData.seats = busTypeOption.seats;
     }
 
-    // Save the new route and exit adding state
     setRoutes((prevRoutes) =>
       prevRoutes.map((route) =>
         route.id === newRouteData.id ? newRouteData : route
@@ -61,7 +61,6 @@ function TripsManagement() {
   };
 
   const handleUpdateRoute = (updatedRoute) => {
-    // Find the bus type option to get the seats
     const busTypeOption = busTypeOptions.find(option => option.type === updatedRoute['bus type']);
     if (busTypeOption) {
       updatedRoute.seats = busTypeOption.seats;

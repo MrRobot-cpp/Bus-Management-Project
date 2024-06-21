@@ -4,20 +4,20 @@ import { Link } from 'react-router-dom';
 import { validatePassword } from './validation';
 import './login.css';
 
-const driverCredentials = {
-    email: "ahmedsamersayed22@gmail.com",
-    password: "samortchy2004"
-};
-
-const studentCredentials = {
-    email: "shadyyasset@gmail.com",
-    password: "shdshddd2002"
-};
-
-const adminCredentials = {
-    email: "ghazouly2007@gmail.com",
-    password: "ghazou2007"
-};
+//const driverCredentials = {
+//    email: "ahmedsamersayed22@gmail.com",
+//    password: "samortchy2004"
+//};
+//
+//const studentCredentials = {
+//    email: "shadyyasset@gmail.com",
+//    password: "shdshddd2002"
+//};
+//
+//const adminCredentials = {
+//    email: "ghazouly2007@gmail.com",
+//    password: "ghazou2007"
+//};
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -89,7 +89,7 @@ const Login = () => {
         <div className='login'>
             <div className="login-container">
                 <form className='login-form' onSubmit={showForgotPassword ? handleResetPassword : handleSubmit}>
-                    <h1 className='login-header'>{showForgotPassword ? 'Reset Password' : 'Sign In'}</h1>
+                    <h1 className='login-header'>{showForgotPassword ? 'Reset Password' : 'Login In'}</h1>
                     <br />
                     {credentialsError && !showForgotPassword && <span className='error'>{credentialsError}</span>}
                     <br />

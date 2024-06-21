@@ -1,9 +1,13 @@
 import express from 'express';
-import { Admin } from '../Model/userModel.js';
-import { isAuthenticated } from '../auth.js';
+import { Admin, Driver, Student } from '../Model/userModel.js';
+import { isAuthenticated, isAdmin } from '../auth.js';
 import { body, param, validationResult } from 'express-validator';
+import tripRoutes from '../routes/tripRoutes.js';
 
 const router = express.Router();
+
+//trip routes
+router.use('/trips', tripRoutes);
 
 // Validation middleware
 const validateAdmin = [
@@ -25,16 +29,16 @@ const validateObjectId = [
 
 
 router.post('/', validateAdmin, async (req, res) => {
+    const errors = validationResult(req);
     try {
         // Check if all required fields are present in the request body
         if (
             !req.body.name || !req.body.email ||
             !req.body.password || !req.body.id ||
-            !req.body.gender || !req.body.birthdate ||
-            !req.body.billingInfo || !req.body.busTypes // Assuming busTypes is provided for Admin
+            !req.body.gender || !req.body.birthdate || !req.body.busTypes // Assuming busTypes is provided for Admin
         ) {
             return res.status(400).send({
-                message: 'Send all required fields: name, email, password, id, gender, birthdate, billingInfo, role, busTypes',
+                message: 'Send all required fields: name, email, password, id, gender, birthdate, role, busTypes',
             });
         }
 
@@ -62,8 +66,22 @@ router.post('/', validateAdmin, async (req, res) => {
     }
 });
 
+// Get all Students
+router.get('/students', isAdmin, isAuthenticated, async (req, res) => {
+    try {
+        const students = await Student.find({});
+        return res.status(200).json({
+            count: students.length,
+            data: students,
+        });
+    } catch (error) {
+        console.log(error.message);
+        res.status(500).send({ message: error.message });
+    }
+});
+
 // Get all Admins
-router.get('/', async (req, res) => {
+router.get('/admins', async (req, res) => {
     try {
         const admins = await Admin.find({});
         return res.status(200).json({
@@ -76,8 +94,62 @@ router.get('/', async (req, res) => {
     }
 });
 
+// Get all Drivers
+router.get('/drivers',  isAuthenticated, async (req, res) => {
+    const errors = validationResult(req);
+    try {
+        const drivers = await Driver.find({});
+        return res.status(200).json({
+            count: drivers.length,
+            data: drivers,
+        });
+    } catch (error) {
+        console.log(error.message);
+        res.status(500).send({ message: error.message });
+    }
+});
+
+// Get a Student by ID
+router.get('/students/:id', isAuthenticated, validateObjectId, async (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+        return res.status(400).json({ errors: errors.array() });
+    }
+
+    try {
+        const { id } = req.params;
+        const student = await Student.findById(id);
+
+        if (!student) {
+            return res.status(404).json({ message: 'Student not found' });
+        }
+
+        return res.status(200).json(student);
+    } catch (error) {
+        console.log(error.message);
+        res.status(500).send({ message: error.message });
+    }
+});
+
+// Get a Driver by ID
+router.get('/drivers/:id',  validateObjectId, async (req, res) => {
+    try {
+        const { id } = req.params;
+        const driver = await Driver.findById(id);
+
+        if (!driver) {
+            return res.status(404).json({ message: 'Driver not found' });
+        }
+
+        return res.status(200).json(driver);
+    } catch (error) {
+        console.log(error.message);
+        res.status(500).send({ message: error.message });
+    }
+});
+
 // Get an Admin by ID
-router.get('/:id', isAuthenticated, validateObjectId, async (req, res) => {
+router.get('/:id', isAdmin, isAuthenticated, validateObjectId, async (req, res) => {
     try {
         const { id } = req.params;
         const admin = await Admin.findById(id);

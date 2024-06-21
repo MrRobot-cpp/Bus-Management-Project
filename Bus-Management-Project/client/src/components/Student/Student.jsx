@@ -15,8 +15,6 @@ const exampleObj = {
     Password: "shdshddd2002",
     Phone:"01284049697",
     Location:"New Nozha",
-    Birthdate: "5/4/2002",
-    Gender: "male",
 }
 
 
