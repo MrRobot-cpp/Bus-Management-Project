@@ -18,8 +18,6 @@ function Admin() {
     email: '',
     password: '',
     id: '',
-    gender: '',
-    birthdate: '',
     billingInfo: {
       cardNumber: '',
       cardHolderName: '',

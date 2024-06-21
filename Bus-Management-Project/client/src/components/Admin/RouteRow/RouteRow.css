@@ -1,21 +1,3 @@
-.save-btn, .delete-btn {
-    background-color: #495579; 
-    border: none;
-    color: white;
-    padding: 10px 24px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 12px;
-}
-
-
-.save-btn:hover, .delete-btn:hover {
-    background: #263159;
-}
 
 .route-data {
     color: black;
@@ -92,14 +74,15 @@
     justify-content: center;
     width: 100%;
     height: 100%;
+    margin-block: 30px;
   }
 
   .route-info {
     border: 1px solid #ccc;
     border-radius: 5px;
-    padding: 40px;
+    padding: 20px;
     margin: 10px;
-    width: 40vw;
+    width: 60vw;
     font-size: 20px;
     line-height: 35px;
     background:#FFFBEB;
@@ -108,27 +91,40 @@
 
 
   
-  .route-choice-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    }
-    
-    .route-choice {
-      background-color: #FFFBEB;
-      width: 500px;
-      padding: 15px;
-      border-radius: 20px;
-  }
-
-.route-choice-title {
-    font-size: 20px;
+.route-popup-contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* margin-bottom: 20px; */
+  gap: 20px;
 }
+
+.route-top-contents {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+
+}
+
+div.exit-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.route-choice {
+  background-color: #FFFBEB;
+  width: 450px;
+  padding: 15px;
+  border-radius: 20px;
+}
+
 
 .route-choice-content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 7px;
 }
 
 .start-end-route {
@@ -154,7 +150,77 @@
 }
 
 .navigation-map {
-  width: 100%;
-  height: 1000%;
+  width: 400px;
+  height: 400px;
   background-color: #FFF;
+  background-color: red;
+}
+
+.route-top-container {
+  display: flex;
+  gap: 10px;
+}
+
+.exit-btn {
+  text-align: right;
+  background-color: transparent;
+  border: none;
+  
+}
+
+
+.exit-btn i {
+  font-size: 25px;
+  padding: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  width: auto;
+}
+
+.exit-btn i:hover {
+  color: #FFFBEB;
+  background-color: #263159;
+}
+
+.route-details {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 10px;
+  width: 30%;
+  height: 380px;
+}
+
+.info-span {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+
+.stop-info {
+  display: flex;
+  gap: 10px;
+}
+
+.route-data  {
+  /* border: 1px solid rgba(0, 0, 0, 0.278);
+  border-radius: 10px;
+  padding: 5px; */
+  width: auto;
+  color: #495579;
+}
+
+.start-end-text, .stop-name-loc-text {
+  display: flex;
+  justify-content: space-between;
+}  
+
+.route-bottom-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.start-end-text p, .stop-name-loc-text p {
+  font-size: 18px;
 }

@@ -102,10 +102,9 @@
 }
 
 .thick-line {
-  height: 50px; /* Adjust the height to make it thicker */
-  background-color: black; /* Change the color as needed */
-  border: none; /* Remove default border */
-
+  height: 50px; 
+  background-color: black; 
+  border: none; 
 }
 
 .driverHeader p {

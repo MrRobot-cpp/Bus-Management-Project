@@ -43,7 +43,7 @@ function Student(){
                         {header==="Trips" && <StudentTrip/> }
                         {header==="Deposit" &&<CashDeposit/> }
                         {header==="Navigation" &&<StudentMapRoutes/> }
-                        {header==="Profile" && <Profile user={exampleObj}/>}        {/* <StudentTrip/> */}
+                        {header==="Profile" && <Profile user={exampleObj}/>}      
                     </div>
                 </div>
             </div>

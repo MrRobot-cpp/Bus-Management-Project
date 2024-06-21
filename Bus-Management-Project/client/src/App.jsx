@@ -11,10 +11,15 @@ import LandingPage from './components/LandingPage/LandingPage'
 function App() {
 
     return (
+     
         <>
+<<<<<<< HEAD
         <AccountConfig/>
+=======
+        <Admin/>
+>>>>>>> 171b5e9ab7e142cd4fc62aa20e60bb172c8e614d
             {/*SAMER: MA7DSH YL3B FL ROUTES ELY 3AOZ YGRB 7AGA Y COMMENT EL ROUTES W YKTB T7TEHA */}
-            {/* <Routes>
+             {/* <Routes>
                 <Route
                     path={"/Landing-page"}
                     element={<LandingPage />}
@@ -47,7 +52,7 @@ function App() {
                     path={"/Login/driver-view"}
                     element={<Driver />}
                 />
-            </Routes>  */}
+            </Routes>    */}
             {/*SHAYFK YALY BTFKR TSHELHOM HA3DOK*/}
         </>
     );
