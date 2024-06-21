@@ -74,8 +74,6 @@
     text-align: center;
     color: #FFFBEB;
     background-color: transparent;
-    border-radius: 15px;
-    box-shadow: 0px 5px 15px rgba(1 1 1 / 0.25);
   }
   
   .profile-pic {
@@ -115,12 +113,13 @@
   
   .table-info {
     width: 85%;
-    height: 70%;
+    height:22vh;
     box-shadow: 0px 5px 15px rgba(1, 1, 1, 0.25);
     overflow: hidden;
     border: 5px solid #fffbeb;
     border-radius: 15px;
     margin: 15px;
+    margin-top: 0px;
     margin-bottom: 0px;
   }
   

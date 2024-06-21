@@ -9,12 +9,11 @@ import StudentMapRoutes from "./StudentMapRoutes/StudentMapRoutes"
 import CashDeposit from './CashDeposit/CashDeposit.jsx'
 
 const exampleObj = {
-    Name: "shady",
+    Name: "Shady Yasser",
     Id:"123456",
-    Email: "shadyyasset@gmail.com",
+    Email: "shadyyasser@gmail.com",
     Password: "shdshddd2002",
-    Phone:"01284049697",
-    Location:"New Nozha",
+    Location:"New Nozha"
 }
 
 

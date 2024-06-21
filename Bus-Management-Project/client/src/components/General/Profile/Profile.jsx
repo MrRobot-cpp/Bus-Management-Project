@@ -124,7 +124,7 @@ function StudentProfile(props) {
                 <tbody>
                   {Object.keys(user).map(
                     (propertyName, index) =>
-                      propertyName !== "Id" && (
+                      propertyName !== "Id" &&  propertyName !== "Name" && (
                         <tr key={index}>
                           <td className="student-table-td">{propertyName}</td>
                           <td className="student-table-td">
@@ -143,7 +143,6 @@ function StudentProfile(props) {
                           <td className="student-table-td">
                             {(propertyName === "Email" ||
                               propertyName === "Password" ||
-                              propertyName === "Phone" ||
                               propertyName === "Location") &&
                               isChecked &&
                               (editableIndex === index ? (
