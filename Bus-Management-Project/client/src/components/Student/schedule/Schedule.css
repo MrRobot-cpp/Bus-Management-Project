@@ -7,7 +7,7 @@
 }
 
 .month-title, .schedule-title {
-    font-size: 1em;
+    font-size: 1.3em;
     font-weight: 400;
 }
 
@@ -27,6 +27,10 @@
     padding: 5px;
 }
 
+.current-week-day {
+    font-size: 14px;
+}
+
 hr {
     border: #263159 solid 1px;
     opacity: 0.3;
@@ -40,7 +44,7 @@ hr {
     background-color: #263159;
     color: #FFFBEB;
     padding-inline: 15px;
-    padding-block: 10px;
+    padding-block: 5px;
     margin-block: 5px;
     border-radius: 20px;
     display: flex;
@@ -68,6 +72,12 @@ hr {
     display: flex;
     flex-direction: column;
 }
+
+
+.schedule-item p {
+    font-size: 14px;
+}
+
 
 
 @media (max-width: 480px) {

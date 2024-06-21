@@ -55,8 +55,8 @@ const Schedule = () => {
                     const isToday = date.toDateString() === today.toDateString();
                     return (
                     <div className='current-day' key={day} style={{backgroundColor: isToday ? '#263159' : '#495579'}}>
-                        <div>{day}</div>
-                        <div>{date.getDate()}</div>
+                        <div className='current-week-day'>{day}</div>
+                        <div className='curent-week-day'>{date.getDate()}</div>
                     </div>
                     );
                 })}
@@ -66,7 +66,7 @@ const Schedule = () => {
             <div className="schedule-content">
             <div className="schedule-item">
                 <div className="name-time">
-                    <h4>Shobra to MIU</h4>
+                    <h5>Shobra to MIU</h5>
                     <p>7:30 AM - 8:30 AM</p>
                 </div>
                 <div className='status-more'>
@@ -76,7 +76,7 @@ const Schedule = () => {
             </div>
             <div className="schedule-item">
                 <div className="name-time">
-                    <h4>Shobra to MIU</h4>
+                    <h5>Shobra to MIU</h5>
                     <p>7:30 AM - 8:30 AM</p>
                 </div>
                 <div className='status-more'>

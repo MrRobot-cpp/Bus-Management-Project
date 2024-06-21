@@ -77,11 +77,20 @@
 .driver-contact {
     display: flex;
     flex-direction: column;
+    gap: 5px;
 }
 
 .profile-pic {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
+    margin: 0;
+}
+
+.pic-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .star-rating {
@@ -108,7 +117,7 @@
 }
 
 .student-current-trip-title, .payments-title {
-    font-size: 25px;
+    font-size: 1.3em;
 }
 
 .current-trip-info {
@@ -153,8 +162,12 @@
     border-radius: 20px;
     padding: 10px;
     width: 85%;
-    height: 50%;
+    /* height: 80%; */
     align-content: center;
+}
+
+div.payments {
+    height: 200px;
 
 }
 
@@ -187,7 +200,7 @@
 .payments-info, .payments-date {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
     padding: 10px;
 }
 
@@ -198,14 +211,22 @@
     text-align: center;
 }
 
+.payments-text p {
+    font-size: 16px;
+    margin-right: 5px;
+}
+
 .payments-date-1 {
-    width: 150px;
+    width: 100px;
 }
 
 .payments-date-2 {
-    width: 90px;
+    width: 50px;
 }
 
+p.payments-date-1, p.payments-date-2, p.payments-amount {
+    font-size: 15px;
+}
 
 /* Media Queries
 @media (max-width: 1550px) {

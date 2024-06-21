@@ -57,7 +57,7 @@ function StudentDashboard() {
                 <Schedule/>
                 </div>
                 <div className="driver-info">
-                    <div className="pic-name-rate">
+                    <div className="pic-name">
                         <img className='profile-pic' src={profilePic} alt="profile picture" />
                         <h3>Driver Name</h3>
                     </div>
@@ -72,6 +72,7 @@ function StudentDashboard() {
                         <p className='rating-number'>4.38</p>
                     </div>
                     <div className="driver-contact">
+                        <p>+201204837593</p>
                     <p className="live-loc">Live Location</p> {/* should link to navigation tab */}
                     </div>
                 </div>
