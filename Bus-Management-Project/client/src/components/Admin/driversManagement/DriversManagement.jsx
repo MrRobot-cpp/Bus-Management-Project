@@ -199,10 +199,9 @@ export default DriversManagement;
 // Modal component definition
 // Modal component definition
 function Modal({ driver, onClose, onAddTrip }) {
-  const [students] = useState([
-    { id: 1, name: 'John Doe', email: 'john.doe@example.com', fees: '$100' },
-    { id: 2, name: 'Jane Smith', email: 'jane.smith@example.com', fees: '$120' },
-    // Add more student mock data as needed
+  const [trips] = useState([
+    { id: 1, OpeningTime: '27/5/2024', StartTime: '8:30 AM', EndTime: '9:00 AM', StartPoint: 'Nady Al Ahly', EndPoint: 'MIU' },
+    { id: 2, OpeningTime: '27/5/2024', StartTime: '8:30 AM', EndTime: '9:00 AM', StartPoint: 'Nady Al Ahly', EndPoint: 'MIU' }
   ]);
 
   return (
@@ -211,7 +210,7 @@ function Modal({ driver, onClose, onAddTrip }) {
         <div className={styles["route-info"]}>
           <div className={styles["route-popup-header"]}>
             <div className={styles["exit-title"]}>
-              <h2 className={styles['popup-title']}>Route Details</h2>
+              <h2 className={styles['popup-title']}>List of Trips</h2>
               <button className={styles['exit-btn']} onClick={onClose}><i className="fa-solid fa-xmark"></i></button>
             </div>
             <hr />
@@ -221,18 +220,22 @@ function Modal({ driver, onClose, onAddTrip }) {
               <thead>
                 <tr>
                   <th>ID</th>
-                  <th>Name</th>
-                  <th>Email</th>
-                  <th>Fees</th>
+                  <th>Opening Time</th>
+                  <th>Start Time</th>
+                  <th>End Time</th>
+                  <th>Start Point</th>
+                  <th>End Point</th>
                 </tr>
               </thead>
               <tbody>
-                {students.map((student) => (
-                  <tr key={student.id}>
-                    <td className='student-id-data'>{student.id}</td>
-                    <td>{student.name}</td>
-                    <td>{student.email}</td>
-                    <td>{student.fees}</td>
+                {trips.map((trips) => (
+                  <tr key={trips.id}>
+                    <td className='student-id-data'>{trips.id}</td>
+                    <td>{trips.OpeningTime}</td>
+                    <td>{trips.StartTime}</td>
+                    <td>{trips.EndTime}</td>
+                    <td>{trips.StartPoint}</td>
+                    <td>{trips.EndPoint}</td>
                   </tr>
                 ))}
               </tbody>
