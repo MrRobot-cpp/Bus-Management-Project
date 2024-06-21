@@ -19,19 +19,17 @@
     align-items: center; /* Center the image */
   }
   
-.chat-button {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color:#495579;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer; 
-  padding-top: 4px;
-  margin-top: 5px;
-
- 
+  .chat-button {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-color: #495579;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	padding-top: 0;
+	padding-bottom: 30px;
 }
 
 .chat-button.fa-comments {
