@@ -10,7 +10,7 @@ function DriversManagement() {
       id: uuidv4(),
       name: 'Ahmed Mohmed',
       email: 'AhmedMoe@gmail.com',
-      password: '',
+      password: '12345',
       salary: '2500',
       address: 'Nasr City, Cairo'
     },
@@ -122,6 +122,8 @@ function DriversManagement() {
   );
 }
 
+// DriversManagement.js
+// DriversManagement.js
 function DriverRow({ driver, onSave, onDelete, onOpenModal, isEditing }) {
   const [isEditable, setIsEditable] = useState(isEditing);
   const [driverData, setDriverData] = useState({ ...driver });
@@ -136,7 +138,7 @@ function DriverRow({ driver, onSave, onDelete, onOpenModal, isEditing }) {
   };
 
   const handleSave = () => {
-    const isEmptyField = Object.values(driverData).some(value => value === '');
+    const isEmptyField = Object.values(driverData).some((value) => value === '');
     if (isEmptyField) {
       alert('All fields must be filled in before saving.');
       return;
@@ -149,14 +151,16 @@ function DriverRow({ driver, onSave, onDelete, onOpenModal, isEditing }) {
     setIsEditable(!isEditable);
   };
 
+  const inputClassName = `${styles['routeRow-input']} ${styles['routeRow-input-small']}`;
+
   return (
     <tr>
       {Object.keys(driverData).map((key) => (
         <td key={key}>
           {isEditable ? (
             <input
-              className={`${styles['routeRow-input']} ${styles[key.replace(/\s+/g, '-').toLowerCase() + '-input']}`}
-              type={key === 'email' ? 'email' : key === 'password' ? 'password' : 'text'}
+              className={inputClassName}
+              type={key === 'email' ? 'email' : 'text'}
               name={key}
               value={driverData[key]}
               onChange={handleInputChange}
@@ -180,6 +184,8 @@ function DriverRow({ driver, onSave, onDelete, onOpenModal, isEditing }) {
   );
 }
 
+
+
 DriverRow.propTypes = {
   driver: PropTypes.object.isRequired,
   onSave: PropTypes.func.isRequired,
@@ -191,42 +197,50 @@ DriverRow.propTypes = {
 export default DriversManagement;
 
 // Modal component definition
+// Modal component definition
 function Modal({ driver, onClose, onAddTrip }) {
-  // const [tripData, setTripData] = useState({
-  //   tripName: '',
-  //   tripDescription: ''
-  // });
-
-  // const handleInputChange = (e) => {
-  //   const { name, value } = e.target;
-  //   setTripData((prevData) => ({ ...prevData, [name]: value }));
-  // };
-
-  // const handleAdd = () => {
-  //   if (tripData.tripName === '' || tripData.tripDescription === '') {
-  //     alert('All fields must be filled in before adding a trip.');
-  //     return;
-  //   }
-  //   onAddTrip(tripData);
-  // };
+  const [students] = useState([
+    { id: 1, name: 'John Doe', email: 'john.doe@example.com', fees: '$100' },
+    { id: 2, name: 'Jane Smith', email: 'jane.smith@example.com', fees: '$120' },
+    // Add more student mock data as needed
+  ]);
 
   return (
     <div className={styles["overlay"]}>
-    <div className={styles["route-info-container"]}>
-      <div className={styles["route-info"]}>
-        <div className={styles["route-popup-header"]}>
-          <div className={styles["exit-title"]}>
-            <h2 className={styles['popup-title']}>Route Details</h2>
-            <button className={styles['exit-btn']} onClick={onClose}><i className="fa-solid fa-xmark"></i></button>
+      <div className={styles["route-info-container"]}>
+        <div className={styles["route-info"]}>
+          <div className={styles["route-popup-header"]}>
+            <div className={styles["exit-title"]}>
+              <h2 className={styles['popup-title']}>Route Details</h2>
+              <button className={styles['exit-btn']} onClick={onClose}><i className="fa-solid fa-xmark"></i></button>
+            </div>
+            <hr />
           </div>
-          <hr />
-        </div>
-        <div className={styles["route-popup-contents"]}>
-          working
+          <div className={styles["route-popup-contents"]}>
+            <table className={styles["students-table"]}>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Fees</th>
+                </tr>
+              </thead>
+              <tbody>
+                {students.map((student) => (
+                  <tr key={student.id}>
+                    <td className='student-id-data'>{student.id}</td>
+                    <td>{student.name}</td>
+                    <td>{student.email}</td>
+                    <td>{student.fees}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
-  </div>
   );
 }
 

@@ -442,3 +442,19 @@ div.exit-title {
 .start-end-text p, .stop-name-loc-text p {
   font-size: 18px;
 }
+
+td.student-id-date {
+  width: 100px;
+}
+
+.routeRow-input {
+  width: 100%; /* Default width for inputs */
+  padding: 8px;
+  font-size: 14px;
+}
+
+.routeRow-input-small {
+  width: 50%; /* Smaller width for inputs */
+  padding: 6px;
+  font-size: 12px;
+}
