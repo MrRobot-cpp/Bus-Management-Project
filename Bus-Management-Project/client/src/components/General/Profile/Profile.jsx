@@ -1,12 +1,14 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import "./Profile.css";
+import profilePicPlaceholder from "../../../assets/profilepic.png";
 
 function StudentProfile(props) {
   const [isChecked, setIsChecked] = useState(false);
   const [editableIndex, setEditableIndex] = useState(-1);
   const [editedValues, setEditedValues] = useState({});
-  const { user,component } = props;
+  const [newProfilePic, setNewProfilePic] = useState("");
+  const { user, component } = props;
 
   const handleInputChange = (event, propertyName) => {
     const newValue = event.target.value;
@@ -14,6 +16,15 @@ function StudentProfile(props) {
       ...prevValues,
       [propertyName]: newValue,
     }));
+  };
+
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      setNewProfilePic(e.target.result);
+    };
+    reader.readAsDataURL(file);
   };
 
   const handleCheckboxChange = () => {
@@ -39,6 +50,9 @@ function StudentProfile(props) {
     }
     // Update the corresponding value in your data or state
     const updatedUser = { ...user, [propertyName]: newValue };
+    if (newProfilePic) {
+      updatedUser.profilePic = newProfilePic;
+    }
     console.log(`Saving ${propertyName}: ${newValue}`);
     console.log("Updated User:", updatedUser);
     // Update editedValues with the latest input value
@@ -58,11 +72,28 @@ function StudentProfile(props) {
         <div className="card-info">
           <div className="top-profile">
             <div className="left-profile">
-              <img
-                className="profile-pic"
-                src="https://www.bing.com/th?id=OIP.hF4tMZhXY6KFPMPqRiBsvAHaHa&w=150&h=150&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"
-                alt=""
+              <input
+                type="file"
+                accept="image/*"
+                onChange={handleFileChange}
+                className="upload-input"
+                id="profile-pic-input"
               />
+              {isChecked ? (
+                <label htmlFor="profile-pic-input">
+                  <img
+                    className="profile-pic"
+                    src={newProfilePic || user.profilePic || profilePicPlaceholder}
+                    alt="profile picture"
+                  />
+                </label>
+              ) : (
+                <img
+                  className="profile-pic"
+                  src={newProfilePic || user.profilePic || profilePicPlaceholder}
+                  alt="profile picture"
+                />
+              )}
               <div className="profile-txt">
                 <h2 className="profile-name">{user.Name}</h2>
                 <h4 className="profile-name">ID:{user.Id}</h4>
@@ -90,48 +121,48 @@ function StudentProfile(props) {
             </div>
             <div className="table-info">
               <table className="student-table">
-                {Object.keys(user).map((propertyName, index) => (
-                  propertyName !== "Id" && (
-                    <tr key={index}>
-                      <td className="student-table-td">{propertyName}</td>
-                      <td className="student-table-td">
-                        {editableIndex === index ? (
-                          <input
-                            id={`input-${index}`}
-                            type="text"
-                            value={editedValues[propertyName] ?? user[propertyName]}
-                            onChange={(event) => handleInputChange(event, propertyName)}
-                            className="input-personal-info"
-                          />
-                        ) : (
-                          <span>{user[propertyName]}</span>
-                        )}
-                      </td>
-                      <td className="student-table-td">
-                        {(propertyName === "Email" ||
-                          propertyName === "Password" ||
-                          propertyName === "Phone" ||
-                          propertyName === "Location") &&
-                          isChecked &&
-                          (editableIndex === index ? (
-                            <button
-                              onClick={() => handleSaveClick(propertyName)}
-                              className="edit-btn"
-                            >
-                              Save
-                            </button>
-                          ) : (
-                            <button
-                              onClick={() => handleEditClick(index, propertyName)}
-                              className="edit-btn"
-                            >
-                              Edit
-                            </button>
-                          ))}
-                      </td>
-                    </tr>
-                  )
-                ))}
+                <tbody>
+                  {Object.keys(user).map(
+                    (propertyName, index) =>
+                      propertyName !== "Id" && (
+                        <tr key={index}>
+                          <td className="student-table-td">{propertyName}</td>
+                          <td className="student-table-td">
+                            {editableIndex === index ? (
+                              <input
+                                id={`input-${index}`}
+                                type="text"
+                                value={editedValues[propertyName] ?? user[propertyName]}
+                                onChange={(event) => handleInputChange(event, propertyName)}
+                                className="input-personal-info"
+                              />
+                            ) : (
+                              <span>{user[propertyName]}</span>
+                            )}
+                          </td>
+                          <td className="student-table-td">
+                            {(propertyName === "Email" ||
+                              propertyName === "Password" ||
+                              propertyName === "Phone" ||
+                              propertyName === "Location") &&
+                              isChecked &&
+                              (editableIndex === index ? (
+                                <button onClick={() => handleSaveClick(propertyName)} className="edit-btn">
+                                  Save
+                                </button>
+                              ) : (
+                                <button
+                                  onClick={() => handleEditClick(index, propertyName)}
+                                  className="edit-btn"
+                                >
+                                  Edit
+                                </button>
+                              ))}
+                          </td>
+                        </tr>
+                      )
+                  )}
+                </tbody>
               </table>
             </div>
           </div>
@@ -146,6 +177,12 @@ function StudentProfile(props) {
               </div>
             </div>
           </div>
+        </div>
+        <div className="personal-info">
+          <h2>Trip History</h2>
+        </div>
+        <div className="Trip-history-student-profile">
+          <h2 className="upcoming-trip-txt">Data</h2>
         </div>
       </div>
     </div>
