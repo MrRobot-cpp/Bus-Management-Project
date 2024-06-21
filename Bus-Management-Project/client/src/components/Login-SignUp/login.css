@@ -181,6 +181,7 @@
 }  */
 
 
+
 @media (max-width: 1200px) {
     .login-container {
         width: 70%;
@@ -204,13 +205,24 @@
         height: 50px;
         font-size: 1em;
     }
+
+    .not-regist {
+        transform: translate(0,-14px);
+        padding: 10px;
+        width: 250px;
+    }
 }
+
+
+
 
 @media (max-width: 845px) {
     a.forgot-password-link {
         margin: 0;
     }
 }
+
+
 
 @media (max-width: 768px) {
     .login-container {
@@ -235,7 +247,17 @@
         height: 45px;
         font-size: 0.9em;
     }
+
+    .social-icons a {
+        font-size: 2em;
+    }
+
+    h4.not-regist {
+        min-width: 190px;
+    }
 }
+
+
 
 @media (max-width: 576px) {
     .login-container, .login-form {
@@ -266,4 +288,7 @@
         height: 100px;
     }
     
+    .social-icons a {
+        font-size: 1.5em;
+    }
 }

@@ -89,7 +89,7 @@ const Login = () => {
         <div className='login'>
             <div className="login-container">
                 <form className='login-form' onSubmit={showForgotPassword ? handleResetPassword : handleSubmit}>
-                    <h1 className='login-header'>{showForgotPassword ? 'Reset Password' : 'Sign In'}</h1>
+                    <h1 className='login-header'>{showForgotPassword ? 'Reset Password' : 'Login In'}</h1>
                     <br />
                     {credentialsError && !showForgotPassword && <span className='error'>{credentialsError}</span>}
                     <br />
