@@ -36,3 +36,6 @@ align-items: center;
     justify-content: center;
     align-items: center; */
 } 
+.bottom-right-container > div:nth-child(1){
+    margin-top: 20px;
+}

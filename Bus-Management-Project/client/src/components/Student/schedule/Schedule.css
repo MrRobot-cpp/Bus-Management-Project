@@ -7,7 +7,7 @@
 }
 
 .month-title, .schedule-title {
-    font-size: 1em;
+    font-size: 1.3em;
     font-weight: 400;
 }
 
@@ -18,13 +18,18 @@
 }
 
 .current-day {
-    width: 10%;
-    height: 10%;
-    text-align: center;
-    align-content: center;
-    color: #FFFBEB;
-    border-radius: 10px;
-    padding: 5px;
+	width: 10%;
+	height: 60px;
+	text-align: center;
+	align-content: center;
+	color: #fffbeb;
+	border-radius: 20px;
+	padding: 15px;
+	margin-top: -13px;
+	margin-left: 10px;
+}
+.current-week-day {
+    font-size: 14px;
 }
 
 hr {
@@ -40,7 +45,7 @@ hr {
     background-color: #263159;
     color: #FFFBEB;
     padding-inline: 15px;
-    padding-block: 10px;
+    padding-block: 5px;
     margin-block: 5px;
     border-radius: 20px;
     display: flex;
@@ -68,6 +73,12 @@ hr {
     display: flex;
     flex-direction: column;
 }
+
+
+.schedule-item p {
+    font-size: 14px;
+}
+
 
 
 @media (max-width: 480px) {

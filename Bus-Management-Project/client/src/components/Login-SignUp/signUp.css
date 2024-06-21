@@ -139,3 +139,96 @@
     padding: 20px;
     margin: 12px;
 }
+
+
+/* responsive media queries */
+@media (max-width: 1200px) {
+    .not-regist {
+        transform: translate(-110px,-14px);
+        padding: 10px;
+        width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .Creation-container, .sign-form {
+        width: 60%;
+        height: auto;
+        padding: 30px;
+        margin: 15px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column; /* Ensure elements stack vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .names {
+        flex-direction: column; /* Stack first name and last name inputs vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .name-div {
+        width: 100%; /* Full width for name inputs */
+    }
+
+    .sign-input {
+        width: 100%; /* Full width for inputs */
+        height: 30px;
+    }
+
+    .sign-header {
+        font-size: 2em;
+    }
+
+    .social-icons a {
+        font-size: 2em;
+    }
+
+    .Sign-btn {
+        width: 160px;
+        height: 45px;
+        font-size: 0.9em;
+        margin: 16px;
+    }
+
+    .termsLine {
+        position: static; /* Ensure termsLine stays in document flow */
+    
+    }
+
+    .not-regist {
+        transform: translate(0,-14px);
+        padding: 10px;
+        width: 250px;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .sign-header {
+        font-size: 1.8em;
+    }
+
+    div.name-div, div.sign-div-holder {
+        width: auto;
+    }
+
+    .sign-input {
+        height: 28px;
+    }
+
+    .social-icons a {
+        font-size: 1.5em;
+    }
+
+    .Sign-btn {
+        width: 140px;
+        height: 40px;
+        font-size: 0.8em;
+    }
+
+    .not-regist {
+        width: auto;
+    }
+}
+
