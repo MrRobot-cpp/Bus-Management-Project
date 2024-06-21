@@ -10,7 +10,7 @@ import TripsTable from "./tripstable/TripsTable.jsx"; //done
 import Profile from "../General/Profile/Profile.jsx" 
 import MapRoutes from "./DriverMapRoutes/DriverMapRoutes.jsx"
 import styles from "./Driver.module.css"; //done
-import ChatWidget from "../chat/ChatWidget.jsx"
+import ChatWidget from "../Chat/ChatWidget.jsx"
 
 const trips = [
   {
