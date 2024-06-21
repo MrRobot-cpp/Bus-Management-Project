@@ -124,7 +124,9 @@ const ChatWidget = () => {
     return (
         <div className="chat-widget">
             <button className="chat-button" onClick={() => setIsOpen(!isOpen)}>
-                Chat
+                {/* <img src="chat-icon.png" alt="Chat Icon" width="30" height="30" /> */}
+                {/* <i className="fa-solid fa-comments"></i> */}
+                <i className="fa-regular fa-comments"></i>
             </button>
             {isOpen && (
                 <div className="chat-window">
@@ -136,10 +138,10 @@ const ChatWidget = () => {
                         {messages.map((msg, index) => (
                             <div key={index} className="message">
                                 <strong>{msg.sender.name}: </strong> {msg.text}
-                                <div className="timestamp">{new Date(msg.sentAt * 1000).toLocaleString()}</div>
+                                <div className="timestamp">{newDate(msg.sentAt * 1000).toLocaleString()}</div>
                             </div>
                         ))}
-                    </div>
+                    </div>      
                     <div className="chat-input">
                         <input
                             type="text"

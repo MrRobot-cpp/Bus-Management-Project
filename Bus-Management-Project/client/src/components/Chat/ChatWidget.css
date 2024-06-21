@@ -6,14 +6,72 @@
 }
 
 .chat-button {
-    background-color:#495579;
+    background-color: #495579;
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
+    padding: 20px; /* Increase padding to make the button larger */
+    border-radius: 50%; /* Make the button circular */
     cursor: pointer;
-    
+    width: 60px; /* Set a fixed width */
+    height: 60px; /* Set a fixed height */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the image */
+  }
+  
+.chat-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color:#495579;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer; 
+  padding-top: 4px;
+  margin-top: 5px;
+
+ 
 }
+
+.chat-button.fa-comments {
+  font-size: 20px; 
+  color: #333; 
+  font-size: 20px; 
+  position: absolute; 
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+ 
+}
+
+.chat-button:hover {
+  background-color:#263159; /* add a hover effect */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .chat-window {
     width: 300px;
