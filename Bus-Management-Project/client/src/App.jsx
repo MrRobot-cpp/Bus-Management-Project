@@ -13,9 +13,8 @@ function App() {
     return (
      
         <>
-           <Driver/>
             {/*SAMER: MA7DSH YL3B FL ROUTES ELY 3AOZ YGRB 7AGA Y COMMENT EL ROUTES W YKTB T7TEHA */}
-             {/* <Routes>
+             <Routes>
                 <Route
                     path={"/Landing-page"}
                     element={<LandingPage />}
@@ -48,7 +47,7 @@ function App() {
                     path={"/Login/driver-view"}
                     element={<Driver />}
                 />
-            </Routes>   */}
+            </Routes>   
             {/*SHAYFK YALY BTFKR TSHELHOM HA3DOK*/}
         </>
     );
