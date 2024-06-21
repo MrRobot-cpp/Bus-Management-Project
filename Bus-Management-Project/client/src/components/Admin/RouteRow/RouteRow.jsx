@@ -3,7 +3,6 @@ import styles from '../tripsManagement/TripsManagement.module.css';
 import './RouteRow.css';
 import ReactDOM from 'react-dom';
 
-
 function RouteRow({ route, onSave, onDelete, isEditing, busTypeOptions, showLocationButton }) {
   const [isEditable, setIsEditable] = useState(isEditing);
   const [routeData, setRouteData] = useState({ ...route });
@@ -33,18 +32,12 @@ function RouteRow({ route, onSave, onDelete, isEditing, busTypeOptions, showLoca
   };
 
   const handleLocationClick = () => {
-    return (
-        <div className="overlay">
-            <div className="trip-info-container">
-                <p>working</p>
-            </div>
-        </div>
-    );
+    setIsPopupVisible(true);
   };
 
-//   const handleClosePopup = () => {
-//     setIsPopupVisible(false);
-//   };
+  const handleClosePopup = () => {
+    setIsPopupVisible(false);
+  };
 
   return (
     <>
@@ -96,16 +89,38 @@ function RouteRow({ route, onSave, onDelete, isEditing, busTypeOptions, showLoca
           )}
         </td>
       </tr>
-      {/* {isPopupVisible && (
-        <div className={styles["overlay"]}>
-          <div className={styles["trip-info-container"]}>
-            <div className={styles["trip-info"]}>
-              <h2>Trip Details</h2>
-              <button onClick={handleClosePopup}>Close</button>
+      {isPopupVisible && (
+        <div className="overlay">
+          <div className="route-info-container">
+            <div className="route-info">
+              <h2>Route Details</h2>
+              <div className="route-top-container">
+                <div className="navigation-map">
+                  <p>working</p>
+                </div>
+                <div className="route-details"></div>
+              </div>
+              <div className="route-bottom-container">
+                <div className={styles["route-choice-container"]}>
+                  <div className={styles["route-choice"]}>
+                      <p className={styles['route-choice-title']}>Trip Choice:</p>
+                      <hr />
+                      <div className={styles["route-choice-content"]}>
+                          <div className={styles["start-end-route"]}>
+                              <input type="text"className={styles['start-input']} />
+                              <i className="fa-solid fa-arrow-right-arrow-left"></i>
+                              <input type="text" className={styles['end-input']} />
+                          </div>
+                          <button className={styles["show-trips-btn"]}>Show Trips</button>
+                      </div>
+                  </div>
+              </div>
             </div>
+              <button onClick={handleClosePopup}>Exit</button>
           </div>
         </div>
-      )} */}
+        </div>
+      )}
     </>
   );
 }
