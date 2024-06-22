@@ -96,16 +96,12 @@ const trips = [
 ];
 
 const driver = {
-  //JSON object example
-  name: "Ahmed",
-  Id: "#200428",
-  mail: "ahmedsamersayed22@gmail.com",
-  gender: "male",
-  age: 40,
-  noOfTrips: 1000,
-  phone: "01090790791",
-  type: "driver",
-};
+  Name: "Rahma Soliman",
+  Id:"012345",
+  Email: "Rahma@gmail.com",
+  Password: "rou2003",
+  Location:"Nasr City"
+}
 
 function TripComponent() {
   return (
