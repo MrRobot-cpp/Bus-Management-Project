@@ -15,7 +15,7 @@ function App() {
      
         <>
             {/*SAMER: MA7DSH YL3B FL ROUTES ELY 3AOZ YGRB 7AGA Y COMMENT EL ROUTES W YKTB T7TEHA */}
-        <Admin/>
+        <Driver/>
             {/* <Routes>
                 <Route path="/landing-page" element={<LandingPage />} />
                 <Route path="/" element={<LandingPage />} />
