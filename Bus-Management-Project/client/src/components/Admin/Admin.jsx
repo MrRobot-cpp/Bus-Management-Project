@@ -7,9 +7,19 @@ import AdminProfile from './adminprofile/AdminProfile';
 import PaymentsManagement from './paymentsManagement/PaymentsManagement';
 import RouteManagement from './RouteManagement/RouteManagement';
 import TripsManagement from './tripsManagement/TripsManagement';
+import Profile from "../General/Profile/Profile";
 import VerticalNavbar from '../General/VerticalNavbar';
 import styles from './Admin.module.css';
 import axios from 'axios';
+
+
+const adminobj = {
+  Name: "Ahmed Elghazouly",
+  Id:"234567",
+  Email: "ghazouly@gmail.com",
+  Password: "ghazouly2005",
+  Location:"New Nozha"
+}
 
 
 function Admin() {
@@ -17,7 +27,6 @@ function Admin() {
 
   const menuItems = [
     { text: "Drivers" },
-    // { text: "Students" },
     { text: "Trips" },
     { text: "Payments" },
     { text: "Profile" }
@@ -37,7 +46,7 @@ function Admin() {
           {header === "Drivers" && <DriversManagement />}
           {/* {header === "Students" && <StudentsManagement />} */}
           {header === "Trips" && <TripsManagement />}
-          {header === "Profile" && <AdminProfile />}
+          {header === "Profile" && <Profile user = {adminobj} />}
         </div>
       </div>
     </div>
