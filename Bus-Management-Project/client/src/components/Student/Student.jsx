@@ -8,13 +8,15 @@ import StudentDashboard from './studentDashboard/StudentDashboard.jsx'
 import StudentMapRoutes from "./StudentMapRoutes/StudentMapRoutes"
 import CashDeposit from './CashDeposit/CashDeposit.jsx'
 
-const exampleObj = {
-    Name: "Shady Yasser",
-    Id:"123456",
-    Email: "shadyyasser@gmail.com",
-    Password: "shdshddd2002",
-    Location:"New Nozha"
-}
+
+const user = localStorage.getItem('user');
+console.log(localStorage.getItem('userRole'));
+console.log(localStorage.getItem('authToken'));
+console.log(localStorage.getItem('userName'));
+
+
+
+console.log(user)
 
 
 function Student(){
@@ -38,11 +40,11 @@ function Student(){
                         <VerticalNavbar menuItems={menuItems} onQuery={setHeader}/>
                     </div>
                     <div className={styles["bottom-right-container"]}>
-                        {header==="Dashboard" && <StudentDashboard/> }
+                        {header==="Dashboard" && <StudentDashboard /> }
                         {header==="Trips" && <StudentTrip/> }
                         {header==="Deposit" &&<CashDeposit/> }
                         {header==="Navigation" &&<StudentMapRoutes/> }
-                        {header==="Profile" && <Profile user={exampleObj}/>}      
+                        {header==="Profile" && <Profile user={user}/>}      
                     </div>
                 </div>
             </div>

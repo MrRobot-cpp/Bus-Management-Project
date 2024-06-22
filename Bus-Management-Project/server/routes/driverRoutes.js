@@ -101,40 +101,6 @@ router.post('/',  validateDriver, async (req, res) => {
 });
 
 
-// Update a Driver by ID
-router.put('/:id',  validateObjectId, validateDriver, async (req, res) => {
-    try {
-        const { id } = req.params;
-        const { name, email, password, gender, birthdate, billingInfo,
-             trips, averageRating, salary, address } = req.body;
-
-        if (!name || !email || !password || !gender || !birthdate || 
-            !billingInfo || !salary || !address) {
-            return res.status(400).send({
-                message: 'Send all required fields: name, email, password, gender, birthdate, billingInfo, role, salary, address',
-            });
-        }
-
-        const updatedDriver = {
-            name, email, password, gender, birthdate,
-            billingInfo, trips, averageRating, salary,
-            address
-        };
-
-        const result = await Driver.findByIdAndUpdate(id, updatedDriver, { new: true });
-
-        if (!result) {
-            return res.status(404).json({ message: 'Driver not found' });
-        }
-
-        return res.status(200).json({ message: 'Driver updated successfully!', data: result });
-
-    } catch (error) {
-        console.log(error.message);
-        res.status(500).send({ message: error.message });
-    }
-});
-
 // Update a Driver by ID (partial update)
 router.patch('/:id',  validateObjectId, validateDriver, async (req, res) => {
     const errors = validationResult(req);

@@ -1,8 +1,8 @@
-// ProtectedRoute.js
+// eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { Navigate, Outlet } from 'react-router-dom';
 
-const adminProtectedRoute = ({ requiredRole }) => {
+const ProtectedRoute = ({ requiredRole }) => {
     const token = localStorage.getItem('authToken');
     const role = localStorage.getItem('userRole');
 
@@ -13,4 +13,4 @@ const adminProtectedRoute = ({ requiredRole }) => {
     return <Outlet />;
 };
 
-export default adminProtectedRoute;
+export default ProtectedRoute;

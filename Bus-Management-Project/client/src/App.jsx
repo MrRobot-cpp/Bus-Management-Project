@@ -1,4 +1,5 @@
-// App.js
+
+// eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Login from './components/Login-SignUp/Login.jsx';
@@ -8,7 +9,7 @@ import Student from './components/Student/Student';
 import Driver from './components/Driver/Driver';
 import AccountConfig from './components/Login-SignUp/AccountConfig.jsx';
 import LandingPage from './components/LandingPage/LandingPage';
-import ProtectedRoute from './protectedRoutes/adminProtectedRoute.jsx'; // Make sure to import ProtectedRoute
+import ProtectedRoute from './protectedRoutes/ProtectedRoute.jsx'; // Make sure to import ProtectedRoute
 
 function App() {
     return (

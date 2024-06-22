@@ -1,24 +1,28 @@
-// eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from 'react';
 import './AccountConfig.css';
 import Dropdown from '../General/Dropdown.jsx';
+import axios from 'axios';  // Make sure to import axios if it's used
 
-function AccountConfig() {
+function AccountConfig(props) {
+
+    const { name, email, password, isChecked } = props;
+
     const options1 = ['Nozha', 'Sheraton', 'Shobra', 'Heliopolis', '5th settlement', 'El Rehab', 'Nasr City', '6 October'];
 
     const [step, setStep] = useState(1);
     const [selectedOption1, setSelectedOption1] = useState('');
     const [locationInput, setLocationInput] = useState('');
     const [inputValid, setInputValid] = useState(false);
+    const [credentialsError, setCredentialsError] = useState('');
 
     useEffect(() => {
         // Validate input and enable continue button only when area and location are selected and valid
-        if (step === 2 && selectedOption1 && inputValid) {
+        if (step === 2 && selectedOption1 && validateInput(locationInput)) {
             setInputValid(true);
         } else {
             setInputValid(false);
         }
-    }, [step, selectedOption1, inputValid]);
+    }, [step, selectedOption1, locationInput]);
 
     const handleOption1Select = (option) => {
         setSelectedOption1(option);
@@ -36,10 +40,29 @@ function AccountConfig() {
         return regex.test(input);
     };
 
-    const handleContinue = () => {
+    const handleContinue = async () => {
         // Ensure step does not exceed 2
         if (step < 2) {
             setStep(step + 1);
+        } else {
+            try {
+                const response = await axios.post('http://localhost:3030/auth/signup', {
+                    name: name,
+                    email: email,
+                    password: password,
+                    address: `${selectedOption1} ${locationInput}`
+                });
+
+                console.log('Form submitted successfully!', response.data);
+                // Handle successful login, e.g., storing token, redirecting, etc.
+
+                // Redirect based on role
+                window.location.href = '/login';
+
+            } catch (error) {
+                setCredentialsError("Invalid Email or Password");
+                console.log("Invalid credentials", error);
+            }
         }
     };
 
@@ -77,9 +100,9 @@ function AccountConfig() {
                 </div>
                 {/* Continue button */}
                 {step === 2 && (
-                    <button 
+                    <button
                         className={`IContinue-Button ${inputValid ? 'active' : ''}`}
-                        onClick={handleContinue} 
+                        onClick={handleContinue}
                         disabled={!inputValid}>
                         Continue
                     </button>

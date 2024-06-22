@@ -1,30 +1,46 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { v4 as uuidv4 } from 'uuid';
+import axios from 'axios';
 import styles from './DriversManagement.module.css';
 
-
 function DriversManagement() {
-  const [drivers, setDrivers] = useState([
-    {
-      id: uuidv4(),
-      name: 'Ahmed Mohmed',
-      email: 'AhmedMoe@gmail.com',
-      password: '12345',
-      salary: '2500',
-      address: 'Nasr City, Cairo'
-    },
-    // Additional initial drivers can be added here if needed...
-  ]);
-
+  const [drivers, setDrivers] = useState([ {
+    id: '', // Generating a unique id
+    name: '',
+    email: '',
+    password: '',
+    salary: '',
+    address: '',
+  }]);
   const [isAdding, setIsAdding] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedDriver, setSelectedDriver] = useState(null);
 
+  useEffect(() => {
+    const fetchDrivers = async () => {
+      try {
+        const token = localStorage.getItem('authToken');
+        const response = await axios.get('http://localhost:3030/admin/drivers',{
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        });
+        const currData = response.data.data;
+        const updatedData = currData.map(({_id, __v, role, trips, averageRating, ...rest }) => rest);
+
+        setDrivers(updatedData);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    fetchDrivers();
+  }, []); // Empty dependency array ensures this runs once on mount
+
   const handleAddDriver = () => {
     if (!isAdding) {
       const newDriver = {
-        id: uuidv4(),
+        id: '', // Generating a unique id
         name: '',
         email: '',
         password: '',
@@ -122,8 +138,6 @@ function DriversManagement() {
   );
 }
 
-// DriversManagement.js
-// DriversManagement.js
 function DriverRow({ driver, onSave, onDelete, onOpenModal, isEditing }) {
   const [isEditable, setIsEditable] = useState(isEditing);
   const [driverData, setDriverData] = useState({ ...driver });
@@ -156,7 +170,7 @@ function DriverRow({ driver, onSave, onDelete, onOpenModal, isEditing }) {
   return (
     <tr>
       {Object.keys(driverData).map((key) => (
-        <td key={key}>
+        <td key={key}>  
           {isEditable ? (
             <input
               className={inputClassName}
@@ -184,8 +198,6 @@ function DriverRow({ driver, onSave, onDelete, onOpenModal, isEditing }) {
   );
 }
 
-
-
 DriverRow.propTypes = {
   driver: PropTypes.object.isRequired,
   onSave: PropTypes.func.isRequired,
@@ -194,10 +206,6 @@ DriverRow.propTypes = {
   isEditing: PropTypes.bool,
 };
 
-export default DriversManagement;
-
-// Modal component definition
-// Modal component definition
 function Modal({ driver, onClose, onAddTrip }) {
   const [trips] = useState([
     { id: 1, OpeningTime: '27/5/2024', StartTime: '8:30 AM', EndTime: '9:00 AM', StartPoint: 'Nady Al Ahly', EndPoint: 'MIU' },
@@ -253,56 +261,4 @@ Modal.propTypes = {
   onAddTrip: PropTypes.func.isRequired
 };
 
-
-
-
-
-
-
-
-/* const createDriver = async (driverData) => {
-      try {
-        const response = await axios.post('http://localhost:3030/driver/', driverData);
-        console.log('Driver created:', response.data);
-        return response.data;
-      } catch (error) {
-        console.error('Error creating driver:', error.response ? error.response.data : error.message);
-        throw error;
-      }
-    };
-  
-    const handleChange = (e) => {
-      const { name, value } = e.target;
-      if (name === 'cardNumber' || name === 'cardHolderName' || name === 'cvv' || name === 'expiryDate') {
-        setNewDriver((prevState) => ({
-          ...prevState,
-          billingInfo: {
-            ...prevState.billingInfo,
-            [name]: value
-          }
-        }));
-      } else {
-        setNewDriver({
-          ...newDriver,
-          [name]: value
-        });
-      }
-    };
-  
-    const handleCreateDriver = async () => {
-      try {
-        const driver = await createDriver(newDriver);
-        console.log('Driver successfully created:', driver);
-        setNewDriver({
-          name: '',
-          email: '',
-          password: '',
-          id: '',
-          salary: '',
-          address: ''
-        });
-      } catch (error) {
-        console.error('Error:', error);
-      }
-    };
-    */
+export default DriversManagement;

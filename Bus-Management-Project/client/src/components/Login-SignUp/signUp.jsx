@@ -1,9 +1,10 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { validateEmail, validatePassword, validateName } from './validation';
 import './signUp.css'; // Assuming you have this CSS file in your project
 import TermsAndConditions from './TermsAndConditions';
+import { Link } from 'react-router-dom';
+import AccountConfig from './AccountConfig';
 
 function Signup() {
     const [firstName, setFirstName] = useState('');
@@ -20,6 +21,8 @@ function Signup() {
     const [confirmPasswordError, setConfirmPasswordError] = useState('');
     const [termsError, setTermsError] = useState('');
     const [signupClicked, setSignupClicked] = useState(false);
+    const [isFormSubmitted, setIsFormSubmitted] = useState(false); // New state to track form submission
+
 
     const handleFirstNameChange = (e) => {
         const value = e.target.value;
@@ -64,12 +67,8 @@ function Signup() {
 
         if (validateEmail(email) && validatePassword(password) && password === confirmPassword && isChecked) {
             // Proceed with form submission
+            setIsFormSubmitted(true);
             console.log('Form submitted successfully!');
-            // Navigate to accountconfig page
-            // Uncomment the below line when you are ready to navigate
-            // return <Link to="/accountconfig" />;
-            // For now, you can simulate navigation using console log
-            console.log('Navigating to accountconfig page...');
         } else {
             console.log('Form submission failed. Please check input fields.');
         }
@@ -78,6 +77,10 @@ function Signup() {
     const handleToggleTerms = () => {
         setToggleIsChecked(!toggleIsChecked);
     };
+
+    if (isFormSubmitted) {
+        return <AccountConfig name={`${firstName} ${lastName}`} email={email} password={password} isChecked={isChecked}/>;
+    }
 
     return (
         <div className='sign'>
@@ -135,8 +138,6 @@ function Signup() {
                         {termsError && <span className="error">{termsError}</span>}
                     </div>
                     <div className='sign-div-holder'>
-                        {/* Replace the button with Link when you are ready to navigate */}
-                        {/* <Link to="/accountconfig">Sign Up</Link> */}
                         <button className='Sign-btn' type="submit" id="submit">Sign Up</button>
                     </div>
                     <h4 className="not-regist">Already Have An Account? <Link className="create-acc-link" to="/login">Login</Link></h4>

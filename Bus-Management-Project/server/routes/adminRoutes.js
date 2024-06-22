@@ -1,4 +1,5 @@
 import express from 'express';
+import mongoose from 'mongoose';
 import { Admin, Driver, Student } from '../Model/userModel.js';
 import { isAuthenticated, isAdmin } from '../auth.js';
 import { body, param, validationResult } from 'express-validator';
@@ -67,7 +68,7 @@ router.post('/', validateAdmin, async (req, res) => {
 });
 
 // Get all Students
-router.get('/students', isAdmin, isAuthenticated, async (req, res) => {
+router.get('/students', isAuthenticated, async (req, res) => {
     try {
         const students = await Student.find({});
         return res.status(200).json({
@@ -81,7 +82,7 @@ router.get('/students', isAdmin, isAuthenticated, async (req, res) => {
 });
 
 // Get all Admins
-router.get('/admins', async (req, res) => {
+router.get('/admins', isAuthenticated, async (req, res) => {
     try {
         const admins = await Admin.find({});
         return res.status(200).json({
@@ -191,6 +192,38 @@ router.put('/:id', isAuthenticated, validateObjectId, validateAdmin, async (req,
         }
 
         return res.status(200).json({ message: 'Admin updated successfully!', data: result });
+
+    } catch (error) {
+        console.log(error.message);
+        res.status(500).send({ message: error.message });
+    }
+});
+
+// Update a Driver by ID
+router.put('drivers/:id',  validateObjectId,  async (req, res) => {
+    try {
+        const { id } = req.params;
+        const { name, email, password,  trips, averageRating, salary, address } = req.body;
+
+        if (!name || !email || !password || !salary || !address) {
+            return res.status(400).send({
+                message: 'Send all required fields: name, email, password, gender, birthdate, billingInfo, role, salary, address',
+            });
+        }
+
+        const updatedDriver = {
+            name, email, password, 
+             trips, averageRating, 
+             salary,address
+        };
+
+        const result = await Driver.findOneAndUpdate({id : id }, updatedDriver, { new: true });
+
+        if (!result) {
+            return res.status(404).json({ message: 'Driver not found' });
+        }
+
+        return res.status(200).json({ message: 'Driver updated successfully!', data: result });
 
     } catch (error) {
         console.log(error.message);
