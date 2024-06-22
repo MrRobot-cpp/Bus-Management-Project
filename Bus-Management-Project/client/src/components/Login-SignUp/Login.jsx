@@ -3,21 +3,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { validatePassword } from './validation';
 import './login.css';
-
-//const driverCredentials = {
-//    email: "ahmedsamersayed22@gmail.com",
-//    password: "samortchy2004"
-//};
-//
-//const studentCredentials = {
-//    email: "shadyyasset@gmail.com",
-//    password: "shdshddd2002"
-//};
-//
-//const adminCredentials = {
-//    email: "ghazouly2007@gmail.com",
-//    password: "ghazou2007"
-//};
+import axios from 'axios';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -60,22 +46,38 @@ const Login = () => {
         setShowForgotPassword(false);
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setLoginClicked(true);
         setCredentialsError('');
 
         if (email && password) {
-            // Check credentials
-            if (
-                (email === driverCredentials.email && password === driverCredentials.password) ||
-                (email === studentCredentials.email && password === studentCredentials.password) ||
-                (email === adminCredentials.email && password === adminCredentials.password)
-            ) {
-                console.log('Form submitted successfully!');
-            } else {
+            try {
+                const response = await axios.post('http://localhost:3030/auth/login', { email, password });
+
+                const {token} = response.data;
+                const {role} = response.data.user;
+
+                 // Store the token and role in localStorage
+                localStorage.setItem('authToken', token);
+                localStorage.setItem('userRole', role);
+
+                console.log('Form submitted successfully!', response.data);
+                // Handle successful login, e.g., storing token, redirecting, etc.
+
+                 // Redirect based on role
+            if (role === 'Admin') {
+                window.location.href = '/admin';
+            } else if(role === 'Driver'){
+                // Redirect to another appropriate page if not admin
+                window.location.href = '/driver';
+            }else if(role === 'Student'){
+                // Redirect to another appropriate page if not admin
+                window.location.href = '/student';
+            }
+            } catch (error) {
                 setCredentialsError("Invalid Email or Password");
-                console.log("Invalid credentials");
+                console.log("Invalid credentials", error);
             }
         }
     };
