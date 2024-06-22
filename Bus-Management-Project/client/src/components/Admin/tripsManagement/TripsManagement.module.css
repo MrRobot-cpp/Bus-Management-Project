@@ -413,6 +413,15 @@ div.exit-title {
   display: flex;
   gap: 10px;
 }
+.route-start-data{
+  width: auto;
+  color: #495579;
+}
+
+.route-end-data{
+  width: auto;
+  color: #495579;
+}
 
 .route-data  {
   /* border: 1px solid rgba(0, 0, 0, 0.278);
