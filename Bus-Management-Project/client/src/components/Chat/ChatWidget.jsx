@@ -123,9 +123,11 @@ const ChatWidget = () => {
 
     return (
         <div className="chat-widget">
-            <button className="chat-button" onClick={() => setIsOpen(!isOpen)}>
-                Chat
-            </button>
+           {!isOpen && (
+                <button className="chat-button" onClick={() => setIsOpen(true)}>
+                    <i className="fa fa-comments" aria-hidden="true"></i>
+                </button>
+            )}
             {isOpen && (
                 <div className="chat-window">
                     <div className="chat-header">
@@ -136,10 +138,10 @@ const ChatWidget = () => {
                         {messages.map((msg, index) => (
                             <div key={index} className="message">
                                 <strong>{msg.sender.name}: </strong> {msg.text}
-                                <div className="timestamp">{new Date(msg.sentAt * 1000).toLocaleString()}</div>
+                                <div className="timestamp">{newDate(msg.sentAt * 1000).toLocaleString()}</div>
                             </div>
                         ))}
-                    </div>
+                    </div>      
                     <div className="chat-input">
                         <input
                             type="text"

@@ -5,34 +5,32 @@ import PaymentGif from '../../../assets/Payment.png';
 import DepositGate from '../DepositGate/DepositGate.jsx';
 
 function CashDeposit() {
-    const banks = ['Visa/Credit Card', 'HSBC Bank', 'CIB Bank', 'ADIB Bank'];
 
     const [checkedItems, setCheckedItems] = useState({
         0: false,
         1: false,
+        2: false,
+        3: false,
+    });
+    const [disabledItems, setDisabledItems] = useState({
+        0: false,
+        1: false,
+        2: false,
+        3: false,
     });
     const [totalAmount, setTotalAmount] = useState(0);
-    const [paymentMade, setPaymentMade] = useState(false);
     const [showPaymentModal, setShowPaymentModal] = useState(false);
 
     const handleCheckboxChange = (index) => {
-        if (!paymentMade || !checkedItems[0] || !checkedItems[1]) {
+        if (!disabledItems[index]) {
             const newCheckedItems = { ...checkedItems, [index]: !checkedItems[index] };
             setCheckedItems(newCheckedItems);
 
             let amount = totalAmount;
             if (newCheckedItems[index]) {
-                if (index === 0 && !checkedItems[0]) {
-                    amount += 4500;
-                } else if (index === 1 && !checkedItems[1]) {
-                    amount += 3000;
-                }
+                amount += 3000;
             } else {
-                if (index === 0 && checkedItems[0]) {
-                    amount -= 4500;
-                } else if (index === 1 && checkedItems[1]) {
-                    amount -= 3000;
-                }
+                amount -= 3000;
             }
             setTotalAmount(amount);
         }
@@ -45,8 +43,23 @@ function CashDeposit() {
     };
 
     const handlePaymentSuccess = () => {
+        const newDisabledItems = { ...disabledItems };
+        const newCheckedItems = { ...checkedItems };
+
+        Object.keys(checkedItems).forEach(key => {
+            if (checkedItems[key]) {
+                newDisabledItems[key] = true;
+                newCheckedItems[key] = true;
+            }
+        });
+
+        setDisabledItems(newDisabledItems);
+        setCheckedItems(newCheckedItems);
         setTotalAmount(0);
-        setPaymentMade(true);
+        setShowPaymentModal(false); // Close the payment modal
+    };
+
+    const handleCloseModal = () => {
         setShowPaymentModal(false); // Close the payment modal
     };
 
@@ -56,12 +69,6 @@ function CashDeposit() {
                 <div className={styles["cash-deposit"]}>
                     <div className={styles["cash-deposit-content"]}>
                         <div className={styles["first-row-container"]}>
-                            <div className={styles["choosebank-container"]}>
-                                <h3>Choose the bank</h3>
-                                <div className={styles["dropdown-holder"]}>
-                                    <Dropdown options={banks} />
-                                </div>
-                            </div>
                             <div className={styles["current-due-container"]}>
                                 <h3>Current Due</h3>
                                 <div className={styles["deposit-table"]}>
@@ -75,14 +82,24 @@ function CashDeposit() {
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>4500</td>
+                                                <td>3000</td>
                                                 <td>20/5/2024</td>
-                                                <td><input type="checkbox" onChange={() => handleCheckboxChange(0)} disabled={paymentMade && checkedItems[0]} /></td>
+                                                <td><input type="checkbox" checked={checkedItems[0]} onChange={() => handleCheckboxChange(0)} disabled={disabledItems[0]} /></td>
                                             </tr>
                                             <tr>
                                                 <td>3000</td>
                                                 <td>10/6/2024</td>
-                                                <td><input type="checkbox" onChange={() => handleCheckboxChange(1)} disabled={paymentMade && checkedItems[1]} /></td>
+                                                <td><input type="checkbox" checked={checkedItems[1]} onChange={() => handleCheckboxChange(1)} disabled={disabledItems[1]} /></td>
+                                            </tr>
+                                            <tr>
+                                                <td>3000</td>
+                                                <td>10/6/2024</td>
+                                                <td><input type="checkbox" checked={checkedItems[2]} onChange={() => handleCheckboxChange(2)} disabled={disabledItems[2]} /></td>
+                                            </tr>
+                                            <tr>
+                                                <td>3000</td>
+                                                <td>10/6/2024</td>
+                                                <td><input type="checkbox" checked={checkedItems[3]} onChange={() => handleCheckboxChange(3)} disabled={disabledItems[3]} /></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -108,7 +125,7 @@ function CashDeposit() {
             {showPaymentModal && (
                 <div className={styles["modal"]}>
                     <div className={styles["modal-content"]}>
-                        <DepositGate onSuccess={handlePaymentSuccess} />
+                        <DepositGate onSuccess={handlePaymentSuccess} onClose={handleCloseModal} />
                     </div>
                 </div>
             )}
