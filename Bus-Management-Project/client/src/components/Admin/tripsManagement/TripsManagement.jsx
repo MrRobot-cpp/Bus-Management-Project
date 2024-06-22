@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import styles from './TripsManagement.module.css';
+import AdminMapRouting from '../AdminMapRouting/AdminMapRouting';
 
 const busTypeOptions = [
   { type: "Mini Bus", seats: 15 },
@@ -15,7 +16,7 @@ function TripsManagement() {
       id: uuidv4(),
       'opening Time': new Date("2024-05-11").toISOString().split('T')[0],
       'start Time': '10:00 AM',
-      "end Time": '11:00 AM',
+      'end Time': '11:00 AM',
       'bus type': 'Mini Bus',
       seats: 15,
       'Driver Assigned': ''
@@ -217,7 +218,7 @@ function RouteRow({ route, onSave, onDelete, isEditing, busTypeOptions, showLoca
           <div className={styles["route-info"]}>
             <div className={styles["route-popup-header"]}>
               <div className={styles["exit-title"]}>
-                <h2 className={styles['popup-title']}>Route Details</h2>
+                <h4 className={styles['popup-title']}>Route Details</h4>
                 <button className={styles['exit-btn']} onClick={handleClosePopup}><i className="fa-solid fa-xmark"></i></button>
               </div>
               <hr />
@@ -225,7 +226,7 @@ function RouteRow({ route, onSave, onDelete, isEditing, busTypeOptions, showLoca
             <div className={styles["route-popup-contents"]}>
               <div className={styles["route-top-contents"]}>
                 <div className={styles["navigation-map"]}>
-                  <p>working</p>
+                 <AdminMapRouting/>
                 </div>
                 <div className={styles["route-details"]}>
                   <span className={styles['info-span']}>
