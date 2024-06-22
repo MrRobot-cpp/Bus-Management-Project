@@ -24,7 +24,7 @@
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
-    margin: 0;
+    margin-top: 25px;
     height: 100%;
     width: 80%;
     overflow: auto;
