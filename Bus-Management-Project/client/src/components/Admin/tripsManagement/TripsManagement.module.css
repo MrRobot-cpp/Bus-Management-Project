@@ -1,3 +1,4 @@
+
 .RouteManagement-container{
     display: flex;
     justify-content: center;
@@ -232,7 +233,7 @@ transform: translateY(-20px);
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(5px);
 
@@ -272,16 +273,7 @@ transform: translateY(-20px);
   }
 
 
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(5px);
 
-  }
 
   .route-info-container{
     display: flex;
@@ -298,6 +290,7 @@ transform: translateY(-20px);
     padding: 20px;
     margin: 10px;
     width: 60vw;
+    height: 45vw;
     font-size: 20px;
     line-height: 35px;
     background:#FFFBEB;
@@ -316,6 +309,7 @@ transform: translateY(-20px);
 
 .route-top-contents {
   display: flex;
+  width: 100%;
   gap: 20px;
   align-items: center;
   justify-content: center;
@@ -367,7 +361,6 @@ div.exit-title {
 .navigation-map {
   width: 400px;
   height: 400px;
-  background-color: #FFF;
   background-color: red;
 }
 
@@ -387,6 +380,7 @@ div.exit-title {
 .exit-btn i {
   font-size: 25px;
   padding: 5px;
+  padding-bottom: 0px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   width: auto;
