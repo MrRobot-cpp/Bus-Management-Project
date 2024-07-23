@@ -1,0 +1,30 @@
+.save-btn, .delete-btn {
+    background-color: #495579; 
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+
+.save-btn:hover, .delete-btn:hover {
+    background: #263159;
+}
+
+.route-data {
+    color: black;
+}
+
+input {
+    border-radius: 10px;
+    border: 1px solid #00000061;
+    padding: 5px;
+    text-align: center;
+    background-color: #FFFBEB;
+}
