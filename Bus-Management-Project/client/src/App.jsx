@@ -13,11 +13,10 @@ import ProtectedRoute from './protectedRoutes/ProtectedRoute.jsx'; // Make sure 
 
 function App() {
     return (
-     
         <>
             {/*SAMER: MA7DSH YL3B FL ROUTES ELY 3AOZ YGRB 7AGA Y COMMENT EL ROUTES W YKTB T7TEHA */}
         <Admin/>
-            {/* <Routes>
+            <Routes>
                 <Route path="/landing-page" element={<LandingPage />} />
                 <Route path="/" element={<LandingPage />} />
                 <Route path="/Login" element={<Login />} />
@@ -35,7 +34,7 @@ function App() {
                 <Route element={<ProtectedRoute requiredRole="Driver" />}>
                     <Route path="/driver" element={<Driver />} />
                 </Route>
-            </Routes> */}
+            </Routes>
             {/*SHAYFK YALY BTFKR TSHELHOM HA3DOK*/}
         </>
     );
