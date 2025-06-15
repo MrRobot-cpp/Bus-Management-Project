@@ -129,7 +129,6 @@ function PaymentsManagement() {
                 <p>Edit-Payments:</p>
 
 
-                	
                 <input type="text" value={editPaymentsetSelectedPayment.studentName} onChange={(e) => setEditPaymentsetSelectedPayment({ ...editPaymentsetSelectedPayment, studentName: e.target.value })} placeholder="student name" />
                 <input type="text" value={editPaymentsetSelectedPayment.ID} onChange={(e) => setEditPaymentsetSelectedPayment({ ...editPaymentsetSelectedPayment, ID: e.target.value })} placeholder="-" />
                 <input type="text" value={editPaymentsetSelectedPayment.Installments} onChange={(e) => setEditPaymentsetSelectedPayment({ ...editPaymentsetSelectedPayment, Installments: e.target.value })} placeholder="Installment" />
