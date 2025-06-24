@@ -1,7 +1,7 @@
 import express from 'express';
 import { Trip } from '../Model/tripModel.js';
 import { body, param, validationResult } from 'express-validator';
-
+import xss from 'xss';
 
 const router = express.Router();
 
@@ -39,7 +39,9 @@ router.post('/', validateTrip, async (req, res) => {
         };
 
         const trip = await Trip.create(newTrip);
-        return res.status(201).send(trip);
+        // Sanitize the trip object before sending
+        const sanitizedTrip = JSON.parse(xss(JSON.stringify(trip)));
+        return res.status(201).send(sanitizedTrip);
 
     } catch (error) {
         console.error(error.message);

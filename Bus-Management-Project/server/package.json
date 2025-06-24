@@ -15,7 +15,7 @@
     "@cometchat-pro/chat": "^3.0.13",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
-    "express": "4.20.0",
+    "express": "4.21.1",
     "express-validator": "^7.1.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.9.5",

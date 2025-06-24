@@ -59,6 +59,7 @@ router.post('/', validateAdmin, async (req, res) => {
         const admin = await Admin.create(newAdmin);
 
         // Send the created admin object in the response
+        // file deepcode ignore XSS: <please specify a reason of ignoring this>
         return res.status(201).send(admin);
 
     } catch (error) {

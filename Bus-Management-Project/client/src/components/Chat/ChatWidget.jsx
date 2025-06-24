@@ -6,7 +6,8 @@ import './ChatWidget.css';
 
 const appID = '2595958bbb92c7d2';
 const region = 'eu';
-const apiKey = '0bf6348e36b651a1f2c2e8120538f88f6ddc523f';
+// eslint-disable-next-line no-undef
+const apiKey = process.env.REACT_APP_COMETCHAT_API_KEY;
 const receiverID = 'admin790'; // The UID of the admin or support team member
 const receiverType = CometChat.RECEIVER_TYPE.USER;
 
@@ -123,7 +124,7 @@ const ChatWidget = () => {
 
     return (
         <div className="chat-widget">
-           {!isOpen && (
+        {!isOpen && (
                 <button className="chat-button" onClick={() => setIsOpen(true)}>
                     <i className="fa fa-comments" aria-hidden="true"></i>
                 </button>
@@ -138,7 +139,7 @@ const ChatWidget = () => {
                         {messages.map((msg, index) => (
                             <div key={index} className="message">
                                 <strong>{msg.sender.name}: </strong> {msg.text}
-                                <div className="timestamp">{newDate(msg.sentAt * 1000).toLocaleString()}</div>
+                                <div className="timestamp">{new Date(msg.sentAt * 1000).toLocaleString()}</div>
                             </div>
                         ))}
                     </div>      

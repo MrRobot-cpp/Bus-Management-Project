@@ -92,7 +92,21 @@ router.post('/',  validateDriver, async (req, res) => {
         };
 
         const driver = await Driver.create(newDriver);
-        return res.status(201).send(driver);
+        // Remove sensitive fields and sanitize output before sending
+        const sanitizedDriver = {
+            _id: driver._id,
+            name: driver.name,
+            email: driver.email,
+            id: driver.id,
+            gender: driver.gender,
+            birthdate: driver.birthdate,
+            trips: driver.trips,
+            averageRating: driver.averageRating,
+            salary: driver.salary,
+            address: driver.address
+            // Add other non-sensitive fields as needed
+        };
+        return res.status(201).json(sanitizedDriver);
 
     } catch (error) {
         console.error(error.message);
