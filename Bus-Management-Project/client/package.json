@@ -19,7 +19,7 @@
     "leaflet": "^1.9.4",
     "leaflet-control-geocoder": "^2.4.0",
     "leaflet-routing-machine": "^3.2.12",
-    "leaflet.locatecontrol": "^0.81.1",
+    "leaflet.locatecontrol": "^0.84.2",
     "nominatim-client": "^3.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
