@@ -1,8 +1,8 @@
 import './StudentDashboard.css'
 import Schedule from '../schedule/Schedule';
 
-import studentLogo from '../../../assets/studenticon.png'
-import profilePic from '../../../assets/profilepic.png'
+import studentLogo from '../../../assets/images/studenticon.png'
+import profilePic from '../../../assets/images/profilepic.png'
 import MenuItemButtonHighlighted from '../../General/MenuItemButton/MenuItemButtonHighLighted';
 
 

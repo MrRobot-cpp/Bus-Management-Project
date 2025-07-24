@@ -7,7 +7,7 @@ import 'leaflet/dist/leaflet.css';
 import 'leaflet-routing-machine/dist/leaflet-routing-machine.css';
 import 'leaflet-control-geocoder/dist/Control.Geocoder.css';
 import 'leaflet.locatecontrol/dist/L.Control.Locate.min.css';
-import DriverMark from '../../../assets/DriverMark.svg';
+import DriverMark from '../../../assets/images/DriverMark.svg';
 import styles from './DriverMapRoutes.module.css'; // Import the CSS Module for this component
 
 const MapComponent = () => {

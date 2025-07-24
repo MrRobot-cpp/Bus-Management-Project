@@ -12,7 +12,7 @@ import MenuItemButtonHighlighted from "../General/MenuItemButton/MenuItemButtonH
 import CustomerCard from "../General/CustomerCard/CustomerCard.jsx";
 import Accordion from '../General/Accordion/Accordion.jsx';
 
-import busImage1 from '../../assets/images/bus-image-1.svg' 
+import busImage1 from '../../assets/images/bus-image-1.png' 
 import busImage2 from '../../assets/images/bus-image-2.svg'
 import busImage3 from '../../assets/images/bus-image-3.svg'
 
