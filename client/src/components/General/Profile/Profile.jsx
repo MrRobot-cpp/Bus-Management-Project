@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import "./Profile.css";
-import profilePicPlaceholder from "../../../assets/images/profilepic.png";
+import profilePicPlaceholder from "../../../public/images/profilepic.png";
 
 function StudentProfile(props) {
   const [isChecked, setIsChecked] = useState(false);

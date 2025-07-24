@@ -12,22 +12,22 @@ import MenuItemButtonHighlighted from "../General/MenuItemButton/MenuItemButtonH
 import CustomerCard from "../General/CustomerCard/CustomerCard.jsx";
 import Accordion from '../General/Accordion/Accordion.jsx';
 
-import busImage1 from '../../assets/images/bus-image-1.png' 
-import busImage2 from '../../assets/images/bus-image-2.svg'
-import busImage3 from '../../assets/images/bus-image-3.svg'
+import busImage1 from '../../../public/images/bus-image-1.png' 
+import busImage2 from '../../../public/images/bus-image-2.svg'
+import busImage3 from '../../../public/images/bus-image-3.svg'
 
-import client1Image from "../../assets/images/client1.jpeg";
-import client2Image from "../../assets/images/client2.jpeg";
-import client3Image from "../../assets/images/client3.jpeg";
-import client4Image from "../../assets/images/client4.jpeg";
-import client5Image from "../../assets/images/client5.jpeg";
-import client6Image from "../../assets/images/client6.jpeg";
-import client7Image from "../../assets/images/client7.jpeg";
-import iphoneImage from "../../assets/images/iphoneImage.png";
+import client1Image from "../../../public/images/client1.jpeg";
+import client2Image from "../../../public/images/client2.jpeg";
+import client3Image from "../../../public/images/client3.jpeg";
+import client4Image from "../../../public/images/client4.jpeg";
+import client5Image from "../../../public/images/client5.jpeg";
+import client6Image from "../../../public/images/client6.jpeg";
+import client7Image from "../../../public/images/client7.jpeg";
+import iphoneImage from "../../../public/images/iphoneImage.png";
 
-import instagramImage from "../../assets/images/instagramImage.png"
-import facebookImage from "../../assets/images/facebookImage.png"
-import twitterXImage from "../../assets/images/twitterXImage.png"
+import instagramImage from "../../../public/images/instagramImage.png"
+import facebookImage from "../../../public/images/facebookImage.png"
+import twitterXImage from "../../../public/images/twitterXImage.png"
 
 
 
