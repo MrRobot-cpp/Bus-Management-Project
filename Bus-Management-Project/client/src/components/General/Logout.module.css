@@ -1,0 +1,80 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 999;
+
+  }
+
+  .logout-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .logout{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 40px;
+    margin: 10px;
+    height: 30vh;
+    width: 40vw;
+    font-size: 20px;
+    line-height: 35px;
+    background: rgb(255, 251, 235);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .logout>h2{
+    color: rgb(38, 49, 89);
+  }
+
+  .btn-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 67%;
+    margin-top: 10vh;
+  }
+
+  .btn-container>button,.btn-two{
+    border: none;
+    height: 8vh;
+    width: 10vw;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: 0.2s ease;
+  }
+
+  .btn-one{
+    background: transparent;
+    color: #263159;
+    box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.5);
+}
+
+.btn-two{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
+    background: #263159;
+    color: #FFFBEB;
+    box-shadow: 0px 0px 6px 1px rgba(38, 49, 89, 0.7);
+
+}
+
+.btn-one:hover,.btn-two:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}

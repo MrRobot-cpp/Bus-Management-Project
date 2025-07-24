@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.Ilogin {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    background-color: #263159;
+    place-items: center;
+}
+
+.Ilogin-header {
+    font-size: 2.5em;
+    line-height: 1.1;
+    color: #263159;
+}
+
+.Ibuttons-holder {
+    display: flex;
+    flex-direction: row;
+}
+
+.IConfig-text-div {
+    text-align: left;
+    width: 55%;
+}
+
+.Ilogin-container h4 {
+    color: #838383;
+    text-align: left;
+    margin: 4px 0px;
+}
+
+.Ilogin-container div {
+    text-align: left;
+}
+
+.Iloading-Questions {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+}
+
+.Iloading-dash {
+    margin: 2px 5px;
+    border: 0.5px solid #263159;
+    color: #FFFBEB;
+    width: 12%;
+    height: 2px;
+}
+
+.Iloading-dash.active {
+    background-color: #263159;
+}
+
+.ILogin-btn {
+    width: 100%;
+    height: 6vh;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1.2em;
+    font-weight: 500;
+    font-family: inherit;
+    color: #FFFBEB;
+    background-color: #263159;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    margin: 0.2em 1.6em 0.2em 0em;
+}
+
+.ILogin-btn:hover {
+    transition: 0.5s ease;
+    transform: scale(1.1);
+    border-color: #646cff;
+}
+
+.IContinue-Button {
+    width: 52%;
+    height: 8%;
+    background-color: #E4E5E7;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    font-size: 1.7em;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 1em 1.6em 1em 0.8em;
+    cursor: not-allowed;
+    transition: background-color 0.25s, cursor 0.25s;
+}
+
+.IContinue-Button.active {
+    background-color: #263159;
+    cursor: pointer;
+}
+
+.Ilogin-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    box-sizing: border-box;
+    width: 45vw;
+    height: 80vh;
+    background-color: #FFFBEB;
+    border-radius: 40px;
+    padding: 20px;
+    margin: 12px;
+}
+
+.INumberOfDays {
+    background-color: #FFFBEB;
+    border: 1.5px solid #263159;
+    border-radius: 10px;
+    width: 88%;
+    height: 2.3vh;
+    padding: 10px;
+    box-shadow: 0px 5px 15px rgba(1, 1, 1, 0.08);
+    color: #263159;
+    font-weight: bold;
+}
+
+.Ilocation-input {
+    background-color: #FFFBEB;
+    border: 1.5px solid #263159;
+    border-radius: 10px;
+    width: 88%;
+    height: 2.3vh;
+    padding: 10px;
+    box-shadow: 0px 5px 15px rgba(1, 1, 1, 0.08);
+    color: #263159;
+    font-weight: bold;
+}
+
+.Idrop-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.Iplaceholder-text {
+    color: #263159;
+    font-style: italic;
+}
+
+.Ierror {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}

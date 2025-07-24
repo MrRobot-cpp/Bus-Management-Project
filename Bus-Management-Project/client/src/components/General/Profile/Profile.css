@@ -1,0 +1,261 @@
+.card-container {
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: 0.5s ease;
+  }
+  
+  .card-info {
+    display: flex;
+    justify-content: space-between;
+    max-height: 40%;
+  }
+  
+  .profile-name {
+    text-align: left;
+    color: #263159;
+  }
+  
+  .top-profile {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(1, 1, 1, 0.25);
+    background-color: #FFFBEB;
+  }
+  
+  .left-profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .right-profile {
+    margin: 2em;
+  }
+  
+  .student-profile-body {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+  }
+  
+  .personal-info-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 85%;
+    width: 50%;
+    overflow: hidden;
+  }
+  
+  .personal-info {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: auto;
+    text-align: center;
+    color: #FFFBEB;
+    background-color: transparent;
+  }
+  
+  .profile-pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2.7em;
+    width: 100px;
+    height: 100px;
+    color: #FFFBEB;
+    border-radius: 64px;
+    margin: 12px;
+    cursor: pointer;
+  }
+  
+  .edit-btn {
+    width: 5.5vw;
+    height: 3.6vh;
+    float: right;
+    background-color: #263159;
+    color: #FFFBEB;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    border: 2px solid #263159;
+    border-radius: 10px;
+    display: block;
+    cursor: pointer;
+  }
+  
+  .edit-btn:hover {
+    transition: 0.5s ease;
+    transform: scale(1.1);
+    border-color: #646cff;
+  }
+  
+  .table-info {
+    width: 85%;
+    height:22vh;
+    box-shadow: 0px 5px 15px rgba(1, 1, 1, 0.25);
+    overflow: hidden;
+    border: 5px solid #fffbeb;
+    border-radius: 15px;
+    margin: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  
+  .student-table {
+    width: 100%;
+    background-color: #fffbeb;
+    box-shadow: 0px 5px 25px rgba(1 1 1 / 25%);
+  }
+  
+  .student-table-td {
+    width: 5.5vw;
+    height: 3.6vh;
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    color: #263159;
+    font-size: 1em;
+    font-family: inherit;
+  }
+  
+  .input-personal-info {
+    width: 13.7vw;
+    height: 2vh;
+    font-size: 1em;
+    font-family: inherit;
+    background-color: transparent;
+    text-decoration: none;
+    border: none;
+  }
+  
+  .upcoming-trip-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 85%;
+    width: 50%;
+  }
+  
+  .upcoming-trip-container > .personal-info {
+    margin-top: 18px;
+  }
+  
+  .bottom-upcoming-trip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 90%;
+    margin-top: -10px;
+  }
+  
+  .upcoming-trip-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 80%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(1, 1, 1, 0.25);
+    background-color: #FFFBEB;
+  }
+  
+  .Trip-history-student-profile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 20%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(1, 1, 1, 0.25);
+    background-color: #FFFBEB;
+    margin-top: 10px;
+  }
+  
+  .upcoming-trip-txt {
+    padding: 1em;
+    text-align: center;
+    color: #263159;
+  }
+  
+  .edit-toggle-txt {
+    text-align: center;
+    margin-left: 5px;
+    transform: translate(10px, 8px);
+    color: #263159;
+  }
+  
+  .toggle-checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: none;
+  }
+  
+  .toggle-switch {
+    background-color: gray;
+    width: 78px;
+    height: 32px;
+    border-radius: 16px;
+    position: relative;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  
+  .toggle-switch::before {
+    content: "";
+    font-weight: 900;
+    background-color: white;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    border-radius: 50%;
+    top: 4px;
+    left: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ddd;
+    transition: 0.3s;
+  }
+  
+  .toggle-checkbox:checked + .toggle-switch {
+    background-color: #263159;
+  }
+  
+  .toggle-checkbox:checked + .toggle-switch::before,
+  .edit-toggle-txt {
+    content: "";
+    left: 50px;
+    color: #263159;
+  }
+  
+  .upload-input {
+    display: none;
+  }
+  

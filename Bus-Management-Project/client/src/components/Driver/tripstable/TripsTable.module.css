@@ -1,0 +1,163 @@
+@keyframes animation1 {
+  from {
+    width: 90%;
+  }
+  to {
+    width: 10%;
+  }
+}
+
+@keyframes animation2 {
+  from {
+    width: 10%;
+  }
+  to {
+    width: 90%;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-corner{
+  visibility: hidden;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+  height: auto;
+
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.trips-table-container-driver{
+    display: flex;
+    flex-direction: column ;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: -10px;
+    margin-bottom: 5px;
+    margin-right: 0px;
+    height: 95%;
+    width: 95%;
+    background: #FFFBEB; 
+    transition: 0.4s ease;
+    border-radius: 20px;
+
+
+}
+
+
+.table-head{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  height: 10%;
+  min-height: 50px;
+  flex-direction: row;
+  text-align: left;
+  border-bottom: 1.5px solid #EFF0F6;
+}
+
+.table-head > p{
+  font-size: 17px;
+  margin-left: 10px;
+}
+
+.trips-table{
+    overflow: scroll;
+    height: 80%;
+    width: 100%;
+}
+
+.trips-table table{
+    width: 100%;
+    height: 60%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: scroll;
+    margin-bottom: 20px;
+    white-space: nowrap;
+    transition: 1s ease;
+  }
+  
+  .trips-table th, td {
+    padding: 12px 15px;
+    text-align: center;
+    transition: 1s ease;
+
+  }
+  
+  .trips-table th {
+    font-size: 15px;
+    color: #000;
+    font-weight: 500;
+    transition: 1s ease;
+  }
+
+  .trips-table td{
+    color: #70768C;
+    opacity: 500;
+  }
+  
+/*////////////////////////////////////////////minmize button///////////////////////////////////////*/
+.min-btn-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7vh;
+  height: 7vh;
+}
+
+.min-btn,.plus-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5vh;
+  height: 5vh;
+  border-radius: 20px;
+  background: #EFF0F6;
+}
+
+.horizontal-bar,.vertical-bar{
+  position: absolute;
+  height: 4px;
+  width: 20px;
+  background: #000;
+  border-radius: 20px;
+  transition: 0.5s ease;
+}
+
+.plus-btn .vertical-bar{
+  transform: rotate(90deg);
+}
+/*////////////////////////////////////////////status button///////////////////////////////////////*/
+
+.status-btn{
+  background: transparent;
+  height: 20px;
+  width: 50px;
+  border-radius: 5px;
+  box-shadow: #EFF0F6;
+  border:1.7px solid #495579;
+}
+
+.status-btn-active{
+  border: none;
+  background: transparent;
+  height: 20px;
+  width: 50px;
+  color: #28a745;
+}
+
+

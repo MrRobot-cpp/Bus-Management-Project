@@ -1,0 +1,258 @@
+
+.home-container{
+    display: flex;
+    flex-direction: row ;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-left: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height:98%;
+    width: 90%;
+    overflow: hidden;
+    /* background: #FFFBEB; */
+    /*
+    padding-top: 20px;
+    margin-left: 100px;
+    margin-right: 10px; */
+}
+.left-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  width: 50%;
+  margin-right: 20px;
+  margin-top: -50px;
+  /* overflow: hidden; */
+  /* background: red; */
+  /* transform: translateX(160px);*/
+}
+
+.right-container{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  height: 100%;
+  width: 80%;
+margin-left: -100px;
+
+  /* background: blue; */
+}
+
+.data-organizer-container{
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+    transition: 0.9s ease;
+    font-size: 14px;
+    height: 90%;
+    width: 100%;
+    margin-bottom: 4.7vh;
+    margin-left: 25px;
+    /* background: orange; */
+}
+
+.trip-container{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 780px;
+  height: 330px;
+  transition: 0.9s ease;
+  font-size: 14px;
+  margin-bottom: 50px;
+  margin-left: -10px;
+
+
+
+  /* background: pink; */
+
+}
+
+.driver-profile-container{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.9s ease;
+  font-size: 14px;
+  height: -500px;
+  width: 600px;
+  margin-top: 300px;
+
+  /* background: purple; */
+}
+
+
+
+ @media screen and (max-height: 400px) {
+    .welcome-text {
+      font-size: 1.5rem;
+      transition: 0.2s ease-in-out;
+    }
+  }
+
+
+
+  @media screen and (max-width: 720px) {
+    .welcome-text {
+      font-size: 1.5rem;
+      transition: 0.2s ease-in-out;
+    }
+  }
+  
+/* daily summer */
+
+
+.daily-summary {
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #FFFBEB;
+  color: #263159; /* Matching the background color */
+  border-radius: 20px;
+  font-size: 15px; /* Adjusting the font size */
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
+  width: 240px;
+
+}
+
+.daily-summary p {
+  margin: 10px 10px ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: black;
+}
+
+.daily-summary input {
+  border: 1px solid #263159;
+  background-color:#FFFBEB;
+  border-radius: 10px;
+  padding: 7px;
+  width: 100px;
+  text-align: center;
+  color: #333;
+  font-size: 1em;
+  border-radius: 7px;
+}
+
+/* general trip */
+.general-tips {
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: #263159;
+  background-color: #FFFBEB; /* Matching the background color */
+  border-radius: 20px;
+  font-size: 15px; /* Adjusting the font size */
+  padding: 20px; /* Adding padding for better spacing */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
+  width: 240px;
+}
+
+.general-tips p {
+  margin: 10px 10px; /* Adding margin between paragraphs */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px; /* Adjusting the font size */
+  color: black;
+
+}
+
+.general-tips input {
+  border: 1px solid #263159;/* Matching the border color */
+  background-color: #FFFBEB; /* Matching the background color */
+  border-radius: 10px; /* Adding border radius */
+  padding: 7px; /* Adding padding for better spacing */
+  width: 100px; /* Adjusting the width */
+  text-align: center; /* Centering the text */
+  color: #333; /* Setting the text color */
+  font-size: 1em; /* Adjusting the font size */
+  border-radius: 7px;
+}
+
+.DG{
+  display:flex;
+  padding: 10px;
+  gap: 30px;
+
+
+}
+/* current trip */
+.current-trip {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFBEB;
+  border-radius: 20px;
+  padding: 20px;
+  font-size: 15px;
+  width: 100%; /* Adjust the width as needed */
+  margin-top:2px; /* Adjust margin as needed */
+  margin-left: 10px;
+  border: 1px solid #263159;
+  height: 100%;
+  margin-bottom: 110px;
+}
+
+.current-trip h2 {
+  font-size: 20px;
+  color: #263159;
+}
+
+.current-trip p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1em;
+  padding-bottom:3px;
+
+}
+
+.current-trip input {
+  border: 1px solid #263159;
+  background-color: #FFFBEB;
+  border-radius: 7px;
+  padding: 5px;
+  width: 150px;
+  text-align: center;
+  color:#263159;
+  font-size: 10px;
+}
+
+.progress-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.progress {
+  background-color: #263159;
+  height: 10px;
+  width: 80%; /* Adjust this width to represent the progress percentage */
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.icon {
+  font-size: 20px;
+  color:#263159;
+}
+
+.test1{
+  align-items: center;
+
+}
+

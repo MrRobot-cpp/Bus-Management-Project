@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+
+
+
+.trip{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #FFFBEB; 
+    /* min-height: 500px; */
+    min-width: 40px;
+    height: 90%;
+    width: 95%;
+    /* padding-top: 5px;
+    margin-left: 45px;
+    margin-right: 10px; */
+    border-radius: 15px;
+    transition: 0.5s ease;
+}
+/* .bus-img-container{
+    display: block;
+    height: 50px;
+    width: 100px
+}*/
+
+.text-style{
+    /* transform: translateY(-40px); */
+    color: #263159;
+    /* margin: 10px;
+    margin-right: 17.5px;
+    padding-top: 10px; */
+}
+
+.student-count{
+    display: flex;
+    /* margin: 0; */
+    width: 50%;
+    height: auto;
+    flex-direction: row;
+    /* transform: translate(-100px,-70px); */
+}
+
+.extra-trip-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+    /* padding-top: 20px;
+    padding-bottom: 10px; */
+    margin-bottom: 5px;
+    width: 90%;
+    height: 20%;
+    /* background: navajowhite; */
+    /* transform: translate(-64px,0px); */
+
+}
+
+.extra-trip-info-text{
+    font-size: 0.8em;
+}
+
+.time-line{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: red; */
+    height: 70%;
+    width: 100%;
+}
+
+.progress-bar-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    /* background: palevioletred; */
+    /* transform: translate(0px, 20px); */
+
+}

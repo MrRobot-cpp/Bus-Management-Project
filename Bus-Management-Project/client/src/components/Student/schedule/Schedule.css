@@ -1,0 +1,98 @@
+.schedule {
+    width: 100%;
+    height: 100%;
+    background-color: #FFFBEB;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.month-title, .schedule-title {
+    font-size: 1.3em;
+    font-weight: 400;
+}
+
+.current-week {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.current-day {
+	width: 10%;
+	height: 60px;
+	text-align: center;
+	align-content: center;
+	color: #fffbeb;
+	border-radius: 20px;
+	padding: 15px;
+	margin-top: -13px;
+	margin-left: 10px;
+}
+.current-week-day {
+    font-size: 14px;
+}
+
+hr {
+    border: #263159 solid 1px;
+    opacity: 0.3;
+    margin: 10px;
+}
+
+
+
+.schedule-item {
+    width: 93%;
+    background-color: #263159;
+    color: #FFFBEB;
+    padding-inline: 15px;
+    padding-block: 5px;
+    margin-block: 5px;
+    border-radius: 20px;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+}
+
+.status {
+    opacity: 0.8;
+}
+
+.status-more {
+    display: flex;
+    flex-direction: column;
+    opacity: 0.8;
+    text-align: right;
+}
+.schedule-content{
+    width: 100%;
+}
+
+.status-more, .name-time, .schedule-content {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.schedule-item p {
+    font-size: 14px;
+}
+
+
+
+@media (max-width: 480px) {
+    .month-title, .schedule-title {
+        font-size: 22px;
+    }
+
+    .current-day {
+        width: 35px;
+        height: 45px;
+    }
+
+    .schedule-item {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+}

@@ -1,0 +1,26 @@
+.student-header-container{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    background-color: #263159;
+}
+
+.header-txt{
+    padding: 1em;
+    padding-left: 0;
+    margin-left: 1em;
+    margin-right: 1em;
+    color: #FFFBEB;
+    font-family:inherit;
+}
+.border-box-container{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+.border-box{
+    height: 1px;
+    width: 97vw;
+    border: 1px solid #FFFBEB;
+}

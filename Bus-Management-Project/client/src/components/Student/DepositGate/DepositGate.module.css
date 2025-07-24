@@ -1,0 +1,79 @@
+.payment {
+    background-color: #263159;
+    max-width: 360px;
+    height:60vh;
+    padding: 25px;
+    border-radius: 5px;
+    position: relative;
+}
+.closeButton{
+    height: 30px;
+    width: 30px;
+}
+.closeButton:hover{
+color: #FFFBEB;
+background-color: #263159;
+border:2px solid #FFFBEB;
+transition: ease-in-out;
+}
+
+.paymentHeader {
+    text-align: center;
+    letter-spacing: 2px;
+    color: #FFFBEB;
+}
+
+.cardInputContainer {
+    padding: 15px 0px;
+}
+
+.formLabel {
+    display: block;
+    color: #FFFBEB;
+    margin-bottom: 6px;
+}
+
+.formInput {
+    padding: 13px 0px;
+    width: 100%;
+    text-align: center;
+    border: 2px solid #FFFBEB;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    outline: none;
+    font-size: 16px;
+    color: #263159;
+}
+.error{
+    color: #FFFBEB;
+}
+.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+.cardGroup {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardItem {
+    width: 48%;
+}
+
+.payButton {
+    margin-top: 30px;
+    background: #FFFBEB;
+    padding: 12px;
+    text-align: center;
+    color: #263159;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.iconRelativeInput {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #263159; 
+    border-radius: 4px;
+    box-sizing: border-box;
+}

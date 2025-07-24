@@ -1,0 +1,54 @@
+
+.feature-card {
+    margin: 0 ;
+    background-color: #FFFBEB;
+    width: 230px;
+    height: 210px;
+    padding: 18px;
+    border-radius: 16px;
+}
+
+.feature-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    translate: 0 -25px;
+}
+
+.feature-card-headline {
+    font-size: 24px;
+}
+
+.feature-card-link {
+    font-weight: bold;
+    display: inline-block;
+}
+
+.feature-card-description {
+    opacity: 0.5;
+    padding: 0;
+}
+
+.feature-card-icon {
+    width: 64px;
+    height: 64px;
+    background-color: #000;
+    border-radius: 32px;
+    translate: 0 -35px;
+    box-shadow: 5px 8px 8px  rgba(0, 0, 0, 0.35);
+}
+
+.fa-hourglass-half, .fa-route, .fa-comments, .fa-user {
+    color: #FFFBEB;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    translate: 0 15px;
+}
+
+@media (max-width: 576px) {
+    .feature-card {
+        width: fit-content;
+        padding: 18px;
+    }
+}

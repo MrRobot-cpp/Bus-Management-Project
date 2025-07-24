@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+.sign{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    align-items: center;
+    background-color: #263159;
+    place-items: center;
+}
+.sign-form{
+    margin-top: auto;
+    margin-bottom: auto;
+    color: #263159;
+    background-color: #FFFBEB;
+}
+.sign-header{
+    font-size: 3.2em;
+    line-height: 1.1;
+    color: #263159;
+}
+.labels-container{
+    display: flex;
+    flex-direction: column;
+}
+.names{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.name-div input{
+    width: 18em;
+    margin-right:0.45em ;
+    margin-left:0.45em ;
+}
+.sign-input{
+    border-radius: 8px;
+    width: 508px;
+    height: 40px;
+    padding-left: 10px;
+    margin: 5px;
+    background-color: #FFFBEB;
+}
+.create-acc-link{
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit;
+}
+.social-icons a {
+    color: #263159;
+    padding: 8px;
+    font-size: 3.2em;
+    background-color: #FFFBEB;
+}
+.social-icons a:hover {
+    color: #535bf2;
+}
+.termsLine{
+    position: absolute;
+    transform: translate(10px,-34px);
+    background-color: transparent;
+    font-weight: 500;
+}
+.termsLine a{
+    color: #646cff;
+    text-decoration: inherit;
+}
+.checker{
+    width: 15px;
+    height: 15px;
+    transform: translateY(4px);
+}
+.top-border{
+    position: absolute;
+    background-color: #FFFBEB;
+    height: 20px;
+    transform: translate(20px,-5px);
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 2px;
+}
+.Forgot-Password{
+    margin-left: 380px;
+    background-color: transparent;
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit;
+}
+.not-regist{
+    transform: translate(-230px,-14px);
+    background-color: transparent;
+}
+.social-icons a {
+    color: #263159;
+    padding: 8px;
+    font-size: 3.2em;
+}
+.Sign-btn {
+    width: 210px;
+    height: 64px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1.2em;
+    font-weight: 500;
+    font-family: inherit;
+    color: #FFFBEB;
+    background-color: #263159;
+    border-radius: 15px;
+    margin: 12px;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    margin: 2em;
+}
+.Sign-btn:hover{
+    transition: 0.5s ease;
+    transform: scale(1.1);
+    border-color: #646cff;
+}
+.Creation-container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    width: 900px;
+    height: 790px;
+    background-color: #FFFBEB;
+    border-radius: 40px;
+    padding: 20px;
+    margin: 12px;
+}
+
+
+/* responsive media queries */
+@media (max-width: 1200px) {
+    .not-regist {
+        transform: translate(-110px,-14px);
+        padding: 10px;
+        width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .Creation-container, .sign-form {
+        width: 60%;
+        height: auto;
+        padding: 30px;
+        margin: 15px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column; /* Ensure elements stack vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .names {
+        flex-direction: column; /* Stack first name and last name inputs vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .name-div {
+        width: 100%; /* Full width for name inputs */
+    }
+
+    .sign-input {
+        width: 100%; /* Full width for inputs */
+        height: 30px;
+    }
+
+    .sign-header {
+        font-size: 2em;
+    }
+
+    .social-icons a {
+        font-size: 2em;
+    }
+
+    .Sign-btn {
+        width: 160px;
+        height: 45px;
+        font-size: 0.9em;
+        margin: 16px;
+    }
+
+    .termsLine {
+        position: static; /* Ensure termsLine stays in document flow */
+    
+    }
+
+    .not-regist {
+        transform: translate(0,-14px);
+        padding: 10px;
+        width: 250px;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .sign-header {
+        font-size: 1.8em;
+    }
+
+    div.name-div, div.sign-div-holder {
+        width: auto;
+    }
+
+    .sign-input {
+        height: 28px;
+    }
+
+    .social-icons a {
+        font-size: 1.5em;
+    }
+
+    .Sign-btn {
+        width: 140px;
+        height: 40px;
+        font-size: 0.8em;
+    }
+
+    .not-regist {
+        width: auto;
+    }
+}
+
