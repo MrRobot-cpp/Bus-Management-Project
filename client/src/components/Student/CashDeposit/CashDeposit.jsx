@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from './CashDeposit.module.css';
 import Dropdown from '../../General/Dropdown';
-import PaymentGif from '../../../public/images/Payment.png';
+import PaymentGif from '../../../../public/images/Payment.png';
 import DepositGate from '../DepositGate/DepositGate.jsx';
 
 function CashDeposit() {

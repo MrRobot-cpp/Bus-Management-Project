@@ -1,13 +1,13 @@
 //eslint-disable-next-line no-unused-vars
 import React from 'react';
 import './AdminDashboard.css';
-import studentImage from '../../../public/images/User.png'; // Import the image
-import iconImage from '../../../public/images/Rectangle 2373.png';
-import iconImage1 from '../../../public/images/Rectangle 2374.png';
-import iconImage2 from '../../../public/images/Rectangle 2375.png';
-import chartimage from '../../../public/images/Order.png';
-import chartimage2 from '../../../public/images/chart.png';
-import chartimage3 from '../../../public/images/chart2.png';
+import studentImage from '../../../../public/images/User.png'; // Import the image
+import iconImage from '../../../../public/images/Rectangle 2373.png';
+import iconImage1 from '../../../../public/images/Rectangle 2374.png';
+import iconImage2 from '../../../../public/images/Rectangle 2375.png';
+import chartimage from '../../../../public/images/Order.png';
+import chartimage2 from '../../../../public/images/chart.png';
+import chartimage3 from '../../../../public/images/chart2.png';
 
 
 
